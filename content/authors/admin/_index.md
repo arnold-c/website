@@ -1,48 +1,39 @@
 ---
 authors:
 - admin
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: My research interests include infectious disease epidemiology, mathematical modelling, and machine learning.
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: MSc Global Health Policy
+    institution: London School of Hygiene and Tropical Medicine
+    year: 2017 - Present
+  - course: MChem Chemistry
+    institution: University of Oxford
+    year: 2011-2015
 email: ""
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
-name: Nelson Bighetti
+- Infectious Disease Epidemiology
+- Mathematical Modelling of Infectious Diseases
+- Machine Learning
+name: Callum Arnold
 organizations:
-- name: Stanford University
+- name: The Hospital for Sick Children
   url: ""
-role: Professor of Artificial Intelligence
+role: Clinical Research Coordinator
 social:
 - icon: envelope
   icon_pack: fas
   link: '#contact'
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/arnold-c
 superuser: true
 user_groups:
 - Researchers
 - Visitors
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 
+Callum Arnold is a clinical research coordinator in the Infectious Disease Division at the Hospital for Sick Children, and is concurrently completing an MSc in Global Health Policy at LSHTM. His research interests are in infectious disease epidemiology, with a particular focus on mathematical models.
