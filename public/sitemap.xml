@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/tutorials/example/example1/</loc>
+    <loc>/tutorials/example/repro-intro/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
@@ -13,7 +13,12 @@
   </url>
   
   <url>
-    <loc>/tutorials/example/example2/</loc>
+    <loc>/tutorials/example/project-structure/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tutorials/example/key-points/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   

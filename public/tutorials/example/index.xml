@@ -13,72 +13,168 @@
     </image>
     
     <item>
-      <title>Example Page 1</title>
-      <link>/tutorials/example/example1/</link>
+      <title>Reproducible Work - An Introduction</title>
+      <link>/tutorials/example/repro-intro/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/example/example1/</guid>
+      <guid>/tutorials/example/repro-intro/</guid>
       <description>
 
-&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+&lt;p&gt;This chapter focusses on what everyone can and should be doing. The guidelines here do not require anything to be downloaded, so can be implemented immediately and easily. If you follow the principles laid out here, you are well on your way to making reproducible research.&lt;/p&gt;
 
-&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+&lt;p&gt;Before we can discuss how we should structure our projects and manage our data, we need to first talk about reproducible research.&lt;/p&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-reproducible-work&#34;&gt;What is reproducible work?&lt;/h2&gt;
 
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Contains relevant code, including which packages were used, and which programming language was used&lt;/li&gt;
+&lt;li&gt;Contains enough text, either via markdown or comments, to be able to understand the purpose of the code chunks and code document
 
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ideally integrates code and results, along with text, into a single document (&lt;strong&gt;literate programming!&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Applying good data quality control techniques to ensure that projects are self-contained so that all files and everything necessary to produce the output documents are easily accessible and accounted for&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;h2 id=&#34;why-is-it-important&#34;&gt;Why is it important?&lt;/h2&gt;
 
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;p&gt;Simply put, mistakes happen. Projects also move between PHO employees. If your project is structured properly, you will have a code document that contains all of the relevant information, and it is easy to recreate the outcomes. Importantly, you will also have the necessary input files (and tracking of &lt;strong&gt;all&lt;/strong&gt; their changes) stored within the project folder. That way, if you move computers, delete a document by accident, or hand over the project to another person, everything is neatly contained and can be reproduced without hassle.&lt;/p&gt;
 
-&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+&lt;h2 id=&#34;how-do-i-make-reproducible-work&#34;&gt;How do I make reproducible work?&lt;/h2&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;p&gt;There are many different ways to make reproducible work. The information listed here should give you the foundations upon which you can build your own systems. However, the principles are the same and largely revolve around project structures and a version control system, such as Git.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Example Page 2</title>
-      <link>/tutorials/example/example2/</link>
+      <title>Structuring a Project</title>
+      <link>/tutorials/example/project-structure/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/example/example2/</guid>
+      <guid>/tutorials/example/project-structure/</guid>
       <description>
 
-&lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
+&lt;p&gt;The first step in creating reproducible research is creating self-contained projects. Everything that goes in to, and comes out of, the project, should be contained within a single folder (directory). At PHO, it is best that you create these directories within your personal drive (&lt;code&gt;H:\&lt;/code&gt;). I would recommend that you create a folder called &lt;code&gt;repos/&lt;/code&gt; that your project folders live in, e.g. &lt;code&gt;H:/repos/proj/&lt;/code&gt;. This way, if you like to store other files on your &lt;code&gt;H:\&lt;/code&gt; drive, your project folders are neatly separated. Whilst we will discuss version control with Git &lt;a href=&#34;#git&#34;&gt;later&lt;/a&gt;, I would suggest that you also routinely back up your project folder to either the shared team drives (&lt;code&gt;I:\&lt;/code&gt; or SharePoint, depending on whether the data is &lt;a href=&#34;#sensitive-data&#34;&gt;sensitive&lt;/a&gt;).&lt;/p&gt;
 
-&lt;h2 id=&#34;tip-3&#34;&gt;Tip 3&lt;/h2&gt;
+&lt;p&gt;Now you have set up your &lt;code&gt;repos/&lt;/code&gt; folder in your &lt;code&gt;H:\&lt;/code&gt; drive, it is time to create the project folder. This is the structure that I find works for me. You may want to find a variation on it that works for you, but the basic premise of keeping repositories self-contained should remain.&lt;/p&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;H:/
+└── repos/
+    └── proj/
+        ├── data/
+        ├── docs/
+        ├── figs/
+        ├── funs/
+        ├── out/
+        ├── cleaning.R
+        └── analysis.R
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;As you can see, the project repository contains separate directories that you can use to store different file types. Importantly, the analysis and cleaning files are stored in the project root, allowing easy use of relative paths over explicit paths e.g. &lt;code&gt;read_csv(here(&#39;data&#39;, &#39;data_file.csv&#39;))&lt;/code&gt; rather than &lt;code&gt;read_csv(&#39;C:/Users/owner/Documents/Repos/my_project/data/data_file.csv&#39;)&lt;/code&gt;. The reason why relative paths are preferable is that they allow projects to be used by multiple people without the need to re-write code. If you use explicit paths and change computer, or the project is opened by another person, the code will break as they will not have the same directory structure as the computer that the code was created on.&lt;/p&gt;
 
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; the example above used an R package called &lt;code&gt;here_here&lt;/code&gt;, calling the function &lt;code&gt;here()&lt;/code&gt;. Similar solutions may exist for other languages, and you should try and find them for the language of your choice.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;h2 id=&#34;data&#34;&gt;&lt;code&gt;data/&lt;/code&gt;&lt;/h2&gt;
 
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;p&gt;An important idea is that you should &lt;strong&gt;treat your data as read-only&lt;/strong&gt;. You and your team have likely worked hard to collect the data and it&amp;rsquo;s easy to make a changes along the way that you either forget about, or need to reverse. As most projects span a long time between the data collection and analysis stages, if that happens to you it will take a lot of work to figure out exactly which changes you are interested in reversing etc. To save yourself this hassle, and help make your work reproducible, &lt;strong&gt;once the data is collected it should not be edited&lt;/strong&gt;; all the work should happen in your code, allowing it to be easily checked.&lt;/p&gt;
 
-&lt;h2 id=&#34;tip-4&#34;&gt;Tip 4&lt;/h2&gt;
+&lt;p&gt;If you are following good data practices and treating your data as read-only, all your cleaning will happen within your code (create a cleaning file in your project e.g. &lt;code&gt;proj-cleaning.R&lt;/code&gt;). However, if you do need to edit the files manually (&lt;strong&gt;and I strongly recommend against it&lt;/strong&gt; as it makes it harder to reproduce as there isn&amp;rsquo;t a good way to track exactly what changes were made), you should create a save a new (separate) copy of the dataset (using file &lt;a href=&#34;#how-to-name-files&#34;&gt;naming conventions&lt;/a&gt;) in your project directory (e.g. &lt;code&gt;H:/repos/proj/2019-01-24_data-file.csv&lt;/code&gt;). Additionally, you should create a word document where you can list the changes you made with each new file. When we get to the section on &lt;a href=&#34;#git&#34;&gt;Git&lt;/a&gt;, you will see how we can set it up to track all the changes within a project folder (including the create/deletion/movement of files!) so we don&amp;rsquo;t have to remember what changes we make. This means we can just have one copy of each document, and track the changes through time.&lt;/p&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;h2 id=&#34;other-subdirectories&#34;&gt;Other subdirectories&lt;/h2&gt;
 
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;docs/&lt;/code&gt;: this contains the output documents. For example, if you are using R Markdown to create a pdf via LaTeX, you could place them here.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;funs/&lt;/code&gt;: this contains the functions you write and might want to reference. The idea is to create functions so that can give code a meaningful name. It also helps if you need to repeat a code chunk multiple times, especially if you need to edit it at some point, as you can just call the function rather than typing it out each time.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;out/&lt;/code&gt;: this contains files that are produced from the original data e.g. cleaned data files. You can then call them in your analysis scripts.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;figs/&lt;/code&gt;: this contains figures that may be generated from your scripts.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Importantly, if you follow the principle that your &lt;code&gt;data/&lt;/code&gt; files are read-only, all of the files in these directories (with the exception of &lt;code&gt;funs/&lt;/code&gt;) &lt;em&gt;should&lt;/em&gt; be reproducible and could be deleted at any time without concern of generating them again. In order to revert to previous figures and output versions, you will need to be able to track changes in your code. This is where a &lt;em&gt;version control system&lt;/em&gt; like Git comes in, which we will discuss in the next section.&lt;/p&gt;
 
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-name-files&#34;&gt;How to name files&lt;/h2&gt;
 
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;p&gt;How you name files and directories may not seem like an important point, but it can cause quite a headache if you try and use code to automate processes, and at best, it just slows things down. To quote Aaron Quinlan, a bioinformatician, &lt;a href=&#34;https://twitter.com/aaronquinlan/status/711593127551733761&#34; target=&#34;_blank&#34;&gt;&amp;ldquo;a space in a filename is a space in one&amp;rsquo;s soul&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Instead try and use something like &lt;a href=&#34;https://speakerdeck.com/jennybc/how-to-name-files&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;KISS (&lt;em&gt;Keep It Simple Stupid&lt;/em&gt;): use simple and consistent file names
+
+&lt;ul&gt;
+&lt;li&gt;It needs to be machine readable&lt;/li&gt;
+&lt;li&gt;It needs to be human readable&lt;/li&gt;
+&lt;li&gt;It needs to order well in a directory&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;No special characters and &lt;strong&gt;no spaces&lt;/strong&gt;!&lt;/li&gt;
+&lt;li&gt;Use YYYY-MM-DD date format&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;-&lt;/code&gt; to delimit words and &lt;code&gt;_&lt;/code&gt; to delimit sections
+
+&lt;ul&gt;
+&lt;li&gt;i.e. &lt;code&gt;2019-01-19_my-data.csv&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Left-pad numbers
+
+&lt;ul&gt;
+&lt;li&gt;i.e. &lt;code&gt;01_my-data.csv&lt;/code&gt; vs &lt;code&gt;1_my-data.csv&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;If you don&amp;rsquo;t, file orders get messed up when you get to double-digits&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;what-is-sensitive-data&#34;&gt;What is sensitive data?&lt;/h2&gt;
+
+&lt;p&gt;Some of the data you will be working with is sensitive. As such, we need to know the most appropriate places to store it, along with how it can be shared.&lt;/p&gt;
+
+&lt;p&gt;Sensitive data refer to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Data which contain identifiable information&lt;/li&gt;
+&lt;li&gt;Personal data (e.g. name, health card number, post code, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These data contain information which can identify individual persons. Therefore, they must be carefully protected and only shared with those who have special permission. They are also not the norm and are typically used only when absolutely necessary.&lt;/p&gt;
+
+&lt;p&gt;Non-sensitive data refer to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Data which have been de-identified (e.g. unique identifier)&lt;/li&gt;
+&lt;li&gt;Aggregated data (e.g. post code region)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Because these data are designed not to be traceable to the individual level, less care and protection is required. However, safeguards are still often used for reassurance.&lt;/p&gt;
+
+&lt;p&gt;As alluded to earlier, if you have sensitive data, you should not store your backups on the &lt;code&gt;I:\&lt;/code&gt; drive/SharePoint *&lt;em&gt;delete as appropriate&lt;/em&gt;*, instead opting to use the &lt;code&gt;I:\&lt;/code&gt; drive/SharePoint *&lt;em&gt;delete as appropriate&lt;/em&gt;*.&lt;/p&gt;
+
+&lt;h2 id=&#34;project-structure-summary&#34;&gt;Project structure summary&lt;/h2&gt;
+
+&lt;p&gt;If you&amp;rsquo;ve followed the steps up until here, you will have a project folder in your &lt;code&gt;H:\&lt;/code&gt; drive and the shared team drives, complete with all data and output files, and images and tables etc. generated. Most importantly, your project folder will contain a final copy of your code so your results could be replicated if necessary. Ideally, this code will contain your final results in one easy-to-distribute package. This can be done in either a Microsoft Excel or Word file with all code typed and results copy and pasted, or by using a &lt;a href=&#34;#jupyter-notebooks&#34;&gt;Jupyter notebook&lt;/a&gt; as we advocate for here.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Key Points</title>
+      <link>/tutorials/example/key-points/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>/tutorials/example/key-points/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Use a version control system such as Git to track changes in your code.&lt;/li&gt;
+&lt;li&gt;Data isn&amp;rsquo;t touched one collected:
+
+&lt;ul&gt;
+&lt;li&gt;Do all &lt;em&gt;data munging&lt;/em&gt; within your program i.e. no editing the excel spreadsheets!!!&lt;/li&gt;
+&lt;li&gt;You should have an untouched copy of your data on your &lt;code&gt;H:\&lt;/code&gt; drive &lt;strong&gt;and&lt;/strong&gt; the shared team drives&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Your outputs should be reproducible from the code you have:
+
+&lt;ul&gt;
+&lt;li&gt;Make sure this is the case by routinely clearing your programming environment and re-running the code in a clean environment to ensure your results aren&amp;rsquo;t contingent on &lt;em&gt;&amp;lsquo;hidden&amp;rsquo;&lt;/em&gt; packages/modules that were &lt;a href=&#34;https://onunicornsandgenes.blog/2017/04/02/using-r-dont-save-your-workspace/&#34; target=&#34;_blank&#34;&gt;loaded erroneously&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Never set explicit file paths (e.g. &lt;code&gt;setwd()&lt;/code&gt;) if you can avoid it
+
+&lt;ul&gt;
+&lt;li&gt;Try and use a package that allows you to set relative paths e.g. &lt;code&gt;here_here&lt;/code&gt; in R. This allows the project to be passed to someone else in its entirety and the code won&amp;rsquo;t break because they don&amp;rsquo;t have the same folder names and set up as you (also if you work on multiple computers/OS)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Format your filenames properly&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

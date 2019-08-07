@@ -33,7 +33,7 @@ Before we can discuss how we should structure our projects and manage our data, 
 What is reproducible work?">
 
   
-  <link rel="alternate" hreflang="en-us" href="/tutorials/example/example1/">
+  <link rel="alternate" hreflang="en-us" href="/tutorials/example/example1-copy/">
 
   
 
@@ -98,7 +98,7 @@ What is reproducible work?">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/tutorials/example/example1/">
+  <link rel="canonical" href="/tutorials/example/example1-copy/">
 
   
   
@@ -111,7 +111,7 @@ What is reproducible work?">
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Callum Arnold">
-  <meta property="og:url" content="/tutorials/example/example1/">
+  <meta property="og:url" content="/tutorials/example/example1-copy/">
   <meta property="og:title" content="Reproducible Work - An Introduction | Callum Arnold">
   <meta property="og:description" content="This chapter focusses on what everyone can and should be doing. The guidelines here do not require anything to be downloaded, so can be implemented immediately and easily. If you follow the principles laid out here, you are well on your way to making reproducible research.
 Before we can discuss how we should structure our projects and manage our data, we need to first talk about reproducible research.
@@ -388,19 +388,11 @@ What is reproducible work?"><meta property="og:image" content="/img/icon-192.png
   </div>
   
   <div class="docs-toc-item">
-    <a class="docs-toc-link" href="/tutorials/example/key-points/">Chapter 1 - The Basics for All</a>
+    <a class="docs-toc-link" href="/tutorials/example/example1-copy/">Chapter 1 - The Basics for All</a>
     <ul class="nav docs-sidenav">
       
-      <li >
-        <a href="/tutorials/example/key-points/">Key Points</a>
-      </li>
-      
       <li class="active">
-        <a href="/tutorials/example/example1/">Reproducible Work - An Introduction</a>
-      </li>
-      
-      <li >
-        <a href="/tutorials/example/project-structure/">Structuring a Project</a>
+        <a href="/tutorials/example/example1-copy/">Reproducible Work - An Introduction</a>
       </li>
       
     </ul>
@@ -437,8 +429,19 @@ What is reproducible work?"><meta property="og:image" content="/img/icon-192.png
 <li>
 <ul>
 <li><a href="#what-is-reproducible-work">What is reproducible work?</a></li>
-<li><a href="#why-is-it-important">Why is it important?</a></li>
+<li><a href="#why-is-it-important">Why is it important?</a>
+<ul>
 <li><a href="#how-do-i-make-reproducible-work">How do I make reproducible work?</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#structuring-a-project">Structuring a project</a>
+<ul>
+<li><a href="#data"><code>data/</code></a></li>
+<li><a href="#other-subdirectories">Other subdirectories</a></li>
+<li><a href="#how-to-name-files">How to name files</a></li>
+<li><a href="#what-is-sensitive-data">What is sensitive data?</a></li>
+<li><a href="#project-structure-summary">Project structure summary</a></li>
+<li><a href="#key-points">Key Points</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -477,9 +480,130 @@ What is reproducible work?"><meta property="og:image" content="/img/icon-192.png
 
 <p>Simply put, mistakes happen. Projects also move between PHO employees. If your project is structured properly, you will have a code document that contains all of the relevant information, and it is easy to recreate the outcomes. Importantly, you will also have the necessary input files (and tracking of <strong>all</strong> their changes) stored within the project folder. That way, if you move computers, delete a document by accident, or hand over the project to another person, everything is neatly contained and can be reproduced without hassle.</p>
 
-<h2 id="how-do-i-make-reproducible-work">How do I make reproducible work?</h2>
+<h3 id="how-do-i-make-reproducible-work">How do I make reproducible work?</h3>
 
 <p>There are many different ways to make reproducible work. The information listed here should give you the foundations upon which you can build your own systems. However, the principles are the same and largely revolve around project structures and a version control system, such as Git.</p>
+
+<h1 id="structuring-a-project">Structuring a project</h1>
+
+<p>The first step in creating reproducible research is creating self-contained projects. Everything that goes in to, and comes out of, the project, should be contained within a single folder (directory). At PHO, it is best that you create these directories within your personal drive (<code>H:\</code>). I would recommend that you create a folder called <code>repos/</code> that your project folders live in, e.g. <code>H:/repos/proj/</code>. This way, if you like to store other files on your <code>H:\</code> drive, your project folders are neatly separated. Whilst we will discuss version control with Git <a href="#git">later</a>, I would suggest that you also routinely back up your project folder to either the shared team drives (<code>I:\</code> or SharePoint, depending on whether the data is <a href="#sensitive-data">sensitive</a>).</p>
+
+<p>Now you have set up your <code>repos/</code> folder in your <code>H:\</code> drive, it is time to create the project folder. This is the structure that I find works for me. You may want to find a variation on it that works for you, but the basic premise of keeping repositories self-contained should remain.</p>
+
+<pre><code>H:/
+└── repos/
+    └── proj/
+        ├── data/
+        ├── docs/
+        ├── figs/
+        ├── funs/
+        ├── out/
+        ├── cleaning.R
+        └── analysis.R
+</code></pre>
+
+<p>As you can see, the project repository contains separate directories that you can use to store different file types. Importantly, the analysis and cleaning files are stored in the project root, allowing easy use of relative paths over explicit paths e.g. <code>read_csv(here('data', 'data_file.csv'))</code> rather than <code>read_csv('C:/Users/owner/Documents/Repos/my_project/data/data_file.csv')</code>. The reason why relative paths are preferable is that they allow projects to be used by multiple people without the need to re-write code. If you use explicit paths and change computer, or the project is opened by another person, the code will break as they will not have the same directory structure as the computer that the code was created on.</p>
+
+<blockquote>
+<p><strong>Note:</strong> the example above used an R package called <code>here_here</code>, calling the function <code>here()</code>. Similar solutions may exist for other languages, and you should try and find them for the language of your choice.</p>
+</blockquote>
+
+<h2 id="data"><code>data/</code></h2>
+
+<p>An important idea is that you should <strong>treat your data as read-only</strong>. You and your team have likely worked hard to collect the data and it&rsquo;s easy to make a changes along the way that you either forget about, or need to reverse. As most projects span a long time between the data collection and analysis stages, if that happens to you it will take a lot of work to figure out exactly which changes you are interested in reversing etc. To save yourself this hassle, and help make your work reproducible, <strong>once the data is collected it should not be edited</strong>; all the work should happen in your code, allowing it to be easily checked.</p>
+
+<p>If you are following good data practices and treating your data as read-only, all your cleaning will happen within your code (create a cleaning file in your project e.g. <code>proj-cleaning.R</code>). However, if you do need to edit the files manually (<strong>and I strongly recommend against it</strong> as it makes it harder to reproduce as there isn&rsquo;t a good way to track exactly what changes were made), you should create a save a new (separate) copy of the dataset (using file <a href="#how-to-name-files">naming conventions</a>) in your project directory (e.g. <code>H:/repos/proj/2019-01-24_data-file.csv</code>). Additionally, you should create a word document where you can list the changes you made with each new file. When we get to the section on <a href="#git">Git</a>, you will see how we can set it up to track all the changes within a project folder (including the create/deletion/movement of files!) so we don&rsquo;t have to remember what changes we make. This means we can just have one copy of each document, and track the changes through time.</p>
+
+<h2 id="other-subdirectories">Other subdirectories</h2>
+
+<ul>
+<li><code>docs/</code>: this contains the output documents. For example, if you are using R Markdown to create a pdf via LaTeX, you could place them here.</li>
+<li><code>funs/</code>: this contains the functions you write and might want to reference. The idea is to create functions so that can give code a meaningful name. It also helps if you need to repeat a code chunk multiple times, especially if you need to edit it at some point, as you can just call the function rather than typing it out each time.</li>
+<li><code>out/</code>: this contains files that are produced from the original data e.g. cleaned data files. You can then call them in your analysis scripts.</li>
+<li><code>figs/</code>: this contains figures that may be generated from your scripts.</li>
+</ul>
+
+<p>Importantly, if you follow the principle that your <code>data/</code> files are read-only, all of the files in these directories (with the exception of <code>funs/</code>) <em>should</em> be reproducible and could be deleted at any time without concern of generating them again. In order to revert to previous figures and output versions, you will need to be able to track changes in your code. This is where a <em>version control system</em> like Git comes in, which we will discuss in the next section.</p>
+
+<h2 id="how-to-name-files">How to name files</h2>
+
+<p>How you name files and directories may not seem like an important point, but it can cause quite a headache if you try and use code to automate processes, and at best, it just slows things down. To quote Aaron Quinlan, a bioinformatician, <a href="https://twitter.com/aaronquinlan/status/711593127551733761" target="_blank">&ldquo;a space in a filename is a space in one&rsquo;s soul&rdquo;</a>.</p>
+
+<p>Instead try and use something like <a href="https://speakerdeck.com/jennybc/how-to-name-files" target="_blank">this</a>:</p>
+
+<ul>
+<li>KISS (<em>Keep It Simple Stupid</em>): use simple and consistent file names
+
+<ul>
+<li>It needs to be machine readable</li>
+<li>It needs to be human readable</li>
+<li>It needs to order well in a directory</li>
+</ul></li>
+<li>No special characters and <strong>no spaces</strong>!</li>
+<li>Use YYYY-MM-DD date format</li>
+<li>Use <code>-</code> to delimit words and <code>_</code> to delimit sections
+
+<ul>
+<li>i.e. <code>2019-01-19_my-data.csv</code></li>
+</ul></li>
+<li>Left-pad numbers
+
+<ul>
+<li>i.e. <code>01_my-data.csv</code> vs <code>1_my-data.csv</code></li>
+<li>If you don&rsquo;t, file orders get messed up when you get to double-digits</li>
+</ul></li>
+</ul>
+
+<h2 id="what-is-sensitive-data">What is sensitive data?</h2>
+
+<p>Some of the data you will be working with is sensitive. As such, we need to know the most appropriate places to store it, along with how it can be shared.</p>
+
+<p>Sensitive data refer to:</p>
+
+<ul>
+<li>Data which contain identifiable information</li>
+<li>Personal data (e.g. name, health card number, post code, etc.)</li>
+</ul>
+
+<p>These data contain information which can identify individual persons. Therefore, they must be carefully protected and only shared with those who have special permission. They are also not the norm and are typically used only when absolutely necessary.</p>
+
+<p>Non-sensitive data refer to:</p>
+
+<ul>
+<li>Data which have been de-identified (e.g. unique identifier)</li>
+<li>Aggregated data (e.g. post code region)</li>
+</ul>
+
+<p>Because these data are designed not to be traceable to the individual level, less care and protection is required. However, safeguards are still often used for reassurance.</p>
+
+<p>As alluded to earlier, if you have sensitive data, you should not store your backups on the <code>I:\</code> drive/SharePoint *<em>delete as appropriate</em>*, instead opting to use the <code>I:\</code> drive/SharePoint *<em>delete as appropriate</em>*.</p>
+
+<h2 id="project-structure-summary">Project structure summary</h2>
+
+<p>If you&rsquo;ve followed the steps up until here, you will have a project folder in your <code>H:\</code> drive and the shared team drives, complete with all data and output files, and images and tables etc. generated. Most importantly, your project folder will contain a final copy of your code so your results could be replicated if necessary. Ideally, this code will contain your final results in one easy-to-distribute package. This can be done in either a Microsoft Excel or Word file with all code typed and results copy and pasted, or by using a <a href="#jupyter-notebooks">Jupyter notebook</a> as we advocate for here.</p>
+
+<h2 id="key-points">Key Points</h2>
+
+<ul>
+<li>Use a version control system such as Git to track changes in your code.</li>
+<li>Data isn&rsquo;t touched one collected:
+
+<ul>
+<li>Do all <em>data munging</em> within your program i.e. no editing the excel spreadsheets!!!</li>
+<li>You should have an untouched copy of your data on your <code>H:\</code> drive <strong>and</strong> the shared team drives</li>
+</ul></li>
+<li>Your outputs should be reproducible from the code you have:
+
+<ul>
+<li>Make sure this is the case by routinely clearing your programming environment and re-running the code in a clean environment to ensure your results aren&rsquo;t contingent on <em>&lsquo;hidden&rsquo;</em> packages/modules that were <a href="https://onunicornsandgenes.blog/2017/04/02/using-r-dont-save-your-workspace/" target="_blank">loaded erroneously</a></li>
+</ul></li>
+<li>Never set explicit file paths (e.g. <code>setwd()</code>) if you can avoid it
+
+<ul>
+<li>Try and use a package that allows you to set relative paths e.g. <code>here_here</code> in R. This allows the project to be passed to someone else in its entirety and the code won&rsquo;t break because they don&rsquo;t have the same folder names and set up as you (also if you work on multiple computers/OS)</li>
+</ul></li>
+<li>Format your filenames properly</li>
+</ul>
 
           </div>
 
@@ -496,7 +620,7 @@ What is reproducible work?"><meta property="og:image" content="/img/icon-192.png
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/tutorials/example/example2/" rel="prev"></a>
+    <a href="/tutorials/example/example1/" rel="prev">Reproducible Work - An Introduction</a>
   </div>
   
 </div>
@@ -510,7 +634,7 @@ What is reproducible work?"><meta property="og:image" content="/img/icon-192.png
 
           
 <p class="edit-page">
-  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/tutorials%5cexample%5cexample1.md">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/tutorials%5cexample%5cexample1%20-%20Copy.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>
