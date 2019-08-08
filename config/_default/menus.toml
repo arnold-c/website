@@ -27,10 +27,10 @@
   name = "Contact"
   url = "#contact"
   weight = 60
-  
+
 [[main]]
-  name = "Tutes"  # Title of the link.
-  url = "Tute/"  # Widget Page folder name.
+  name = "Teaching"  # Title of the link.
+  url = "Teaching/"  # Widget Page folder name.
   weight = 70  # Position of the link in the navigation bar.
 
 # Link to a PDF of your resume/CV from the menu.
