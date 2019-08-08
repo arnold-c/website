@@ -3,7 +3,7 @@ date: "2019-05-05T00:00:00+01:00"
 draft: false
 linktitle: 1. Reproducible Work - An Introduction
 menu:
-  example:
+  repro-research:
     parent: Chapter 1 - The Basics for All
     weight: 1
 title: Reproducible Work - An Introduction

@@ -14,9 +14,9 @@
     
     <item>
       <title>Reproducible Work - An Introduction</title>
-      <link>/tutorials/example/repro-intro/</link>
+      <link>/tutorials/repro-research/repro-intro/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/example/repro-intro/</guid>
+      <guid>/tutorials/repro-research/repro-intro/</guid>
       <description>
 
 &lt;p&gt;This chapter focusses on what everyone can and should be doing. The guidelines here do not require anything to be downloaded, so can be implemented immediately and easily. If you follow the principles laid out here, you are well on your way to making reproducible research.&lt;/p&gt;
@@ -47,9 +47,9 @@
     
     <item>
       <title>Structuring a Project</title>
-      <link>/tutorials/example/project-structure/</link>
+      <link>/tutorials/repro-research/project-structure/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/example/project-structure/</guid>
+      <guid>/tutorials/repro-research/project-structure/</guid>
       <description>
 
 &lt;p&gt;The first step in creating reproducible research is creating self-contained projects. Everything that goes in to, and comes out of, the project, should be contained within a single folder (directory). At PHO, it is best that you create these directories within your personal drive (&lt;code&gt;H:\&lt;/code&gt;). I would recommend that you create a folder called &lt;code&gt;repos/&lt;/code&gt; that your project folders live in, e.g. &lt;code&gt;H:/repos/proj/&lt;/code&gt;. This way, if you like to store other files on your &lt;code&gt;H:\&lt;/code&gt; drive, your project folders are neatly separated. Whilst we will discuss version control with Git &lt;a href=&#34;#git&#34;&gt;later&lt;/a&gt;, I would suggest that you also routinely back up your project folder to either the shared team drives (&lt;code&gt;I:\&lt;/code&gt; or SharePoint, depending on whether the data is &lt;a href=&#34;#sensitive-data&#34;&gt;sensitive&lt;/a&gt;).&lt;/p&gt;
@@ -152,9 +152,9 @@
     
     <item>
       <title>Key Points</title>
-      <link>/tutorials/example/key-points/</link>
+      <link>/tutorials/repro-research/key-points/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/example/key-points/</guid>
+      <guid>/tutorials/repro-research/key-points/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Use a version control system such as Git to track changes in your code.&lt;/li&gt;
 &lt;li&gt;Data isn&amp;rsquo;t touched one collected:
@@ -668,6 +668,14 @@ $$&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Landing Page</title>
+      <link>/tute/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>/tute/</guid>
+      <description></description>
     </item>
     
     <item>
