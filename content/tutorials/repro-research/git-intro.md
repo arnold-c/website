@@ -1,11 +1,11 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
 draft: false
-linktitle: 1. Git - An Introduction
+linktitle:
 menu:
   repro-research:
     parent: Chapter 2 - Git
-    weight: 2
+    weight: 4
 title: Git - An Introduction
 toc: true
 type: docs

@@ -1,11 +1,11 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
 draft: false
-linktitle: 4. Output Documents
+linktitle:
 menu:
   repro-research:
     parent: Chapter 3 - Notebooks
-    weight: 3
+    weight: 14
 title: Output Documents
 toc: true
 type: docs

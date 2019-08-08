@@ -1,11 +1,11 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
 draft: false
-linktitle: 1. Notebooks - An Introduction
+linktitle:
 menu:
   repro-research:
     parent: Chapter 3 - Notebooks
-    weight: 3
+    weight: 11
 title: Notebooks - An Introduction
 toc: true
 type: docs

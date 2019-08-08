@@ -1,11 +1,11 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
 draft: false
-linktitle: 7. Branching
+linktitle:
 menu:
   repro-research:
     parent: Chapter 2 - Git
-    weight: 2
+    weight: 10
 title: Branching
 toc: true
 type: docs

@@ -1,11 +1,11 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
 draft: false
-linktitle: 3. Using Jupyter Notebooks
+linktitle:
 menu:
   repro-research:
     parent: Chapter 3 - Notebooks
-    weight: 3
+    weight: 13
 title: Using Jupyter Notebooks
 toc: true
 type: docs

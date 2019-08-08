@@ -1,11 +1,11 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
 draft: false
-linktitle: 3. Key Points
+linktitle:
 menu:
   repro-research:
     parent: Chapter 1 - The Basics for All
-    weight: 1
+    weight: 3
 title: Key Points
 toc: true
 type: docs
