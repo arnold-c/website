@@ -14,9 +14,9 @@
     
     <item>
       <title>Reproducible Work - An Introduction</title>
-      <link>/tutorials/repro-research/repro-intro/</link>
+      <link>/courses/repro-research/repro-intro/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/repro-research/repro-intro/</guid>
+      <guid>/courses/repro-research/repro-intro/</guid>
       <description>
 
 &lt;p&gt;This chapter focusses on what everyone can and should be doing. The guidelines here do not require anything to be downloaded, so can be implemented immediately and easily. If you follow the principles laid out here, you are well on your way to making reproducible research.&lt;/p&gt;
@@ -47,9 +47,9 @@
     
     <item>
       <title>Structuring a Project</title>
-      <link>/tutorials/repro-research/project-structure/</link>
+      <link>/courses/repro-research/project-structure/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/repro-research/project-structure/</guid>
+      <guid>/courses/repro-research/project-structure/</guid>
       <description>
 
 &lt;p&gt;The first step in creating reproducible research is creating self-contained projects. Everything that goes in to, and comes out of, the project, should be contained within a single folder (directory). At PHO, it is best that you create these directories within your personal drive (&lt;code&gt;H:\&lt;/code&gt;). I would recommend that you create a folder called &lt;code&gt;repos/&lt;/code&gt; that your project folders live in, e.g. &lt;code&gt;H:/repos/proj/&lt;/code&gt;. This way, if you like to store other files on your &lt;code&gt;H:\&lt;/code&gt; drive, your project folders are neatly separated. Whilst we will discuss version control with Git &lt;a href=&#34;#git&#34;&gt;later&lt;/a&gt;, I would suggest that you also routinely back up your project folder to either the shared team drives (&lt;code&gt;I:\&lt;/code&gt; or SharePoint, depending on whether the data is &lt;a href=&#34;#sensitive-data&#34;&gt;sensitive&lt;/a&gt;).&lt;/p&gt;
@@ -152,9 +152,9 @@
     
     <item>
       <title>Key Points</title>
-      <link>/tutorials/repro-research/key-points/</link>
+      <link>/courses/repro-research/key-points/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/repro-research/key-points/</guid>
+      <guid>/courses/repro-research/key-points/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Use a version control system such as Git to track changes in your code.&lt;/li&gt;
 &lt;li&gt;Data isn&amp;rsquo;t touched one collected:
@@ -180,18 +180,18 @@
     
     <item>
       <title>Git - An Introduction</title>
-      <link>/tutorials/repro-research/git-intro/</link>
+      <link>/courses/repro-research/git-intro/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/repro-research/git-intro/</guid>
+      <guid>/courses/repro-research/git-intro/</guid>
       <description>&lt;p&gt;Think of it as tracked changes for your code. When working on a project, even if you&amp;rsquo;re the only one coding, it&amp;rsquo;s important to be able to go back to previous versions if you make a mistake and can&amp;rsquo;t remember all the steps you went through since your last stable version.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Setting Up Git</title>
-      <link>/tutorials/repro-research/git-setup/</link>
+      <link>/courses/repro-research/git-setup/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/repro-research/git-setup/</guid>
+      <guid>/courses/repro-research/git-setup/</guid>
       <description>
 
 &lt;p&gt;There are many ways to get Git running on your computer. Depending on your OS and the version you have, Git may come pre-installed on your computer. However, it is a good idea to update it to the latest version, so I&amp;rsquo;d recommend you follow the steps below anyway.&lt;/p&gt;
@@ -249,18 +249,18 @@ git config --global user.email &#39;my_email@gmail.com&#39;
     
     <item>
       <title>Git Client</title>
-      <link>/tutorials/repro-research/git-client/</link>
+      <link>/courses/repro-research/git-client/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/repro-research/git-client/</guid>
+      <guid>/courses/repro-research/git-client/</guid>
       <description>&lt;p&gt;Now you have Git installed, there are a number of ways to use it. The easiest way is to use a client, which allows you to use buttons instead of typing code. They also provide a visual for more complicated ideas, such as branching, greatly simplifying the process. I prefer to use the SourceTree client, but you can use others. GitKraken is a good alternative, and nicely, it also works on Linux, which many clients don’t. I have had some issues connecting SourceTree with GitHub, so have moved towards GitKraken for some projects, and have no qualms with it so far.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Remote Repositories</title>
-      <link>/tutorials/repro-research/remotes/</link>
+      <link>/courses/repro-research/remotes/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/repro-research/remotes/</guid>
+      <guid>/courses/repro-research/remotes/</guid>
       <description>
 
 &lt;p&gt;It is not essential, but one of the best things about Git is that online repositories create an easier way to sync your work between computers and colleagues, avoiding much of the mess caused when this work happens simultaneously/(insert file sharing system of choice) isn&amp;rsquo;t syncing properly. In this section, I will explain the correct way to utilize this, and the other way &amp;hellip;&lt;/p&gt;
@@ -391,9 +391,9 @@ git commit -m &amp;quot;your commit message&amp;quot;
     
     <item>
       <title>Creating a Repositories</title>
-      <link>/tutorials/repro-research/create-repo/</link>
+      <link>/courses/repro-research/create-repo/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/repro-research/create-repo/</guid>
+      <guid>/courses/repro-research/create-repo/</guid>
       <description>
 
 &lt;p&gt;*&lt;em&gt;This section will need to be updated after figuring out the PHO system&lt;/em&gt;*&lt;/p&gt;
@@ -446,9 +446,9 @@ git commit -m &amp;quot;your commit message&amp;quot;
     
     <item>
       <title>Basic Commands</title>
-      <link>/tutorials/repro-research/basic-commands/</link>
+      <link>/courses/repro-research/basic-commands/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/repro-research/basic-commands/</guid>
+      <guid>/courses/repro-research/basic-commands/</guid>
       <description>&lt;p&gt;There are many commands that you could learn in Git, but these are the basics, and will be sufficient for pretty much everything you&amp;rsquo;ll need to do at the moment.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -467,9 +467,9 @@ git commit -m &amp;quot;your commit message&amp;quot;
     
     <item>
       <title>Branching</title>
-      <link>/tutorials/repro-research/branching/</link>
+      <link>/courses/repro-research/branching/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/repro-research/branching/</guid>
+      <guid>/courses/repro-research/branching/</guid>
       <description>
 
 &lt;p&gt;Branching is a key part of the Git work-flow. It allows you to make changes to your code, without worrying about breaking previously &amp;lsquo;good&amp;rsquo; code. But what is it?&lt;/p&gt;
@@ -512,9 +512,9 @@ git commit -m &amp;quot;your commit message&amp;quot;
     
     <item>
       <title>Notebooks - An Introduction</title>
-      <link>/tutorials/repro-research/notebooks-intro/</link>
+      <link>/courses/repro-research/notebooks-intro/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/repro-research/notebooks-intro/</guid>
+      <guid>/courses/repro-research/notebooks-intro/</guid>
       <description>&lt;p&gt;This chapter is aimed at those who are able to download the programming language Python. This should hopefully be everyone, as it does not currently require administrative privileges, but we cannot guarantee this will be the case in the future.&lt;/p&gt;
 
 &lt;p&gt;There are many different types of notebooks, but we will only explore Jupyter notebooks. The reason why we won&amp;rsquo;t look at other options is because Jupyter notebooks are very well established and have numerous kernels available that allow for the use of many different statistical and programming languages. &lt;strong&gt;Note:&lt;/strong&gt; if you are using R, you should be using RStudio in combination with R Notebooks or Rmd files (or using &lt;code&gt;#&#39;&lt;/code&gt; in your &lt;code&gt;.R&lt;/code&gt; scripts to insert markdown comments), which are far more suited to R than Jupyter is.&lt;/p&gt;
@@ -527,9 +527,9 @@ git commit -m &amp;quot;your commit message&amp;quot;
     
     <item>
       <title>Setting Up Jupyter Notebooks</title>
-      <link>/tutorials/repro-research/setup-jupyter/</link>
+      <link>/courses/repro-research/setup-jupyter/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/repro-research/setup-jupyter/</guid>
+      <guid>/courses/repro-research/setup-jupyter/</guid>
       <description>
 
 &lt;p&gt;This section will give you a brief overview of what a Jupyter notebook is and how to use them, but if you would like a more detailed understanding, please read the official &lt;a href=&#34;https://jupyter-notebook.readthedocs.io/en/stable/notebook.html&#34; target=&#34;_blank&#34;&gt;documentation&lt;/a&gt;. Jupyter Labs has now been released as a newer version of notebooks, giving you a full IDE (integrated development environment) and more control over the notebooks and working environment. This guide will not explore these features, as we are more interested in how to use the notebook.&lt;/p&gt;
@@ -743,9 +743,9 @@ sas        /home/sas/.local/share/jupyter/kernels/sas
     
     <item>
       <title>Using Jupyter Notebooks</title>
-      <link>/tutorials/repro-research/using-jupyter/</link>
+      <link>/courses/repro-research/using-jupyter/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/repro-research/using-jupyter/</guid>
+      <guid>/courses/repro-research/using-jupyter/</guid>
       <description>
 
 &lt;p&gt;Now you have set up Jupyter to run with the programming language of your choice, we should start using it. How you do that is detailed in this section.&lt;/p&gt;
@@ -854,9 +854,9 @@ sas        /home/sas/.local/share/jupyter/kernels/sas
     
     <item>
       <title>Output Documents</title>
-      <link>/tutorials/repro-research/jupyter-output/</link>
+      <link>/courses/repro-research/jupyter-output/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/tutorials/repro-research/jupyter-output/</guid>
+      <guid>/courses/repro-research/jupyter-output/</guid>
       <description>&lt;p&gt;We&amp;rsquo;ve covered a lot of information up until now about setting up your projects and your code, but a big part of reproducible research is the creation of nice-looking documents. The reason we&amp;rsquo;ve gone to such effort to install Jupyter notebooks and connect them with our language of choice is that not only do they allow for excellent data exploration, but they also make documents that look professional.&lt;/p&gt;
 
 &lt;p&gt;In scientific articles, whilst it&amp;rsquo;s not essential, LaTeX is a nice touch, and Jupyter can give you a LaTeX formatted pdf documents. To do this, you will first need to install LaTeX. If you are on Windows, I would recommend the &lt;a href=&#34;https://miktex.org/download&#34; target=&#34;_blank&#34;&gt;MiKTeX&lt;/a&gt; distribution, and if you use a Mac, then I would recommend the &lt;a href=&#34;http://www.tug.org/mactex/mactex-download.html&#34; target=&#34;_blank&#34;&gt;MacTeX&lt;/a&gt; distribution. You will also need the &amp;ldquo;swiss-army knife&amp;rdquo; of file conversion, &lt;a href=&#34;https://pandoc.org/installing.html&#34; target=&#34;_blank&#34;&gt;pandoc&lt;/a&gt;. Pandoc is not &lt;em&gt;needed&lt;/em&gt; for creating LaTeX-formatted pdfs, but if you have documents with unsupported characters and you need to use a different &lt;code&gt;pdf-engine&lt;/code&gt; you&amp;rsquo;ll need to use pandoc.&lt;/p&gt;
@@ -1364,10 +1364,10 @@ $$&lt;/p&gt;
     </item>
     
     <item>
-      <title>Landing Page</title>
-      <link>/teaching/</link>
+      <title>Tutorials</title>
+      <link>/tutorials/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/teaching/</guid>
+      <guid>/tutorials/</guid>
       <description></description>
     </item>
     
@@ -1387,6 +1387,49 @@ $$&lt;/p&gt;
       <guid>/terms/</guid>
       <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>External Project</title>
+      <link>/tutorial/external-project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/tutorial/external-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Internal Project</title>
+      <link>/tutorial/internal-project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/tutorial/internal-project/</guid>
+      <description>
+
+&lt;h1 id=&#34;this-is-the-first-section&#34;&gt;This is the First section&lt;/h1&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+
+&lt;h2 id=&#34;second-sections&#34;&gt;Second sections&lt;/h2&gt;
+
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+
+&lt;h3 id=&#34;third-section&#34;&gt;Third section&lt;/h3&gt;
+
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+
+&lt;h2 id=&#34;fourth-section&#34;&gt;Fourth section&lt;/h2&gt;
+
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Test Tute</title>
+      <link>/tutorial/test-tute/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/tutorial/test-tute/</guid>
+      <description></description>
     </item>
     
     <item>

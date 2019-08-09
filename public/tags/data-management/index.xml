@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data management | Callum Arnold</title>
+    <link>/tags/data-management/</link>
+      <atom:link href="/tags/data-management/index.xml" rel="self" type="application/rss+xml" />
+    <description>Data management</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Data management</title>
+      <link>/tags/data-management/</link>
+    </image>
+    
+    <item>
+      <title>Overview</title>
+      <link>/teaching/repro-research/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
+      <guid>/teaching/repro-research/</guid>
+      <description>&lt;p&gt;This tutorials’s focus is on how to produce reproducible research, and should serve as an introduction to data management and project organisation. Whilst there are many tools that we can use to ensure our projects and code are tidy and result in reproducible work, some of these are not possible to implement given the potential requirements for administrative priviges during set up. As such, I have divided this tutorial into multiple sections, progressively getting more involved as the tutorial continues. Whilst you may be able to utilise these more sophisticated tools, the core of reproducible research remains the same, so the first chapters still apply.&lt;/p&gt;
+
+&lt;p&gt;I hope that you enjoy the content and feel like you come away having learnt something useful, and that this tutorial can serve as a reference document for your future research. If you have any questions that cannot be answered within the tutorial, or you would like to contribute and improve this document, please contact me.&lt;/p&gt;
+
+&lt;p&gt;This document would not be possible without the contributions of Stephanie Hughes from Public Health Ontario, so thank you Steph!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

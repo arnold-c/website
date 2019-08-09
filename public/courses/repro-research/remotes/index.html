@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Callum Arnold">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="It is not essential, but one of the best things about Git is that online repositories create an easier way to sync your work between computers and colleagues, avoiding much of the mess caused when this work happens simultaneously/(insert file sharing system of choice) isn&rsquo;t syncing properly. In this section, I will explain the correct way to utilize this, and the other way &hellip;
+GitHub - the Good *This section will need to be updated after figuring out the PHO system*">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/courses/repro-research/remotes/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="rgb(251, 191, 183)">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.ea5ec11c34d113b933301e3cce3141da.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/courses/repro-research/remotes/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Callum Arnold">
+  <meta property="og:url" content="/courses/repro-research/remotes/">
+  <meta property="og:title" content="Remote Repositories | Callum Arnold">
+  <meta property="og:description" content="It is not essential, but one of the best things about Git is that online repositories create an easier way to sync your work between computers and colleagues, avoiding much of the mess caused when this work happens simultaneously/(insert file sharing system of choice) isn&rsquo;t syncing properly. In this section, I will explain the correct way to utilize this, and the other way &hellip;
+GitHub - the Good *This section will need to be updated after figuring out the PHO system*"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2019-05-05T00:00:00&#43;01:00">
+    
+    <meta property="article:modified_time" content="2019-05-05T00:00:00&#43;01:00">
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Remote Repositories | Callum Arnold</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Callum Arnold</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/tutorials/"><span>Tutorials</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/repro-research/">Overview</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/repro-research/repro-intro/">Chapter 1 - The Basics for All</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/repro-research/repro-intro/">Reproducible Work - An Introduction</a>
+      </li>
+      
+      <li >
+        <a href="/courses/repro-research/project-structure/">Structuring a Project</a>
+      </li>
+      
+      <li >
+        <a href="/courses/repro-research/key-points/">Key Points</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/repro-research/git-intro/">Chapter 2 - Git</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/repro-research/git-intro/">Git - An Introduction</a>
+      </li>
+      
+      <li >
+        <a href="/courses/repro-research/git-setup/">Setting Up Git</a>
+      </li>
+      
+      <li >
+        <a href="/courses/repro-research/git-client/">Git Client</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/repro-research/remotes/">Remote Repositories</a>
+      </li>
+      
+      <li >
+        <a href="/courses/repro-research/create-repo/">Creating a Repositories</a>
+      </li>
+      
+      <li >
+        <a href="/courses/repro-research/basic-commands/">Basic Commands</a>
+      </li>
+      
+      <li >
+        <a href="/courses/repro-research/branching/">Branching</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/repro-research/setup-jupyter/">Chapter 3 - Notebooks</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/repro-research/setup-jupyter/">Setting Up Jupyter Notebooks</a>
+      </li>
+      
+      <li >
+        <a href="/courses/repro-research/notebooks-intro/">Notebooks - An Introduction</a>
+      </li>
+      
+      <li >
+        <a href="/courses/repro-research/using-jupyter/">Using Jupyter Notebooks</a>
+      </li>
+      
+      <li >
+        <a href="/courses/repro-research/jupyter-output/">Output Documents</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#github-the-good">GitHub - the Good</a></li>
+<li><a href="#private-server">Private server</a>
+<ul>
+<li><a href="#dropbox-the-bad">Dropbox - the Bad</a>
+<ul>
+<li><a href="#git-remote-dropbox">git-remote-dropbox</a></li>
+<li><a href="#creating-a-dropbox-repository">Creating a Dropbox repository</a></li>
+</ul></li>
+<li><a href="#onedrive-google-drive-network-drive-others-the-ugly">OneDrive/Google Drive/Network Drive/others - the Ugly</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name">Remote Repositories</h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<p>It is not essential, but one of the best things about Git is that online repositories create an easier way to sync your work between computers and colleagues, avoiding much of the mess caused when this work happens simultaneously/(insert file sharing system of choice) isn&rsquo;t syncing properly. In this section, I will explain the correct way to utilize this, and the other way &hellip;</p>
+
+<h2 id="github-the-good">GitHub - the Good</h2>
+
+<p>*<em>This section will need to be updated after figuring out the PHO system</em>*</p>
+
+<p>GitHub is built for this. You should take full advantage of the effort and troubleshooting that has gone into the platform. <strong>Don&rsquo;t try and recreate the wheel</strong></p>
+
+<p>With GitHub now offering <a href="https://Github.com/pricing" target="_blank">unlimited free private repositories</a>, I would recommend that you set up an account with GitHub. The reason why I suggest GitHub over a different purpose-built platform (such as Bitbucket or GitLab) is the community. Previously, I would have recommended Bitbucket due to the unlimited free private repositories, but this is no longer a restriction with GitHub. With GitHub, if you ever want to make your code open-source, you immediately have access to the largest community of programmers who can help you improve your code, as well as putting it to good use. And isn&rsquo;t that why we do research?</p>
+
+<p>Now that you&rsquo;ve decided to use GitHub, it&rsquo;s very easy to register. Just click the link above and select the package you&rsquo;d like. If you have an academic email address, consider making this your primary email address on the account, as it gives you a <strong>PRO</strong> account unlimited collaborators on private repositories, unlike the standard account that limits it to 3 collaborators.</p>
+
+<p>Be sure to choose a user name that is easy to remember, and easy to find. I would suggest just using your name.</p>
+
+<p>Now you have a GitHub account set up, this is your <em>remote</em>. If you work on a project with collaborators, this can be shared with them. That way, collaborators can work on their own versions of the code on their <em>local</em> machine (computer), and when it&rsquo;s ready for other people to use/help write, they can <code>push</code> it to the <em>remote</em> where others can access it. Don&rsquo;t worry if you don&rsquo;t know what <code>push</code> is - we&rsquo;ll cover that <a href="#basic-commands">soon</a></p>
+
+<h2 id="private-server">Private server</h2>
+
+<p>It is possible to use and get the benefits of Git without a purpose-made online repository such as GitHub, but it&rsquo;s not as simple and it&rsquo;s not as stable. Because services like Dropbox and OneDrive are not built for storing and tracking changes in code and <em>dot</em> files, it can go wrong, especially when more than one author is involved. Of all the file syncing systems, Dropbox seems to be the best option due to the <a href="https://github.com/anishathalye/git-remote-dropbox" target="_blank">git-remote-dropbox extension</a>, but this is still inferior to GitHub etc. With these home-made systems, corruption of the project repository is a matter of &ldquo;when&rdquo;, not &ldquo;if&rdquo;. If you insist on using this option, go read the <a href="#basic-commands">git basic commands</a> first, come back, and read on &hellip;</p>
+
+<h3 id="dropbox-the-bad">Dropbox - the Bad</h3>
+
+<h4 id="git-remote-dropbox">git-remote-dropbox</h4>
+
+<p>Install the git-remote-dropbox extension. The instructions were copied from the <a href="https://github.com/anishathalye/git-remote-dropbox" target="_blank">documentation</a> and *<em>have not been tested</em>*.</p>
+
+<ol>
+<li>Install the helper with <code>pip install git-remote-dropbox</code>.</li>
+<li>Generate an OAuth 2 token by going to the app console, creating a Dropbox API app with &ldquo;Full Dropbox&rdquo; access (or &ldquo;App folder&rdquo; access if you prefer, if you&rsquo;re not going to be using Dropbox&rsquo;s sharing features to use git-remote-dropbox in a multi-user setup), and generating an access token for yourself.</li>
+
+<li><p>Save your OAuth token in <code>~/.config/git/git-remote-dropbox.json</code> or <code>~/.git-remote-dropbox.json</code>. The file should look something like this:</p>
+
+<pre><code>{
+&quot;default&quot;: &quot;xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx&quot;
+}
+</code></pre></li>
+</ol>
+
+<ul>
+<li><p>git-remote-dropbox supports using multiple Dropbox accounts. You can create OAuth tokens for different accounts and add them all to the config file, using a user-defined username as the key:</p>
+
+<pre><code>{
+&quot;alice&quot;: &quot;xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx&quot;,
+&quot;ben&quot;: &quot;xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx&quot;,
+&quot;charlie&quot;: &quot;xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx&quot;
+}
+</code></pre></li>
+
+<li><p>You can tell git-remote-dropbox to use the token corresponding to username by specifying a URL like <code>dropbox://username@/path/to/repo</code>.</p></li>
+
+<li><p>You can also specify the token inline by using a URL like <code>dropbox://:token@/path/to/repo</code>.</p></li>
+</ul>
+
+<h4 id="creating-a-dropbox-repository">Creating a Dropbox repository</h4>
+
+<p>Now you&rsquo;ve installed the helper extension, you can start using Dropbox for your <em>remote</em> repositories. Unless a project already exists with a Dropbox repository (i.e. you&rsquo;ve been added to the project and were not the one to set it up), I would recommend that you first create the repositories on your local machine using the steps below.</p>
+
+<ol>
+<li>Create a project folder on your computer <strong>(not in your Dropbox folder)</strong>, and open up the Git Bash within the folder</li>
+<li>Enter <code>git init</code> to initialize your folder as a Git repository</li>
+<li>Enter <code>git remote add origin &quot;dropbox:///path/to/repo&quot;</code></li>
+</ol>
+
+<p>If a repository already exists in a Dropbox folder, and you want to make a local copy, you can do the following:</p>
+
+<ol>
+<li>Create a project folder on your computer, and open up the Git Bash within the folder</li>
+<li>Enter <code>git clone &quot;dropbox:///path/to/repo&quot; -b master</code></li>
+</ol>
+
+<p>You are now set up to use Dropbox as your remote repository and can <code>commit</code>, <code>push</code>, and <code>pull</code> changes using the Git Bash commands:</p>
+
+<ul>
+<li><code>git add .</code> This <em>stages</em> the changes to your files, and it is essential to do before you <code>commit</code></li>
+<li><code>git commit -m &quot;your commit message&quot;</code></li>
+<li><code>git push origin master</code></li>
+<li><code>git pull origin master</code></li>
+</ul>
+
+<h3 id="onedrive-google-drive-network-drive-others-the-ugly">OneDrive/Google Drive/Network Drive/others - the Ugly</h3>
+
+<p>*<em>The instructions for this are based off the following articles and have not been tested</em>*.</p>
+
+<p><a href="https://blog.geekforbrains.com/how-to-use-dropbox-and-git-for-private-repos-e1d304d5ff79" target="_blank">https://blog.geekforbrains.com/how-to-use-dropbox-and-git-for-private-repos-e1d304d5ff79</a></p>
+
+<p><a href="http://autchen.github.io/guides/2016/03/10/git-onedrive.html" target="_blank">http://autchen.github.io/guides/2016/03/10/git-onedrive.html</a></p>
+
+<p><a href="http://tony.halcyonlane.com/blog/2011/09/22/Using-git-at-work-on-a-Windows-network-drive//" target="_blank">http://tony.halcyonlane.com/blog/2011/09/22/Using-git-at-work-on-a-Windows-network-drive//</a></p>
+
+<p><a href="https://medium.com/@techstreams/git-google-drive-simple-git-host-3a84db4fc1fd" target="_blank">https://medium.com/@techstreams/git-google-drive-simple-git-host-3a84db4fc1fd</a></p>
+
+<p>If you want to use a different file syncing system, then you need to create a <em>bare</em> remote repository. This is structured differently than a normal git repository, which makes it <em>slightly</em> better for use as a remote repository &hellip; but it&rsquo;s still a bad idea and can corrupt the project.</p>
+
+<ol>
+<li>Create/open an existing project folder on your computer <strong>(not in your OneDrive folder)</strong>, and open up the Git Bash within the folder</li>
+<li>Enter <code>git init</code> to initialize your folder as a Git repository</li>
+
+<li><p>Assuming you have files already in the directory, you should commit them using</p>
+
+<pre><code>git add --all
+git commit -m &quot;your commit message&quot;
+</code></pre></li>
+
+<li><p>Create the bare repo in OneDrive etc using</p>
+
+<ul>
+<li><code>git init --bare . ~/OneDrive///path/to/repo/project.git</code></li>
+</ul></li>
+
+<li><p>Configure your remote using</p>
+
+<ul>
+<li><code>git remote add origin ~/OneDrive///path/to/repo/project.git</code></li>
+</ul></li>
+
+<li><p><code>push</code>/<code>pull</code> your commits using</p>
+
+<ul>
+<li><code>git push origin master</code></li>
+</ul></li>
+</ol>
+
+<p>You can share the OneDrive repository (folder) so that multiple people can work on the project. However, if you do this, <strong>it is essential you coordinate your <code>push</code>/<code>pull</code> commands to avoid corrupting the repository.</strong></p>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/repro-research/git-client/" rel="next">Git Client</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/repro-research/create-repo/" rel="prev">Creating a Repositories</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on May 5, 2019</p>
+
+          
+<p class="edit-page">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses%5crepro-research%5cremotes.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+        
+  </p>
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/python.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwW8WEH8AgaDS6dLvHTx8p2Tz5jpgNZcQ"></script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

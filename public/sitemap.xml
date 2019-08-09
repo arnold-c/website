@@ -3,77 +3,77 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/tutorials/repro-research/repro-intro/</loc>
+    <loc>/courses/repro-research/repro-intro/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tutorials/repro-research/</loc>
+    <loc>/courses/repro-research/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tutorials/repro-research/project-structure/</loc>
+    <loc>/courses/repro-research/project-structure/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tutorials/repro-research/key-points/</loc>
+    <loc>/courses/repro-research/key-points/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tutorials/repro-research/git-intro/</loc>
+    <loc>/courses/repro-research/git-intro/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tutorials/repro-research/git-setup/</loc>
+    <loc>/courses/repro-research/git-setup/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tutorials/repro-research/git-client/</loc>
+    <loc>/courses/repro-research/git-client/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tutorials/repro-research/remotes/</loc>
+    <loc>/courses/repro-research/remotes/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tutorials/repro-research/create-repo/</loc>
+    <loc>/courses/repro-research/create-repo/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tutorials/repro-research/basic-commands/</loc>
+    <loc>/courses/repro-research/basic-commands/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tutorials/repro-research/branching/</loc>
+    <loc>/courses/repro-research/branching/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tutorials/repro-research/notebooks-intro/</loc>
+    <loc>/courses/repro-research/notebooks-intro/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tutorials/repro-research/setup-jupyter/</loc>
+    <loc>/courses/repro-research/setup-jupyter/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tutorials/repro-research/using-jupyter/</loc>
+    <loc>/courses/repro-research/using-jupyter/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tutorials/repro-research/jupyter-output/</loc>
+    <loc>/courses/repro-research/jupyter-output/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
@@ -165,7 +165,7 @@
   </url>
   
   <url>
-    <loc>/teaching/</loc>
+    <loc>/tutorials/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -177,6 +177,39 @@
   <url>
     <loc>/terms/</loc>
     <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/deep-learning/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/demo/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tutorial/external-project/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tutorial/internal-project/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tutorial/test-tute/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tutorial/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -260,7 +293,7 @@
   </url>
   
   <url>
-    <loc>/tutorials/</loc>
+    <loc>/courses/</loc>
   </url>
   
 </urlset>

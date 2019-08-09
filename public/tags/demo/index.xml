@@ -14,9 +14,17 @@
     
     <item>
       <title>External Project</title>
-      <link>/project/external-project/</link>
+      <link>/tutorial/external-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/external-project/</guid>
+      <guid>/tutorial/external-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test Tute</title>
+      <link>/tutorial/test-tute/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/tutorial/test-tute/</guid>
       <description></description>
     </item>
     

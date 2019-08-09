@@ -28,11 +28,6 @@
   url = "#contact"
   weight = 60
 
-[[main]]
-  name = "Teaching"  # Title of the link.
-  url = "Teaching/"  # Widget Page folder name.
-  weight = 70  # Position of the link in the navigation bar.
-
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # [[main]]
