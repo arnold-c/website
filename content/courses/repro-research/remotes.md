@@ -4,19 +4,17 @@ draft: false
 linktitle:
 menu:
   repro-research:
-    parent: Chapter 2 - Git
-    weight: 7
+    parent: Chapter 3 - Git
+    weight: 11
 title: Remote Repositories
 toc: true
 type: docs
-weight: 7
+weight: 11
 ---
 
-It is not essential, but one of the best things about Git is that online repositories create an easier way to sync your work between computers and colleagues, avoiding much of the mess caused when this work happens simultaneously/(insert file sharing system of choice) isn't syncing properly. In this section, I will explain the correct way to utilize this, and the other way ...
+It is not essential, but one of the best things about Git is that online repositories create an easier way to sync your work between computers and colleagues, avoiding much of the mess caused when this work happens simultaneously / your file sharing system of choice isn't syncing properly. In this section, I will explain the correct way to utilize this, and the other way ...
 
 ## GitHub - the Good
-
-\**This section will need to be updated after figuring out the PHO system*\*
 
 GitHub is built for this. You should take full advantage of the effort and troubleshooting that has gone into the platform. **Don't try and recreate the wheel**
 
@@ -26,7 +24,7 @@ Now that you've decided to use GitHub, it's very easy to register. Just click th
 
 Be sure to choose a user name that is easy to remember, and easy to find. I would suggest just using your name.
 
-Now you have a GitHub account set up, this is your *remote*. If you work on a project with collaborators, this can be shared with them. That way, collaborators can work on their own versions of the code on their *local* machine (computer), and when it's ready for other people to use/help write, they can `push` it to the *remote* where others can access it. Don't worry if you don't know what `push` is - we'll cover that [soon](#basic-commands)
+Now you have a GitHub account set up, this is your *remote*. If you work on a project with collaborators, this can be shared with them. That way, collaborators can work on their own versions of the code on their *local* machine (computer), and when it's ready for other people to use/help write, they can `push` it to the *remote* where others can access it. Don't worry if you don't know what `push` is - we'll cover that [soon](#basic-commands).
 
 ## Private server
 

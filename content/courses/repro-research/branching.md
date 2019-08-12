@@ -4,12 +4,12 @@ draft: false
 linktitle:
 menu:
   repro-research:
-    parent: Chapter 2 - Git
-    weight: 10
+    parent: Chapter 3 - Git
+    weight: 14
 title: Branching
 toc: true
 type: docs
-weight: 10
+weight: 14
 ---
 
 Branching is a key part of the Git work-flow. It allows you to make changes to your code, without worrying about breaking previously 'good' code. But what is it?
@@ -20,15 +20,15 @@ Simply put, when you create another branch you are creating a copy of your code 
 
 > "But isn't that why we use Git?"
 
-Kind of. But Git is only so powerful. If you have working code, you don't want to put it out of action whilst you test ideas out, especially if other people need to use your code and can't wait for you to figure out your future problems. So creating another branch allows you to get around this issue. For most projects, you can get away with just two branches, a `master` and a `develop`, which are explained below. If your project is complex, and requires multiple people to work on the code at the same time, it would be worth you looking at implementing [this model](https://nvie.com/posts/a-successful-Git-branching-model/).
+Kind of. But Git is only so powerful. If you have working code, you don't want to put it out of action whilst you test ideas out, especially if other people need to use your code and can't wait for you to figure out your future problems. So creating another branch allows you to get around this issue. For most projects, you can get away with just two branches, a `master` and a `develop`, which are explained below. If your project is complex, and requires multiple people to work on the code at the same time, it would be worth you looking at implementing [this model](https://nvie.com/posts/a-successful-git-branching-model/).
 
 The image to the right is copied from the model listed above. It is useful in illustrating the `master` and `develop` approach to branching.
 
 ## Creating a branch
 
-As with all things in Git, you can do this multiple ways. I prefer to use the SourceTree client, as I find it far more intuitive when you can see the changes, but you can use the command line or Git bash. If you want to explore the command line code, I would recommend visiting [this website](https://learnGitbranching.js.org/), which allows you to interact with the code through illustrations.
+As with all things in Git, you can do this multiple ways. I prefer to use the client, as I find it far more intuitive when you can see the changes, but you can use the command line or Git bash. If you want to explore the command line code, I would recommend visiting [this website](https://learngitbranching.js.org/), which allows you to interact with the code through illustrations.
 
-When you are in SourceTree, open the repository you would like to create a branch in. You will notice that there are two buttons called `Branch` and `Merge`. If you click on `Branch`, you will see something like this
+When you are in your client (in this case, SourceTree), open the repository you would like to create a branch in. You will notice that there are two buttons called `Branch` and `Merge`. If you click on `Branch`, you will see something like this
 
 <img alt="guideline-b2aa08de.png" src="assets/guideline-b2aa08de.png" width="" height="" >
 
@@ -44,4 +44,4 @@ To do this, first you need to `checkout` the `master` branch, so you are merging
 
 <img alt="guideline-eeaa7b68.png" src="assets/guideline-eeaa7b68.png" width="150%" height="" >
 
-You have now merged your first feature. Whilst the `merge` feature is particularly useful, it is not the only way of doing this. `rebase` is another option that works in a slightly different way. It is slightly beyond the scope of this document, but you should read [this document](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) and visit [this website](https://learnGitbranching.js.org/), as suggested previously, to get practice putting them both into practice.
+You have now merged your first feature. Whilst the `merge` feature is particularly useful, it is not the only way of doing this. `rebase` is another option that works in a slightly different way. It is slightly beyond the scope of this document, but you should read [this document](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) and visit [this website](https://learngitbranching.js.org/), as suggested previously, to get experience of putting them both into practice.

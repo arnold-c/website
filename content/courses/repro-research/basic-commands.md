@@ -4,12 +4,12 @@ draft: false
 linktitle:
 menu:
   repro-research:
-    parent: Chapter 2 - Git
-    weight: 9
+    parent: Chapter 3 - Git
+    weight: 13
 title: Basic Commands
 toc: true
 type: docs
-weight: 9
+weight: 13
 ---
 
 There are many commands that you could learn in Git, but these are the basics, and will be sufficient for pretty much everything you'll need to do at the moment.

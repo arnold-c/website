@@ -4,17 +4,17 @@ draft: false
 linktitle:
 menu:
   repro-research:
-    parent: Chapter 3 - Notebooks
-    weight: 11
+    parent: Chapter 2 - Notebooks
+    weight: 4
 title: Notebooks - An Introduction
 toc: true
 type: docs
-weight: 11
+weight: 4
 ---
 
-This chapter is aimed at those who are able to download the programming language Python. This should hopefully be everyone, as it does not currently require administrative privileges, but we cannot guarantee this will be the case in the future.
+There are many different types of notebooks, but we will only explore Jupyter notebooks. The reason why we won't look at other options is because Jupyter notebooks are very well established and have numerous kernels available that allow for the use of many different statistical and programming languages.
 
-There are many different types of notebooks, but we will only explore Jupyter notebooks. The reason why we won't look at other options is because Jupyter notebooks are very well established and have numerous kernels available that allow for the use of many different statistical and programming languages. **Note:** if you are using R, you should be using RStudio in combination with R Notebooks or Rmd files (or using `#'` in your `.R` scripts to insert markdown comments), which are far more suited to R than Jupyter is.
+> **Note:** if you are using R, you should be using RStudio in combination with R Notebooks or Rmd files (or using `#'` in your `.R` scripts to insert markdown comments), which are far more suited to R than Jupyter is.
 
 But first, what is a notebook, and why should we use them?
 

@@ -4,12 +4,12 @@ draft: false
 linktitle:
 menu:
   repro-research:
-    parent: Chapter 2 - Git
-    weight: 6
+    parent: Chapter 3 - Git
+    weight: 10
 title: Git Client
 toc: true
 type: docs
-weight: 6
+weight: 10
 ---
 
-Now you have Git installed, there are a number of ways to use it. The easiest way is to use a client, which allows you to use buttons instead of typing code. They also provide a visual for more complicated ideas, such as branching, greatly simplifying the process. I prefer to use the SourceTree client, but you can use others. GitKraken is a good alternative, and nicely, it also works on Linux, which many clients don’t. I have had some issues connecting SourceTree with GitHub, so have moved towards GitKraken for some projects, and have no qualms with it so far.
+Now you have Git installed, there are a number of ways to use it. The easiest way is to use a client, which allows you to use buttons instead of typing code. They also provide a visual for more complicated ideas, such as branching, greatly simplifying the process. I prefer to use the [GitKraken](https://www.gitkraken.com/) client, and they're associated GloBoards for project To-Do's, but you can use others.[SourceTree](https://www.sourcetreeapp.com/) is another good alternative, but I have had some issues connecting to some GitHub accounts, so I have since moved away from it.
