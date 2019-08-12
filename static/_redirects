@@ -1,0 +1,6 @@
+# Redirect default Netlify subdomain to primary domain
+https://arnold-c.netlify.com/* https://arnold-c.rbind.io/:splat 301!
+http://arnold-c.netlify.com/* https://arnold-c.rbind.io/:splat 301!
+
+# Forces HTTPS
+http://arnold-c.rbind.io/* https://arnold-c.rbind.io/:splat  301!
