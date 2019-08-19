@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Callum Arnold</title>
+    <title>CALLUM ARNOLD</title>
     <link>/authors/admin/</link>
       <atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
-    <description>Callum Arnold</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <description>CALLUM ARNOLD</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <image>
       <url>/img/icon-192.png</url>
-      <title>Callum Arnold</title>
+      <title>CALLUM ARNOLD</title>
       <link>/authors/admin/</link>
     </image>
     
@@ -364,9 +364,9 @@ rm Untitled.md
     <item>
       <title></title>
       <link>/authors/admin/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/authors/admin/</guid>
-      <description>&lt;p&gt;I am a clinical research coordinator in the Infectious Disease Division at the Hospital for Sick Children, and am concurrently completing an MSc in Global Health Policy at LSHTM. Whilst completing my Masters in computational chemistry, I realised that I enjoyed research and computational modelling, but not enough to continue with chemistry. Since then, I have applied and developed my skills in Public Health research. My research interests are in infectious disease epidemiology, with a particular focus on the use of mathematical models to improve outbreak response and resource utilisation.&lt;/p&gt;
+      <description>&lt;p&gt;I am a clinical research coordinator in the Infectious Disease Division at the Hospital for Sick Children, and am concurrently completing an MSc in Global Health Policy at LSHTM. Whilst completing my Masters in computational chemistry, I realised that I enjoyed research and computational modelling, but wanted to work in a more applied healthcare-related field. Since then, I have applied and developed my skills in Public Health research. My research interests are in infectious disease epidemiology, with a particular focus on the use of mathematical models to improve outbreak response and resource utilisation.&lt;/p&gt;
 </description>
     </item>
     

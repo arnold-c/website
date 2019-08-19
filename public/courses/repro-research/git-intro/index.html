@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="Think of it as tracked changes for your code. When working on a project, even if you&rsquo;re the only one coding, it&rsquo;s important to be able to go back to previous versions if you make a mistake and can&rsquo;t remember all the steps you went through since your last stable version.">
+  <meta name="description" content="As mentioned, a version control system is an integral part of any reproducible research project. Think of it as tracked changes for your code. When working on a project, even if you&rsquo;re the only one coding, it&rsquo;s important to be able to go back to previous versions if you make a mistake and can&rsquo;t remember all the steps you went through since your last stable version. Git isn&rsquo;t the only VCS available, but it&rsquo;s the most prevalent, and has a good support community, so is what will be the focus in this book.">
 
   
   <link rel="alternate" hreflang="en-us" href="/courses/repro-research/git-intro/">
@@ -88,6 +88,20 @@
 
   
   
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-145604670-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
   
 
   
@@ -108,16 +122,16 @@
   
   <meta property="twitter:card" content="summary">
   
-  <meta property="og:site_name" content="Callum Arnold">
+  <meta property="og:site_name" content="CALLUM ARNOLD">
   <meta property="og:url" content="/courses/repro-research/git-intro/">
-  <meta property="og:title" content="Git - An Introduction | Callum Arnold">
-  <meta property="og:description" content="Think of it as tracked changes for your code. When working on a project, even if you&rsquo;re the only one coding, it&rsquo;s important to be able to go back to previous versions if you make a mistake and can&rsquo;t remember all the steps you went through since your last stable version."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:title" content="Git - An Introduction | CALLUM ARNOLD">
+  <meta property="og:description" content="As mentioned, a version control system is an integral part of any reproducible research project. Think of it as tracked changes for your code. When working on a project, even if you&rsquo;re the only one coding, it&rsquo;s important to be able to go back to previous versions if you make a mistake and can&rsquo;t remember all the steps you went through since your last stable version. Git isn&rsquo;t the only VCS available, but it&rsquo;s the most prevalent, and has a good support community, so is what will be the focus in this book."><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2019-05-05T00:00:00&#43;01:00">
+      <meta property="article:published_time" content="2019-08-12T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2019-05-05T00:00:00&#43;01:00">
+    <meta property="article:modified_time" content="2019-08-12T15:21:39-04:00">
   
 
   
@@ -129,7 +143,7 @@
 
 
 
-  <title>Git - An Introduction | Callum Arnold</title>
+  <title>Git - An Introduction | CALLUM ARNOLD</title>
 
 </head>
 
@@ -172,7 +186,7 @@
   <div class="container">
 
     
-      <a class="navbar-brand" href="/">Callum Arnold</a>
+      <a class="navbar-brand" href="/">CALLUM ARNOLD</a>
       
       <button type="button" class="navbar-toggler" data-toggle="collapse"
               data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -211,65 +225,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/#posts"><span>Posts</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
           <a class="nav-link " href="/#projects"><span>Projects</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#featured"><span>Publications</span></a>
         </li>
 
         
@@ -405,7 +361,32 @@
   </div>
   
   <div class="docs-toc-item">
-    <a class="docs-toc-link" href="/courses/repro-research/git-intro/">Chapter 2 - Git</a>
+    <a class="docs-toc-link" href="/courses/repro-research/notebooks-intro/">Chapter 2 - Notebooks</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/repro-research/notebooks-intro/">Notebooks - An Introduction</a>
+      </li>
+      
+      <li >
+        <a href="/courses/repro-research/setup-jupyter/">Setting Up Jupyter Notebooks</a>
+      </li>
+      
+      <li >
+        <a href="/courses/repro-research/using-jupyter/">Using Jupyter Notebooks</a>
+      </li>
+      
+      <li >
+        <a href="/courses/repro-research/jupyter-output/">Output Documents</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/repro-research/git-intro/">Chapter 3 - Git</a>
     <ul class="nav docs-sidenav">
       
       <li class="active">
@@ -436,29 +417,21 @@
         <a href="/courses/repro-research/branching/">Branching</a>
       </li>
       
+      <li >
+        <a href="/courses/repro-research/git-jupyter/">Git and Jupyter</a>
+      </li>
+      
     </ul>
     
 
   </div>
   
   <div class="docs-toc-item">
-    <a class="docs-toc-link" href="/courses/repro-research/setup-jupyter/">Chapter 3 - Notebooks</a>
+    <a class="docs-toc-link" href="/courses/repro-research/additional-resources/">Chapter 4 - Additional Resources</a>
     <ul class="nav docs-sidenav">
       
       <li >
-        <a href="/courses/repro-research/setup-jupyter/">Setting Up Jupyter Notebooks</a>
-      </li>
-      
-      <li >
-        <a href="/courses/repro-research/notebooks-intro/">Notebooks - An Introduction</a>
-      </li>
-      
-      <li >
-        <a href="/courses/repro-research/using-jupyter/">Using Jupyter Notebooks</a>
-      </li>
-      
-      <li >
-        <a href="/courses/repro-research/jupyter-output/">Output Documents</a>
+        <a href="/courses/repro-research/additional-resources/">Additional Resources</a>
       </li>
       
     </ul>
@@ -491,7 +464,7 @@
           <h1 itemprop="name">Git - An Introduction</h1>
 
           <div class="article-style" itemprop="articleBody">
-            <p>Think of it as tracked changes for your code. When working on a project, even if you&rsquo;re the only one coding, it&rsquo;s important to be able to go back to previous versions if you make a mistake and can&rsquo;t remember all the steps you went through since your last stable version.</p>
+            <p>As mentioned, a version control system is an integral part of any reproducible research project. Think of it as tracked changes for your code. When working on a project, even if you&rsquo;re the only one coding, it&rsquo;s important to be able to go back to previous versions if you make a mistake and can&rsquo;t remember all the steps you went through since your last stable version. Git isn&rsquo;t the only VCS available, but it&rsquo;s the most prevalent, and has a good support community, so is what will be the focus in this book.</p>
 
           </div>
 
@@ -508,7 +481,7 @@
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/courses/repro-research/key-points/" rel="next">Key Points</a>
+    <a href="/courses/repro-research/jupyter-output/" rel="next">Output Documents</a>
   </div>
   
   
@@ -525,7 +498,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on May 5, 2019</p>
+          <p>Last updated on Aug 12, 2019</p>
 
           
 <p class="edit-page">
