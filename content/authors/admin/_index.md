@@ -24,9 +24,9 @@ social:
 - icon: envelope
   icon_pack: fas
   link: '#contact'
-- icon: pubmed
+- icon: orcid
   icon_pack: ai
-  link: https://www.ncbi.nlm.nih.gov/pubmed/?term=callum+arnold
+  link: https://orcid.org/0000-0002-3245-6956
 - icon: researchgate
   icon_pack: ai
   link: https://www.researchgate.net/profile/Callum_Arnold
