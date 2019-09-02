@@ -10,7 +10,7 @@ education:
   - course: MChem Chemistry
     institution: University of Oxford
     year: 2011-2015
-email: ""
+email: "cal.rk.arnold@gmail.com"
 interests:
 - Infectious Disease Epidemiology
 - Mathematical Modelling of Infectious Diseases
