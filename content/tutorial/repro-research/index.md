@@ -1,7 +1,7 @@
 ---
 date: "2019-08-12T00:00:00Z"
 external_link: /courses/repro-research/
-url_project: "https://bookdown.org/arnold_c/repro-research/"
+url_slides: "https://bookdown.org/arnold_c/repro-research/"
 image:
   caption: Photo by Project Jupyter
   focal_point: Smart
