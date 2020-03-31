@@ -17,35 +17,24 @@
       <link>/courses/repro-research/repro-intro/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       <guid>/courses/repro-research/repro-intro/</guid>
-      <description>
-
-&lt;p&gt;This chapter focuses on what everyone can and should be doing. The guidelines here do not require anything to be downloaded, so can be implemented immediately and easily. If you follow the principles laid out here, you are well on your way to making reproducible research.&lt;/p&gt;
-
+      <description>&lt;p&gt;This chapter focuses on what everyone can and should be doing. The guidelines here do not require anything to be downloaded, so can be implemented immediately and easily. If you follow the principles laid out here, you are well on your way to making reproducible research.&lt;/p&gt;
 &lt;h2 id=&#34;what-is-reproducible-work&#34;&gt;What is reproducible work?&lt;/h2&gt;
-
 &lt;p&gt;At its core, reproducible research is about being transparent in how to produce the results you report. In doing so, this allows anyone with your data and code to reproduce the work you have produced. This includes you, as there will be many times you need to check results, and a reproducible workflow will allow you to spot mistakes easily, and give you confidence that the code and data you use give the reported outcome every time they are run.&lt;/p&gt;
-
 &lt;p&gt;Reproducible research:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Contains relevant code, including which packages were used, and which programming language was used&lt;/li&gt;
 &lt;li&gt;Contains enough text, either via markdown or comments, to be able to understand the purpose of the code chunks and code document
-
 &lt;ul&gt;
 &lt;li&gt;Ideally integrates code and results, along with text, into a single document (&lt;strong&gt;literate programming!&lt;/strong&gt;)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Applying good data quality control techniques to ensure that projects are self-contained so that all files and everything necessary to produce the output documents are easily accessible and accounted for&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;why-is-it-important&#34;&gt;Why is it important?&lt;/h2&gt;
-
 &lt;p&gt;Simply put, mistakes happen.  If your project is structured properly, you will have a code document that contains all of the relevant information, and it is easy to recreate the outcomes. Importantly, you will also have the necessary input files (and tracking of &lt;strong&gt;all&lt;/strong&gt; their changes) stored within the project folder. That way, if you move computers, delete a document by accident, or hand over the project to another person, everything is neatly contained and can be reproduced without hassle.&lt;/p&gt;
-
 &lt;h2 id=&#34;how-do-i-make-reproducible-work&#34;&gt;How do I make reproducible work?&lt;/h2&gt;
-
 &lt;p&gt;There are many different ways to make reproducible work. The information listed here should give you the foundations upon which you can build your own systems. However, the principles are the same and largely revolve around project structures, and dynamic documents that contain both the code and the results embedded in them. This way, updates to the code will automatically update results (including tables and figures), and you don’t need to worry about incorrectly copying the wrong version, or even retyping numbers in a table&lt;/p&gt;
-
-&lt;p&gt;In addition, a version control system like Git can prove to be an invaluable tool in making reproducible research. It is essential tracked changes for everything you do in a project: all the changes in your code, which files you produce, where you move files, the results your create … and the list goes on. We will talk through the basics of Git towards the end of this book, but if you would like a more in depth tutorial, you should read &lt;a href=&#34;https://happygitwithr.com/&#34; target=&#34;_blank&#34;&gt;this fantastic resource&lt;/a&gt; by Jenny Bryan and co. It is aimed at R users, but much of it is generalizable. More resources are available at the end of the document.&lt;/p&gt;
+&lt;p&gt;In addition, a version control system like Git can prove to be an invaluable tool in making reproducible research. It is essential tracked changes for everything you do in a project: all the changes in your code, which files you produce, where you move files, the results your create … and the list goes on. We will talk through the basics of Git towards the end of this book, but if you would like a more in depth tutorial, you should read &lt;a href=&#34;https://happygitwithr.com/&#34;&gt;this fantastic resource&lt;/a&gt; by Jenny Bryan and co. It is aimed at R users, but much of it is generalizable. More resources are available at the end of the document.&lt;/p&gt;
 </description>
     </item>
     
@@ -54,12 +43,8 @@
       <link>/courses/repro-research/project-structure/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       <guid>/courses/repro-research/project-structure/</guid>
-      <description>
-
-&lt;p&gt;The first step in creating reproducible research is creating self-contained projects. Everything that goes in to, and comes out of, the project, should be contained within a single folder (directory). I would recommend that you create a folder called &lt;code&gt;repos/&lt;/code&gt; that your project folders live in, e.g. &lt;code&gt;C:/User/owner/Documents/repos/proj/&lt;/code&gt;. This way your project folders are neatly separated from other files. Whilst we will discuss version control with Git &lt;a href=&#34;#git&#34;&gt;later&lt;/a&gt;, I would suggest that you also routinely back up your project folder to separate drives (cloud and/or external hard drives), using a &lt;a href=&#34;https://www.nakivo.com/blog/3-2-1-backup-rule-efficient-data-protection-strategy/&#34; target=&#34;_blank&#34;&gt;3-2-1 system&lt;/a&gt;.&lt;/p&gt;
-
+      <description>&lt;p&gt;The first step in creating reproducible research is creating self-contained projects. Everything that goes in to, and comes out of, the project, should be contained within a single folder (directory). I would recommend that you create a folder called &lt;code&gt;repos/&lt;/code&gt; that your project folders live in, e.g. &lt;code&gt;C:/User/owner/Documents/repos/proj/&lt;/code&gt;. This way your project folders are neatly separated from other files. Whilst we will discuss version control with Git &lt;a href=&#34;#git&#34;&gt;later&lt;/a&gt;, I would suggest that you also routinely back up your project folder to separate drives (cloud and/or external hard drives), using a &lt;a href=&#34;https://www.nakivo.com/blog/3-2-1-backup-rule-efficient-data-protection-strategy/&#34;&gt;3-2-1 system&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Now you have set up your &lt;code&gt;repos/&lt;/code&gt; folder, it is time to create the project folder. This is the structure that I find works for me. You may want to find a variation on it that works for you, but the basic premise of keeping repositories self-contained should remain.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;C:/
 └── Documents/
     └── repos/
@@ -71,58 +56,45 @@
             ├── out/
             ├── cleaning.R
             └── analysis.R
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As you can see, the project repository contains separate directories that you can use to store different file types. Importantly, the analysis and cleaning files are stored in the project root, allowing easy use of relative paths over explicit paths e.g. &lt;code&gt;read_csv(here(&#39;data&#39;, &#39;data_file.csv&#39;))&lt;/code&gt; rather than &lt;code&gt;read_csv(&#39;C:/Users/owner/Documents/Repos/my_project/data/data_file.csv&#39;)&lt;/code&gt;. The reason why relative paths are preferable is that they allow projects to be used by multiple people without the need to re-write code. If you use explicit paths and change computer, or the project is opened by another person, the code will break as they will not have the same directory structure as the computer that the code was created on.&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As you can see, the project repository contains separate directories that you can use to store different file types. Importantly, the analysis and cleaning files are stored in the project root, allowing easy use of relative paths over explicit paths e.g. &lt;code&gt;read_csv(here(&#39;data&#39;, &#39;data_file.csv&#39;))&lt;/code&gt; rather than &lt;code&gt;read_csv(&#39;C:/Users/owner/Documents/Repos/my_project/data/data_file.csv&#39;)&lt;/code&gt;. The reason why relative paths are preferable is that they allow projects to be used by multiple people without the need to re-write code. If you use explicit paths and change computer, or the project is opened by another person, the code will break as they will not have the same directory structure as the computer that the code was created on.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; the example above used an R package called &lt;code&gt;here_here&lt;/code&gt;, calling the function &lt;code&gt;here()&lt;/code&gt;. Similar solutions may exist for other languages, and you should try and find them for the language of your choice.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h2 id=&#34;data&#34;&gt;&lt;code&gt;data/&lt;/code&gt;&lt;/h2&gt;
-
 &lt;p&gt;An important idea is that you should &lt;strong&gt;treat your data as read-only&lt;/strong&gt;. You and your team have likely worked hard to collect the data and it&amp;rsquo;s easy to make a changes along the way that you either forget about, or need to reverse. As most projects span a long time between the data collection and analysis stages, if that happens to you it will take a lot of work to figure out exactly which changes you are interested in reversing etc. To save yourself this hassle, and help make your work reproducible, &lt;strong&gt;once the data is collected it should not be edited&lt;/strong&gt;; all the work should happen in your code, allowing it to be easily checked.&lt;/p&gt;
-
 &lt;p&gt;If you are following good data practices and treating your data as read-only, all your cleaning will happen within your code (create a cleaning file in your project e.g. &lt;code&gt;proj-cleaning.R&lt;/code&gt;). However, if you do need to edit the files manually (&lt;strong&gt;and I strongly recommend against it&lt;/strong&gt; as it makes it harder to reproduce as there isn&amp;rsquo;t a good way to track exactly what changes were made), you should create a save a new (separate) copy of the dataset (using file &lt;a href=&#34;#how-to-name-files&#34;&gt;naming conventions&lt;/a&gt;) in your project directory (e.g. &lt;code&gt;H:/repos/proj/2019-01-24_data-file.csv&lt;/code&gt;). Additionally, you should create a word document where you can list the changes you made with each new file. When we get to the section on &lt;a href=&#34;#git&#34;&gt;Git&lt;/a&gt;, you will see how we can set it up to track all the changes within a project folder (including the create/deletion/movement of files!) so we don&amp;rsquo;t have to remember what changes we make. This means we can just have one copy of each document, and track the changes through time.&lt;/p&gt;
-
 &lt;h2 id=&#34;other-subdirectories&#34;&gt;Other subdirectories&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;docs/&lt;/code&gt;: this contains the output documents. For example, if you are using R Markdown to create a pdf via LaTeX, you could place them here.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;funs/&lt;/code&gt;: this contains the functions you write and might want to reference. The idea is to create functions so that can give code a meaningful name. It also helps if you need to repeat a code chunk multiple times, especially if you need to edit it at some point, as you can just call the function rather than typing it out each time.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;out/&lt;/code&gt;: this contains files that are produced from the original data e.g. cleaned data files. You can then call them in your analysis scripts.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;figs/&lt;/code&gt;: this contains figures that may be generated from your scripts.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Importantly, if you follow the principle that your &lt;code&gt;data/&lt;/code&gt; files are read-only, all of the files in these directories (with the exception of &lt;code&gt;funs/&lt;/code&gt;) &lt;em&gt;should&lt;/em&gt; be reproducible and could be deleted at any time without concern of generating them again. In order to revert to previous figures and output versions, you will need to be able to track changes in your code. This is where a &lt;em&gt;version control system&lt;/em&gt; like Git comes in, which we will discuss at the end.&lt;/p&gt;
-
 &lt;h2 id=&#34;how-to-name-files-and-directories&#34;&gt;How to name files and directories&lt;/h2&gt;
-
-&lt;p&gt;How you name files and directories may not seem like an important point, but it can cause quite a headache if you try and use code to automate processes, and at best, it just slows things down. To quote Aaron Quinlan, a bioinformatician, &lt;a href=&#34;https://twitter.com/aaronquinlan/status/711593127551733761&#34; target=&#34;_blank&#34;&gt;&amp;ldquo;a space in a filename is a space in one&amp;rsquo;s soul&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Instead try and use something like &lt;a href=&#34;https://speakerdeck.com/jennybc/how-to-name-files&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt;:&lt;/p&gt;
-
+&lt;p&gt;How you name files and directories may not seem like an important point, but it can cause quite a headache if you try and use code to automate processes, and at best, it just slows things down. To quote Aaron Quinlan, a bioinformatician, &lt;a href=&#34;https://twitter.com/aaronquinlan/status/711593127551733761&#34;&gt;&amp;ldquo;a space in a filename is a space in one&amp;rsquo;s soul&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Instead try and use something like &lt;a href=&#34;https://speakerdeck.com/jennybc/how-to-name-files&#34;&gt;this&lt;/a&gt;:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;KISS (&lt;em&gt;Keep It Simple Stupid&lt;/em&gt;): use simple and consistent file names
-
 &lt;ul&gt;
 &lt;li&gt;It needs to be machine readable&lt;/li&gt;
 &lt;li&gt;It needs to be human readable&lt;/li&gt;
 &lt;li&gt;It needs to order well in a directory&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;No special characters and &lt;strong&gt;no spaces&lt;/strong&gt;!&lt;/li&gt;
 &lt;li&gt;Use YYYY-MM-DD date format&lt;/li&gt;
 &lt;li&gt;Use &lt;code&gt;-&lt;/code&gt; to delimit words and &lt;code&gt;_&lt;/code&gt; to delimit sections
-
 &lt;ul&gt;
 &lt;li&gt;i.e. &lt;code&gt;2019-01-19_my-data.csv&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Left-pad numbers
-
 &lt;ul&gt;
 &lt;li&gt;i.e. &lt;code&gt;01_my-data.csv&lt;/code&gt; vs &lt;code&gt;1_my-data.csv&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;If you don&amp;rsquo;t, file orders get messed up when you get to double-digits&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -135,21 +107,21 @@
       <description>&lt;ul&gt;
 &lt;li&gt;Use a version control system such as Git to track changes in your code.&lt;/li&gt;
 &lt;li&gt;Data isn&amp;rsquo;t touched one collected:
-
 &lt;ul&gt;
 &lt;li&gt;Do all &lt;em&gt;data munging&lt;/em&gt; within your program i.e. no editing the excel spreadsheets!!!&lt;/li&gt;
 &lt;li&gt;You should have multiple backups on at least two different sets of servers/drives&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Your outputs should be reproducible from the code you have:
-
 &lt;ul&gt;
-&lt;li&gt;Make sure this is the case by routinely clearing your programming environment and re-running the code in a clean environment to ensure your results aren&amp;rsquo;t contingent on &lt;em&gt;&amp;lsquo;hidden&amp;rsquo;&lt;/em&gt; packages/modules that were &lt;a href=&#34;https://onunicornsandgenes.blog/2017/04/02/using-r-dont-save-your-workspace/&#34; target=&#34;_blank&#34;&gt;loaded erroneously&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Make sure this is the case by routinely clearing your programming environment and re-running the code in a clean environment to ensure your results aren&amp;rsquo;t contingent on &lt;em&gt;&amp;lsquo;hidden&amp;rsquo;&lt;/em&gt; packages/modules that were &lt;a href=&#34;https://onunicornsandgenes.blog/2017/04/02/using-r-dont-save-your-workspace/&#34;&gt;loaded erroneously&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Never set explicit file paths (e.g. &lt;code&gt;setwd()&lt;/code&gt;) if you can avoid it
-
 &lt;ul&gt;
 &lt;li&gt;Try and use a package that allows you to set relative paths e.g. &lt;code&gt;here_here&lt;/code&gt; in R. This allows the project to be passed to someone else in its entirety and the code won&amp;rsquo;t break because they don&amp;rsquo;t have the same folder names and set up as you (also if you work on multiple computers/OS)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Format your filenames properly&lt;/li&gt;
 &lt;/ul&gt;
 </description>
@@ -161,14 +133,11 @@
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       <guid>/courses/repro-research/notebooks-intro/</guid>
       <description>&lt;p&gt;There are many different types of notebooks, but we will only explore Jupyter notebooks. The reason why we won&amp;rsquo;t look at other options is because Jupyter notebooks are very well established and have numerous kernels available that allow for the use of many different statistical and programming languages.&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; if you are using R, you should be using RStudio in combination with R Notebooks or Rmd files (or using &lt;code&gt;#&#39;&lt;/code&gt; in your &lt;code&gt;.R&lt;/code&gt; scripts to insert markdown comments), which are far more suited to R than Jupyter is.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;But first, what is a notebook, and why should we use them?&lt;/p&gt;
-
-&lt;p&gt;A notebook is a way of producing documents that mix plain text and code, which was one of the key goals at the beginning of this guide! Whilst &lt;a href=&#34;https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI/edit#slide=id.g3a428e2eb8_0_305&#34; target=&#34;_blank&#34;&gt;they are not perfect&lt;/a&gt; (though read &lt;a href=&#34;https://yihui.name/en/2018/09/notebook-war/&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt; to see some rebuttals), and should not be used for doing heavy coding and scripting, they are excellent for data exploration and producing output documents. You just need to be careful to run all the code in a fresh environment often enough to ensure you don&amp;rsquo;t have any &lt;em&gt;hidden&lt;/em&gt; packages/modules loaded in the background that aren&amp;rsquo;t part of your code.&lt;/p&gt;
+&lt;p&gt;A notebook is a way of producing documents that mix plain text and code, which was one of the key goals at the beginning of this guide! Whilst &lt;a href=&#34;https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI/edit#slide=id.g3a428e2eb8_0_305&#34;&gt;they are not perfect&lt;/a&gt; (though read &lt;a href=&#34;https://yihui.name/en/2018/09/notebook-war/&#34;&gt;this&lt;/a&gt; to see some rebuttals), and should not be used for doing heavy coding and scripting, they are excellent for data exploration and producing output documents. You just need to be careful to run all the code in a fresh environment often enough to ensure you don&amp;rsquo;t have any &lt;em&gt;hidden&lt;/em&gt; packages/modules loaded in the background that aren&amp;rsquo;t part of your code.&lt;/p&gt;
 </description>
     </item>
     
@@ -177,123 +146,83 @@
       <link>/courses/repro-research/setup-jupyter/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       <guid>/courses/repro-research/setup-jupyter/</guid>
-      <description>
-
-&lt;p&gt;This section will give you a brief overview of what a Jupyter notebook is and how to use them, but if you would like a more detailed understanding, please read the official &lt;a href=&#34;https://jupyter-notebook.readthedocs.io/en/stable/notebook.html&#34; target=&#34;_blank&#34;&gt;documentation&lt;/a&gt;. Jupyter Labs has now been released as a newer version of notebooks, giving you a full IDE (integrated development environment) and more control over the notebooks and working environment. This guide will not explore these features, as we are more interested in how to use the notebook.&lt;/p&gt;
-
+      <description>&lt;p&gt;This section will give you a brief overview of what a Jupyter notebook is and how to use them, but if you would like a more detailed understanding, please read the official &lt;a href=&#34;https://jupyter-notebook.readthedocs.io/en/stable/notebook.html&#34;&gt;documentation&lt;/a&gt;. Jupyter Labs has now been released as a newer version of notebooks, giving you a full IDE (integrated development environment) and more control over the notebooks and working environment. This guide will not explore these features, as we are more interested in how to use the notebook.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; throughout this section you can substitute the phrase &lt;em&gt;&amp;ldquo;Jupyter notebooks&amp;rdquo;&lt;/em&gt; with &lt;em&gt;&amp;ldquo;Jupyter Labs&amp;rdquo;&lt;/em&gt; if you would prefer to have a full IDE allowing you more control over the system.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;Jupyter notebooks are run on Python, though additional things can be downloaded to allow you to use your programming language of choice. For an example of what you can do with Jupyter notebooks, click &lt;a href=&#34;https://nbviewer.jupyter.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter1_Introduction/Ch1_Introduction_PyMC3.ipynb&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;, and &lt;a href=&#34;https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#programming-and-computer-science&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; for a collection of neat and applied notebooks.&lt;/p&gt;
-
+&lt;p&gt;Jupyter notebooks are run on Python, though additional things can be downloaded to allow you to use your programming language of choice. For an example of what you can do with Jupyter notebooks, click &lt;a href=&#34;https://nbviewer.jupyter.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter1_Introduction/Ch1_Introduction_PyMC3.ipynb&#34;&gt;here&lt;/a&gt;, and &lt;a href=&#34;https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#programming-and-computer-science&#34;&gt;here&lt;/a&gt; for a collection of neat and applied notebooks.&lt;/p&gt;
 &lt;h2 id=&#34;installing-jupyter-notebooks&#34;&gt;Installing Jupyter notebooks&lt;/h2&gt;
-
 &lt;p&gt;Mac&amp;rsquo;s come shipped with a version of Python, but it is most likely outdated, and it doesn&amp;rsquo;t contain everything we want. In order to get running, I strongly recommend downloading the Anaconda distribution over other distributions, or even just directly from Python&amp;rsquo;s website. The instructions below will be enough to get you up and running with Jupyter notebooks in your language of choice.&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Download the full &lt;a href=&#34;https://www.anaconda.com/download/&#34; target=&#34;_blank&#34;&gt;Anaconda&lt;/a&gt; distribution i.e. not miniconda
-
+&lt;li&gt;Download the full &lt;a href=&#34;https://www.anaconda.com/download/&#34;&gt;Anaconda&lt;/a&gt; distribution i.e. not miniconda
 &lt;ul&gt;
 &lt;li&gt;Be sure to choose &lt;code&gt;Python 3.x&lt;/code&gt;, not &lt;code&gt;Python 2.x&lt;/code&gt;, as it&amp;rsquo;s the newer version and is forwards-compatible.&lt;/li&gt;
 &lt;li&gt;Be sure to only install for one user, not the whole system&lt;/li&gt;
 &lt;li&gt;Be sure to select &lt;code&gt;Add Anaconda to my PATH environment variable&lt;/code&gt; under Advanced Options&lt;/li&gt;
 &lt;li&gt;Be sure to install Anaconda to the drive where your data lives. To do this you will need to manually edit the installation path within the Anaconda installer wizard, otherwise it will automatically end up in the &lt;code&gt;C:\&lt;/code&gt; drive&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Use &lt;code&gt;kernels&lt;/code&gt; to connect your programming language of choice with python and the notebook
-
 &lt;ul&gt;
 &lt;li&gt;To see how to get a particular language to work in Jupyter Notebooks, please click on the appropriate language:
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#installing-the-stata-kernel&#34;&gt;Stata&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#installing-the-sas-kernel&#34;&gt;SAS&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#connecting-r-with-jupyter&#34;&gt;R&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;kernels&#34;&gt;Kernels&lt;/h2&gt;
-
 &lt;p&gt;A kernel is program that allows the notebook to connect with, and run, your code. Jupyter comes with the Python code pre-installed, but if you want to use a different language, you will need to download a specific kernel.&lt;/p&gt;
-
-&lt;p&gt;Below, the installation instructions are described for common languages used in epidemiology. To see a full list of kernels available for Jupyter, along with the appropriate documentation and installation instructions, follow &lt;a href=&#34;https://github.com/jupyter/jupyter/wiki/Jupyter-kernels&#34; target=&#34;_blank&#34;&gt;this link&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;Below, the installation instructions are described for common languages used in epidemiology. To see a full list of kernels available for Jupyter, along with the appropriate documentation and installation instructions, follow &lt;a href=&#34;https://github.com/jupyter/jupyter/wiki/Jupyter-kernels&#34;&gt;this link&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;installing-the-stata-kernel&#34;&gt;Installing the Stata kernel&lt;/h3&gt;
-
-&lt;p&gt;The instructions for installing the &lt;code&gt;stata_kernel&lt;/code&gt; are based from the original documentation &lt;a href=&#34;https://kylebarron.github.io/stata_kernel/getting_started/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. It should work with &lt;code&gt;Stata 12&lt;/code&gt; (I have tested it). If these instructions do not work for you, it may be that there has been an update to the kernel, at which point, please refer to the original documentation linked above.&lt;/p&gt;
-
+&lt;p&gt;The instructions for installing the &lt;code&gt;stata_kernel&lt;/code&gt; are based from the original documentation &lt;a href=&#34;https://kylebarron.github.io/stata_kernel/getting_started/&#34;&gt;here&lt;/a&gt;. It should work with &lt;code&gt;Stata 12&lt;/code&gt; (I have tested it). If these instructions do not work for you, it may be that there has been an update to the kernel, at which point, please refer to the original documentation linked above.&lt;/p&gt;
 &lt;p&gt;Open a command prompt (Windows) / terminal (linux/mac) and type/copy-paste the following commands, pressing enter after each line&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;pip install stata_kernel&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;python -m stata_kernel.install&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;Windows-specific steps&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;In order to let &lt;code&gt;stata_kernel&lt;/code&gt; talk to Stata, you need to link the Stata Automation library:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;In the installation directory (most likely &lt;code&gt;C:\Program Files (x86)\Stata12&lt;/code&gt; or similar), right-click on the Stata executable, for example, &lt;code&gt;StataSE.exe&lt;/code&gt; (this will just show as &lt;code&gt;StataSE&lt;/code&gt;, but is listed as an application). Choose &lt;code&gt;Create Shortcut&lt;/code&gt;. Placing it on the Desktop is fine.&lt;/li&gt;
-&lt;li&gt;Right-click on the newly created &lt;code&gt;Shortcut to StataSE.exe&lt;/code&gt;, choose &lt;code&gt;Properties&lt;/code&gt;, and append&lt;code&gt;/Register&lt;/code&gt; to the end of the Target field. So if the target is currently &lt;code&gt;&amp;quot;C:\Program Files\Stata12\StataSE.exe&amp;quot;&lt;/code&gt;, change it to &lt;code&gt;&amp;quot;C:\Program Files\Stata12\StataSE.exe&amp;quot; /Register&lt;/code&gt; (note the space before &lt;code&gt;/&lt;/code&gt;). Click OK.&lt;/li&gt;
+&lt;li&gt;Right-click on the newly created &lt;code&gt;Shortcut to StataSE.exe&lt;/code&gt;, choose &lt;code&gt;Properties&lt;/code&gt;, and append&lt;code&gt; /Register&lt;/code&gt; to the end of the Target field. So if the target is currently &lt;code&gt;&amp;quot;C:\Program Files\Stata12\StataSE.exe&amp;quot;&lt;/code&gt;, change it to &lt;code&gt;&amp;quot;C:\Program Files\Stata12\StataSE.exe&amp;quot; /Register&lt;/code&gt; (note the space before &lt;code&gt;/&lt;/code&gt;). Click OK.&lt;/li&gt;
 &lt;li&gt;Right-click on the updated &lt;code&gt;Shortcut to StataSE.exe&lt;/code&gt;; choose Run as administrator.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;h3 id=&#34;installing-the-sas-kernel&#34;&gt;Installing the SAS kernel&lt;/h3&gt;
-
-&lt;p&gt;*&lt;em&gt;This has not yet been tested here. The instructions for installing the &lt;code&gt;sas_kernel&lt;/code&gt; are based from the original documentation &lt;a href=&#34;https://github.com/sassoftware/sas_kernel&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/em&gt;*&lt;/p&gt;
-
+&lt;p&gt;*&lt;em&gt;This has not yet been tested here. The instructions for installing the &lt;code&gt;sas_kernel&lt;/code&gt; are based from the original documentation &lt;a href=&#34;https://github.com/sassoftware/sas_kernel&#34;&gt;here&lt;/a&gt;&lt;/em&gt;*&lt;/p&gt;
 &lt;p&gt;Open a command prompt (Windows) / terminal (linux/mac) and type/copy-paste the following commands, pressing enter after each line. First we need to install a dependency called &lt;code&gt;saspy&lt;/code&gt; that helps the kernel connect &lt;code&gt;SAS&lt;/code&gt; to &lt;code&gt;python&lt;/code&gt;&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;pip install saspy&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;pip install sas_kernel&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;You should now see something like this.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Available kernels:
 python3    /home/sas/anaconda3/lib/python3.5/site-packages/ipykernel/resources
 sas        /home/sas/.local/share/jupyter/kernels/sas
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now verify that the SAS Executable is correct&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now verify that the SAS Executable is correct&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;find the &lt;code&gt;sascfg.py&lt;/code&gt; file &amp;ndash; it is currently located in the install location (see above) &lt;code&gt;[install location]/site-packages/saspy/sascfg.py&lt;/code&gt;. To query &lt;code&gt;pip&lt;/code&gt; for the location of the file, type &lt;code&gt;pip show saspy&lt;/code&gt;. Failing that, this command will search the OS for the file location: &lt;code&gt;find / -name sascfg.py&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;edit the file with the correct path the SAS executable and include any options you wish it include in the SAS invocation. See examples in this &lt;a href=&#34;https://github.com/sassoftware/saspy/blob/master/saspy/sascfg.py&#34; target=&#34;_blank&#34;&gt;file&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;edit the file with the correct path the SAS executable and include any options you wish it include in the SAS invocation. See examples in this &lt;a href=&#34;https://github.com/sassoftware/saspy/blob/master/saspy/sascfg.py&#34;&gt;file&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h3 id=&#34;connecting-r-with-jupyter&#34;&gt;Connecting R with Jupyter&lt;/h3&gt;
-
-&lt;p&gt;If you are hoping to make nice documents and reproducible work using R, I would highly recommend that you use the R Markdown or R Notebook through &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34; target=&#34;_blank&#34;&gt;RStudio&lt;/a&gt; application instead. However, if you would prefer Jupyter, then please read on.&lt;/p&gt;
-
+&lt;p&gt;If you are hoping to make nice documents and reproducible work using R, I would highly recommend that you use the R Markdown or R Notebook through &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34;&gt;RStudio&lt;/a&gt; application instead. However, if you would prefer Jupyter, then please read on.&lt;/p&gt;
 &lt;p&gt;It is possible to download an R kernel, much like for Stata and SAS, but it can be a bit fickle, so a different approach is described below. It is important to note that with this method you are installing a fresh version of R, so you will not have access to the packages you have previously installed - you will need to reinstall them in this R environment, which could be done within a Jupyter notebook.&lt;/p&gt;
-
 &lt;p&gt;Open a command prompt (Windows) / terminal (Linux/Mac) and enter the following commands:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;conda install r-essentials r-igraph&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Rscript -e &#39;install.packages(&amp;quot;languageserver&amp;quot;)&#39;&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;If you would rather install an R kernel than a fresh install of R within the Anaconda distribution, you can follow the instructions &lt;a href=&#34;https://richpauloo.github.io/2018-05-16-Installing-the-R-kernel-in-Jupyter-Lab/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. The advantage of this is that it allows the notebook to access previously installed packages as they are not running off a fresh version of R.&lt;/p&gt;
-
-&lt;h2 id=&#34;customizing-jupyter-notebook-s-ui&#34;&gt;Customizing Jupyter notebook&amp;rsquo;s UI&lt;/h2&gt;
-
+&lt;p&gt;If you would rather install an R kernel than a fresh install of R within the Anaconda distribution, you can follow the instructions &lt;a href=&#34;https://richpauloo.github.io/2018-05-16-Installing-the-R-kernel-in-Jupyter-Lab/&#34;&gt;here&lt;/a&gt;. The advantage of this is that it allows the notebook to access previously installed packages as they are not running off a fresh version of R.&lt;/p&gt;
+&lt;h2 id=&#34;customizing-jupyter-notebooks-ui&#34;&gt;Customizing Jupyter notebook&amp;rsquo;s UI&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;The following section is not essential and can be ignored if you want to keep things as simple as possible.&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Because I do not like the &lt;code&gt;In[]&lt;/code&gt; &lt;code&gt;Out[]&lt;/code&gt; text showing in documents, along with centering plots/figures, I have customized the Jupyter notebook settings. If you would like to do the same, this section should help you. It is not necessary, but I feel that it gives cleaner documents (including pdf documents via LaTeX). If you do this, it is essential that you &lt;strong&gt;routinely restart the kernel to run everything again in a fresh environment&lt;/strong&gt; as it is incredibly easy to run code blocks out of order and forget how this changes the output and introduces &lt;em&gt;hidden&lt;/em&gt; packages.&lt;/p&gt;
-
-&lt;p&gt;If you would like to customize the look of the notebook, &lt;a href=&#34;https://github.com/dunovank/jupyter-themes&#34; target=&#34;_blank&#34;&gt;jupyterthemes&lt;/a&gt; is a great package that can be installed. I have also edited the &lt;code&gt;custom.css&lt;/code&gt; file (&lt;code&gt;C:\Users\owner\.jupyter\custom\&lt;/code&gt;), adding &lt;code&gt;display: None;&lt;/code&gt; under the section&lt;/p&gt;
-
+&lt;p&gt;If you would like to customize the look of the notebook, &lt;a href=&#34;https://github.com/dunovank/jupyter-themes&#34;&gt;jupyterthemes&lt;/a&gt; is a great package that can be installed. I have also edited the &lt;code&gt;custom.css&lt;/code&gt; file (&lt;code&gt;C:\Users\owner\.jupyter\custom\&lt;/code&gt;), adding &lt;code&gt;display: None;&lt;/code&gt; under the section&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;div.prompt,
  .prompt {
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;so that it now reads&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;so that it now reads&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;div.prompt,
  .prompt {
  font-family: monospace, monospace;
@@ -304,21 +233,14 @@ sas        /home/sas/.local/share/jupyter/kernels/sas
  .
  .
 }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This removes the &lt;code&gt;In[]&lt;/code&gt; &lt;code&gt;Out[]&lt;/code&gt; text. To centre the output of tables/figures, add&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This removes the &lt;code&gt;In[]&lt;/code&gt; &lt;code&gt;Out[]&lt;/code&gt; text. To centre the output of tables/figures, add&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;.output_png {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
 }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;to the &lt;code&gt;custom.css&lt;/code&gt; file, right after the &lt;code&gt;.prompt {..}&lt;/code&gt; section.&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;to the &lt;code&gt;custom.css&lt;/code&gt; file, right after the &lt;code&gt;.prompt {..}&lt;/code&gt; section.&lt;/p&gt;
 &lt;p&gt;To enable soft wrapping in the notebook, you need to edit the &lt;code&gt;notebook.json&lt;/code&gt; file (&lt;code&gt;C:\Users\owner\.jupyter\nbconfig\&lt;/code&gt;). If it does not exist, you need to create it. Once open, add&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;MarkdownCell&amp;quot;: {
     &amp;quot;cm_config&amp;quot;: {
@@ -331,9 +253,7 @@ sas        /home/sas/.local/share/jupyter/kernels/sas
     }
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;before restarting Jupyter.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;before restarting Jupyter.&lt;/p&gt;
 </description>
     </item>
     
@@ -342,22 +262,13 @@ sas        /home/sas/.local/share/jupyter/kernels/sas
       <link>/courses/repro-research/using-jupyter/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       <guid>/courses/repro-research/using-jupyter/</guid>
-      <description>
-
-&lt;p&gt;Now you have set up Jupyter to run with the programming language of your choice, we should start using it. How you do that is detailed in this section.&lt;/p&gt;
-
+      <description>&lt;p&gt;Now you have set up Jupyter to run with the programming language of your choice, we should start using it. How you do that is detailed in this section.&lt;/p&gt;
 &lt;h2 id=&#34;creating-a-notebook&#34;&gt;Creating a notebook&lt;/h2&gt;
-
 &lt;p&gt;You can either open up the Anaconda navigator and then Jupyter notebooks, or open Jupyter notebooks directly. Once open, navigate to the directory you would like to create the notebook in (&lt;em&gt;If you are using a version control system like Git, then you should be within the project&amp;rsquo;s repository&lt;/em&gt;)&lt;/p&gt;
-
 &lt;p&gt;Select the &lt;strong&gt;New&lt;/strong&gt; button in the top right corner, and then select the language you would like to program in (&lt;em&gt;this assumes that you have downloaded an appropriate kernel if you would like to use a language other than Python&lt;/em&gt;)&lt;/p&gt;
-
 &lt;h2 id=&#34;running-a-jupyter-notebook&#34;&gt;Running a Jupyter notebook&lt;/h2&gt;
-
-&lt;p&gt;Now you have the notebook open in your chosen language, it&amp;rsquo;s time to start doing some data exploration and analysis. Here, we&amp;rsquo;ll cover some basic commands that will get you started, but to fully leverage the power of the notebook, you should read the &lt;a href=&#34;https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#code-cells&#34; target=&#34;_blank&#34;&gt;Jupyter documentation&lt;/a&gt;, along with the documentation of your preferred kernel, particularly sections relating to &lt;code&gt;magic&lt;/code&gt; commands (which are language-specific).&lt;/p&gt;
-
+&lt;p&gt;Now you have the notebook open in your chosen language, it&amp;rsquo;s time to start doing some data exploration and analysis. Here, we&amp;rsquo;ll cover some basic commands that will get you started, but to fully leverage the power of the notebook, you should read the &lt;a href=&#34;https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#code-cells&#34;&gt;Jupyter documentation&lt;/a&gt;, along with the documentation of your preferred kernel, particularly sections relating to &lt;code&gt;magic&lt;/code&gt; commands (which are language-specific).&lt;/p&gt;
 &lt;p&gt;When you are writing in a cell (‘Edit’ mode), you can use these commands:&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -365,32 +276,26 @@ sas        /home/sas/.local/share/jupyter/kernels/sas
 &lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;Shift + Enter&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Executes the current cell and enters you into the next one&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;Ctrl/Cmd + Enter&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Executes the current cell, but does not enter you into the next one&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;Esc&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;This exits &amp;lsquo;Edit&amp;rsquo; mode without executing the cells&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;Tab&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Code completion or indent&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
 &lt;p&gt;If you are not in &amp;lsquo;Edit&amp;rsquo; mode (&amp;lsquo;Command&amp;rsquo; mode), and therefore at least one cell is selected, you can use these commands:&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -398,33 +303,27 @@ sas        /home/sas/.local/share/jupyter/kernels/sas
 &lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;Ctrl/Cmd + a&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Add an empty cell above your current cell&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;Ctrl/Cmd + b&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Add an empty cell below your current cell&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;dd&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Delete the selected cell&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;Ctrl/Cmd + m&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Change the cell type to &amp;lsquo;Markdown&amp;rsquo; so you can add text&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;Ctrl/Cmd + y&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Change the cell type to &amp;lsquo;Code&amp;rsquo; so you can add code&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;Enter&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Enter &amp;lsquo;Edit&amp;rsquo; mode&lt;/td&gt;
@@ -440,15 +339,10 @@ sas        /home/sas/.local/share/jupyter/kernels/sas
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       <guid>/courses/repro-research/jupyter-output/</guid>
       <description>&lt;p&gt;We&amp;rsquo;ve covered a lot of information up until now about setting up your projects and your code, but a big part of reproducible research is the creation of nice-looking and transparent documents. The reason we&amp;rsquo;ve gone to such effort to install Jupyter notebooks and connect them with our language of choice is that not only do they allow for excellent data exploration, but they also make documents that look professional.&lt;/p&gt;
-
-&lt;p&gt;In scientific articles, whilst it&amp;rsquo;s not essential, LaTeX is a nice touch, and Jupyter can give you a LaTeX formatted pdf documents. To do this, you will first need to install LaTeX. If you are on Windows, I would recommend the &lt;a href=&#34;https://miktex.org/download&#34; target=&#34;_blank&#34;&gt;MiKTeX&lt;/a&gt; distribution, and if you use a Mac, then I would recommend the &lt;a href=&#34;http://www.tug.org/mactex/mactex-download.html&#34; target=&#34;_blank&#34;&gt;MacTeX&lt;/a&gt; distribution. You will also need the &amp;ldquo;swiss-army knife&amp;rdquo; of file conversion, &lt;a href=&#34;https://pandoc.org/installing.html&#34; target=&#34;_blank&#34;&gt;pandoc&lt;/a&gt;. Pandoc is not &lt;em&gt;needed&lt;/em&gt; for creating LaTeX-formatted pdfs, but if you have documents with unsupported characters and you need to use a different &lt;code&gt;pdf-engine&lt;/code&gt; you&amp;rsquo;ll need to use pandoc.&lt;/p&gt;
-
-&lt;p&gt;During the installation process, LaTeX should have been added automatically to the PATH. To test this, enter &lt;code&gt;pdflatex&lt;/code&gt; into a command line/terminal. If you get the output &lt;code&gt;This is pdfTeX ...&lt;/code&gt; then you are good to go. If not, please add the executable to the PATH&lt;a id = &#34;env-variables&#34;&gt;&lt;/a&gt;. In Windows you do this by navigating to &lt;code&gt;Environment Variables&lt;/code&gt; from the Windows key and editing the PATH in &lt;code&gt;User Variables&lt;/code&gt;. In Mac, you should open the terminal and enter &lt;code&gt;touch ~/.bash_profile; open ~/.bash_profile&lt;/code&gt;, which opens (or creates if missing) the file that stores your PATH. From here, type &lt;code&gt;export PATH=&amp;quot;path-to-latex-executable:$PATH&amp;quot;&lt;/code&gt; to add the executable to the path. Now save and exit the text editor, run &lt;code&gt;source ~/.bash_profile&lt;/code&gt; in your terminal, and you&amp;rsquo;re good to go. The executable location can be found by opening the MiKTeX/MacTeX console and looking at the bin directory under settings. For me, on a Windows computer where I don&amp;rsquo;t have administrator privileges it reads  &lt;code&gt;C:\Users\owner\AppData\Local\Programs\MiKTeX 2.9\miktex/bin/x64&lt;/code&gt;. If you are still having issues, please consult &lt;a href=&#34;http://sachaepskamp.com/wp-content/uploads/2011/10/Install.pdf&#34; target=&#34;_blank&#34;&gt;this document&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;In scientific articles, whilst it&amp;rsquo;s not essential, LaTeX is a nice touch, and Jupyter can give you a LaTeX formatted pdf documents. To do this, you will first need to install LaTeX. If you are on Windows, I would recommend the &lt;a href=&#34;https://miktex.org/download&#34;&gt;MiKTeX&lt;/a&gt; distribution, and if you use a Mac, then I would recommend the &lt;a href=&#34;http://www.tug.org/mactex/mactex-download.html&#34;&gt;MacTeX&lt;/a&gt; distribution. You will also need the &amp;ldquo;swiss-army knife&amp;rdquo; of file conversion, &lt;a href=&#34;https://pandoc.org/installing.html&#34;&gt;pandoc&lt;/a&gt;. Pandoc is not &lt;em&gt;needed&lt;/em&gt; for creating LaTeX-formatted pdfs, but if you have documents with unsupported characters and you need to use a different &lt;code&gt;pdf-engine&lt;/code&gt; you&amp;rsquo;ll need to use pandoc.&lt;/p&gt;
+&lt;p&gt;During the installation process, LaTeX should have been added automatically to the PATH. To test this, enter &lt;code&gt;pdflatex&lt;/code&gt; into a command line/terminal. If you get the output &lt;code&gt;This is pdfTeX ...&lt;/code&gt; then you are good to go. If not, please add the executable to the PATH&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;. In Windows you do this by navigating to &lt;code&gt;Environment Variables&lt;/code&gt; from the Windows key and editing the PATH in &lt;code&gt;User Variables&lt;/code&gt;. In Mac, you should open the terminal and enter &lt;code&gt;touch ~/.bash_profile; open ~/.bash_profile&lt;/code&gt;, which opens (or creates if missing) the file that stores your PATH. From here, type &lt;code&gt;export PATH=&amp;quot;path-to-latex-executable:$PATH&amp;quot;&lt;/code&gt; to add the executable to the path. Now save and exit the text editor, run &lt;code&gt;source ~/.bash_profile&lt;/code&gt; in your terminal, and you&amp;rsquo;re good to go. The executable location can be found by opening the MiKTeX/MacTeX console and looking at the bin directory under settings. For me, on a Windows computer where I don&amp;rsquo;t have administrator privileges it reads  &lt;code&gt;C:\Users\owner\AppData\Local\Programs\MiKTeX 2.9\miktex/bin/x64&lt;/code&gt;. If you are still having issues, please consult &lt;a href=&#34;http://sachaepskamp.com/wp-content/uploads/2011/10/Install.pdf&#34;&gt;this document&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Now you&amp;rsquo;re ready to create a LaTeX-formatted pdf document. All you need to do is click &lt;em&gt;File -&amp;gt; Download as -&amp;gt; PDF via LaTeX (.pdf)&lt;/em&gt;.&lt;/p&gt;
-
 &lt;p&gt;Unfortunately, when creating pdf documents, code is not hard wrapped. This means that if you have a very long line of code (&amp;gt; 80 characters), it will run out of the formatted area, and at worst, off the page. At present, I do not know a way to force Jupyter notebooks to wrap the output automatically, so instead you have to write clean code and start new lines using &lt;code&gt;,&lt;/code&gt; and &lt;code&gt;\n&lt;/code&gt; if it&amp;rsquo;s too long.&lt;/p&gt;
-
 &lt;p&gt;If you would rather not produce a pdf via LaTeX, instead wanting an arguably more readable output, you could create an html file. This is done in the same manner as pdf documents.&lt;/p&gt;
 </description>
     </item>
@@ -467,58 +361,44 @@ sas        /home/sas/.local/share/jupyter/kernels/sas
       <link>/courses/repro-research/git-setup/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       <guid>/courses/repro-research/git-setup/</guid>
-      <description>
-
-&lt;p&gt;There are many ways to get Git running on your computer. Depending on your OS and the version you have, Git may come pre-installed on your computer. However, it is a good idea to update it to the latest version, so I&amp;rsquo;d recommend you follow the steps below anyway.&lt;/p&gt;
-
+      <description>&lt;p&gt;There are many ways to get Git running on your computer. Depending on your OS and the version you have, Git may come pre-installed on your computer. However, it is a good idea to update it to the latest version, so I&amp;rsquo;d recommend you follow the steps below anyway.&lt;/p&gt;
 &lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;
-
 &lt;ol&gt;
-&lt;li&gt;Install &lt;a href=&#34;https://gitforwindows.org/&#34; target=&#34;_blank&#34;&gt;Git for Windows&lt;/a&gt;
-
+&lt;li&gt;Install &lt;a href=&#34;https://gitforwindows.org/&#34;&gt;Git for Windows&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;This gives you Git Bash, which is a much nicer way of interfacing with Git than the command line.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Note:&lt;/strong&gt; when asked about &amp;ldquo;&lt;em&gt;Adjusting your PATH environment&lt;/em&gt;&amp;rdquo;, be sure to select &amp;ldquo;&lt;em&gt;Git from the command line and also from 3rd-party software&lt;/em&gt;&amp;rdquo;. The other default options should be fine. For more details about the installation settings, please click &lt;a href=&#34;https://github.com/jennybc/happy-git-with-r/issues/105&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Note:&lt;/strong&gt; when asked about &amp;ldquo;&lt;em&gt;Adjusting your PATH environment&lt;/em&gt;&amp;quot;, be sure to select &amp;ldquo;&lt;em&gt;Git from the command line and also from 3rd-party software&lt;/em&gt;&amp;quot;. The other default options should be fine. For more details about the installation settings, please click &lt;a href=&#34;https://github.com/jennybc/happy-git-with-r/issues/105&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Open up Git Bash and enter &lt;code&gt;where git&lt;/code&gt;. Open up the command line and enter &lt;code&gt;where git&lt;/code&gt;. Depending on whether you have administrator privileges, the outputs should look something like this, respectively
-
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;which git&lt;/code&gt; : &lt;code&gt;/mingw64/bin/git&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;where git&lt;/code&gt; : &lt;code&gt;C:\Users\owner\AppData\Local\Programs\git\bin\git.exe&lt;/code&gt; (User privileges)
-
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;where git&lt;/code&gt; : &lt;code&gt;C:\Program Files\git\bin\git.exe&lt;/code&gt; (administrator privileges)&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;If you see &lt;code&gt;cmd&lt;/code&gt; instead of &lt;code&gt;bin&lt;/code&gt;, then you need to edit the PATH in your environment variables, &lt;a href=&#34;#env-variables&#34;&gt;as above&lt;/a&gt;. You can do this by typing &lt;code&gt;environment variables&lt;/code&gt; into the Start box and scrolling to the PATH section of User/System variables (depending on whether you have administrator privileges), and changing &lt;code&gt;cmd&lt;/code&gt; to &lt;code&gt;bin&lt;/code&gt; in the &lt;code&gt;git.exe&lt;/code&gt; path.&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;If you see &lt;code&gt;cmd&lt;/code&gt; instead of &lt;code&gt;bin&lt;/code&gt;, then you need to edit the PATH in your environment variables, &lt;a href=&#34;#env-variables&#34;&gt;as above&lt;/a&gt;. You can do this by typing &lt;code&gt;environment variables&lt;/code&gt; into the Start box and scrolling to the PATH section of User/System variables (depending on whether you have administrator privileges), and changing &lt;code&gt;cmd&lt;/code&gt; to &lt;code&gt;bin&lt;/code&gt; in the &lt;code&gt;git.exe&lt;/code&gt; path.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h3 id=&#34;mac&#34;&gt;Mac&lt;/h3&gt;
-
 &lt;p&gt;There are more (workable) ways to install Git on OSX than on Windows, but I think this is the best option as it gives you a great package manager for the future.&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Open the terminal and enter &lt;code&gt;/usr/bin/ruby -e &amp;quot;$(curl -fsSL https:/raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Enter &lt;code&gt;brew install git&lt;/code&gt; into the terminal&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;h3 id=&#34;final-git-set-up-steps&#34;&gt;Final Git set up steps&lt;/h3&gt;
-
 &lt;p&gt;Now that you have Git running, you need to tell it who you are. This allows multiple people to make changes to code, and the correct names will be attached to the changes.&lt;/p&gt;
-
 &lt;p&gt;Open up the Git Bash and enter&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;git config --global user.name &#39;Firstname Lastname&#39;
 git config --global user.email &#39;my_email@gmail.com&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Typing in &lt;code&gt;git config --global --list&lt;/code&gt; is a way to check that your details have been saved correctly.&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Typing in &lt;code&gt;git config --global --list&lt;/code&gt; is a way to check that your details have been saved correctly.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; it is essential that you enter the same &lt;strong&gt;email&lt;/strong&gt; as your GitHub account information. This way you can connect the two. If you would prefer to use a different user name than your GitHub user name you can. This would help show you which computer you completed the work on, but it is not important to most people.&lt;/p&gt;
-
 &lt;h3 id=&#34;installation-problems&#34;&gt;Installation problems&lt;/h3&gt;
-
-&lt;p&gt;If you followed the instructions above, Git should be ready to go. However, sometimes you still end up with errors. This is far more likely with Windows that Mac, but if you find that the next steps don&amp;rsquo;t work for you, see if the other installation options from Jenny Bryan&amp;rsquo;s book &lt;a href=&#34;https://happygitwithr.com/install-git.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; work for you, or the trouble shooting tips &lt;a href=&#34;https://happygitwithr.com/troubleshooting.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; (and &lt;a href=&#34;https://github.com/jennybc/happy-git-with-r/issues/67&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; if you&amp;rsquo;re on Windows), which are useful when trying to connect Git with RStudio.&lt;/p&gt;
+&lt;p&gt;If you followed the instructions above, Git should be ready to go. However, sometimes you still end up with errors. This is far more likely with Windows that Mac, but if you find that the next steps don&amp;rsquo;t work for you, see if the other installation options from Jenny Bryan&amp;rsquo;s book &lt;a href=&#34;https://happygitwithr.com/install-git.html&#34;&gt;here&lt;/a&gt; work for you, or the trouble shooting tips &lt;a href=&#34;https://happygitwithr.com/troubleshooting.html&#34;&gt;here&lt;/a&gt; (and &lt;a href=&#34;https://github.com/jennybc/happy-git-with-r/issues/67&#34;&gt;here&lt;/a&gt; if you&amp;rsquo;re on Windows), which are useful when trying to connect Git with RStudio.&lt;/p&gt;
 </description>
     </item>
     
@@ -527,7 +407,7 @@ git config --global user.email &#39;my_email@gmail.com&#39;
       <link>/courses/repro-research/git-client/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       <guid>/courses/repro-research/git-client/</guid>
-      <description>&lt;p&gt;Now you have Git installed, there are a number of ways to use it. The easiest way is to use a client, which allows you to use buttons instead of typing code. They also provide a visual for more complicated ideas, such as branching, greatly simplifying the process. I prefer to use the &lt;a href=&#34;https://www.gitkraken.com/&#34; target=&#34;_blank&#34;&gt;GitKraken&lt;/a&gt; client, and they&amp;rsquo;re associated GloBoards for project To-Do&amp;rsquo;s, but you can use others.&lt;a href=&#34;https://www.sourcetreeapp.com/&#34; target=&#34;_blank&#34;&gt;SourceTree&lt;/a&gt; is another good alternative, but I have had some issues connecting to some GitHub accounts, so I have since moved away from it.&lt;/p&gt;
+      <description>&lt;p&gt;Now you have Git installed, there are a number of ways to use it. The easiest way is to use a client, which allows you to use buttons instead of typing code. They also provide a visual for more complicated ideas, such as branching, greatly simplifying the process. I prefer to use the &lt;a href=&#34;https://www.gitkraken.com/&#34;&gt;GitKraken&lt;/a&gt; client, and they&amp;rsquo;re associated GloBoards for project To-Do&amp;rsquo;s, but you can use others.&lt;a href=&#34;https://www.sourcetreeapp.com/&#34;&gt;SourceTree&lt;/a&gt; is another good alternative, but I have had some issues connecting to some GitHub accounts, so I have since moved away from it.&lt;/p&gt;
 </description>
     </item>
     
@@ -536,128 +416,92 @@ git config --global user.email &#39;my_email@gmail.com&#39;
       <link>/courses/repro-research/remotes/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       <guid>/courses/repro-research/remotes/</guid>
-      <description>
-
-&lt;p&gt;It is not essential, but one of the best things about Git is that online repositories create an easier way to sync your work between computers and colleagues, avoiding much of the mess caused when this work happens simultaneously / your file sharing system of choice isn&amp;rsquo;t syncing properly. In this section, I will explain the correct way to utilize this, and the other way &amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;github-the-good&#34;&gt;GitHub - the Good&lt;/h2&gt;
-
+      <description>&lt;p&gt;It is not essential, but one of the best things about Git is that online repositories create an easier way to sync your work between computers and colleagues, avoiding much of the mess caused when this work happens simultaneously / your file sharing system of choice isn&amp;rsquo;t syncing properly. In this section, I will explain the correct way to utilize this, and the other way &amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;github---the-good&#34;&gt;GitHub - the Good&lt;/h2&gt;
 &lt;p&gt;GitHub is built for this. You should take full advantage of the effort and troubleshooting that has gone into the platform. &lt;strong&gt;Don&amp;rsquo;t try and recreate the wheel&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;With GitHub now offering &lt;a href=&#34;https://Github.com/pricing&#34; target=&#34;_blank&#34;&gt;unlimited free private repositories&lt;/a&gt;, I would recommend that you set up an account with GitHub. The reason why I suggest GitHub over a different purpose-built platform (such as Bitbucket or GitLab) is the community. Previously, I would have recommended Bitbucket due to the unlimited free private repositories, but this is no longer a restriction with GitHub. With GitHub, if you ever want to make your code open-source, you immediately have access to the largest community of programmers who can help you improve your code, as well as putting it to good use. And isn&amp;rsquo;t that why we do research?&lt;/p&gt;
-
+&lt;p&gt;With GitHub now offering &lt;a href=&#34;https://Github.com/pricing&#34;&gt;unlimited free private repositories&lt;/a&gt;, I would recommend that you set up an account with GitHub. The reason why I suggest GitHub over a different purpose-built platform (such as Bitbucket or GitLab) is the community. Previously, I would have recommended Bitbucket due to the unlimited free private repositories, but this is no longer a restriction with GitHub. With GitHub, if you ever want to make your code open-source, you immediately have access to the largest community of programmers who can help you improve your code, as well as putting it to good use. And isn&amp;rsquo;t that why we do research?&lt;/p&gt;
 &lt;p&gt;Now that you&amp;rsquo;ve decided to use GitHub, it&amp;rsquo;s very easy to register. Just click the link above and select the package you&amp;rsquo;d like. If you have an academic email address, consider making this your primary email address on the account, as it gives you a &lt;strong&gt;PRO&lt;/strong&gt; account unlimited collaborators on private repositories, unlike the standard account that limits it to 3 collaborators.&lt;/p&gt;
-
 &lt;p&gt;Be sure to choose a user name that is easy to remember, and easy to find. I would suggest just using your name.&lt;/p&gt;
-
 &lt;p&gt;Now you have a GitHub account set up, this is your &lt;em&gt;remote&lt;/em&gt;. If you work on a project with collaborators, this can be shared with them. That way, collaborators can work on their own versions of the code on their &lt;em&gt;local&lt;/em&gt; machine (computer), and when it&amp;rsquo;s ready for other people to use/help write, they can &lt;code&gt;push&lt;/code&gt; it to the &lt;em&gt;remote&lt;/em&gt; where others can access it. Don&amp;rsquo;t worry if you don&amp;rsquo;t know what &lt;code&gt;push&lt;/code&gt; is - we&amp;rsquo;ll cover that &lt;a href=&#34;#basic-commands&#34;&gt;soon&lt;/a&gt;.&lt;/p&gt;
-
 &lt;h2 id=&#34;private-server&#34;&gt;Private server&lt;/h2&gt;
-
-&lt;p&gt;It is possible to use and get the benefits of Git without a purpose-made online repository such as GitHub, but it&amp;rsquo;s not as simple and it&amp;rsquo;s not as stable. Because services like Dropbox and OneDrive are not built for storing and tracking changes in code and &lt;em&gt;dot&lt;/em&gt; files, it can go wrong, especially when more than one author is involved. Of all the file syncing systems, Dropbox seems to be the best option due to the &lt;a href=&#34;https://github.com/anishathalye/git-remote-dropbox&#34; target=&#34;_blank&#34;&gt;git-remote-dropbox extension&lt;/a&gt;, but this is still inferior to GitHub etc. With these home-made systems, corruption of the project repository is a matter of &amp;ldquo;when&amp;rdquo;, not &amp;ldquo;if&amp;rdquo;. If you insist on using this option, go read the &lt;a href=&#34;#basic-commands&#34;&gt;git basic commands&lt;/a&gt; first, come back, and read on &amp;hellip;&lt;/p&gt;
-
-&lt;h3 id=&#34;dropbox-the-bad&#34;&gt;Dropbox - the Bad&lt;/h3&gt;
-
+&lt;p&gt;It is possible to use and get the benefits of Git without a purpose-made online repository such as GitHub, but it&amp;rsquo;s not as simple and it&amp;rsquo;s not as stable. Because services like Dropbox and OneDrive are not built for storing and tracking changes in code and &lt;em&gt;dot&lt;/em&gt; files, it can go wrong, especially when more than one author is involved. Of all the file syncing systems, Dropbox seems to be the best option due to the &lt;a href=&#34;https://github.com/anishathalye/git-remote-dropbox&#34;&gt;git-remote-dropbox extension&lt;/a&gt;, but this is still inferior to GitHub etc. With these home-made systems, corruption of the project repository is a matter of &amp;ldquo;when&amp;rdquo;, not &amp;ldquo;if&amp;rdquo;. If you insist on using this option, go read the &lt;a href=&#34;#basic-commands&#34;&gt;git basic commands&lt;/a&gt; first, come back, and read on &amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;dropbox---the-bad&#34;&gt;Dropbox - the Bad&lt;/h3&gt;
 &lt;h4 id=&#34;git-remote-dropbox&#34;&gt;git-remote-dropbox&lt;/h4&gt;
-
-&lt;p&gt;Install the git-remote-dropbox extension. The instructions were copied from the &lt;a href=&#34;https://github.com/anishathalye/git-remote-dropbox&#34; target=&#34;_blank&#34;&gt;documentation&lt;/a&gt; and *&lt;em&gt;have not been tested&lt;/em&gt;*.&lt;/p&gt;
-
+&lt;p&gt;Install the git-remote-dropbox extension. The instructions were copied from the &lt;a href=&#34;https://github.com/anishathalye/git-remote-dropbox&#34;&gt;documentation&lt;/a&gt; and *&lt;em&gt;have not been tested&lt;/em&gt;*.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Install the helper with &lt;code&gt;pip install git-remote-dropbox&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Generate an OAuth 2 token by going to the app console, creating a Dropbox API app with &amp;ldquo;Full Dropbox&amp;rdquo; access (or &amp;ldquo;App folder&amp;rdquo; access if you prefer, if you&amp;rsquo;re not going to be using Dropbox&amp;rsquo;s sharing features to use git-remote-dropbox in a multi-user setup), and generating an access token for yourself.&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Save your OAuth token in &lt;code&gt;~/.config/git/git-remote-dropbox.json&lt;/code&gt; or &lt;code&gt;~/.git-remote-dropbox.json&lt;/code&gt;. The file should look something like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-&amp;quot;default&amp;quot;: &amp;quot;xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;Save your OAuth token in &lt;code&gt;~/.config/git/git-remote-dropbox.json&lt;/code&gt; or &lt;code&gt;~/.git-remote-dropbox.json&lt;/code&gt;. The file should look something like this:&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;git-remote-dropbox supports using multiple Dropbox accounts. You can create OAuth tokens for different accounts and add them all to the config file, using a user-defined username as the key:&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;{
-&amp;quot;alice&amp;quot;: &amp;quot;xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx&amp;quot;,
-&amp;quot;ben&amp;quot;: &amp;quot;xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx&amp;quot;,
-&amp;quot;charlie&amp;quot;: &amp;quot;xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx&amp;quot;
+    &amp;quot;default&amp;quot;: &amp;quot;xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx&amp;quot;
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;You can tell git-remote-dropbox to use the token corresponding to username by specifying a URL like &lt;code&gt;dropbox://username@/path/to/repo&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;You can also specify the token inline by using a URL like &lt;code&gt;dropbox://:token@/path/to/repo&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;git-remote-dropbox supports using multiple Dropbox accounts. You can create OAuth tokens for different accounts and add them all to the config file, using a user-defined username as the key:&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;alice&amp;quot;: &amp;quot;xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx&amp;quot;,
+    &amp;quot;ben&amp;quot;: &amp;quot;xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx&amp;quot;,
+    &amp;quot;charlie&amp;quot;: &amp;quot;xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;You can tell git-remote-dropbox to use the token corresponding to username by specifying a URL like &lt;code&gt;dropbox://username@/path/to/repo&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can also specify the token inline by using a URL like &lt;code&gt;dropbox://:token@/path/to/repo&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h4 id=&#34;creating-a-dropbox-repository&#34;&gt;Creating a Dropbox repository&lt;/h4&gt;
-
 &lt;p&gt;Now you&amp;rsquo;ve installed the helper extension, you can start using Dropbox for your &lt;em&gt;remote&lt;/em&gt; repositories. Unless a project already exists with a Dropbox repository (i.e. you&amp;rsquo;ve been added to the project and were not the one to set it up), I would recommend that you first create the repositories on your local machine using the steps below.&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Create a project folder on your computer &lt;strong&gt;(not in your Dropbox folder)&lt;/strong&gt;, and open up the Git Bash within the folder&lt;/li&gt;
 &lt;li&gt;Enter &lt;code&gt;git init&lt;/code&gt; to initialize your folder as a Git repository&lt;/li&gt;
 &lt;li&gt;Enter &lt;code&gt;git remote add origin &amp;quot;dropbox:///path/to/repo&amp;quot;&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;If a repository already exists in a Dropbox folder, and you want to make a local copy, you can do the following:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Create a project folder on your computer, and open up the Git Bash within the folder&lt;/li&gt;
 &lt;li&gt;Enter &lt;code&gt;git clone &amp;quot;dropbox:///path/to/repo&amp;quot; -b master&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;You are now set up to use Dropbox as your remote repository and can &lt;code&gt;commit&lt;/code&gt;, &lt;code&gt;push&lt;/code&gt;, and &lt;code&gt;pull&lt;/code&gt; changes using the Git Bash commands:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git add .&lt;/code&gt; This &lt;em&gt;stages&lt;/em&gt; the changes to your files, and it is essential to do before you &lt;code&gt;commit&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git commit -m &amp;quot;your commit message&amp;quot;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push origin master&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git pull origin master&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h3 id=&#34;onedrive-google-drive-network-drive-others-the-ugly&#34;&gt;OneDrive/Google Drive/Network Drive/others - the Ugly&lt;/h3&gt;
-
+&lt;h3 id=&#34;onedrivegoogle-drivenetwork-driveothers---the-ugly&#34;&gt;OneDrive/Google Drive/Network Drive/others - the Ugly&lt;/h3&gt;
 &lt;p&gt;*&lt;em&gt;The instructions for this are based off the following articles and have not been tested&lt;/em&gt;*.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://blog.geekforbrains.com/how-to-use-dropbox-and-git-for-private-repos-e1d304d5ff79&#34; target=&#34;_blank&#34;&gt;https://blog.geekforbrains.com/how-to-use-dropbox-and-git-for-private-repos-e1d304d5ff79&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://autchen.github.io/guides/2016/03/10/git-onedrive.html&#34; target=&#34;_blank&#34;&gt;http://autchen.github.io/guides/2016/03/10/git-onedrive.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://tony.halcyonlane.com/blog/2011/09/22/Using-git-at-work-on-a-Windows-network-drive//&#34; target=&#34;_blank&#34;&gt;http://tony.halcyonlane.com/blog/2011/09/22/Using-git-at-work-on-a-Windows-network-drive//&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://medium.com/@techstreams/git-google-drive-simple-git-host-3a84db4fc1fd&#34; target=&#34;_blank&#34;&gt;https://medium.com/@techstreams/git-google-drive-simple-git-host-3a84db4fc1fd&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://blog.geekforbrains.com/how-to-use-dropbox-and-git-for-private-repos-e1d304d5ff79&#34;&gt;https://blog.geekforbrains.com/how-to-use-dropbox-and-git-for-private-repos-e1d304d5ff79&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://autchen.github.io/guides/2016/03/10/git-onedrive.html&#34;&gt;http://autchen.github.io/guides/2016/03/10/git-onedrive.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://tony.halcyonlane.com/blog/2011/09/22/Using-git-at-work-on-a-Windows-network-drive//&#34;&gt;http://tony.halcyonlane.com/blog/2011/09/22/Using-git-at-work-on-a-Windows-network-drive//&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@techstreams/git-google-drive-simple-git-host-3a84db4fc1fd&#34;&gt;https://medium.com/@techstreams/git-google-drive-simple-git-host-3a84db4fc1fd&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;If you want to use a different file syncing system, then you need to create a &lt;em&gt;bare&lt;/em&gt; remote repository. This is structured differently than a normal git repository, which makes it &lt;em&gt;slightly&lt;/em&gt; better for use as a remote repository &amp;hellip; but it&amp;rsquo;s still a bad idea and can corrupt the project.&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Create/open an existing project folder on your computer &lt;strong&gt;(not in your OneDrive folder)&lt;/strong&gt;, and open up the Git Bash within the folder&lt;/li&gt;
 &lt;li&gt;Enter &lt;code&gt;git init&lt;/code&gt; to initialize your folder as a Git repository&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Assuming you have files already in the directory, you should commit them using&lt;/p&gt;
-
+&lt;li&gt;Assuming you have files already in the directory, you should commit them using&lt;/li&gt;
+&lt;/ol&gt;
 &lt;pre&gt;&lt;code&gt;git add --all
 git commit -m &amp;quot;your commit message&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Create the bare repo in OneDrive etc using&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Create the bare repo in OneDrive etc using
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git init --bare . ~/OneDrive///path/to/repo/project.git&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Configure your remote using&lt;/p&gt;
-
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configure your remote using
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git remote add origin ~/OneDrive///path/to/repo/project.git&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;push&lt;/code&gt;/&lt;code&gt;pull&lt;/code&gt; your commits using&lt;/p&gt;
-
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;push&lt;/code&gt;/&lt;code&gt;pull&lt;/code&gt; your commits using
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git push origin master&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;You can share the OneDrive repository (folder) so that multiple people can work on the project. However, if you do this, &lt;strong&gt;it is essential you coordinate your &lt;code&gt;push&lt;/code&gt;/&lt;code&gt;pull&lt;/code&gt; commands to avoid corrupting the repository.&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
@@ -667,49 +511,36 @@ git commit -m &amp;quot;your commit message&amp;quot;
       <link>/courses/repro-research/create-repo/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       <guid>/courses/repro-research/create-repo/</guid>
-      <description>
-
-&lt;p&gt;If everything has gone well until now, you&amp;rsquo;re ready to create a project repository. This is where all your code, all your data, all your output files, everything, should live. Whilst you can create a repository directly on your computer, I would advise against this as it causes additional headaches when you want to connect it with GitHub. Instead, create the remote repository first on GitHub.&lt;/p&gt;
-
+      <description>&lt;p&gt;If everything has gone well until now, you&amp;rsquo;re ready to create a project repository. This is where all your code, all your data, all your output files, everything, should live. Whilst you can create a repository directly on your computer, I would advise against this as it causes additional headaches when you want to connect it with GitHub. Instead, create the remote repository first on GitHub.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Go to www.github.com and click the &lt;code&gt;+&lt;/code&gt; and &lt;em&gt;&amp;ldquo;New repository&amp;rdquo;&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Go to &lt;a href=&#34;http://www.github.com&#34;&gt;www.github.com&lt;/a&gt; and click the &lt;code&gt;+&lt;/code&gt; and &lt;em&gt;&amp;ldquo;New repository&amp;rdquo;&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;Choose a project name&lt;/li&gt;
 &lt;li&gt;Decide whether you want it to be a public or private project (choose private if working on sensitive data and research, as you can always convert it to public later)&lt;/li&gt;
 &lt;li&gt;Initialize with a README file&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;connecting-to-github&#34;&gt;Connecting to GitHub&lt;/h2&gt;
-
 &lt;p&gt;If you are using SourceTree, there are two ways to connect your computer to your GitHub repositories. I would recommend the first option, as it makes &lt;em&gt;cloning&lt;/em&gt; repositories (making a copy on your local computer) easier in the future, as you don&amp;rsquo;t have to go to GitHub each time to find the &lt;em&gt;HTTPS/SSH&lt;/em&gt; address. The methods for GitKraken are essentially the same, and SourceTree seems to be slightly more popular, hence why I describe it here.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Method 1&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Go to &lt;em&gt;Tools -&amp;gt; Options -&amp;gt; Authentication&lt;/em&gt; in SourceTree and add your GitHub account details&lt;/li&gt;
 &lt;li&gt;Leave the preferred protocol at &lt;em&gt;&amp;ldquo;HTTPS&amp;rdquo;&lt;/em&gt; for the moment, unless you know what you&amp;rsquo;re doing with SSH keys&lt;/li&gt;
 &lt;li&gt;Now open a new tab, click on &lt;em&gt;Remote&lt;/em&gt;, and you should see your repositories listed&lt;/li&gt;
 &lt;li&gt;Clone the repositories that you&amp;rsquo;d like to work on&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Now SourceTree and GitHub are connected, you shouldn&amp;rsquo;t have to do the first few steps - just go to step 3.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;&lt;strong&gt;Method 2&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Go to your repository on GitHub and click on the green &lt;em&gt;&amp;ldquo;Clone or download&amp;rdquo;&lt;/em&gt; button&lt;/li&gt;
 &lt;li&gt;Copy the &lt;em&gt;HTTPS&lt;/em&gt; address (your settings should say &lt;em&gt;&amp;ldquo;Clone with HTTPS&amp;rdquo;&lt;/em&gt; above it, otherwise click &lt;em&gt;&amp;ldquo;Use HTTPS&amp;rdquo;&lt;/em&gt;)&lt;/li&gt;
 &lt;li&gt;Go to SourceTree, open a new tab, and click on &lt;em&gt;&amp;ldquo;Clone&amp;rdquo;&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;Paste the &lt;em&gt;HTTPS&lt;/em&gt; address into the &lt;em&gt;&amp;ldquo;Source Path / URL:&amp;rdquo;&lt;/em&gt; box&lt;/li&gt;
+&lt;li&gt;Paste the &lt;em&gt;HTTPS&lt;/em&gt; address into the &lt;em&gt;&amp;ldquo;Source Path / URL:&amp;quot;&lt;/em&gt; box&lt;/li&gt;
 &lt;li&gt;Click on the &lt;em&gt;&amp;ldquo;Clone&amp;rdquo;&lt;/em&gt; button at the bottom&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;&lt;strong&gt;Method 3&lt;/strong&gt; (&lt;em&gt;not recommended&lt;/em&gt;)&lt;/p&gt;
-
-&lt;p&gt;If you would like to do it the hard way and use the Git Bash, read the instructions &lt;a href=&#34;https://happygitwithr.com/push-pull-github.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; if you would like to use SSH keys, read the instructions &lt;a href=&#34;https://help.github.com/articles/connecting-to-github-with-ssh/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you would like to do it the hard way and use the Git Bash, read the instructions &lt;a href=&#34;https://happygitwithr.com/push-pull-github.html&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; if you would like to use SSH keys, read the instructions &lt;a href=&#34;https://help.github.com/articles/connecting-to-github-with-ssh/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -719,15 +550,14 @@ git commit -m &amp;quot;your commit message&amp;quot;
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       <guid>/courses/repro-research/basic-commands/</guid>
       <description>&lt;p&gt;There are many commands that you could learn in Git, but these are the basics, and will be sufficient for pretty much everything you&amp;rsquo;ll need to do at the moment.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;commit&lt;/code&gt;: this standings for &lt;em&gt;committing&lt;/em&gt; a change to your file in Git. Think of it as saving a document, but instead of saving the whole document as-is, Git saves just the changes since the last version. This makes it very efficient, especially when it comes to backing up your work.
 &lt;strong&gt;Key points:&lt;/strong&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;commit&lt;/code&gt; often. By making and saving small changes, your code versions becomes more readable in case you need to go back and find out exactly what and where it went wrong.&lt;/li&gt;
 &lt;li&gt;Always write helpful messages - keep them succinct, but make sure they describe what the change you made was.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;pull&lt;/code&gt;: this commands copies the version of the code from your remote to your local machine. Use this when you want to get the most up-to-date version of your code to work on (assuming your local version isn&amp;rsquo;t the most up-to-date)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;push&lt;/code&gt;: the opposite of &lt;code&gt;pull&lt;/code&gt;. If your local version is the most up-to-date version, &lt;code&gt;push&lt;/code&gt; your version to the remote.&lt;/li&gt;
 &lt;/ul&gt;
@@ -739,43 +569,25 @@ git commit -m &amp;quot;your commit message&amp;quot;
       <link>/courses/repro-research/branching/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       <guid>/courses/repro-research/branching/</guid>
-      <description>
-
-&lt;p&gt;Branching is a key part of the Git work-flow. It allows you to make changes to your code, without worrying about breaking previously &amp;lsquo;good&amp;rsquo; code. But what is it?&lt;/p&gt;
-
+      <description>&lt;p&gt;Branching is a key part of the Git work-flow. It allows you to make changes to your code, without worrying about breaking previously &amp;lsquo;good&amp;rsquo; code. But what is it?&lt;/p&gt;
 &lt;p&gt;Simply put, when you create another branch you are creating a copy of your code at that point in time. This is useful because it allows you to make changes to your copy, and leave your original code intact! So there&amp;rsquo;s no concern about breaking your working code while you test out some ideas.&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&#34;guideline-554f4577.png&#34; src=&#34;assets/guideline-554f4577.png&#34; style=&#34;float: right;&#34; width=&#34;40%&#34; height=&#34;&#34; &gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;But isn&amp;rsquo;t that why we use Git?&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;Kind of. But Git is only so powerful. If you have working code, you don&amp;rsquo;t want to put it out of action whilst you test ideas out, especially if other people need to use your code and can&amp;rsquo;t wait for you to figure out your future problems. So creating another branch allows you to get around this issue. For most projects, you can get away with just two branches, a &lt;code&gt;master&lt;/code&gt; and a &lt;code&gt;develop&lt;/code&gt;, which are explained below. If your project is complex, and requires multiple people to work on the code at the same time, it would be worth you looking at implementing &lt;a href=&#34;https://nvie.com/posts/a-successful-git-branching-model/&#34; target=&#34;_blank&#34;&gt;this model&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;Kind of. But Git is only so powerful. If you have working code, you don&amp;rsquo;t want to put it out of action whilst you test ideas out, especially if other people need to use your code and can&amp;rsquo;t wait for you to figure out your future problems. So creating another branch allows you to get around this issue. For most projects, you can get away with just two branches, a &lt;code&gt;master&lt;/code&gt; and a &lt;code&gt;develop&lt;/code&gt;, which are explained below. If your project is complex, and requires multiple people to work on the code at the same time, it would be worth you looking at implementing &lt;a href=&#34;https://nvie.com/posts/a-successful-git-branching-model/&#34;&gt;this model&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The image to the right is copied from the model listed above. It is useful in illustrating the &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;develop&lt;/code&gt; approach to branching.&lt;/p&gt;
-
 &lt;h2 id=&#34;creating-a-branch&#34;&gt;Creating a branch&lt;/h2&gt;
-
-&lt;p&gt;As with all things in Git, you can do this multiple ways. I prefer to use the client, as I find it far more intuitive when you can see the changes, but you can use the command line or Git bash. If you want to explore the command line code, I would recommend visiting &lt;a href=&#34;https://learngitbranching.js.org/&#34; target=&#34;_blank&#34;&gt;this website&lt;/a&gt;, which allows you to interact with the code through illustrations.&lt;/p&gt;
-
+&lt;p&gt;As with all things in Git, you can do this multiple ways. I prefer to use the client, as I find it far more intuitive when you can see the changes, but you can use the command line or Git bash. If you want to explore the command line code, I would recommend visiting &lt;a href=&#34;https://learngitbranching.js.org/&#34;&gt;this website&lt;/a&gt;, which allows you to interact with the code through illustrations.&lt;/p&gt;
 &lt;p&gt;When you are in your client (in this case, SourceTree), open the repository you would like to create a branch in. You will notice that there are two buttons called &lt;code&gt;Branch&lt;/code&gt; and &lt;code&gt;Merge&lt;/code&gt;. If you click on &lt;code&gt;Branch&lt;/code&gt;, you will see something like this&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&#34;guideline-b2aa08de.png&#34; src=&#34;assets/guideline-b2aa08de.png&#34; width=&#34;&#34; height=&#34;&#34; &gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;p&gt;Enter the branch name you would like to create into &lt;code&gt;New Branch&lt;/code&gt; (I would suggest &lt;code&gt;develop&lt;/code&gt;), and hit &lt;code&gt;Create Branch&lt;/code&gt;. That&amp;rsquo;s it. You now have a &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;develop&lt;/code&gt; branch.&lt;/p&gt;
-
 &lt;p&gt;You might notice the tick-box &lt;code&gt;Checkout New Branch&lt;/code&gt;. This means SourceTree will execute the command &lt;code&gt;git checkout develop&lt;/code&gt; i.e. you will move to the &lt;code&gt;develop&lt;/code&gt; branch to continue your work. Now, any changes you make to your code will happen in the &lt;code&gt;develop&lt;/code&gt; copy of the code, not in your &lt;code&gt;master&lt;/code&gt; branch. Neat. If you want to move back to &lt;code&gt;master&lt;/code&gt; branch at some point, you simply right click on the &lt;code&gt;master&lt;/code&gt; branch on the left side of SourceTree, and select &lt;code&gt;Checkout master...&lt;/code&gt;.&lt;/p&gt;
-
 &lt;h2 id=&#34;merging-a-branch&#34;&gt;Merging a branch&lt;/h2&gt;
-
 &lt;p&gt;You&amp;rsquo;ve created a &lt;code&gt;develop&lt;/code&gt; branch so you can keep you &lt;code&gt;master&lt;/code&gt; pristine and in working condition. But now you&amp;rsquo;ve made changes you&amp;rsquo;re happy with, and you want to incorporate them in the main code. To do this, you need to &lt;code&gt;merge&lt;/code&gt; the changes from &lt;code&gt;develop&lt;/code&gt; into &lt;code&gt;master&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;To do this, first you need to &lt;code&gt;checkout&lt;/code&gt; the &lt;code&gt;master&lt;/code&gt; branch, so you are merging changes &lt;em&gt;into&lt;/em&gt; it. Then, click on the &lt;code&gt;Merge&lt;/code&gt; button in SourceTree. Select the &lt;code&gt;commit&lt;/code&gt; you would like to merge into the &lt;code&gt;master&lt;/code&gt; branch (most likely the top one in the &lt;code&gt;develop&lt;/code&gt; branch), and click &lt;code&gt;OK&lt;/code&gt;. You should have a view like this.&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&#34;guideline-eeaa7b68.png&#34; src=&#34;assets/guideline-eeaa7b68.png&#34; width=&#34;150%&#34; height=&#34;&#34; &gt;&lt;/p&gt;
-
-&lt;p&gt;You have now merged your first feature. Whilst the &lt;code&gt;merge&lt;/code&gt; feature is particularly useful, it is not the only way of doing this. &lt;code&gt;rebase&lt;/code&gt; is another option that works in a slightly different way. It is slightly beyond the scope of this document, but you should read &lt;a href=&#34;https://www.atlassian.com/git/tutorials/merging-vs-rebasing&#34; target=&#34;_blank&#34;&gt;this document&lt;/a&gt; and visit &lt;a href=&#34;https://learngitbranching.js.org/&#34; target=&#34;_blank&#34;&gt;this website&lt;/a&gt;, as suggested previously, to get experience of putting them both into practice.&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;You have now merged your first feature. Whilst the &lt;code&gt;merge&lt;/code&gt; feature is particularly useful, it is not the only way of doing this. &lt;code&gt;rebase&lt;/code&gt; is another option that works in a slightly different way. It is slightly beyond the scope of this document, but you should read &lt;a href=&#34;https://www.atlassian.com/git/tutorials/merging-vs-rebasing&#34;&gt;this document&lt;/a&gt; and visit &lt;a href=&#34;https://learngitbranching.js.org/&#34;&gt;this website&lt;/a&gt;, as suggested previously, to get experience of putting them both into practice.&lt;/p&gt;
 </description>
     </item>
     
@@ -785,13 +597,12 @@ git commit -m &amp;quot;your commit message&amp;quot;
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       <guid>/courses/repro-research/git-jupyter/</guid>
       <description>&lt;p&gt;Unfortunately, Git and Jupyter don&amp;rsquo;t always play nicely, so we have to do a few things to try and get around the issues. Due to the way the notebooks create and store the outputs from the code, &lt;code&gt;diffs&lt;/code&gt; become unreadable. There are a few ways to get around this. The first option is the simplest, but the others provide a little more control over what you see in the &lt;code&gt;diffs&lt;/code&gt;. This is here to serve as an introduction to the tools, but not as a tutorial, so only the links to the documentation have been provided for you to read.&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Clear all outputs before you save and commit the files. That way, Git only tracks changes to the input&lt;/li&gt;
 &lt;li&gt;Download the notebook as a markdown file allowing &lt;code&gt;diffs&lt;/code&gt; to be tracked in Git as normal&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://nbdime.readthedocs.io/en/latest/index.html&#34; target=&#34;_blank&#34;&gt;nbdime&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reviewnb.com/&#34; target=&#34;_blank&#34;&gt;ReviewNB&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://nextjournal.com/&#34; target=&#34;_blank&#34;&gt;Nextjournal&lt;/a&gt; is a promising take on notebooks that simplifies the  process of making reproducible research. Currently it is only in beta, and for private research, but if it has a free version when it becomes established it would be a good option allowing a &amp;lsquo;Google Docs&amp;rsquo; style of version control.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nbdime.readthedocs.io/en/latest/index.html&#34;&gt;nbdime&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reviewnb.com/&#34;&gt;ReviewNB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nextjournal.com/&#34;&gt;Nextjournal&lt;/a&gt; is a promising take on notebooks that simplifies the  process of making reproducible research. Currently it is only in beta, and for private research, but if it has a free version when it becomes established it would be a good option allowing a &amp;lsquo;Google Docs&amp;rsquo; style of version control.&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
@@ -801,48 +612,31 @@ git commit -m &amp;quot;your commit message&amp;quot;
       <link>/courses/repro-research/additional-resources/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       <guid>/courses/repro-research/additional-resources/</guid>
-      <description>
-
-&lt;p&gt;This document only touches on enough to get you up an running with reproducible work. However, to become fully proficient you will need to delve deeper into the material - trust me, it&amp;rsquo;ll make your life easier in the long run. Here are a few places to start for each section, many of which were the basis for the systems I implement and advocate for here.&lt;/p&gt;
-
+      <description>&lt;p&gt;This document only touches on enough to get you up an running with reproducible work. However, to become fully proficient you will need to delve deeper into the material - trust me, it&amp;rsquo;ll make your life easier in the long run. Here are a few places to start for each section, many of which were the basis for the systems I implement and advocate for here.&lt;/p&gt;
 &lt;h2 id=&#34;project-structure&#34;&gt;Project structure&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://nicercode.github.io/blog/2013-04-05-projects/&#34; target=&#34;_blank&#34;&gt;https://nicercode.github.io/blog/2013-04-05-projects/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://tomwallis.info/2014/01/16/setting-up-a-project-directory/&#34; target=&#34;_blank&#34;&gt;https://tomwallis.info/2014/01/16/setting-up-a-project-directory/&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://nicercode.github.io/blog/2013-04-05-projects/&#34;&gt;https://nicercode.github.io/blog/2013-04-05-projects/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://tomwallis.info/2014/01/16/setting-up-a-project-directory/&#34;&gt;https://tomwallis.info/2014/01/16/setting-up-a-project-directory/&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;These two resources describe the project structure that I advocate for in a little more detail, with a few minor differences. If you work in &lt;code&gt;R&lt;/code&gt; I would recommend that you follow nicercode&amp;rsquo;s other suggestions as well, particularly regarding the creation of an R project.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://medium.freecodecamp.org/why-you-need-python-environments-and-how-to-manage-them-with-conda-85f155f4353c&#34; target=&#34;_blank&#34;&gt;https://medium.freecodecamp.org/why-you-need-python-environments-and-how-to-manage-them-with-conda-85f155f4353c&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://medium.freecodecamp.org/why-you-need-python-environments-and-how-to-manage-them-with-conda-85f155f4353c&#34;&gt;https://medium.freecodecamp.org/why-you-need-python-environments-and-how-to-manage-them-with-conda-85f155f4353c&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This takes a deeper look into how to manage &lt;code&gt;python&lt;/code&gt; environments with anaconda, and how this affects your project structures. This is useful if you are work with &lt;code&gt;python 2.x&lt;/code&gt; and &lt;code&gt;python 3.x&lt;/code&gt;, but also allows your to ensure old code won&amp;rsquo;t get broken when modules are updated as each module is specific to the environment it is downloaded in.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://happygitwithr.com/&#34; target=&#34;_blank&#34;&gt;https://happygitwithr.com/&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://happygitwithr.com/&#34;&gt;https://happygitwithr.com/&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I cannot emphasise this enough: this is genuinely &lt;strong&gt;the best resource&lt;/strong&gt; I have come across for explaining how to set up and organise a project with &lt;code&gt;Git&lt;/code&gt;. Whilst it is aimed at &lt;code&gt;R&lt;/code&gt; users, there is a large amount of cross-over, so read it regardless of the language you use.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://medium.freecodecamp.org/how-not-to-be-afraid-of-git-anymore-fe1da7415286&#34; target=&#34;_blank&#34;&gt;https://medium.freecodecamp.org/how-not-to-be-afraid-of-git-anymore-fe1da7415286&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://medium.freecodecamp.org/how-not-to-be-afraid-of-git-anymore-fe1da7415286&#34;&gt;https://medium.freecodecamp.org/how-not-to-be-afraid-of-git-anymore-fe1da7415286&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This helps you understand the nuts-and-bolts of &lt;code&gt;Git&lt;/code&gt; by learning to use the command line, rather than an application like SourceTree.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2/&#34; target=&#34;_blank&#34;&gt;https://git-scm.com/book/en/v2/&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2/&#34;&gt;https://git-scm.com/book/en/v2/&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The literal book on Git. Everything from the basics to the advanced.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://nvie.com/posts/a-successful-git-branching-model/&#34; target=&#34;_blank&#34;&gt;https://nvie.com/posts/a-successful-git-branching-model/&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://nvie.com/posts/a-successful-git-branching-model/&#34;&gt;https://nvie.com/posts/a-successful-git-branching-model/&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If you feel comfortable with the idea of branching and are interested in a good extension of what we&amp;rsquo;ve covered, this will help. Roughly speaking, the more complex you project is and the more people that are involved simultaneously, the more branches you want so you can handle problems as they come up, without breaking previously &amp;lsquo;good&amp;rsquo; code.&lt;/p&gt;
 &lt;/blockquote&gt;

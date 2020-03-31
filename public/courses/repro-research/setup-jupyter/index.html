@@ -69,6 +69,8 @@
     
 
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
 
     
 
@@ -82,7 +84,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.ea5ec11c34d113b933301e3cce3141da.css">
+  <link rel="stylesheet" href="/css/academic.min.81b68179bdeb5f9924b037dd9439ceab.css">
 
   
 
@@ -451,19 +453,17 @@
       </ul>
 
       <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#installing-jupyter-notebooks">Installing Jupyter notebooks</a></li>
-<li><a href="#kernels">Kernels</a>
-<ul>
-<li><a href="#installing-the-stata-kernel">Installing the Stata kernel</a></li>
-<li><a href="#installing-the-sas-kernel">Installing the SAS kernel</a></li>
-<li><a href="#connecting-r-with-jupyter">Connecting R with Jupyter</a></li>
-</ul></li>
-<li><a href="#customizing-jupyter-notebook-s-ui">Customizing Jupyter notebook&rsquo;s UI</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#installing-jupyter-notebooks">Installing Jupyter notebooks</a></li>
+    <li><a href="#kernels">Kernels</a>
+      <ul>
+        <li><a href="#installing-the-stata-kernel">Installing the Stata kernel</a></li>
+        <li><a href="#installing-the-sas-kernel">Installing the SAS kernel</a></li>
+        <li><a href="#connecting-r-with-jupyter">Connecting R with Jupyter</a></li>
+      </ul>
+    </li>
+    <li><a href="#customizing-jupyter-notebooks-ui">Customizing Jupyter notebook&rsquo;s UI</a></li>
+  </ul>
 </nav>
 
       
@@ -478,123 +478,83 @@
           <h1 itemprop="name">Setting Up Jupyter Notebooks</h1>
 
           <div class="article-style" itemprop="articleBody">
-            
-
-<p>This section will give you a brief overview of what a Jupyter notebook is and how to use them, but if you would like a more detailed understanding, please read the official <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html" target="_blank">documentation</a>. Jupyter Labs has now been released as a newer version of notebooks, giving you a full IDE (integrated development environment) and more control over the notebooks and working environment. This guide will not explore these features, as we are more interested in how to use the notebook.</p>
-
+            <p>This section will give you a brief overview of what a Jupyter notebook is and how to use them, but if you would like a more detailed understanding, please read the official <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html">documentation</a>. Jupyter Labs has now been released as a newer version of notebooks, giving you a full IDE (integrated development environment) and more control over the notebooks and working environment. This guide will not explore these features, as we are more interested in how to use the notebook.</p>
 <blockquote>
 <p><strong>Note:</strong> throughout this section you can substitute the phrase <em>&ldquo;Jupyter notebooks&rdquo;</em> with <em>&ldquo;Jupyter Labs&rdquo;</em> if you would prefer to have a full IDE allowing you more control over the system.</p>
 </blockquote>
-
-<p>Jupyter notebooks are run on Python, though additional things can be downloaded to allow you to use your programming language of choice. For an example of what you can do with Jupyter notebooks, click <a href="https://nbviewer.jupyter.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter1_Introduction/Ch1_Introduction_PyMC3.ipynb" target="_blank">here</a>, and <a href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#programming-and-computer-science" target="_blank">here</a> for a collection of neat and applied notebooks.</p>
-
+<p>Jupyter notebooks are run on Python, though additional things can be downloaded to allow you to use your programming language of choice. For an example of what you can do with Jupyter notebooks, click <a href="https://nbviewer.jupyter.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter1_Introduction/Ch1_Introduction_PyMC3.ipynb">here</a>, and <a href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#programming-and-computer-science">here</a> for a collection of neat and applied notebooks.</p>
 <h2 id="installing-jupyter-notebooks">Installing Jupyter notebooks</h2>
-
 <p>Mac&rsquo;s come shipped with a version of Python, but it is most likely outdated, and it doesn&rsquo;t contain everything we want. In order to get running, I strongly recommend downloading the Anaconda distribution over other distributions, or even just directly from Python&rsquo;s website. The instructions below will be enough to get you up and running with Jupyter notebooks in your language of choice.</p>
-
 <ul>
-<li>Download the full <a href="https://www.anaconda.com/download/" target="_blank">Anaconda</a> distribution i.e. not miniconda
-
+<li>Download the full <a href="https://www.anaconda.com/download/">Anaconda</a> distribution i.e. not miniconda
 <ul>
 <li>Be sure to choose <code>Python 3.x</code>, not <code>Python 2.x</code>, as it&rsquo;s the newer version and is forwards-compatible.</li>
 <li>Be sure to only install for one user, not the whole system</li>
 <li>Be sure to select <code>Add Anaconda to my PATH environment variable</code> under Advanced Options</li>
 <li>Be sure to install Anaconda to the drive where your data lives. To do this you will need to manually edit the installation path within the Anaconda installer wizard, otherwise it will automatically end up in the <code>C:\</code> drive</li>
-</ul></li>
+</ul>
+</li>
 <li>Use <code>kernels</code> to connect your programming language of choice with python and the notebook
-
 <ul>
 <li>To see how to get a particular language to work in Jupyter Notebooks, please click on the appropriate language:
-
 <ul>
 <li><a href="#installing-the-stata-kernel">Stata</a></li>
 <li><a href="#installing-the-sas-kernel">SAS</a></li>
 <li><a href="#connecting-r-with-jupyter">R</a></li>
-</ul></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="kernels">Kernels</h2>
-
 <p>A kernel is program that allows the notebook to connect with, and run, your code. Jupyter comes with the Python code pre-installed, but if you want to use a different language, you will need to download a specific kernel.</p>
-
-<p>Below, the installation instructions are described for common languages used in epidemiology. To see a full list of kernels available for Jupyter, along with the appropriate documentation and installation instructions, follow <a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels" target="_blank">this link</a>.</p>
-
+<p>Below, the installation instructions are described for common languages used in epidemiology. To see a full list of kernels available for Jupyter, along with the appropriate documentation and installation instructions, follow <a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">this link</a>.</p>
 <h3 id="installing-the-stata-kernel">Installing the Stata kernel</h3>
-
-<p>The instructions for installing the <code>stata_kernel</code> are based from the original documentation <a href="https://kylebarron.github.io/stata_kernel/getting_started/" target="_blank">here</a>. It should work with <code>Stata 12</code> (I have tested it). If these instructions do not work for you, it may be that there has been an update to the kernel, at which point, please refer to the original documentation linked above.</p>
-
+<p>The instructions for installing the <code>stata_kernel</code> are based from the original documentation <a href="https://kylebarron.github.io/stata_kernel/getting_started/">here</a>. It should work with <code>Stata 12</code> (I have tested it). If these instructions do not work for you, it may be that there has been an update to the kernel, at which point, please refer to the original documentation linked above.</p>
 <p>Open a command prompt (Windows) / terminal (linux/mac) and type/copy-paste the following commands, pressing enter after each line</p>
-
 <ul>
 <li><code>pip install stata_kernel</code></li>
 <li><code>python -m stata_kernel.install</code></li>
 </ul>
-
 <p><strong>Windows-specific steps</strong></p>
-
 <p>In order to let <code>stata_kernel</code> talk to Stata, you need to link the Stata Automation library:</p>
-
 <ol>
 <li>In the installation directory (most likely <code>C:\Program Files (x86)\Stata12</code> or similar), right-click on the Stata executable, for example, <code>StataSE.exe</code> (this will just show as <code>StataSE</code>, but is listed as an application). Choose <code>Create Shortcut</code>. Placing it on the Desktop is fine.</li>
-<li>Right-click on the newly created <code>Shortcut to StataSE.exe</code>, choose <code>Properties</code>, and append<code>/Register</code> to the end of the Target field. So if the target is currently <code>&quot;C:\Program Files\Stata12\StataSE.exe&quot;</code>, change it to <code>&quot;C:\Program Files\Stata12\StataSE.exe&quot; /Register</code> (note the space before <code>/</code>). Click OK.</li>
+<li>Right-click on the newly created <code>Shortcut to StataSE.exe</code>, choose <code>Properties</code>, and append<code> /Register</code> to the end of the Target field. So if the target is currently <code>&quot;C:\Program Files\Stata12\StataSE.exe&quot;</code>, change it to <code>&quot;C:\Program Files\Stata12\StataSE.exe&quot; /Register</code> (note the space before <code>/</code>). Click OK.</li>
 <li>Right-click on the updated <code>Shortcut to StataSE.exe</code>; choose Run as administrator.</li>
 </ol>
-
 <h3 id="installing-the-sas-kernel">Installing the SAS kernel</h3>
-
-<p>*<em>This has not yet been tested here. The instructions for installing the <code>sas_kernel</code> are based from the original documentation <a href="https://github.com/sassoftware/sas_kernel" target="_blank">here</a></em>*</p>
-
+<p>*<em>This has not yet been tested here. The instructions for installing the <code>sas_kernel</code> are based from the original documentation <a href="https://github.com/sassoftware/sas_kernel">here</a></em>*</p>
 <p>Open a command prompt (Windows) / terminal (linux/mac) and type/copy-paste the following commands, pressing enter after each line. First we need to install a dependency called <code>saspy</code> that helps the kernel connect <code>SAS</code> to <code>python</code></p>
-
 <ul>
 <li><code>pip install saspy</code></li>
 <li><code>pip install sas_kernel</code></li>
 </ul>
-
 <p>You should now see something like this.</p>
-
 <pre><code>Available kernels:
 python3    /home/sas/anaconda3/lib/python3.5/site-packages/ipykernel/resources
 sas        /home/sas/.local/share/jupyter/kernels/sas
-</code></pre>
-
-<p>Now verify that the SAS Executable is correct</p>
-
+</code></pre><p>Now verify that the SAS Executable is correct</p>
 <ul>
 <li>find the <code>sascfg.py</code> file &ndash; it is currently located in the install location (see above) <code>[install location]/site-packages/saspy/sascfg.py</code>. To query <code>pip</code> for the location of the file, type <code>pip show saspy</code>. Failing that, this command will search the OS for the file location: <code>find / -name sascfg.py</code></li>
-<li>edit the file with the correct path the SAS executable and include any options you wish it include in the SAS invocation. See examples in this <a href="https://github.com/sassoftware/saspy/blob/master/saspy/sascfg.py" target="_blank">file</a></li>
+<li>edit the file with the correct path the SAS executable and include any options you wish it include in the SAS invocation. See examples in this <a href="https://github.com/sassoftware/saspy/blob/master/saspy/sascfg.py">file</a></li>
 </ul>
-
 <h3 id="connecting-r-with-jupyter">Connecting R with Jupyter</h3>
-
-<p>If you are hoping to make nice documents and reproducible work using R, I would highly recommend that you use the R Markdown or R Notebook through <a href="https://www.rstudio.com/products/rstudio/download/" target="_blank">RStudio</a> application instead. However, if you would prefer Jupyter, then please read on.</p>
-
+<p>If you are hoping to make nice documents and reproducible work using R, I would highly recommend that you use the R Markdown or R Notebook through <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a> application instead. However, if you would prefer Jupyter, then please read on.</p>
 <p>It is possible to download an R kernel, much like for Stata and SAS, but it can be a bit fickle, so a different approach is described below. It is important to note that with this method you are installing a fresh version of R, so you will not have access to the packages you have previously installed - you will need to reinstall them in this R environment, which could be done within a Jupyter notebook.</p>
-
 <p>Open a command prompt (Windows) / terminal (Linux/Mac) and enter the following commands:</p>
-
 <ul>
 <li><code>conda install r-essentials r-igraph</code></li>
 <li><code>Rscript -e 'install.packages(&quot;languageserver&quot;)'</code></li>
 </ul>
-
-<p>If you would rather install an R kernel than a fresh install of R within the Anaconda distribution, you can follow the instructions <a href="https://richpauloo.github.io/2018-05-16-Installing-the-R-kernel-in-Jupyter-Lab/" target="_blank">here</a>. The advantage of this is that it allows the notebook to access previously installed packages as they are not running off a fresh version of R.</p>
-
-<h2 id="customizing-jupyter-notebook-s-ui">Customizing Jupyter notebook&rsquo;s UI</h2>
-
+<p>If you would rather install an R kernel than a fresh install of R within the Anaconda distribution, you can follow the instructions <a href="https://richpauloo.github.io/2018-05-16-Installing-the-R-kernel-in-Jupyter-Lab/">here</a>. The advantage of this is that it allows the notebook to access previously installed packages as they are not running off a fresh version of R.</p>
+<h2 id="customizing-jupyter-notebooks-ui">Customizing Jupyter notebook&rsquo;s UI</h2>
 <p><strong>The following section is not essential and can be ignored if you want to keep things as simple as possible.</strong></p>
-
 <p>Because I do not like the <code>In[]</code> <code>Out[]</code> text showing in documents, along with centering plots/figures, I have customized the Jupyter notebook settings. If you would like to do the same, this section should help you. It is not necessary, but I feel that it gives cleaner documents (including pdf documents via LaTeX). If you do this, it is essential that you <strong>routinely restart the kernel to run everything again in a fresh environment</strong> as it is incredibly easy to run code blocks out of order and forget how this changes the output and introduces <em>hidden</em> packages.</p>
-
-<p>If you would like to customize the look of the notebook, <a href="https://github.com/dunovank/jupyter-themes" target="_blank">jupyterthemes</a> is a great package that can be installed. I have also edited the <code>custom.css</code> file (<code>C:\Users\owner\.jupyter\custom\</code>), adding <code>display: None;</code> under the section</p>
-
+<p>If you would like to customize the look of the notebook, <a href="https://github.com/dunovank/jupyter-themes">jupyterthemes</a> is a great package that can be installed. I have also edited the <code>custom.css</code> file (<code>C:\Users\owner\.jupyter\custom\</code>), adding <code>display: None;</code> under the section</p>
 <pre><code>div.prompt,
  .prompt {
-</code></pre>
-
-<p>so that it now reads</p>
-
+</code></pre><p>so that it now reads</p>
 <pre><code>div.prompt,
  .prompt {
  font-family: monospace, monospace;
@@ -605,21 +565,14 @@ sas        /home/sas/.local/share/jupyter/kernels/sas
  .
  .
 }
-</code></pre>
-
-<p>This removes the <code>In[]</code> <code>Out[]</code> text. To centre the output of tables/figures, add</p>
-
+</code></pre><p>This removes the <code>In[]</code> <code>Out[]</code> text. To centre the output of tables/figures, add</p>
 <pre><code>.output_png {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
 }
-</code></pre>
-
-<p>to the <code>custom.css</code> file, right after the <code>.prompt {..}</code> section.</p>
-
+</code></pre><p>to the <code>custom.css</code> file, right after the <code>.prompt {..}</code> section.</p>
 <p>To enable soft wrapping in the notebook, you need to edit the <code>notebook.json</code> file (<code>C:\Users\owner\.jupyter\nbconfig\</code>). If it does not exist, you need to create it. Once open, add</p>
-
 <pre><code>{
   &quot;MarkdownCell&quot;: {
     &quot;cm_config&quot;: {
@@ -632,9 +585,7 @@ sas        /home/sas/.local/share/jupyter/kernels/sas
     }
   }
 }
-</code></pre>
-
-<p>before restarting Jupyter.</p>
+</code></pre><p>before restarting Jupyter.</p>
 
           </div>
 
@@ -672,7 +623,7 @@ sas        /home/sas/.local/share/jupyter/kernels/sas
 
           
 <p class="edit-page">
-  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses%5crepro-research%5csetup-jupyter.md">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses/repro-research/setup-jupyter.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>
@@ -746,10 +697,7 @@ sas        /home/sas/.local/share/jupyter/kernels/sas
 
     
     
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwW8WEH8AgaDS6dLvHTx8p2Tz5jpgNZcQ"></script>
-      
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
-      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
     
 
     
@@ -824,7 +772,7 @@ sas        /home/sas/.local/share/jupyter/kernels/sas
     
     
     
-    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+    <script src="/js/academic.min.9d17066e114a84885249cfc80c60372c.js"></script>
 
     
 

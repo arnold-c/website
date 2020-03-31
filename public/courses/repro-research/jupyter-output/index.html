@@ -69,6 +69,8 @@
     
 
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
 
     
 
@@ -82,7 +84,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.ea5ec11c34d113b933301e3cce3141da.css">
+  <link rel="stylesheet" href="/css/academic.min.81b68179bdeb5f9924b037dd9439ceab.css">
 
   
 
@@ -450,7 +452,7 @@
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      
+      <nav id="TableOfContents"></nav>
 
       
     </div>
@@ -465,15 +467,10 @@
 
           <div class="article-style" itemprop="articleBody">
             <p>We&rsquo;ve covered a lot of information up until now about setting up your projects and your code, but a big part of reproducible research is the creation of nice-looking and transparent documents. The reason we&rsquo;ve gone to such effort to install Jupyter notebooks and connect them with our language of choice is that not only do they allow for excellent data exploration, but they also make documents that look professional.</p>
-
-<p>In scientific articles, whilst it&rsquo;s not essential, LaTeX is a nice touch, and Jupyter can give you a LaTeX formatted pdf documents. To do this, you will first need to install LaTeX. If you are on Windows, I would recommend the <a href="https://miktex.org/download" target="_blank">MiKTeX</a> distribution, and if you use a Mac, then I would recommend the <a href="http://www.tug.org/mactex/mactex-download.html" target="_blank">MacTeX</a> distribution. You will also need the &ldquo;swiss-army knife&rdquo; of file conversion, <a href="https://pandoc.org/installing.html" target="_blank">pandoc</a>. Pandoc is not <em>needed</em> for creating LaTeX-formatted pdfs, but if you have documents with unsupported characters and you need to use a different <code>pdf-engine</code> you&rsquo;ll need to use pandoc.</p>
-
-<p>During the installation process, LaTeX should have been added automatically to the PATH. To test this, enter <code>pdflatex</code> into a command line/terminal. If you get the output <code>This is pdfTeX ...</code> then you are good to go. If not, please add the executable to the PATH<a id = "env-variables"></a>. In Windows you do this by navigating to <code>Environment Variables</code> from the Windows key and editing the PATH in <code>User Variables</code>. In Mac, you should open the terminal and enter <code>touch ~/.bash_profile; open ~/.bash_profile</code>, which opens (or creates if missing) the file that stores your PATH. From here, type <code>export PATH=&quot;path-to-latex-executable:$PATH&quot;</code> to add the executable to the path. Now save and exit the text editor, run <code>source ~/.bash_profile</code> in your terminal, and you&rsquo;re good to go. The executable location can be found by opening the MiKTeX/MacTeX console and looking at the bin directory under settings. For me, on a Windows computer where I don&rsquo;t have administrator privileges it reads  <code>C:\Users\owner\AppData\Local\Programs\MiKTeX 2.9\miktex/bin/x64</code>. If you are still having issues, please consult <a href="http://sachaepskamp.com/wp-content/uploads/2011/10/Install.pdf" target="_blank">this document</a>.</p>
-
+<p>In scientific articles, whilst it&rsquo;s not essential, LaTeX is a nice touch, and Jupyter can give you a LaTeX formatted pdf documents. To do this, you will first need to install LaTeX. If you are on Windows, I would recommend the <a href="https://miktex.org/download">MiKTeX</a> distribution, and if you use a Mac, then I would recommend the <a href="http://www.tug.org/mactex/mactex-download.html">MacTeX</a> distribution. You will also need the &ldquo;swiss-army knife&rdquo; of file conversion, <a href="https://pandoc.org/installing.html">pandoc</a>. Pandoc is not <em>needed</em> for creating LaTeX-formatted pdfs, but if you have documents with unsupported characters and you need to use a different <code>pdf-engine</code> you&rsquo;ll need to use pandoc.</p>
+<p>During the installation process, LaTeX should have been added automatically to the PATH. To test this, enter <code>pdflatex</code> into a command line/terminal. If you get the output <code>This is pdfTeX ...</code> then you are good to go. If not, please add the executable to the PATH<!-- raw HTML omitted --><!-- raw HTML omitted -->. In Windows you do this by navigating to <code>Environment Variables</code> from the Windows key and editing the PATH in <code>User Variables</code>. In Mac, you should open the terminal and enter <code>touch ~/.bash_profile; open ~/.bash_profile</code>, which opens (or creates if missing) the file that stores your PATH. From here, type <code>export PATH=&quot;path-to-latex-executable:$PATH&quot;</code> to add the executable to the path. Now save and exit the text editor, run <code>source ~/.bash_profile</code> in your terminal, and you&rsquo;re good to go. The executable location can be found by opening the MiKTeX/MacTeX console and looking at the bin directory under settings. For me, on a Windows computer where I don&rsquo;t have administrator privileges it reads  <code>C:\Users\owner\AppData\Local\Programs\MiKTeX 2.9\miktex/bin/x64</code>. If you are still having issues, please consult <a href="http://sachaepskamp.com/wp-content/uploads/2011/10/Install.pdf">this document</a>.</p>
 <p>Now you&rsquo;re ready to create a LaTeX-formatted pdf document. All you need to do is click <em>File -&gt; Download as -&gt; PDF via LaTeX (.pdf)</em>.</p>
-
 <p>Unfortunately, when creating pdf documents, code is not hard wrapped. This means that if you have a very long line of code (&gt; 80 characters), it will run out of the formatted area, and at worst, off the page. At present, I do not know a way to force Jupyter notebooks to wrap the output automatically, so instead you have to write clean code and start new lines using <code>,</code> and <code>\n</code> if it&rsquo;s too long.</p>
-
 <p>If you would rather not produce a pdf via LaTeX, instead wanting an arguably more readable output, you could create an html file. This is done in the same manner as pdf documents.</p>
 
           </div>
@@ -512,7 +509,7 @@
 
           
 <p class="edit-page">
-  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses%5crepro-research%5cjupyter-output.md">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses/repro-research/jupyter-output.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>
@@ -586,10 +583,7 @@
 
     
     
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwW8WEH8AgaDS6dLvHTx8p2Tz5jpgNZcQ"></script>
-      
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
-      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
     
 
     
@@ -664,7 +658,7 @@
     
     
     
-    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+    <script src="/js/academic.min.9d17066e114a84885249cfc80c60372c.js"></script>
 
     
 

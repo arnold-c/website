@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="Use a version control system such as Git to track changes in your code. Data isn&rsquo;t touched one collected:  Do all data munging within your program i.e. no editing the excel spreadsheets!!! You should have multiple backups on at least two different sets of servers/drives  Your outputs should be reproducible from the code you have:  Make sure this is the case by routinely clearing your programming environment and re-running the code in a clean environment to ensure your results aren&rsquo;t contingent on &lsquo;hidden&rsquo; packages/modules that were loaded erroneously  Never set explicit file paths (e.">
+  <meta name="description" content="Use a version control system such as Git to track changes in your code. Data isn&rsquo;t touched one collected:  Do all data munging within your program i.e. no editing the excel spreadsheets!!! You should have multiple backups on at least two different sets of servers/drives   Your outputs should be reproducible from the code you have:  Make sure this is the case by routinely clearing your programming environment and re-running the code in a clean environment to ensure your results aren&rsquo;t contingent on &lsquo;hidden&rsquo; packages/modules that were loaded erroneously   Never set explicit file paths (e.">
 
   
   <link rel="alternate" hreflang="en-us" href="/courses/repro-research/key-points/">
@@ -69,6 +69,8 @@
     
 
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
 
     
 
@@ -82,7 +84,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.ea5ec11c34d113b933301e3cce3141da.css">
+  <link rel="stylesheet" href="/css/academic.min.81b68179bdeb5f9924b037dd9439ceab.css">
 
   
 
@@ -125,7 +127,7 @@
   <meta property="og:site_name" content="CALLUM ARNOLD">
   <meta property="og:url" content="/courses/repro-research/key-points/">
   <meta property="og:title" content="Key Points | CALLUM ARNOLD">
-  <meta property="og:description" content="Use a version control system such as Git to track changes in your code. Data isn&rsquo;t touched one collected:  Do all data munging within your program i.e. no editing the excel spreadsheets!!! You should have multiple backups on at least two different sets of servers/drives  Your outputs should be reproducible from the code you have:  Make sure this is the case by routinely clearing your programming environment and re-running the code in a clean environment to ensure your results aren&rsquo;t contingent on &lsquo;hidden&rsquo; packages/modules that were loaded erroneously  Never set explicit file paths (e."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:description" content="Use a version control system such as Git to track changes in your code. Data isn&rsquo;t touched one collected:  Do all data munging within your program i.e. no editing the excel spreadsheets!!! You should have multiple backups on at least two different sets of servers/drives   Your outputs should be reproducible from the code you have:  Make sure this is the case by routinely clearing your programming environment and re-running the code in a clean environment to ensure your results aren&rsquo;t contingent on &lsquo;hidden&rsquo; packages/modules that were loaded erroneously   Never set explicit file paths (e."><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -450,7 +452,7 @@
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      
+      <nav id="TableOfContents"></nav>
 
       
     </div>
@@ -467,21 +469,21 @@
             <ul>
 <li>Use a version control system such as Git to track changes in your code.</li>
 <li>Data isn&rsquo;t touched one collected:
-
 <ul>
 <li>Do all <em>data munging</em> within your program i.e. no editing the excel spreadsheets!!!</li>
 <li>You should have multiple backups on at least two different sets of servers/drives</li>
-</ul></li>
+</ul>
+</li>
 <li>Your outputs should be reproducible from the code you have:
-
 <ul>
-<li>Make sure this is the case by routinely clearing your programming environment and re-running the code in a clean environment to ensure your results aren&rsquo;t contingent on <em>&lsquo;hidden&rsquo;</em> packages/modules that were <a href="https://onunicornsandgenes.blog/2017/04/02/using-r-dont-save-your-workspace/" target="_blank">loaded erroneously</a></li>
-</ul></li>
+<li>Make sure this is the case by routinely clearing your programming environment and re-running the code in a clean environment to ensure your results aren&rsquo;t contingent on <em>&lsquo;hidden&rsquo;</em> packages/modules that were <a href="https://onunicornsandgenes.blog/2017/04/02/using-r-dont-save-your-workspace/">loaded erroneously</a></li>
+</ul>
+</li>
 <li>Never set explicit file paths (e.g. <code>setwd()</code>) if you can avoid it
-
 <ul>
 <li>Try and use a package that allows you to set relative paths e.g. <code>here_here</code> in R. This allows the project to be passed to someone else in its entirety and the code won&rsquo;t break because they don&rsquo;t have the same folder names and set up as you (also if you work on multiple computers/OS)</li>
-</ul></li>
+</ul>
+</li>
 <li>Format your filenames properly</li>
 </ul>
 
@@ -521,7 +523,7 @@
 
           
 <p class="edit-page">
-  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses%5crepro-research%5ckey-points.md">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses/repro-research/key-points.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>
@@ -595,10 +597,7 @@
 
     
     
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwW8WEH8AgaDS6dLvHTx8p2Tz5jpgNZcQ"></script>
-      
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
-      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
     
 
     
@@ -673,7 +672,7 @@
     
     
     
-    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+    <script src="/js/academic.min.9d17066e114a84885249cfc80c60372c.js"></script>
 
     
 

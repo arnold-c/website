@@ -70,6 +70,8 @@ Creating a notebook You can either open up the Anaconda navigator and then Jupyt
     
 
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
 
     
 
@@ -83,7 +85,7 @@ Creating a notebook You can either open up the Anaconda navigator and then Jupyt
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.ea5ec11c34d113b933301e3cce3141da.css">
+  <link rel="stylesheet" href="/css/academic.min.81b68179bdeb5f9924b037dd9439ceab.css">
 
   
 
@@ -453,13 +455,10 @@ Creating a notebook You can either open up the Anaconda navigator and then Jupyt
       </ul>
 
       <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#creating-a-notebook">Creating a notebook</a></li>
-<li><a href="#running-a-jupyter-notebook">Running a Jupyter notebook</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#creating-a-notebook">Creating a notebook</a></li>
+    <li><a href="#running-a-jupyter-notebook">Running a Jupyter notebook</a></li>
+  </ul>
 </nav>
 
       
@@ -474,22 +473,13 @@ Creating a notebook You can either open up the Anaconda navigator and then Jupyt
           <h1 itemprop="name">Using Jupyter Notebooks</h1>
 
           <div class="article-style" itemprop="articleBody">
-            
-
-<p>Now you have set up Jupyter to run with the programming language of your choice, we should start using it. How you do that is detailed in this section.</p>
-
+            <p>Now you have set up Jupyter to run with the programming language of your choice, we should start using it. How you do that is detailed in this section.</p>
 <h2 id="creating-a-notebook">Creating a notebook</h2>
-
 <p>You can either open up the Anaconda navigator and then Jupyter notebooks, or open Jupyter notebooks directly. Once open, navigate to the directory you would like to create the notebook in (<em>If you are using a version control system like Git, then you should be within the project&rsquo;s repository</em>)</p>
-
 <p>Select the <strong>New</strong> button in the top right corner, and then select the language you would like to program in (<em>this assumes that you have downloaded an appropriate kernel if you would like to use a language other than Python</em>)</p>
-
 <h2 id="running-a-jupyter-notebook">Running a Jupyter notebook</h2>
-
-<p>Now you have the notebook open in your chosen language, it&rsquo;s time to start doing some data exploration and analysis. Here, we&rsquo;ll cover some basic commands that will get you started, but to fully leverage the power of the notebook, you should read the <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#code-cells" target="_blank">Jupyter documentation</a>, along with the documentation of your preferred kernel, particularly sections relating to <code>magic</code> commands (which are language-specific).</p>
-
+<p>Now you have the notebook open in your chosen language, it&rsquo;s time to start doing some data exploration and analysis. Here, we&rsquo;ll cover some basic commands that will get you started, but to fully leverage the power of the notebook, you should read the <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#code-cells">Jupyter documentation</a>, along with the documentation of your preferred kernel, particularly sections relating to <code>magic</code> commands (which are language-specific).</p>
 <p>When you are writing in a cell (‘Edit’ mode), you can use these commands:</p>
-
 <table>
 <thead>
 <tr>
@@ -497,32 +487,26 @@ Creating a notebook You can either open up the Anaconda navigator and then Jupyt
 <th align="left"></th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td align="left"><code>Shift + Enter</code></td>
 <td align="left">Executes the current cell and enters you into the next one</td>
 </tr>
-
 <tr>
 <td align="left"><code>Ctrl/Cmd + Enter</code></td>
 <td align="left">Executes the current cell, but does not enter you into the next one</td>
 </tr>
-
 <tr>
 <td align="left"><code>Esc</code></td>
 <td align="left">This exits &lsquo;Edit&rsquo; mode without executing the cells</td>
 </tr>
-
 <tr>
 <td align="left"><code>Tab</code></td>
 <td align="left">Code completion or indent</td>
 </tr>
 </tbody>
 </table>
-
 <p>If you are not in &lsquo;Edit&rsquo; mode (&lsquo;Command&rsquo; mode), and therefore at least one cell is selected, you can use these commands:</p>
-
 <table>
 <thead>
 <tr>
@@ -530,33 +514,27 @@ Creating a notebook You can either open up the Anaconda navigator and then Jupyt
 <th align="left"></th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td align="left"><code>Ctrl/Cmd + a</code></td>
 <td align="left">Add an empty cell above your current cell</td>
 </tr>
-
 <tr>
 <td align="left"><code>Ctrl/Cmd + b</code></td>
 <td align="left">Add an empty cell below your current cell</td>
 </tr>
-
 <tr>
 <td align="left"><code>dd</code></td>
 <td align="left">Delete the selected cell</td>
 </tr>
-
 <tr>
 <td align="left"><code>Ctrl/Cmd + m</code></td>
 <td align="left">Change the cell type to &lsquo;Markdown&rsquo; so you can add text</td>
 </tr>
-
 <tr>
 <td align="left"><code>Ctrl/Cmd + y</code></td>
 <td align="left">Change the cell type to &lsquo;Code&rsquo; so you can add code</td>
 </tr>
-
 <tr>
 <td align="left"><code>Enter</code></td>
 <td align="left">Enter &lsquo;Edit&rsquo; mode</td>
@@ -600,7 +578,7 @@ Creating a notebook You can either open up the Anaconda navigator and then Jupyt
 
           
 <p class="edit-page">
-  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses%5crepro-research%5cusing-jupyter.md">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses/repro-research/using-jupyter.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>
@@ -674,10 +652,7 @@ Creating a notebook You can either open up the Anaconda navigator and then Jupyt
 
     
     
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwW8WEH8AgaDS6dLvHTx8p2Tz5jpgNZcQ"></script>
-      
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
-      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
     
 
     
@@ -752,7 +727,7 @@ Creating a notebook You can either open up the Anaconda navigator and then Jupyt
     
     
     
-    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+    <script src="/js/academic.min.9d17066e114a84885249cfc80c60372c.js"></script>
 
     
 
