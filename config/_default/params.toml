@@ -91,8 +91,9 @@ contact_links = [
 # Map provider:
 #   0: No map
 #   1: Google Maps
-#   2: OpenStreetMap (Mapnik)
+#   2: OpenStreetMap (HOT)
 #   3: OpenStreetMap (Mapbox)
+
 map = 2
 map_api_key = "AIzaSyAwW8WEH8AgaDS6dLvHTx8p2Tz5jpgNZcQ"
 latitude = "43.6573"
