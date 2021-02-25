@@ -94,8 +94,8 @@ contact_links = [
 #   2: OpenStreetMap (HOT)
 #   3: OpenStreetMap (Mapbox)
 
-map = 2
-map_api_key = "AIzaSyAwW8WEH8AgaDS6dLvHTx8p2Tz5jpgNZcQ"
+map = 3
+map_api_key = "pk.eyJ1IjoiYXJub2xkLWMiLCJhIjoiY2tsbGJhejZqMGtidzJ1bXNkdnJkYnoxNCJ9.nJMQPD072FY3nTLNusmd9g"
 latitude = "40.7982"
 longitude = "-77.8599"
 zoom = 11
