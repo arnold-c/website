@@ -44,7 +44,7 @@ social:
   link: https://github.com/arnold-c
 - icon: twitter
   icon_pack: fab
-  link = https://twitter.com/thecallumarnold
+  link: https://twitter.com/thecallumarnold
 superuser: true
 user_groups:
 - Researchers
