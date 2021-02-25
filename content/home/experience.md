@@ -18,12 +18,31 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
+  title = "PhD Student"
+  company = "Pennsylvania State University"
+  company_url = "https://science.psu.edu/bio/people/cfa5228"
+  location = "State College, PA, USA"
+  date_start = "2020-08-24"
+  date_end = ""
+  description = """
+  
+  Infectious disease epidemiology and modelling with Dr. Matt Ferrari.
+  
+  Currently working on:
+  
+  * The Data4Action Research Project regarding COVID-19
+  * Testing strategies for COVID-19 surveillance
+  * Resource utilisation strategies for measles surveillance and detection in the DRC
+  
+  """
+  
+[[experience]]
   title = "Clinical Research Coordinator"
   company = "The Hospital for Sick Children"
   company_url = "https://www.sickkids.ca/"
   location = "Toronto, Canada"
   date_start = "2018-04-13"
-  date_end = ""
+  date_end = "2019-12-31"
   description = """
   
   Coordinating a multi-centre observational study into waning immunity in infants to measles, mumps and varicella, and manage all data produced by the National Microbiology Laboratory and the Nova Scotia Health Authority laboratory in central REDCap database.
