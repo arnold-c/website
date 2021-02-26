@@ -21,7 +21,7 @@ interests:
 - Forecasting Models
 - Machine Learning
 - Bayesian Statistics
-name: Callum Arnold
+title: Callum Arnold
 organizations:
 - name: Pennsylvania State University
   url: "https://science.psu.edu/bio/people/cfa5228"
