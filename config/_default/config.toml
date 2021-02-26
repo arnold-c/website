@@ -22,6 +22,9 @@ googleAnalytics = "UA-145604670-1"
 ## Advanced options below ##
 ############################
 
+# Name of Academic theme folder in `themes/`.
+theme = "wowchemy-hugo-modules"
+
 # Get last modified date for content from Git?
 enableGitInfo = true
 
