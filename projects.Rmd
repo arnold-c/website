@@ -1,0 +1,42 @@
+---
+title: "Projects"
+output:
+  distill::distill_article:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+<link rel="stylesheet" href="academicons/css/academicons.min.css"/>
+
+## Current Projects
+### Data4Action <a href="https://www.github.com/arnold-c/D4A-COVID"> <i class="fab fa-github"></i></a>
+
+A longitudinal cohort study, comprising of two geographically related cohorts, 
+that aims to examine the effect of Penn State University students on the 
+SARS-CoV-2 incidence in the surrounding community. We have recently published a
+pre-print of the interim results, which can be found 
+[here](https://doi.org/10.1101/2021.02.17.21251942).
+
+### UrgEpi <a href="https://www.github.com/arnold-c/drc-urgepi"> <i class="fab fa-github"></i></a>
+
+Examining the role of new laboratory testing facilities on the speed of diagnosis
+and outbreak response decisions for measles in the Katanga region of the 
+Democratic Republic of Congo.
+
+### COVID Testing Protocol <a href="https://www.github.com/arnold-c/testing-protocol"> <i class="fab fa-github"></i></a>
+
+Examining the effects of utilizing social *bubbles* as part of a SARS-CoV-2
+test and trace system within a university community.
+
+## Past Projects
+### Waning Measles Immunity
+
+A prospective cross-sectional serology study of Canadian newborns and mothers
+assessing the rate of waning measles, varicella, and mumps antibodies in infants, 
+including subgroup analysis by vaccination status. A retrospective analysis of 
+waning measles antibody titers (PRNT) in stored sera from a separate cohort of 
+Canadian newborns was published as part of the study, and can be found 
+[here](https://doi.org/10.1542/peds.2019-0630)
