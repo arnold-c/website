@@ -43,3 +43,9 @@ vignettes/*.pdf
 ### R.Bookdown Stack ###
 # R package: bookdown caching files
 /*_files/
+
+/public/
+/resources/
+
+DS_Store
+Thumbs.db
