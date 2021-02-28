@@ -2,7 +2,7 @@ name: "."
 title: "Callum Arnold"
 favicon: img/favicon.png
 output_dir: "_site"
-base_url: https://www.arnold-c.rbind.io
+base_url: https://www.callumarnold.com
 google_analytics: "UA-145604670-1"
 theme: theme.css
 navbar:
@@ -32,7 +32,8 @@ collections:
     categories_metadata: true
     author_metadata: false
     disqus: 
-      shortname: callum-arnold
+      shortname: callumarnold
       hidden: true
     share: [twitter, linkedin]
+repository_url: https://github.com/arnold-c/website
 output: distill::distill_article
