@@ -13,6 +13,7 @@ categories:
   - git
   - best practice
   - notebooks
+creative_commons: CC BY
 output:
   distill::distill_article:
     toc: true
