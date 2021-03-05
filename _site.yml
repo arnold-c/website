@@ -31,9 +31,9 @@ collections:
     categories: true
     categories_metadata: true
     author_metadata: false
-    disqus: 
-      shortname: callumarnold
-      hidden: true
     share: [twitter, linkedin]
 repository_url: https://github.com/arnold-c/website
-output: distill::distill_article
+output: 
+  distill::distill_article:
+    includes:
+      in_header: utterances.html
