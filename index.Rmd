@@ -13,7 +13,7 @@ links:
   - label: GitHub
     url: "https://github.com/arnold-c"
   - label: Email
-    url: "mailto:cal.rk.arnold@gmail.com"
+    url: "mailto:arnold.crk@gmail.com"
 site: distill::distill_website
 output:
   postcards::trestles
@@ -27,7 +27,7 @@ I am a PhD Student in Biology at Pennsylvania State University, where I build
 mathematical models of infectious diseases as part of Dr. Matt Ferrari’s lab 
 (within the Center for Infectious Disease Dynamics), in addition to other 
 infectious disease epidemiology work. I previously worked as a clinical research
-coordinator in the Infectious Disease Division at the Hospital for Sick Children, 
+coordinator in the Infectious Disease Division at the Hospital for Sick Children (Toronto, Canada), 
 and concurrently completed an MSc in Global Health Policy at LSHTM. Whilst 
 completing my Masters in computational chemistry, I realized that I enjoyed 
 research and computational modeling, but wanted to work in a more applied 
@@ -41,8 +41,7 @@ Bash, and am learning Stan for Bayesian modeling.
 
 When I'm not working, I can be found outside doing one of the following
 (depending on the season): 
-road cycling, mountain biking, hiking, rock climbing, cross-country skiing, 
-snowboarding, or very occasionally, running.
+mountain biking, road cycling, rock climbing, hiking, snowboarding, cross-country skiing, or very occasionally, running.
 
 ## Education
 
@@ -66,11 +65,10 @@ snowboarding, or very occasionally, running.
  
   Infectious disease epidemiology and modelling with Dr. Matt Ferrari.
   
-  Currently working on:
+  [Currently working](projects.Rmd) on:
   
-  - The Data4Action Research Project examing the dynamics of COVID-19 in a 
+  - The [Data4Action Research Project](https://doi.org/10.1038/s41598-022-12499-5) examing the dynamics of COVID-19 in a 
   university community
-  - Testing strategies for COVID-19 surveillance
   - Resource utilisation strategies for measles surveillance and detection in the DRC
 </div>
 
