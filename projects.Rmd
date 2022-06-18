@@ -12,24 +12,24 @@ knitr::opts_chunk$set(echo = FALSE)
 <link rel="stylesheet" href="academicons/css/academicons.min.css"/>
 
 ## Current Projects
-### Data4Action <a href="https://www.github.com/arnold-c/D4A-COVID"> <i class="fab fa-github"></i></a>
+### Data4Action <a href="https://www.github.com/arnold-c/Data4Action"> <i class="fab fa-github"></i></a>
 
 A longitudinal cohort study, comprising of two geographically related cohorts, 
 that aims to examine the effect of Penn State University students on the 
 SARS-CoV-2 incidence in the surrounding community. We have recently published a
-pre-print of the interim results, which can be found 
-[here](https://doi.org/10.1101/2021.02.17.21251942).
+the interim serological results in Nature Scientific Reports, which can be 
+found [here](https://doi.org/10.1038/s41598-022-12499-5). The second part of
+the project focuses on relating the differential exposures observed in the 
+student cohort to latent risk profiles, examining the potential impact of interventions to reduce infections.
 
-### UrgEpi <a href="https://www.github.com/arnold-c/drc-urgepi"> <i class="fab fa-github"></i></a>
+### MSF Epicentre - UrgEpi <a href="https://www.github.com/arnold-c/drc-urgepi"> <i class="fab fa-github"></i></a>
 
-Examining the role of new laboratory testing facilities on the speed of diagnosis
-and outbreak response decisions for measles in the Katanga region of the 
-Democratic Republic of Congo.
-
-### COVID Testing Protocol <a href="https://www.github.com/arnold-c/testing-protocol"> <i class="fab fa-github"></i></a>
-
-Examining the effects of utilizing social *bubbles* as part of a SARS-CoV-2
-test and trace system within a university community.
+An ongoing collaboration with Médecin Sans Frontières' (MSF) Epicentre unit to
+analyze measles seroprevalence in the ex-Katanga region of the Democratic 
+Republic of Congo (DRC). The intial project examined the role of new laboratory 
+testing facilities on the speed of diagnosis and outbreak response decisions. 
+The second project examines the impact of Supplemental Immunization Activities 
+in the ex-Katanga region; principally, characterizing the spatial and age-specific seronegativity, and examining the relationship between optical density (OD) distributions and seropositivity thresholds using finite mixture models.
 
 ## Past Projects
 ### Waning Measles Immunity

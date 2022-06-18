@@ -36,7 +36,7 @@ in Public Health research.
 
 My research interests are in infectious disease epidemiology, with a particular 
 focus on the use of mathematical models to improve outbreak response and 
-resource utilization. I primarily work with R, but have experience with Python,
+resource utilization. I primarily work with R and Julia, but have experience with Python,
 Bash, and am learning Stan for Bayesian modeling.
 
 When I'm not working, I can be found outside doing one of the following
