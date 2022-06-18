@@ -65,7 +65,7 @@ mountain biking, road cycling, rock climbing, hiking, snowboarding, cross-countr
  
   Infectious disease epidemiology and modelling with Dr. Matt Ferrari.
   
-  [Currently working](projects.Rmd) on:
+  [Currently working](projects.html) on:
   
   - The [Data4Action Research Project](https://doi.org/10.1038/s41598-022-12499-5) examing the dynamics of COVID-19 in a 
   university community
