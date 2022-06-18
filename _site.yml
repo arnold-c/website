@@ -11,7 +11,7 @@ navbar:
     - text: "Home"
       href: index.html
     - text: "CV"
-      href: files/cv.pdf
+      href: files/cv-push/cv.pdf
     - text: "Projects"
       href: projects.html
     - text: "Blog"
