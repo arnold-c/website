@@ -6,15 +6,14 @@ description: |
   notebooks.
 ---
 
-<link rel="stylesheet" href="../../academicons/css/academicons.min.css"/>
-
 # Welcome, and what this book is about
 
-<aside>
-You can find the bookdown version of this blog post [here](https://bookdown.org/arnold_c/repro-research/)
-</aside>
+This book’s focus is on how to produce reproducible research, and should serve as an introduction to data management and project organisation.
+Through the course of this document, we explain techniques that can be employed easily to help add structure to your research projects and reduce the time spent poring over code to determine if your code really does produce the table and figures you have in your manuscript or poster. Not only does this aid you, but it is essential if the project moves between people. We also hope that the structures we suggest will help you find documents and files more easily.
 
-This book’s focus is on how to produce reproducible research, and should serve as an introduction to data management and project organisation. Through the course of this document, we explain techniques that can be employed easily to help add structure to your research projects and reduce the time spent poring over code to determine if your code really does produce the table and figures you have in your manuscript or poster. Not only does this aid you, but it is essential if the project moves between people. We also hope that the structures we suggest will help you find documents and files more easily.
+::: {.aside}
+You can find the bookdown version of this blog post [here](https://bookdown.org/arnold_c/repro-research/)
+:::
 
 Whilst there are many tools that we can use to ensure our projects and code are tidy and result in reproducible work, some of these may not possible to implement given the potential requirements for administrative privileges during set up. As such, we have divided this book into multiple sections, progressively getting more involved as the book continues. Whilst you may be able to utilise these more sophisticated tools, the core of reproducible research remains the same, so the first chapters still apply.
 
@@ -60,7 +59,7 @@ The first step in creating reproducible research is creating self-contained proj
 
 Now you have set up your `repos/` folder, it is time to create the project folder. This is the structure that I find works for me. You may want to find a variation on it that works for you, but the basic premise of keeping repositories self-contained should remain.
 
-```
+```md
 C:/
 └── Documents/
     └── repos/
@@ -191,7 +190,7 @@ Open a command prompt (Windows) / terminal (linux/mac) and type/copy-paste the f
 
 You should now see something like this.
 
-```
+```bash
 Available kernels:
 python3    /home/sas/anaconda3/lib/python3.5/site-packages/ipykernel/resources
 sas        /home/sas/.local/share/jupyter/kernels/sas
@@ -257,14 +256,14 @@ Because I do not like the `In[]` `Out[]` text showing in documents, along with c
 
 If you would like to customize the look of the notebook, [jupyterthemes](https://github.com/dunovank/jupyter-themes) is a great package that can be installed. I have also edited the `custom.css` file (`C:\Users\owner\.jupyter\custom\`), adding `display: None;` under the section
 
-```
+```css
 div.prompt,
  .prompt {
 ```
 
 so that it now reads
 
-```
+```css
 div.prompt,
  .prompt {
  font-family: monospace, monospace;
@@ -279,7 +278,7 @@ div.prompt,
 
 This removes the `In[]` `Out[]` text. To centre the output of tables/figures, add
 
-```
+```css
 .output_png {
     display: table-cell;
     text-align: center;
@@ -290,7 +289,7 @@ to the `custom.css` file, right after the `.prompt {..}` section.
 
 To enable soft wrapping in the notebook, you need to edit the `notebook.json` file (`C:\Users\owner\.jupyter\nbconfig\`). If it does not exist, you need to create it. Once open, add
 
-```
+```json
 {
   "MarkdownCell": {
     "cm_config": {
@@ -352,7 +351,8 @@ There are more (workable) ways to install Git on OSX than on Windows, but I thin
 Now that you have Git running, you need to tell it who you are. This allows multiple people to make changes to code, and the correct names will be attached to the changes.
 
 Open up the Git Bash and enter
-```
+
+```bash
 git config --global user.name 'Firstname Lastname'
 git config --global user.email 'my_email@gmail.com'
 ```
@@ -399,7 +399,7 @@ Install the git-remote-dropbox extension. The instructions were copied from the 
 2. Generate an OAuth 2 token by going to the app console, creating a Dropbox API app with "Full Dropbox" access (or "App folder" access if you prefer, if you're not going to be using Dropbox's sharing features to use git-remote-dropbox in a multi-user setup), and generating an access token for yourself.
 3. Save your OAuth token in `~/.config/git/git-remote-dropbox.json` or `~/.git-remote-dropbox.json`. The file should look something like this:
 
-```
+```json
 {
     "default": "xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx"
 }
@@ -407,7 +407,7 @@ Install the git-remote-dropbox extension. The instructions were copied from the 
 
 - git-remote-dropbox supports using multiple Dropbox accounts. You can create OAuth tokens for different accounts and add them all to the config file, using a user-defined username as the key:
 
-```
+```json
 {
     "alice": "xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx",
     "ben": "xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx",
@@ -458,7 +458,7 @@ If you want to use a different file syncing system, then you need to create a *b
 2. Enter `git init` to initialize your folder as a Git repository
 3. Assuming you have files already in the directory, you should commit them using
 
-```
+```bash
 git add --all
 git commit -m "your commit message"
 ```
