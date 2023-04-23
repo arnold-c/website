@@ -1,0 +1,29 @@
+# Freeze computed outputs
+# freeze: true
+
+# Enable banner style title blocks
+title-block-banner: true
+
+# Enable CC licence appendix
+license: "CC BY"
+
+# Default for table of contents
+toc: true
+toc-title: Table of contents
+toc-location: left
+
+# Default knitr options
+execute:
+  echo: true
+  message: true
+  warning: true
+
+# Default author
+author:
+  - name: Callum Arnold-Leps
+    url: https://callumarnold.com
+    affiliation: Pennsylvania State University
+    orcid: 0000-0002-3245-6956
+
+# Default fields for citation
+citation: true

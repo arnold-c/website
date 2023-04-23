@@ -1,0 +1,49 @@
+project:
+  type: website
+
+website:
+  title: "Callum Arnold-Leps"
+  favicon: img/favicon.png
+  navbar:
+    background: "#f5e0dc"
+    pinned: true
+    left:
+    - text: "Home"
+      href: index.qmd
+    - text: "CV"
+      href: files/cv-push/cv.pdf
+    - text: "Projects"
+      href: projects.qmd
+    - text: "Posts"
+      href: posts.qmd
+    right:
+    - icon: github
+      href: https://github.com/arnold-c
+    - text: "{{< ai orcid >}}"
+      href: https://orcid.org/0000-0002-3245-6956
+    - text: "{{< ai google-scholar >}}"
+      href: https://scholar.google.com/citations?user=6CMnUykAAAAJ&hl=en
+    - text: "{{< ai researchgate >}}"
+      href: https://www.researchgate.net/profile/Callum_Arnold
+    - icon: twitter
+      href: https://twitter.com/thecallumarnold
+    repo-url: https://github.com/arnold-c/website
+    repo-actions: [edit, issue]
+  page-footer:
+    "Copyright 2023, Callum Arnold-Leps. Made with [Quarto](https://quarto.org)"
+  comments:
+    utterances: 
+      repo: arnold-c/website
+
+format:
+  html:
+    theme:
+      light: [cosmo, format/_fonts.scss, format/_light.scss]
+      dark: [cosmo, format/_fonts.scss, format/_dark.scss]
+    toc: true
+    # code-copy: true
+    # code-fold: false
+    # code-overflow: wrap
+
+
+
