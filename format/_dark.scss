@@ -1,24 +1,19 @@
 /*-- scss:defaults --*/
-// Fonts
-// @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@200..900&display=swap';
-// // @import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@200..900&display=swap';
-// // @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@200..900&display=swap';
-
-// // family=Roboto&family=Roboto+Condensed&
-// // $font-family-serif: "Atkinson Hyperlegible", sans-serif;
-// $font-family-sans-serif: 'Atkinson Hyperlegible';
-// $headings-font-weight: 900 !default;
-
 
 // Base document colors
 $body-bg: #181825 !default;
 $body-color: #cdd6f4 !default;
 $link-color: #eba0ac !default;
 $headings-color: #a6adc8 !default;
+// $title-color:#74c7ec !default; 
 $code-color: #a6e3a1 !default;
 $code-bg: #11111b !default;
 $code-block-bg: $code-bg !default;
-$btn-code-copy-colo: $code-bg !default;
+$btn-code-copy-color: $code-bg !default;
+
+// Navbar
+$navbar-color: $code-bg !default;
+$navbar-padding-y: 1.5rem !default;
 
 // Box colors
 :root {
@@ -28,3 +23,8 @@ $btn-code-copy-colo: $code-bg !default;
 
 // Box class
 @import '_box';
+
+/*-- scss:rules --*/
+.title {
+    color: $gray-700;
+}

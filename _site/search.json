@@ -112,11 +112,11 @@
     "text": "Git\nhttps://happygitwithr.com/\n\nI cannot emphasise this enough: this is genuinely the best resource I have come across for explaining how to set up and organise a project with Git. Whilst it is aimed at R users, there is a large amount of cross-over, so read it regardless of the language you use.\n\nhttps://medium.freecodecamp.org/how-not-to-be-afraid-of-git-anymore-fe1da7415286\n\nThis helps you understand the nuts-and-bolts of Git by learning to use the command line, rather than an application like SourceTree.\n\nhttps://git-scm.com/book/en/v2/\n\nThe literal book on Git. Everything from the basics to the advanced.\n\nhttps://nvie.com/posts/a-successful-git-branching-model/\n\nIf you feel comfortable with the idea of branching and are interested in a good extension of what we’ve covered, this will help. Roughly speaking, the more complex you project is and the more people that are involved simultaneously, the more branches you want so you can handle problems as they come up, without breaking previously ‘good’ code."
   },
   {
-    "objectID": "projects.html#current-projects",
-    "href": "projects.html#current-projects",
+    "objectID": "projects.html",
+    "href": "projects.html",
     "title": "Projects",
-    "section": "Current Projects",
-    "text": "Current Projects\n\nData4Action  \nA longitudinal cohort study, comprising of two geographically related cohorts, that aims to examine the effect of Penn State University students on the SARS-CoV-2 incidence in the surrounding community. We have recently published a the interim serological results in Nature Scientific Reports, which can be found here. The second part of the project focuses on relating the differential exposures observed in the student cohort to latent risk profiles, examining the potential impact of interventions to reduce infections.\n\n\nMSF Epicentre - UrgEpi  \nAn ongoing collaboration with Médecin Sans Frontières’ (MSF) Epicentre unit to analyze measles seroprevalence in the ex-Katanga region of the Democratic Republic of Congo (DRC). The intial project examined the role of new laboratory testing facilities on the speed of diagnosis and outbreak response decisions. The second project examines the impact of Supplemental Immunization Activities in the ex-Katanga region; principally, characterizing the spatial and age-specific seronegativity, and examining the relationship between optical density (OD) distributions and seropositivity thresholds using finite mixture models."
+    "section": "",
+    "text": "A longitudinal cohort study, comprising of two geographically related cohorts, that aims to examine the effect of Penn State University students on the SARS-CoV-2 incidence in the surrounding community. We have recently published a the interim serological results in Nature Scientific Reports, which can be found here. The second part of the project focuses on relating the differential exposures observed in the student cohort to latent risk profiles, examining the potential impact of interventions to reduce infections.\n\n\n\nAn ongoing collaboration with Médecin Sans Frontières’ (MSF) Epicentre unit to analyze measles seroprevalence in the ex-Katanga region of the Democratic Republic of Congo (DRC). The intial project examined the role of new laboratory testing facilities on the speed of diagnosis and outbreak response decisions. The second project examines the impact of Supplemental Immunization Activities in the ex-Katanga region; principally, characterizing the spatial and age-specific seronegativity, and examining the relationship between optical density (OD) distributions and seropositivity thresholds using finite mixture models."
   },
   {
     "objectID": "projects.html#past-projects",
@@ -128,23 +128,23 @@
   {
     "objectID": "index.html#about-me",
     "href": "index.html#about-me",
-    "title": "Callum Arnold-Leps",
+    "title": "Callum Arnold",
     "section": "About Me",
     "text": "About Me\nI am a PhD Candidate in Biology at Pennsylvania State University, where I build mathematical models of infectious diseases as part of Dr. Matt Ferrari’s lab (within the Center for Infectious Disease Dynamics), in addition to other infectious disease epidemiology work. I previously worked as a clinical research coordinator in the Infectious Disease Division at the Hospital for Sick Children (Toronto, Canada), and concurrently completed an MSc in Global Health Policy at LSHTM. Whilst completing my Masters in computational chemistry, I realized that I enjoyed research and computational modeling, but wanted to work in a more applied healthcare-related field. Since then, I have applied and developed my skills in Public Health research.\nMy research interests are in infectious disease epidemiology, with a particular focus on the use of mathematical models to improve outbreak response and resource utilization. I primarily work with R and Julia, but have experience with Python, Bash, and am learning Stan for Bayesian modeling.\nWhen I’m not working, I can be found outside doing one of the following (depending on the season): mountain biking, road cycling, rock climbing, hiking, snowboarding, cross-country skiing, or very occasionally, running."
   },
   {
     "objectID": "index.html#education",
     "href": "index.html#education",
-    "title": "Callum Arnold-Leps",
+    "title": "Callum Arnold",
     "section": "Education",
     "text": "Education\nPhD Biology, 2020 - Present, Pennsylvania State University\nMSc Global Health Policy, 2017 - 2020, London School of Hygiene and Tropical Medicine\nMChem Chemistry, 2011 - 2015, University of Oxford"
   },
   {
     "objectID": "index.html#research-experience",
     "href": "index.html#research-experience",
-    "title": "Callum Arnold-Leps",
+    "title": "Callum Arnold",
     "section": "Research Experience",
-    "text": "Research Experience\n\nPhD Student, Aug 2020 – Present, Pennsylvania State University\nInfectious disease epidemiology and modelling with Dr. Matt Ferrari.\nCurrently working on:\n\nThe Data4Action Research Project examing the dynamics of COVID-19 in a university community\nResource utilisation strategies for measles surveillance and detection in the DRC\n\n\n\nClinical Research Coordinator, Apr 2018 – Dec 2019, The Hospital for Sick Children\nCoordinated a multi-centre observational study into waning immunity in infants to measles, mumps and varicella, and managed all data produced by the National Microbiology Laboratory and the Nova Scotia Health Authority laboratory.\nResponsibilities included:\n\nData Management\nData Analysis\nGrant Applications\nPatient enrollment and consent\n\n\n\nHonorary Clinical Researcher, Jun 2016 - May 2019, BOTNAR, University of Oxford\nResponsibilities included:\n\nData Analysis\n4-D CT Analysis\nMRI Segmentation\nContributing researcher in multicentre FAIM study"
+    "text": "Research Experience\n\nPhD Candidate, Aug 2020 – Present, Pennsylvania State University\nInfectious disease epidemiology and modelling with Dr. Matt Ferrari.\nCurrently working on:\n\nThe Data4Action Research Project examining the dynamics of COVID-19 in a university community\nResource utilisation strategies for measles surveillance and detection in the DRC\nThe effects of population-level thresholds for the detection and response to outbreaks\n\n\n\nClinical Research Coordinator, Apr 2018 – Dec 2019, The Hospital for Sick Children\nCoordinated a multi-centre observational study into waning immunity in infants to measles, mumps and varicella, and managed all data produced by the National Microbiology Laboratory and the Nova Scotia Health Authority laboratory.\nResponsibilities included:\n\nData Management\nData Analysis\nGrant Applications\nPatient enrollment and consent\n\n\n\nHonorary Clinical Researcher, Jun 2016 - May 2019, BOTNAR, University of Oxford\nResponsibilities included:\n\nData Analysis\n4-D CT Analysis\nMRI Segmentation\nContributing researcher in multicentre FAIM study"
   },
   {
     "objectID": "posts.html",
@@ -152,5 +152,12 @@
     "title": "Posts",
     "section": "",
     "text": "An Introduction to Reproducible Research\n\n\n\n\n\nAn introductorary course on reproducible epidemiology research using Git and notebooks.\n\n\n\n\n\n\nAug 15, 2019\n\n\nCallum Arnold-Leps\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2019-08-15-an-introduction-to-reproducible-research/repro-research.html",
+    "href": "posts/2019-08-15-an-introduction-to-reproducible-research/repro-research.html",
+    "title": "An Introduction to Reproducible Research",
+    "section": "",
+    "text": "This book’s focus is on how to produce reproducible research, and should serve as an introduction to data management and project organisation. Through the course of this document, we explain techniques that can be employed easily to help add structure to your research projects and reduce the time spent poring over code to determine if your code really does produce the table and figures you have in your manuscript or poster. Not only does this aid you, but it is essential if the project moves between people. We also hope that the structures we suggest will help you find documents and files more easily.\n\n\nYou can find the bookdown version of this blog post here\nWhilst there are many tools that we can use to ensure our projects and code are tidy and result in reproducible work, some of these may not possible to implement given the potential requirements for administrative privileges during set up. As such, we have divided this book into multiple sections, progressively getting more involved as the book continues. Whilst you may be able to utilise these more sophisticated tools, the core of reproducible research remains the same, so the first chapters still apply.\nWe start by explaining what reproducible research is, why we need it, and how the data we receive can be integrated into a reproducible research workflow. Next, we suggest ways in which you can structure projects to assist this workflow. We end by discussing how to create a Jupyter Notebook and produce the output documents, allowing you to integrate your code and results in a dynamic document.\nWe hope that you enjoy the content and feel like you come away having learnt something useful, and that this book can serve as a reference document for your future research. If you have any questions that cannot be answered within the book, or you would like to contribute and improve this document, please contact us.\nThis document would not be possible without the contributions of Stephanie Hughes from Public Health Ontario, so thank you Steph!"
   }
 ]

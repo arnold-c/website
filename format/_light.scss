@@ -1,13 +1,8 @@
 /*-- scss:defaults --*/
-// Fonts
-// @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@200..900&display=swap';
-// // @import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@200..900&display=swap';
-// // @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@200..900&display=swap';
 
-// // family=Roboto&family=Roboto+Condensed&
-// // $font-family-serif: "Atkinson Hyperlegible", sans-serif;
-// $font-family-sans-serif: 'Atkinson Hyperlegible';
-// $headings-font-weight: 900 !default;
+// Navbar
+$navbar-color: #f5e0dc !default;
+$navbar-padding-y: 1.5rem !default;
 
 // Box colors
 :root {
@@ -18,8 +13,3 @@
 // Box class
 @import '_box';
 
-// Nav Bar
-.navbar {
-    padding-top: 5em;
-    padding-bottom: 5em;
-  }

@@ -1,13 +1,14 @@
 /*-- scss:defaults --*/
 // Fonts
-// @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@200..900&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@200..900&display=swap';
-// @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@200..900&display=swap';
 
-// family=Roboto&family=Roboto+Condensed&
-// $font-family-serif: "Atkinson Hyperlegible", sans-serif;
-// $font-family-sans-serif: 'Open Sans';
-$font-family-sans-serif: 'Atkinson Hyperlegible';
-$headings-font-family: 'Open Sans';
-$headings-font-weight: 800 !default;
+$font-family-sans-serif: 'Atkinson Hyperlegible', 'Open Sans', !default;
+$headings-font-family: 'Open Sans', !default;
+$headings-font-weight: 800, !default;
+
+/*-- scss:rules --*/
+body {
+    font-family: $font-family-sans-serif;
+    font-weight: 500;
+}
