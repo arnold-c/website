@@ -28,6 +28,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: psu-intro-to-git
-          directory: '_book'
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          projectName: website
+          directory: '_site'
