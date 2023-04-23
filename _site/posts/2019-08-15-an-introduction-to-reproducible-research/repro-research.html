@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.475">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Callum Arnold-Leps">
+<meta name="dcterms.date" content="2019-08-15">
+<meta name="description" content="An introductorary course on reproducible epidemiology research using Git and notebooks.">
+
+<title>Callum Arnold - An Introduction to Reproducible Research</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="floating nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Callum Arnold</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../files/cv-push/cv.pdf">
+ <span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects.html">
+ <span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html">
+ <span class="menu-text">Posts</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/arnold-c"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://orcid.org/0000-0002-3245-6956">
+ <span class="menu-text"><i class="ai  ai-orcid" style="color:default"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=6CMnUykAAAAJ&amp;hl=en">
+ <span class="menu-text"><i class="ai  ai-google-scholar ai-lg" style="color:default"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.researchgate.net/profile/Callum_Arnold">
+ <span class="menu-text"><i class="ai  ai-researchgate ai-lg" style="color:default"></i></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/thecallumarnold"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">An Introduction to Reproducible Research</h1>
+                  <div>
+        <div class="description">
+          <p>An introductorary course on reproducible epidemiology research using Git and notebooks.</p>
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  <div class="quarto-title-meta-author">
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Affiliation</div>
+    
+      <div class="quarto-title-meta-contents">
+      <a href="https://callumarnold.com">Callum Arnold-Leps</a> <a href="https://orcid.org/0000-0002-3245-6956" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              Pennsylvania State University
+            </p>
+        </div>
+      </div>
+
+  <div class="quarto-title-meta">
+
+        
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 15, 2019</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#welcome-and-what-this-book-is-about" id="toc-welcome-and-what-this-book-is-about" class="nav-link active" data-scroll-target="#welcome-and-what-this-book-is-about">Welcome, and what this book is about</a></li>
+  <li><a href="#the-basics-for-all" id="toc-the-basics-for-all" class="nav-link" data-scroll-target="#the-basics-for-all">The basics for all</a>
+  <ul class="collapse">
+  <li><a href="#reproducible-work---an-introduction" id="toc-reproducible-work---an-introduction" class="nav-link" data-scroll-target="#reproducible-work---an-introduction">Reproducible work - an introduction</a>
+  <ul class="collapse">
+  <li><a href="#what-is-reproducible-work" id="toc-what-is-reproducible-work" class="nav-link" data-scroll-target="#what-is-reproducible-work">What is reproducible work?</a></li>
+  <li><a href="#why-is-it-important" id="toc-why-is-it-important" class="nav-link" data-scroll-target="#why-is-it-important">Why is it important?</a></li>
+  <li><a href="#how-do-i-make-reproducible-work" id="toc-how-do-i-make-reproducible-work" class="nav-link" data-scroll-target="#how-do-i-make-reproducible-work">How do I make reproducible work?</a></li>
+  </ul></li>
+  <li><a href="#structuring-a-project" id="toc-structuring-a-project" class="nav-link" data-scroll-target="#structuring-a-project">Structuring a project</a>
+  <ul class="collapse">
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><code>data/</code></a></li>
+  <li><a href="#other-subdirectories" id="toc-other-subdirectories" class="nav-link" data-scroll-target="#other-subdirectories">Other subdirectories</a></li>
+  </ul></li>
+  <li><a href="#how-to-name-files-and-directories" id="toc-how-to-name-files-and-directories" class="nav-link" data-scroll-target="#how-to-name-files-and-directories">How to name files and directories</a></li>
+  <li><a href="#key-points" id="toc-key-points" class="nav-link" data-scroll-target="#key-points">Key Points</a></li>
+  </ul></li>
+  <li><a href="#notebooks" id="toc-notebooks" class="nav-link" data-scroll-target="#notebooks">Notebooks</a>
+  <ul class="collapse">
+  <li><a href="#jupyter-notebooks" id="toc-jupyter-notebooks" class="nav-link" data-scroll-target="#jupyter-notebooks">Jupyter notebooks</a>
+  <ul class="collapse">
+  <li><a href="#installing-jupyter-notebooks" id="toc-installing-jupyter-notebooks" class="nav-link" data-scroll-target="#installing-jupyter-notebooks">Installing Jupyter notebooks</a></li>
+  <li><a href="#kernels" id="toc-kernels" class="nav-link" data-scroll-target="#kernels">Kernels</a></li>
+  </ul></li>
+  <li><a href="#using-jupyter-notebooks" id="toc-using-jupyter-notebooks" class="nav-link" data-scroll-target="#using-jupyter-notebooks">Using Jupyter notebooks</a>
+  <ul class="collapse">
+  <li><a href="#creating-a-notebook" id="toc-creating-a-notebook" class="nav-link" data-scroll-target="#creating-a-notebook">Creating a notebook</a></li>
+  <li><a href="#running-a-jupyter-notebook" id="toc-running-a-jupyter-notebook" class="nav-link" data-scroll-target="#running-a-jupyter-notebook">Running a Jupyter notebook</a></li>
+  <li><a href="#customizing-jupyter-notebooks-ui" id="toc-customizing-jupyter-notebooks-ui" class="nav-link" data-scroll-target="#customizing-jupyter-notebooks-ui">Customizing Jupyter notebook’s UI</a></li>
+  </ul></li>
+  <li><a href="#output-documents" id="toc-output-documents" class="nav-link" data-scroll-target="#output-documents">Output documents</a></li>
+  </ul></li>
+  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git">Git</a>
+  <ul class="collapse">
+  <li><a href="#set-up" id="toc-set-up" class="nav-link" data-scroll-target="#set-up">Set up</a>
+  <ul class="collapse">
+  <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows">Windows</a></li>
+  <li><a href="#mac" id="toc-mac" class="nav-link" data-scroll-target="#mac">Mac</a></li>
+  <li><a href="#final-git-set-up-steps" id="toc-final-git-set-up-steps" class="nav-link" data-scroll-target="#final-git-set-up-steps">Final Git set up steps</a></li>
+  <li><a href="#installation-problems" id="toc-installation-problems" class="nav-link" data-scroll-target="#installation-problems">Installation problems</a></li>
+  </ul></li>
+  <li><a href="#git-client" id="toc-git-client" class="nav-link" data-scroll-target="#git-client">Git client</a></li>
+  <li><a href="#remote-repositories" id="toc-remote-repositories" class="nav-link" data-scroll-target="#remote-repositories">Remote repositories</a>
+  <ul class="collapse">
+  <li><a href="#github---the-good" id="toc-github---the-good" class="nav-link" data-scroll-target="#github---the-good">GitHub - the Good</a></li>
+  <li><a href="#private-server" id="toc-private-server" class="nav-link" data-scroll-target="#private-server">Private server</a></li>
+  </ul></li>
+  <li><a href="#creating-a-repository" id="toc-creating-a-repository" class="nav-link" data-scroll-target="#creating-a-repository">Creating a repository</a>
+  <ul class="collapse">
+  <li><a href="#connecting-to-github" id="toc-connecting-to-github" class="nav-link" data-scroll-target="#connecting-to-github">Connecting to GitHub</a></li>
+  </ul></li>
+  <li><a href="#basic-commands" id="toc-basic-commands" class="nav-link" data-scroll-target="#basic-commands">Basic commands</a></li>
+  <li><a href="#branching" id="toc-branching" class="nav-link" data-scroll-target="#branching">Branching</a>
+  <ul class="collapse">
+  <li><a href="#creating-a-branch" id="toc-creating-a-branch" class="nav-link" data-scroll-target="#creating-a-branch">Creating a branch</a></li>
+  <li><a href="#merging-a-branch" id="toc-merging-a-branch" class="nav-link" data-scroll-target="#merging-a-branch">Merging a branch</a></li>
+  </ul></li>
+  <li><a href="#git-and-jupyter" id="toc-git-and-jupyter" class="nav-link" data-scroll-target="#git-and-jupyter">Git and Jupyter</a></li>
+  </ul></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional resources</a>
+  <ul class="collapse">
+  <li><a href="#project-structure" id="toc-project-structure" class="nav-link" data-scroll-target="#project-structure">Project structure</a></li>
+  <li><a href="#git-1" id="toc-git-1" class="nav-link" data-scroll-target="#git-1">Git</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
+
+
+
+<section id="welcome-and-what-this-book-is-about" class="level1 page-columns page-full">
+<h1>Welcome, and what this book is about</h1>
+<p>This book’s focus is on how to produce reproducible research, and should serve as an introduction to data management and project organisation. Through the course of this document, we explain techniques that can be employed easily to help add structure to your research projects and reduce the time spent poring over code to determine if your code really does produce the table and figures you have in your manuscript or poster. Not only does this aid you, but it is essential if the project moves between people. We also hope that the structures we suggest will help you find documents and files more easily.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>You can find the bookdown version of this blog post <a href="https://bookdown.org/arnold_c/repro-research/">here</a></p>
+</div></div><p>Whilst there are many tools that we can use to ensure our projects and code are tidy and result in reproducible work, some of these may not possible to implement given the potential requirements for administrative privileges during set up. As such, we have divided this book into multiple sections, progressively getting more involved as the book continues. Whilst you may be able to utilise these more sophisticated tools, the core of reproducible research remains the same, so the first chapters still apply.</p>
+<p>We start by explaining what reproducible research is, why we need it, and how the data we receive can be integrated into a reproducible research workflow. Next, we suggest ways in which you can structure projects to assist this workflow. We end by discussing how to create a Jupyter Notebook and produce the output documents, allowing you to integrate your code and results in a dynamic document.</p>
+<p>We hope that you enjoy the content and feel like you come away having learnt something useful, and that this book can serve as a reference document for your future research. If you have any questions that cannot be answered within the book, or you would like to contribute and improve this document, please contact us.</p>
+<p>This document would not be possible without the contributions of Stephanie Hughes from Public Health Ontario, so thank you Steph!</p>
+</section>
+<section id="the-basics-for-all" class="level1">
+<h1>The basics for all</h1>
+<p>This chapter focuses on what everyone can and should be doing. The guidelines here do not require anything to be downloaded, so can be implemented immediately and easily. If you follow the principles laid out here, you are well on your way to making reproducible research.</p>
+<section id="reproducible-work---an-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="reproducible-work---an-introduction">Reproducible work - an introduction</h2>
+<p>Before we can discuss how we should structure our projects and manage our data, we need to first talk about reproducible research.</p>
+<section id="what-is-reproducible-work" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-reproducible-work">What is reproducible work?</h3>
+<p>At its core, reproducible research is about being transparent in how to produce the results you report. In doing so, this allows anyone with your data and code to reproduce the work you have produced. This includes you, as there will be many times you need to check results, and a reproducible workflow will allow you to spot mistakes easily, and give you confidence that the code and data you use give the reported outcome every time they are run.</p>
+<p>Reproducible research:</p>
+<ul>
+<li>Contains relevant code, including which packages were used, and which programming language was used</li>
+<li>Contains enough text, either via markdown or comments, to be able to understand the purpose of the code chunks and code document
+<ul>
+<li>Ideally integrates code and results, along with text, into a single document (<strong>literate programming!</strong>)</li>
+</ul></li>
+<li>Applying good data quality control techniques to ensure that projects are self-contained so that all files and everything necessary to produce the output documents are easily accessible and accounted for</li>
+</ul>
+</section>
+<section id="why-is-it-important" class="level3">
+<h3 class="anchored" data-anchor-id="why-is-it-important">Why is it important?</h3>
+<p>Simply put, mistakes happen. If your project is structured properly, you will have a code document that contains all of the relevant information, and it is easy to recreate the outcomes. Importantly, you will also have the necessary input files (and tracking of <strong>all</strong> their changes) stored within the project folder. That way, if you move computers, delete a document by accident, or hand over the project to another person, everything is neatly contained and can be reproduced without hassle.</p>
+</section>
+<section id="how-do-i-make-reproducible-work" class="level3">
+<h3 class="anchored" data-anchor-id="how-do-i-make-reproducible-work">How do I make reproducible work?</h3>
+<p>There are many different ways to make reproducible work. The information listed here should give you the foundations upon which you can build your own systems. However, the principles are the same and largely revolve around project structures, and dynamic documents that contain both the code and the results embedded in them. This way, updates to the code will automatically update results (including tables and figures), and you don’t need to worry about incorrectly copying the wrong version, or even retyping numbers in a table</p>
+<p>In addition, a version control system like Git can prove to be an invaluable tool in making reproducible research. It is essential tracked changes for everything you do in a project: all the changes in your code, which files you produce, where you move files, the results your create … and the list goes on. We will talk through the basics of Git towards the end of this book, but if you would like a more in depth tutorial, you should read <a href="https://happygitwithr.com/">this fantastic resource</a> by Jenny Bryan and co. It is aimed at R users, but much of it is generalizable. More resources are available at the end of the document.</p>
+</section>
+</section>
+<section id="structuring-a-project" class="level2">
+<h2 class="anchored" data-anchor-id="structuring-a-project">Structuring a project</h2>
+<p>The first step in creating reproducible research is creating self-contained projects. Everything that goes in to, and comes out of, the project, should be contained within a single folder (directory). I would recommend that you create a folder called <code>repos/</code> that your project folders live in, e.g.&nbsp;<code>C:/User/owner/Documents/repos/proj/</code>. This way your project folders are neatly separated from other files. Whilst we will discuss version control with Git <a href="#git">later</a>, I would suggest that you also routinely back up your project folder to separate drives (cloud and/or external hard drives), using a <a href="https://www.nakivo.com/blog/3-2-1-backup-rule-efficient-data-protection-strategy/">3-2-1 system</a>.</p>
+<p>Now you have set up your <code>repos/</code> folder, it is time to create the project folder. This is the structure that I find works for me. You may want to find a variation on it that works for you, but the basic premise of keeping repositories self-contained should remain.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>C:/</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>└── Documents/</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    └── repos/</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        └── proj/</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>            ├── data/</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>            ├── docs/</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            ├── figs/</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>            ├── funs/</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            ├── out/</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            ├── cleaning.R</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>            └── analysis.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>As you can see, the project repository contains separate directories that you can use to store different file types. Importantly, the analysis and cleaning files are stored in the project root, allowing easy use of relative paths over explicit paths e.g.&nbsp;<code>read_csv(here('data', 'data_file.csv'))</code> rather than <code>read_csv('C:/Users/owner/Documents/Repos/my_project/data/data_file.csv')</code>. The reason why relative paths are preferable is that they allow projects to be used by multiple people without the need to re-write code. If you use explicit paths and change computer, or the project is opened by another person, the code will break as they will not have the same directory structure as the computer that the code was created on.</p>
+<blockquote class="blockquote">
+<p><strong>Note:</strong> the example above used an R package called <code>here_here</code>, calling the function <code>here()</code>. Similar solutions may exist for other languages, and you should try and find them for the language of your choice.</p>
+</blockquote>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data"><code>data/</code></h3>
+<p>An important idea is that you should <strong>treat your data as read-only</strong>. You and your team have likely worked hard to collect the data and it’s easy to make a changes along the way that you either forget about, or need to reverse. As most projects span a long time between the data collection and analysis stages, if that happens to you it will take a lot of work to figure out exactly which changes you are interested in reversing etc. To save yourself this hassle, and help make your work reproducible, <strong>once the data is collected it should not be edited</strong>; all the work should happen in your code, allowing it to be easily checked.</p>
+<p>If you are following good data practices and treating your data as read-only, all your cleaning will happen within your code (create a cleaning file in your project e.g.&nbsp;<code>proj-cleaning.R</code>). However, if you do need to edit the files manually (<strong>and I strongly recommend against it</strong> as it makes it harder to reproduce as there isn’t a good way to track exactly what changes were made), you should create a save a new (separate) copy of the dataset (using file <a href="#how-to-name-files">naming conventions</a>) in your project directory (e.g.&nbsp;<code>H:/repos/proj/2019-01-24_data-file.csv</code>). Additionally, you should create a word document where you can list the changes you made with each new file. When we get to the section on <a href="#git">Git</a>, you will see how we can set it up to track all the changes within a project folder (including the create/deletion/movement of files!) so we don’t have to remember what changes we make. This means we can just have one copy of each document, and track the changes through time.</p>
+</section>
+<section id="other-subdirectories" class="level3">
+<h3 class="anchored" data-anchor-id="other-subdirectories">Other subdirectories</h3>
+<ul>
+<li><code>docs/</code>: this contains the output documents. For example, if you are using R Markdown to create a pdf via LaTeX, you could place them here.</li>
+<li><code>funs/</code>: this contains the functions you write and might want to reference. The idea is to create functions so that can give code a meaningful name. It also helps if you need to repeat a code chunk multiple times, especially if you need to edit it at some point, as you can just call the function rather than typing it out each time.</li>
+<li><code>out/</code>: this contains files that are produced from the original data e.g.&nbsp;cleaned data files. You can then call them in your analysis scripts.</li>
+<li><code>figs/</code>: this contains figures that may be generated from your scripts.</li>
+</ul>
+<p>Importantly, if you follow the principle that your <code>data/</code> files are read-only, all of the files in these directories (with the exception of <code>funs/</code>) <em>should</em> be reproducible and could be deleted at any time without concern of generating them again. In order to revert to previous figures and output versions, you will need to be able to track changes in your code. This is where a <em>version control system</em> like Git comes in, which we will discuss at the end.</p>
+</section>
+</section>
+<section id="how-to-name-files-and-directories" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-name-files-and-directories">How to name files and directories</h2>
+<p>How you name files and directories may not seem like an important point, but it can cause quite a headache if you try and use code to automate processes, and at best, it just slows things down. To quote Aaron Quinlan, a bioinformatician, <a href="https://twitter.com/aaronquinlan/status/711593127551733761">“a space in a filename is a space in one’s soul”</a>.</p>
+<p>Instead try and use something like <a href="https://speakerdeck.com/jennybc/how-to-name-files">this</a>:</p>
+<ul>
+<li>KISS (<em>Keep It Simple Stupid</em>): use simple and consistent file names
+<ul>
+<li>It needs to be machine readable</li>
+<li>It needs to be human readable</li>
+<li>It needs to order well in a directory</li>
+</ul></li>
+<li>No special characters and <strong>no spaces</strong>!</li>
+<li>Use YYYY-MM-DD date format</li>
+<li>Use <code>-</code> to delimit words and <code>_</code> to delimit sections
+<ul>
+<li>i.e.&nbsp;<code>2019-01-19_my-data.csv</code></li>
+</ul></li>
+<li>Left-pad numbers
+<ul>
+<li>i.e.&nbsp;<code>01_my-data.csv</code> vs <code>1_my-data.csv</code></li>
+<li>If you don’t, file orders get messed up when you get to double-digits</li>
+</ul></li>
+</ul>
+</section>
+<section id="key-points" class="level2">
+<h2 class="anchored" data-anchor-id="key-points">Key Points</h2>
+<ul>
+<li>Use a version control system such as Git to track changes in your code.</li>
+<li>Data isn’t touched one collected:
+<ul>
+<li>Do all <em>data munging</em> within your program i.e.&nbsp;no editing the excel spreadsheets!!!</li>
+<li>You should have multiple backups on at least two different sets of servers/drives</li>
+</ul></li>
+<li>Your outputs should be reproducible from the code you have:
+<ul>
+<li>Make sure this is the case by routinely clearing your programming environment and re-running the code in a clean environment to ensure your results aren’t contingent on <em>‘hidden’</em> packages/modules that were <a href="https://onunicornsandgenes.blog/2017/04/02/using-r-dont-save-your-workspace/">loaded erroneously</a></li>
+</ul></li>
+<li>Never set explicit file paths (e.g.&nbsp;<code>setwd()</code>) if you can avoid it
+<ul>
+<li>Try and use a package that allows you to set relative paths e.g.&nbsp;<code>here_here</code> in R. This allows the project to be passed to someone else in its entirety and the code won’t break because they don’t have the same folder names and set up as you (also if you work on multiple computers/OS)</li>
+</ul></li>
+<li>Format your filenames properly</li>
+</ul>
+</section>
+</section>
+<section id="notebooks" class="level1">
+<h1>Notebooks</h1>
+<p>There are many different types of notebooks, but we will only explore Jupyter notebooks. The reason why we won’t look at other options is because Jupyter notebooks are very well established and have numerous kernels available that allow for the use of many different statistical and programming languages.</p>
+<blockquote class="blockquote">
+<p><strong>Note:</strong> if you are using R, you should be using RStudio in combination with R Notebooks or Rmd files (or using <code>#'</code> in your <code>.R</code> scripts to insert markdown comments), which are far more suited to R than Jupyter is.</p>
+</blockquote>
+<p>But first, what is a notebook, and why should we use them?</p>
+<p>A notebook is a way of producing documents that mix plain text and code, which was one of the key goals at the beginning of this guide! Whilst <a href="https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI/edit#slide=id.g3a428e2eb8_0_305">they are not perfect</a> (though read <a href="https://yihui.name/en/2018/09/notebook-war/">this</a> to see some rebuttals), and should not be used for doing heavy coding and scripting, they are excellent for data exploration and producing output documents. You just need to be careful to run all the code in a fresh environment often enough to ensure you don’t have any <em>hidden</em> packages/modules loaded in the background that aren’t part of your code.</p>
+<section id="jupyter-notebooks" class="level2">
+<h2 class="anchored" data-anchor-id="jupyter-notebooks">Jupyter notebooks</h2>
+<p>This section will give you a brief overview of what a Jupyter notebook is and how to use them, but if you would like a more detailed understanding, please read the official <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html">documentation</a>. Jupyter Labs has now been released as a newer version of notebooks, giving you a full IDE (integrated development environment) and more control over the notebooks and working environment. This guide will not explore these features, as we are more interested in how to use the notebook.</p>
+<blockquote class="blockquote">
+<p><strong>Note:</strong> throughout this section you can substitute the phrase <em>“Jupyter notebooks”</em> with <em>“Jupyter Labs”</em> if you would prefer to have a full IDE allowing you more control over the system.</p>
+</blockquote>
+<p>Jupyter notebooks are run on Python, though additional things can be downloaded to allow you to use your programming language of choice. For an example of what you can do with Jupyter notebooks, click <a href="https://nbviewer.jupyter.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter1_Introduction/Ch1_Introduction_PyMC3.ipynb">here</a>, and <a href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#programming-and-computer-science">here</a> for a collection of neat and applied notebooks.</p>
+<section id="installing-jupyter-notebooks" class="level3">
+<h3 class="anchored" data-anchor-id="installing-jupyter-notebooks">Installing Jupyter notebooks</h3>
+<p>Mac’s come shipped with a version of Python, but it is most likely outdated, and it doesn’t contain everything we want. In order to get running, I strongly recommend downloading the Anaconda distribution over other distributions, or even just directly from Python’s website. The instructions below will be enough to get you up and running with Jupyter notebooks in your language of choice.</p>
+<ul>
+<li>Download the full <a href="https://www.anaconda.com/download/">Anaconda</a> distribution i.e.&nbsp;not miniconda
+<ul>
+<li>Be sure to choose <code>Python 3.x</code>, not <code>Python 2.x</code>, as it’s the newer version and is forwards-compatible.</li>
+<li>Be sure to only install for one user, not the whole system</li>
+<li>Be sure to select <code>Add Anaconda to my PATH environment variable</code> under Advanced Options</li>
+<li>Be sure to install Anaconda to the drive where your data lives. To do this you will need to manually edit the installation path within the Anaconda installer wizard, otherwise it will automatically end up in the <code>C:\</code> drive</li>
+</ul></li>
+<li>Use <code>kernels</code> to connect your programming language of choice with python and the notebook
+<ul>
+<li>To see how to get a particular language to work in Jupyter Notebooks, please click on the appropriate language:
+<ul>
+<li><a href="#installing-the-stata-kernel">Stata</a></li>
+<li><a href="#installing-the-sas-kernel">SAS</a></li>
+<li><a href="#connecting-r-with-jupyter">R</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="kernels" class="level3">
+<h3 class="anchored" data-anchor-id="kernels">Kernels</h3>
+<p>A kernel is program that allows the notebook to connect with, and run, your code. Jupyter comes with the Python code pre-installed, but if you want to use a different language, you will need to download a specific kernel.</p>
+<p>Below, the installation instructions are described for common languages used in epidemiology. To see a full list of kernels available for Jupyter, along with the appropriate documentation and installation instructions, follow <a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">this link</a>.</p>
+<section id="installing-the-stata-kernel" class="level4">
+<h4 class="anchored" data-anchor-id="installing-the-stata-kernel">Installing the Stata kernel</h4>
+<p>The instructions for installing the <code>stata_kernel</code> are based from the original documentation <a href="https://kylebarron.github.io/stata_kernel/getting_started/">here</a>. It should work with <code>Stata 12</code> (I have tested it). If these instructions do not work for you, it may be that there has been an update to the kernel, at which point, please refer to the original documentation linked above.</p>
+<p>Open a command prompt (Windows) / terminal (linux/mac) and type/copy-paste the following commands, pressing enter after each line</p>
+<ul>
+<li><code>pip install stata_kernel</code></li>
+<li><code>python -m stata_kernel.install</code></li>
+</ul>
+<p><strong>Windows-specific steps</strong></p>
+<p>In order to let <code>stata_kernel</code> talk to Stata, you need to link the Stata Automation library:</p>
+<ol type="1">
+<li>In the installation directory (most likely <code>C:\Program Files (x86)\Stata12</code> or similar), right-click on the Stata executable, for example, <code>StataSE.exe</code> (this will just show as <code>StataSE</code>, but is listed as an application). Choose <code>Create Shortcut</code>. Placing it on the Desktop is fine.</li>
+<li>Right-click on the newly created <code>Shortcut to StataSE.exe</code>, choose <code>Properties</code>, and append<code>/Register</code> to the end of the Target field. So if the target is currently <code>"C:\Program Files\Stata12\StataSE.exe"</code>, change it to <code>"C:\Program Files\Stata12\StataSE.exe" /Register</code> (note the space before <code>/</code>). Click OK.</li>
+<li>Right-click on the updated <code>Shortcut to StataSE.exe</code>; choose Run as administrator.</li>
+</ol>
+</section>
+<section id="installing-the-sas-kernel" class="level4">
+<h4 class="anchored" data-anchor-id="installing-the-sas-kernel">Installing the SAS kernel</h4>
+<p>*<em>This has not yet been tested here. The instructions for installing the <code>sas_kernel</code> are based from the original documentation <a href="https://github.com/sassoftware/sas_kernel">here</a></em>*</p>
+<p>Open a command prompt (Windows) / terminal (linux/mac) and type/copy-paste the following commands, pressing enter after each line. First we need to install a dependency called <code>saspy</code> that helps the kernel connect <code>SAS</code> to <code>python</code></p>
+<ul>
+<li><code>pip install saspy</code></li>
+<li><code>pip install sas_kernel</code></li>
+</ul>
+<p>You should now see something like this.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Available</span> kernels:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span>    /home/sas/anaconda3/lib/python3.5/site-packages/ipykernel/resources</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">sas</span>        /home/sas/.local/share/jupyter/kernels/sas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now verify that the SAS Executable is correct</p>
+<ul>
+<li>find the <code>sascfg.py</code> file – it is currently located in the install location (see above) <code>[install location]/site-packages/saspy/sascfg.py</code>. To query <code>pip</code> for the location of the file, type <code>pip show saspy</code>. Failing that, this command will search the OS for the file location: <code>find / -name sascfg.py</code></li>
+<li>edit the file with the correct path the SAS executable and include any options you wish it include in the SAS invocation. See examples in this <a href="https://github.com/sassoftware/saspy/blob/master/saspy/sascfg.py">file</a></li>
+</ul>
+</section>
+<section id="connecting-r-with-jupyter" class="level4">
+<h4 class="anchored" data-anchor-id="connecting-r-with-jupyter">Connecting R with Jupyter</h4>
+<p>If you are hoping to make nice documents and reproducible work using R, I would highly recommend that you use the R Markdown or R Notebook through <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a> application instead. However, if you would prefer Jupyter, then please read on.</p>
+<p>It is possible to download an R kernel, much like for Stata and SAS, but it can be a bit fickle, so a different approach is described below. It is important to note that with this method you are installing a fresh version of R, so you will not have access to the packages you have previously installed - you will need to reinstall them in this R environment, which could be done within a Jupyter notebook.</p>
+<p>Open a command prompt (Windows) / terminal (Linux/Mac) and enter the following commands:</p>
+<ul>
+<li><code>conda install r-essentials r-igraph</code></li>
+<li><code>Rscript -e 'install.packages("languageserver")'</code></li>
+</ul>
+<p>If you would rather install an R kernel than a fresh install of R within the Anaconda distribution, you can follow the instructions <a href="https://richpauloo.github.io/2018-05-16-Installing-the-R-kernel-in-Jupyter-Lab/">here</a>. The advantage of this is that it allows the notebook to access previously installed packages as they are not running off a fresh version of R.</p>
+</section>
+</section>
+</section>
+<section id="using-jupyter-notebooks" class="level2">
+<h2 class="anchored" data-anchor-id="using-jupyter-notebooks">Using Jupyter notebooks</h2>
+<p>Now you have set up Jupyter to run with the programming language of your choice, we should start using it. How you do that is detailed in this section.</p>
+<section id="creating-a-notebook" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-notebook">Creating a notebook</h3>
+<p>You can either open up the Anaconda navigator and then Jupyter notebooks, or open Jupyter notebooks directly. Once open, navigate to the directory you would like to create the notebook in (<em>If you are using a version control system like Git, then you should be within the project’s repository</em>)</p>
+<p>Select the <strong>New</strong> button in the top right corner, and then select the language you would like to program in (<em>this assumes that you have downloaded an appropriate kernel if you would like to use a language other than Python</em>)</p>
+</section>
+<section id="running-a-jupyter-notebook" class="level3">
+<h3 class="anchored" data-anchor-id="running-a-jupyter-notebook">Running a Jupyter notebook</h3>
+<p>Now you have the notebook open in your chosen language, it’s time to start doing some data exploration and analysis. Here, we’ll cover some basic commands that will get you started, but to fully leverage the power of the notebook, you should read the <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#code-cells">Jupyter documentation</a>, along with the documentation of your preferred kernel, particularly sections relating to <code>magic</code> commands (which are language-specific).</p>
+<p>When you are writing in a cell (‘Edit’ mode), you can use these commands:</p>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Keyboard shortcut</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>Shift + Enter</code></td>
+<td style="text-align: left;">Executes the current cell and enters you into the next one</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>Ctrl/Cmd + Enter</code></td>
+<td style="text-align: left;">Executes the current cell, but does not enter you into the next one</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>Esc</code></td>
+<td style="text-align: left;">This exits ‘Edit’ mode without executing the cells</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>Tab</code></td>
+<td style="text-align: left;">Code completion or indent</td>
+</tr>
+</tbody>
+</table>
+<p>If you are not in ‘Edit’ mode (‘Command’ mode), and therefore at least one cell is selected, you can use these commands:</p>
+<table class="table">
+<colgroup>
+<col style="width: 29%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Keyboard shortcut</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>Ctrl/Cmd + a</code></td>
+<td style="text-align: left;">Add an empty cell above your current cell</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>Ctrl/Cmd + b</code></td>
+<td style="text-align: left;">Add an empty cell below your current cell</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>dd</code></td>
+<td style="text-align: left;">Delete the selected cell</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>Ctrl/Cmd + m</code></td>
+<td style="text-align: left;">Change the cell type to ‘Markdown’ so you can add text</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>Ctrl/Cmd + y</code></td>
+<td style="text-align: left;">Change the cell type to ‘Code’ so you can add code</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>Enter</code></td>
+<td style="text-align: left;">Enter ‘Edit’ mode</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="customizing-jupyter-notebooks-ui" class="level3">
+<h3 class="anchored" data-anchor-id="customizing-jupyter-notebooks-ui">Customizing Jupyter notebook’s UI</h3>
+<p><strong>The following section is not essential and can be ignored if you want to keep things as simple as possible.</strong></p>
+<p>Because I do not like the <code>In[]</code> <code>Out[]</code> text showing in documents, along with centering plots/figures, I have customized the Jupyter notebook settings. If you would like to do the same, this section should help you. It is not necessary, but I feel that it gives cleaner documents (including pdf documents via LaTeX). If you do this, it is essential that you <strong>routinely restart the kernel to run everything again in a fresh environment</strong> as it is incredibly easy to run code blocks out of order and forget how this changes the output and introduces <em>hidden</em> packages.</p>
+<p>If you would like to customize the look of the notebook, <a href="https://github.com/dunovank/jupyter-themes">jupyterthemes</a> is a great package that can be installed. I have also edited the <code>custom.css</code> file (<code>C:\Users\owner\.jupyter\custom\</code>), adding <code>display: None;</code> under the section</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>div<span class="fu">.prompt</span><span class="op">,</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">.prompt</span> {</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>so that it now reads</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>div<span class="fu">.prompt</span><span class="op">,</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">.prompt</span> {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a> <span class="kw">font-family</span>: <span class="dv">monospace</span><span class="op">,</span> <span class="dv">monospace</span><span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a> <span class="kw">font-size</span>: <span class="dv">9</span><span class="dt">pt</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a> <span class="kw">font-weight</span>: <span class="dv">normal</span><span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a> <span class="kw">display</span>: <span class="dv">None</span><span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a> <span class="fu">.</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a> <span class="fu">.</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a> <span class="fu">.</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This removes the <code>In[]</code> <code>Out[]</code> text. To centre the output of tables/figures, add</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.output_png</span> {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">display</span>: <span class="dv">table-cell</span><span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>to the <code>custom.css</code> file, right after the <code>.prompt {..}</code> section.</p>
+<p>To enable soft wrapping in the notebook, you need to edit the <code>notebook.json</code> file (<code>C:\Users\owner\.jupyter\nbconfig\</code>). If it does not exist, you need to create it. Once open, add</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"MarkdownCell"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"cm_config"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"lineWrapping"</span><span class="fu">:</span> <span class="kw">true</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"CodeCell"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"cm_config"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"lineWrapping"</span><span class="fu">:</span> <span class="kw">true</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>before restarting Jupyter.</p>
+</section>
+</section>
+<section id="output-documents" class="level2">
+<h2 class="anchored" data-anchor-id="output-documents">Output documents</h2>
+<p>We’ve covered a lot of information up until now about setting up your projects and your code, but a big part of reproducible research is the creation of nice-looking and transparent documents. The reason we’ve gone to such effort to install Jupyter notebooks and connect them with our language of choice is that not only do they allow for excellent data exploration, but they also make documents that look professional.</p>
+<p>In scientific articles, whilst it’s not essential, LaTeX is a nice touch, and Jupyter can give you a LaTeX formatted pdf documents. To do this, you will first need to install LaTeX. If you are on Windows, I would recommend the <a href="https://miktex.org/download">MiKTeX</a> distribution, and if you use a Mac, then I would recommend the <a href="http://www.tug.org/mactex/mactex-download.html">MacTeX</a> distribution. You will also need the “swiss-army knife” of file conversion, <a href="https://pandoc.org/installing.html">pandoc</a>. Pandoc is not <em>needed</em> for creating LaTeX-formatted pdfs, but if you have documents with unsupported characters and you need to use a different <code>pdf-engine</code> you’ll need to use pandoc.</p>
+<p>During the installation process, LaTeX should have been added automatically to the PATH. To test this, enter <code>pdflatex</code> into a command line/terminal. If you get the output <code>This is pdfTeX ...</code> then you are good to go. If not, please add the executable to the PATH<a id="env-variables"></a>. In Windows you do this by navigating to <code>Environment Variables</code> from the Windows key and editing the PATH in <code>User Variables</code>. In Mac, you should open the terminal and enter <code>touch ~/.bash_profile; open ~/.bash_profile</code>, which opens (or creates if missing) the file that stores your PATH. From here, type <code>export PATH="path-to-latex-executable:$PATH"</code> to add the executable to the path. Now save and exit the text editor, run <code>source ~/.bash_profile</code> in your terminal, and you’re good to go. The executable location can be found by opening the MiKTeX/MacTeX console and looking at the bin directory under settings. For me, on a Windows computer where I don’t have administrator privileges it reads <code>C:\Users\owner\AppData\Local\Programs\MiKTeX 2.9\miktex/bin/x64</code>. If you are still having issues, please consult <a href="http://sachaepskamp.com/wp-content/uploads/2011/10/Install.pdf">this document</a>.</p>
+<p>Now you’re ready to create a LaTeX-formatted pdf document. All you need to do is click <em>File -&gt; Download as -&gt; PDF via LaTeX (.pdf)</em>.</p>
+<p>Unfortunately, when creating pdf documents, code is not hard wrapped. This means that if you have a very long line of code (&gt; 80 characters), it will run out of the formatted area, and at worst, off the page. At present, I do not know a way to force Jupyter notebooks to wrap the output automatically, so instead you have to write clean code and start new lines using <code>,</code> and <code>\n</code> if it’s too long.</p>
+<p>If you would rather not produce a pdf via LaTeX, instead wanting an arguably more readable output, you could create an html file. This is done in the same manner as pdf documents.</p>
+</section>
+</section>
+<section id="git" class="level1">
+<h1>Git</h1>
+<p>As mentioned, a version control system is an integral part of any reproducible research project. Think of it as tracked changes for your code. When working on a project, even if you’re the only one coding, it’s important to be able to go back to previous versions if you make a mistake and can’t remember all the steps you went through since your last stable version. Git isn’t the only VCS available, but it’s the most prevalent, and has a good support community, so is what will be the focus in this book.</p>
+<section id="set-up" class="level2">
+<h2 class="anchored" data-anchor-id="set-up">Set up</h2>
+<p>There are many ways to get Git running on your computer. Depending on your OS and the version you have, Git may come pre-installed on your computer. However, it is a good idea to update it to the latest version, so I’d recommend you follow the steps below anyway.</p>
+<section id="windows" class="level3">
+<h3 class="anchored" data-anchor-id="windows">Windows</h3>
+<ol type="1">
+<li>Install <a href="https://gitforwindows.org/">Git for Windows</a>
+<ul>
+<li>This gives you Git Bash, which is a much nicer way of interfacing with Git than the command line.</li>
+<li><strong>Note:</strong> when asked about “<em>Adjusting your PATH environment</em>”, be sure to select “<em>Git from the command line and also from 3rd-party software</em>”. The other default options should be fine. For more details about the installation settings, please click <a href="https://github.com/jennybc/happy-git-with-r/issues/105">here</a></li>
+</ul></li>
+<li>Open up Git Bash and enter <code>where git</code>. Open up the command line and enter <code>where git</code>. Depending on whether you have administrator privileges, the outputs should look something like this, respectively
+<ol type="1">
+<li><code>which git</code> : <code>/mingw64/bin/git</code></li>
+<li><code>where git</code> : <code>C:\Users\owner\AppData\Local\Programs\git\bin\git.exe</code> (User privileges)
+<ol type="1">
+<li><code>where git</code> : <code>C:\Program Files\git\bin\git.exe</code> (administrator privileges)</li>
+</ol></li>
+</ol>
+<ul>
+<li>If you see <code>cmd</code> instead of <code>bin</code>, then you need to edit the PATH in your environment variables, <a href="#env-variables">as above</a>. You can do this by typing <code>environment variables</code> into the Start box and scrolling to the PATH section of User/System variables (depending on whether you have administrator privileges), and changing <code>cmd</code> to <code>bin</code> in the <code>git.exe</code> path.</li>
+</ul></li>
+</ol>
+</section>
+<section id="mac" class="level3">
+<h3 class="anchored" data-anchor-id="mac">Mac</h3>
+<p>There are more (workable) ways to install Git on OSX than on Windows, but I think this is the best option as it gives you a great package manager for the future.</p>
+<ol type="1">
+<li>Open the terminal and enter <code>/usr/bin/ruby -e "$(curl -fsSL https:/raw.githubusercontent.com/Homebrew/install/master/install)"</code></li>
+<li>Enter <code>brew install git</code> into the terminal</li>
+</ol>
+</section>
+<section id="final-git-set-up-steps" class="level3">
+<h3 class="anchored" data-anchor-id="final-git-set-up-steps">Final Git set up steps</h3>
+<p>Now that you have Git running, you need to tell it who you are. This allows multiple people to make changes to code, and the correct names will be attached to the changes.</p>
+<p>Open up the Git Bash and enter</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">'Firstname Lastname'</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">'my_email@gmail.com'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Typing in <code>git config --global --list</code> is a way to check that your details have been saved correctly.</p>
+<p><strong>Note:</strong> it is essential that you enter the same <strong>email</strong> as your GitHub account information. This way you can connect the two. If you would prefer to use a different user name than your GitHub user name you can. This would help show you which computer you completed the work on, but it is not important to most people.</p>
+</section>
+<section id="installation-problems" class="level3">
+<h3 class="anchored" data-anchor-id="installation-problems">Installation problems</h3>
+<p>If you followed the instructions above, Git should be ready to go. However, sometimes you still end up with errors. This is far more likely with Windows that Mac, but if you find that the next steps don’t work for you, see if the other installation options from Jenny Bryan’s book <a href="https://happygitwithr.com/install-git.html">here</a> work for you, or the trouble shooting tips <a href="https://happygitwithr.com/troubleshooting.html">here</a> (and <a href="https://github.com/jennybc/happy-git-with-r/issues/67">here</a> if you’re on Windows), which are useful when trying to connect Git with RStudio.</p>
+</section>
+</section>
+<section id="git-client" class="level2">
+<h2 class="anchored" data-anchor-id="git-client">Git client</h2>
+<p>Now you have Git installed, there are a number of ways to use it. The easiest way is to use a client, which allows you to use buttons instead of typing code. They also provide a visual for more complicated ideas, such as branching, greatly simplifying the process. I prefer to use the <a href="https://www.gitkraken.com/">GitKraken</a> client, and they’re associated GloBoards for project To-Do’s, but you can use others. <a href="https://www.sourcetreeapp.com/">SourceTree</a> is another good alternative, but I have had some issues connecting to some GitHub accounts, so I have since moved away from it.</p>
+</section>
+<section id="remote-repositories" class="level2">
+<h2 class="anchored" data-anchor-id="remote-repositories">Remote repositories</h2>
+<p>It is not essential, but one of the best things about Git is that online repositories create an easier way to sync your work between computers and colleagues, avoiding much of the mess caused when this work happens simultaneously / your file sharing system of choice isn’t syncing properly. In this section, I will explain the correct way to utilize this, and the other way …</p>
+<section id="github---the-good" class="level3">
+<h3 class="anchored" data-anchor-id="github---the-good">GitHub - the Good</h3>
+<p>GitHub is built for this. You should take full advantage of the effort and troubleshooting that has gone into the platform. <strong>Don’t try and recreate the wheel</strong></p>
+<p>With GitHub now offering <a href="https://Github.com/pricing">unlimited free private repositories</a>, I would recommend that you set up an account with GitHub. The reason why I suggest GitHub over a different purpose-built platform (such as Bitbucket or GitLab) is the community. Previously, I would have recommended Bitbucket due to the unlimited free private repositories, but this is no longer a restriction with GitHub. With GitHub, if you ever want to make your code open-source, you immediately have access to the largest community of programmers who can help you improve your code, as well as putting it to good use. And isn’t that why we do research?</p>
+<p>Now that you’ve decided to use GitHub, it’s very easy to register. Just click the link above and select the package you’d like. If you have an academic email address, consider making this your primary email address on the account, as it gives you a <strong>PRO</strong> account unlimited collaborators on private repositories, unlike the standard account that limits it to 3 collaborators.</p>
+<p>Be sure to choose a user name that is easy to remember, and easy to find. I would suggest just using your name.</p>
+<p>Now you have a GitHub account set up, this is your <em>remote</em>. If you work on a project with collaborators, this can be shared with them. That way, collaborators can work on their own versions of the code on their <em>local</em> machine (computer), and when it’s ready for other people to use/help write, they can <code>push</code> it to the <em>remote</em> where others can access it. Don’t worry if you don’t know what <code>push</code> is - we’ll cover that <a href="#basic-commands">soon</a>.</p>
+</section>
+<section id="private-server" class="level3">
+<h3 class="anchored" data-anchor-id="private-server">Private server</h3>
+<p>It is possible to use and get the benefits of Git without a purpose-made online repository such as GitHub, but it’s not as simple and it’s not as stable. Because services like Dropbox and OneDrive are not built for storing and tracking changes in code and <em>dot</em> files, it can go wrong, especially when more than one author is involved. Of all the file syncing systems, Dropbox seems to be the best option due to the <a href="https://github.com/anishathalye/git-remote-dropbox">git-remote-dropbox extension</a>, but this is still inferior to GitHub etc. With these home-made systems, corruption of the project repository is a matter of “when”, not “if”. If you insist on using this option, go read the <a href="#basic-commands">git basic commands</a> first, come back, and read on …</p>
+<section id="dropbox---the-bad" class="level4">
+<h4 class="anchored" data-anchor-id="dropbox---the-bad">Dropbox - the Bad</h4>
+<section id="git-remote-dropbox" class="level5">
+<h5 class="anchored" data-anchor-id="git-remote-dropbox">git-remote-dropbox</h5>
+<p>Install the git-remote-dropbox extension. The instructions were copied from the <a href="https://github.com/anishathalye/git-remote-dropbox">documentation</a> and *<em>have not been tested</em>*.</p>
+<ol type="1">
+<li>Install the helper with <code>pip install git-remote-dropbox</code>.</li>
+<li>Generate an OAuth 2 token by going to the app console, creating a Dropbox API app with “Full Dropbox” access (or “App folder” access if you prefer, if you’re not going to be using Dropbox’s sharing features to use git-remote-dropbox in a multi-user setup), and generating an access token for yourself.</li>
+<li>Save your OAuth token in <code>~/.config/git/git-remote-dropbox.json</code> or <code>~/.git-remote-dropbox.json</code>. The file should look something like this:</li>
+</ol>
+<div class="sourceCode" id="cb8"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"default"</span><span class="fu">:</span> <span class="st">"xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx"</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>git-remote-dropbox supports using multiple Dropbox accounts. You can create OAuth tokens for different accounts and add them all to the config file, using a user-defined username as the key:</li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"alice"</span><span class="fu">:</span> <span class="st">"xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx"</span><span class="fu">,</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"ben"</span><span class="fu">:</span> <span class="st">"xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx"</span><span class="fu">,</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"charlie"</span><span class="fu">:</span> <span class="st">"xxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxx"</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>You can tell git-remote-dropbox to use the token corresponding to username by specifying a URL like <code>dropbox://username@/path/to/repo</code>.</p></li>
+<li><p>You can also specify the token inline by using a URL like <code>dropbox://:token@/path/to/repo</code>.</p></li>
+</ul>
+</section>
+<section id="creating-a-dropbox-repository" class="level5">
+<h5 class="anchored" data-anchor-id="creating-a-dropbox-repository">Creating a Dropbox repository</h5>
+<p>Now you’ve installed the helper extension, you can start using Dropbox for your <em>remote</em> repositories. Unless a project already exists with a Dropbox repository (i.e.&nbsp;you’ve been added to the project and were not the one to set it up), I would recommend that you first create the repositories on your local machine using the steps below.</p>
+<ol type="1">
+<li>Create a project folder on your computer <strong>(not in your Dropbox folder)</strong>, and open up the Git Bash within the folder</li>
+<li>Enter <code>git init</code> to initialize your folder as a Git repository</li>
+<li>Enter <code>git remote add origin "dropbox:///path/to/repo"</code></li>
+</ol>
+<p>If a repository already exists in a Dropbox folder, and you want to make a local copy, you can do the following:</p>
+<ol type="1">
+<li>Create a project folder on your computer, and open up the Git Bash within the folder</li>
+<li>Enter <code>git clone "dropbox:///path/to/repo" -b master</code></li>
+</ol>
+<p>You are now set up to use Dropbox as your remote repository and can <code>commit</code>, <code>push</code>, and <code>pull</code> changes using the Git Bash commands:</p>
+<ul>
+<li><code>git add .</code> This <em>stages</em> the changes to your files, and it is essential to do before you <code>commit</code></li>
+<li><code>git commit -m "your commit message"</code></li>
+<li><code>git push origin master</code></li>
+<li><code>git pull origin master</code></li>
+</ul>
+</section>
+</section>
+<section id="onedrivegoogle-drivenetwork-driveothers---the-ugly" class="level4">
+<h4 class="anchored" data-anchor-id="onedrivegoogle-drivenetwork-driveothers---the-ugly">OneDrive/Google Drive/Network Drive/others - the Ugly</h4>
+<p>*<em>The instructions for this are based off the following articles and have not been tested</em>*.</p>
+<p>https://blog.geekforbrains.com/how-to-use-dropbox-and-git-for-private-repos-e1d304d5ff79</p>
+<p>http://autchen.github.io/guides/2016/03/10/git-onedrive.html</p>
+<p>http://tony.halcyonlane.com/blog/2011/09/22/Using-git-at-work-on-a-Windows-network-drive//</p>
+<p>https://medium.com/<span class="citation" data-cites="techstreams/git-google-drive-simple-git-host-3a84db4fc1fd">@techstreams/git-google-drive-simple-git-host-3a84db4fc1fd</span></p>
+<p>If you want to use a different file syncing system, then you need to create a <em>bare</em> remote repository. This is structured differently than a normal git repository, which makes it <em>slightly</em> better for use as a remote repository … but it’s still a bad idea and can corrupt the project.</p>
+<ol type="1">
+<li>Create/open an existing project folder on your computer <strong>(not in your OneDrive folder)</strong>, and open up the Git Bash within the folder</li>
+<li>Enter <code>git init</code> to initialize your folder as a Git repository</li>
+<li>Assuming you have files already in the directory, you should commit them using</li>
+</ol>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="at">--all</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"your commit message"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="4" type="1">
+<li>Create the bare repo in OneDrive etc using
+<ul>
+<li><code>git init --bare . ~/OneDrive///path/to/repo/project.git</code></li>
+</ul></li>
+<li>Configure your remote using
+<ul>
+<li><code>git remote add origin ~/OneDrive///path/to/repo/project.git</code></li>
+</ul></li>
+<li><code>push</code>/<code>pull</code> your commits using
+<ul>
+<li><code>git push origin master</code></li>
+</ul></li>
+</ol>
+<p>You can share the OneDrive repository (folder) so that multiple people can work on the project. However, if you do this, <strong>it is essential you coordinate your <code>push</code>/<code>pull</code> commands to avoid corrupting the repository.</strong></p>
+</section>
+</section>
+</section>
+<section id="creating-a-repository" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-repository">Creating a repository</h2>
+<p>If everything has gone well until now, you’re ready to create a project repository. This is where all your code, all your data, all your output files, everything, should live. Whilst you can create a repository directly on your computer, I would advise against this as it causes additional headaches when you want to connect it with GitHub. Instead, create the remote repository first on GitHub.</p>
+<ul>
+<li>Go to www.github.com and click the <code>+</code> and <em>“New repository”</em>.</li>
+<li>Choose a project name</li>
+<li>Decide whether you want it to be a public or private project (choose private if working on sensitive data and research, as you can always convert it to public later)</li>
+<li>Initialize with a README file</li>
+</ul>
+<section id="connecting-to-github" class="level3">
+<h3 class="anchored" data-anchor-id="connecting-to-github">Connecting to GitHub</h3>
+<p>If you are using SourceTree, there are two ways to connect your computer to your GitHub repositories. I would recommend the first option, as it makes <em>cloning</em> repositories (making a copy on your local computer) easier in the future, as you don’t have to go to GitHub each time to find the <em>HTTPS/SSH</em> address. The methods for GitKraken are essentially the same, and SourceTree seems to be slightly more popular, hence why I describe it here.</p>
+<p><strong>Method 1</strong></p>
+<ol type="1">
+<li>Go to <em>Tools -&gt; Options -&gt; Authentication</em> in SourceTree and add your GitHub account details</li>
+<li>Leave the preferred protocol at <em>“HTTPS”</em> for the moment, unless you know what you’re doing with SSH keys</li>
+<li>Now open a new tab, click on <em>Remote</em>, and you should see your repositories listed</li>
+<li>Clone the repositories that you’d like to work on</li>
+</ol>
+<blockquote class="blockquote">
+<p><strong>Note:</strong> Now SourceTree and GitHub are connected, you shouldn’t have to do the first few steps - just go to step 3.</p>
+</blockquote>
+<p><strong>Method 2</strong></p>
+<ol type="1">
+<li>Go to your repository on GitHub and click on the green <em>“Clone or download”</em> button</li>
+<li>Copy the <em>HTTPS</em> address (your settings should say <em>“Clone with HTTPS”</em> above it, otherwise click <em>“Use HTTPS”</em>)</li>
+<li>Go to SourceTree, open a new tab, and click on <em>“Clone”</em></li>
+<li>Paste the <em>HTTPS</em> address into the <em>“Source Path / URL:”</em> box</li>
+<li>Click on the <em>“Clone”</em> button at the bottom</li>
+</ol>
+<p><strong>Method 3</strong> (<em>not recommended</em>)</p>
+<p>If you would like to do it the hard way and use the Git Bash, read the instructions <a href="https://happygitwithr.com/push-pull-github.html">here</a></p>
+<p><strong>Note:</strong> if you would like to use SSH keys, read the instructions <a href="https://help.github.com/articles/connecting-to-github-with-ssh/">here</a></p>
+</section>
+</section>
+<section id="basic-commands" class="level2">
+<h2 class="anchored" data-anchor-id="basic-commands">Basic commands</h2>
+<p>There are many commands that you could learn in Git, but these are the basics, and will be sufficient for pretty much everything you’ll need to do at the moment.</p>
+<ul>
+<li><code>commit</code>: this standings for <em>committing</em> a change to your file in Git. Think of it as saving a document, but instead of saving the whole document as-is, Git saves just the changes since the last version. This makes it very efficient, especially when it comes to backing up your work. <strong>Key points:</strong>
+<ul>
+<li><code>commit</code> often. By making and saving small changes, your code versions becomes more readable in case you need to go back and find out exactly what and where it went wrong.</li>
+<li>Always write helpful messages - keep them succinct, but make sure they describe what the change you made was.</li>
+</ul></li>
+<li><code>pull</code>: this commands copies the version of the code from your remote to your local machine. Use this when you want to get the most up-to-date version of your code to work on (assuming your local version isn’t the most up-to-date)</li>
+<li><code>push</code>: the opposite of <code>pull</code>. If your local version is the most up-to-date version, <code>push</code> your version to the remote.</li>
+</ul>
+</section>
+<section id="branching" class="level2">
+<h2 class="anchored" data-anchor-id="branching">Branching</h2>
+<p>Branching is a key part of the Git work-flow. It allows you to make changes to your code, without worrying about breaking previously ‘good’ code. But what is it?</p>
+<p>Simply put, when you create another branch you are creating a copy of your code at that point in time. This is useful because it allows you to make changes to your copy, and leave your original code intact! So there’s no concern about breaking your working code while you test out some ideas.</p>
+<p><img alt="guideline-554f4577.png" src="assets/guideline-554f4577.png" style="float: right;" width="40%" height=""></p>
+<blockquote class="blockquote">
+<p>“But isn’t that why we use Git?”</p>
+</blockquote>
+<p>Kind of. But Git is only so powerful. If you have working code, you don’t want to put it out of action whilst you test ideas out, especially if other people need to use your code and can’t wait for you to figure out your future problems. So creating another branch allows you to get around this issue. For most projects, you can get away with just two branches, a <code>master</code> and a <code>develop</code>, which are explained below. If your project is complex, and requires multiple people to work on the code at the same time, it would be worth you looking at implementing <a href="https://nvie.com/posts/a-successful-git-branching-model/">this model</a>.</p>
+<p>The image to the right is copied from the model listed above. It is useful in illustrating the <code>master</code> and <code>develop</code> approach to branching.</p>
+<section id="creating-a-branch" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-branch">Creating a branch</h3>
+<p>As with all things in Git, you can do this multiple ways. I prefer to use the client, as I find it far more intuitive when you can see the changes, but you can use the command line or Git bash. If you want to explore the command line code, I would recommend visiting <a href="https://learngitbranching.js.org/">this website</a>, which allows you to interact with the code through illustrations.</p>
+<p>When you are in your client (in this case, SourceTree), open the repository you would like to create a branch in. You will notice that there are two buttons called <code>Branch</code> and <code>Merge</code>. If you click on <code>Branch</code>, you will see something like this</p>
+<p><img alt="guideline-b2aa08de.png" src="assets/guideline-b2aa08de.png" width="" height=""></p>
+<p>Enter the branch name you would like to create into <code>New Branch</code> (I would suggest <code>develop</code>), and hit <code>Create Branch</code>. That’s it. You now have a <code>master</code> and <code>develop</code> branch.</p>
+<p>You might notice the tick-box <code>Checkout New Branch</code>. This means SourceTree will execute the command <code>git checkout develop</code> i.e.&nbsp;you will move to the <code>develop</code> branch to continue your work. Now, any changes you make to your code will happen in the <code>develop</code> copy of the code, not in your <code>master</code> branch. Neat. If you want to move back to <code>master</code> branch at some point, you simply right click on the <code>master</code> branch on the left side of SourceTree, and select <code>Checkout master...</code>.</p>
+</section>
+<section id="merging-a-branch" class="level3">
+<h3 class="anchored" data-anchor-id="merging-a-branch">Merging a branch</h3>
+<p>You’ve created a <code>develop</code> branch so you can keep you <code>master</code> pristine and in working condition. But now you’ve made changes you’re happy with, and you want to incorporate them in the main code. To do this, you need to <code>merge</code> the changes from <code>develop</code> into <code>master</code>.</p>
+<p>To do this, first you need to <code>checkout</code> the <code>master</code> branch, so you are merging changes <em>into</em> it. Then, click on the <code>Merge</code> button in SourceTree. Select the <code>commit</code> you would like to merge into the <code>master</code> branch (most likely the top one in the <code>develop</code> branch), and click <code>OK</code>. You should have a view like this.</p>
+<p><img alt="guideline-eeaa7b68.png" src="assets/guideline-eeaa7b68.png" width="150%" height=""></p>
+<p>You have now merged your first feature. Whilst the <code>merge</code> feature is particularly useful, it is not the only way of doing this. <code>rebase</code> is another option that works in a slightly different way. It is slightly beyond the scope of this document, but you should read <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing">this document</a> and visit <a href="https://learngitbranching.js.org/">this website</a>, as suggested previously, to get experience of putting them both into practice.</p>
+</section>
+</section>
+<section id="git-and-jupyter" class="level2">
+<h2 class="anchored" data-anchor-id="git-and-jupyter">Git and Jupyter</h2>
+<p>Unfortunately, Git and Jupyter don’t always play nicely, so we have to do a few things to try and get around the issues. Due to the way the notebooks create and store the outputs from the code, <code>diffs</code> become unreadable. There are a few ways to get around this. The first option is the simplest, but the others provide a little more control over what you see in the <code>diffs</code>. This is here to serve as an introduction to the tools, but not as a tutorial, so only the links to the documentation have been provided for you to read.</p>
+<ol type="1">
+<li>Clear all outputs before you save and commit the files. That way, Git only tracks changes to the input</li>
+<li>Download the notebook as a markdown file allowing <code>diffs</code> to be tracked in Git as normal</li>
+<li><a href="https://nbdime.readthedocs.io/en/latest/index.html">nbdime</a></li>
+<li><a href="https://www.reviewnb.com/">ReviewNB</a></li>
+<li><a href="https://nextjournal.com/">Nextjournal</a> is a promising take on notebooks that simplifies the process of making reproducible research. Currently it is only in beta, and for private research, but if it has a free version when it becomes established it would be a good option allowing a ‘Google Docs’ style of version control.</li>
+</ol>
+</section>
+</section>
+<section id="additional-resources" class="level1">
+<h1>Additional resources</h1>
+<p>This document only touches on enough to get you up an running with reproducible work. However, to become fully proficient you will need to delve deeper into the material - trust me, it’ll make your life easier in the long run. Here are a few places to start for each section, many of which were the basis for the systems I implement and advocate for here.</p>
+<section id="project-structure" class="level2">
+<h2 class="anchored" data-anchor-id="project-structure">Project structure</h2>
+<p>https://nicercode.github.io/blog/2013-04-05-projects/</p>
+<p>https://tomwallis.info/2014/01/16/setting-up-a-project-directory/</p>
+<blockquote class="blockquote">
+<p>These two resources describe the project structure that I advocate for in a little more detail, with a few minor differences. If you work in <code>R</code> I would recommend that you follow nicercode’s other suggestions as well, particularly regarding the creation of an R project.</p>
+</blockquote>
+<p>https://medium.freecodecamp.org/why-you-need-python-environments-and-how-to-manage-them-with-conda-85f155f4353c</p>
+<blockquote class="blockquote">
+<p>This takes a deeper look into how to manage <code>python</code> environments with anaconda, and how this affects your project structures. This is useful if you are work with <code>python 2.x</code> and <code>python 3.x</code>, but also allows your to ensure old code won’t get broken when modules are updated as each module is specific to the environment it is downloaded in.</p>
+</blockquote>
+</section>
+<section id="git-1" class="level2">
+<h2 class="anchored" data-anchor-id="git-1">Git</h2>
+<p>https://happygitwithr.com/</p>
+<blockquote class="blockquote">
+<p>I cannot emphasise this enough: this is genuinely <strong>the best resource</strong> I have come across for explaining how to set up and organise a project with <code>Git</code>. Whilst it is aimed at <code>R</code> users, there is a large amount of cross-over, so read it regardless of the language you use.</p>
+</blockquote>
+<p>https://medium.freecodecamp.org/how-not-to-be-afraid-of-git-anymore-fe1da7415286</p>
+<blockquote class="blockquote">
+<p>This helps you understand the nuts-and-bolts of <code>Git</code> by learning to use the command line, rather than an application like SourceTree.</p>
+</blockquote>
+<p>https://git-scm.com/book/en/v2/</p>
+<blockquote class="blockquote">
+<p>The literal book on Git. Everything from the basics to the advanced.</p>
+</blockquote>
+<p>https://nvie.com/posts/a-successful-git-branching-model/</p>
+<blockquote class="blockquote">
+<p>If you feel comfortable with the idea of branching and are interested in a good extension of what we’ve covered, this will help. Roughly speaking, the more complex you project is and the more people that are involved simultaneously, the more branches you want so you can handle problems as they come up, without breaking previously ‘good’ code.</p>
+</blockquote>
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{arnold-leps2019,
+  author = {Callum Arnold-Leps},
+  title = {An {Introduction} to {Reproducible} {Research}},
+  date = {2019-08-15},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-arnold-leps2019" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Callum Arnold-Leps. 2019. <span>“An Introduction to Reproducible
+Research.”</span> August 15, 2019.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="arnold-c/website" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Copyright 2023, Callum Arnold-Leps. Made with <a href="https://quarto.org">Quarto</a></div>
+  </div>
+</footer>
+
+
+
+</body></html>

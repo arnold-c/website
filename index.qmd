@@ -1,0 +1,94 @@
+---
+title: "Callum Arnold"
+about:
+  template: jolla
+  image: "img/CA_Headshot-Web.jpg"
+  id: "blank"
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      url: "https://www.linkedin.com/in/arnold-c/"
+    - icon: twitter
+      text: Twitter
+      url: "https://twitter.com/thecallumarnold"
+    - text: "{{< ai google-scholar color=default >}} Google Scholar"
+      url: "https://scholar.google.com/citations?user=6CMnUykAAAAJ&hl=en"
+    - text: "{{< ai orcid color=default >}} ORCID"
+      url: "https://orcid.org/0000-0002-3245-6956"
+    - icon: github
+      text: GitHub
+      url: "https://github.com/arnold-c"
+    - icon: envelope-fill
+      text: Email
+      url: "mailto:arnold.crk@gmail.com"
+---
+
+<link rel="stylesheet" href="academicons/css/academicons.min.css"/>
+
+::: {#blank}
+
+:::
+
+## About Me
+
+
+
+I am a PhD Candidate in Biology at Pennsylvania State University, where I build mathematical models of infectious diseases as part of Dr. Matt Ferrari’s lab (within the Center for Infectious Disease Dynamics), in addition to other infectious disease epidemiology work.
+I previously worked as a clinical research coordinator in the Infectious Disease Division at the Hospital for Sick Children (Toronto, Canada), and concurrently completed an MSc in Global Health Policy at LSHTM.
+Whilst completing my Masters in computational chemistry, I realized that I enjoyed research and computational modeling, but wanted to work in a more applied healthcare-related field.
+Since then, I have applied and developed my skills in Public Health research.
+
+My research interests are in infectious disease epidemiology, with a particular focus on the use of mathematical models to improve outbreak response and resource utilization.
+I primarily work with R and Julia, but have experience with Python, Bash, and am learning Stan for Bayesian modeling.
+
+When I'm not working, I can be found outside doing one of the following (depending on the season): mountain biking, road cycling, rock climbing, hiking, snowboarding, cross-country skiing, or very occasionally, running.
+
+## Education
+
+**PhD Biology**, 2020 - Present, *Pennsylvania State University*
+
+**MSc Global Health Policy**, 2017 - 2020, *London School of Hygiene and Tropical Medicine*
+
+**MChem Chemistry**, 2011 - 2015, *University of Oxford*
+
+## Research Experience
+
+<div class="box">
+**PhD Candidate**, Aug 2020 – Present, *Pennsylvania State University*
+ 
+  Infectious disease epidemiology and modelling with Dr. Matt Ferrari.
+  
+  [Currently working](projects.qmd) on:
+  
+  - The [Data4Action Research Project](https://doi.org/10.1038/s41598-022-12499-5) examining the dynamics of COVID-19 in a 
+  university community
+  - Resource utilisation strategies for measles surveillance and detection in the DRC
+  - The effects of population-level thresholds for the detection and response to outbreaks
+</div>
+
+<div class="box">
+  **Clinical Research Coordinator**, Apr 2018 – Dec 2019, *The Hospital for Sick Children*
+  
+  Coordinated a multi-centre observational study into waning immunity in infants 
+  to measles, mumps and varicella, and managed all data produced by the National 
+  Microbiology Laboratory and the Nova Scotia Health Authority laboratory.
+  
+  Responsibilities included:
+  
+  - Data Management
+  - Data Analysis
+  - Grant Applications
+  - Patient enrollment and consent 
+</div>
+
+<div class="box">
+  **Honorary Clinical Researcher**, Jun 2016 - May 2019, *BOTNAR, University of Oxford*
+  
+  Responsibilities included:
+  
+  - Data Analysis
+  - 4-D CT Analysis
+  - MRI Segmentation
+  - Contributing researcher in multicentre FAIM study 
+</div>
+

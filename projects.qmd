@@ -1,0 +1,34 @@
+---
+title: "Projects"
+title-block-banner: true
+---
+
+## Current Projects
+### Data4Action <a href="https://www.github.com/arnold-c/Data4Action"> <i class="bi bi-github"></i></a>
+
+A longitudinal cohort study, comprising of two geographically related cohorts, 
+that aims to examine the effect of Penn State University students on the 
+SARS-CoV-2 incidence in the surrounding community. We have recently published a
+the interim serological results in Nature Scientific Reports, which can be 
+found [here](https://doi.org/10.1038/s41598-022-12499-5). The second part of
+the project focuses on relating the differential exposures observed in the 
+student cohort to latent risk profiles, examining the potential impact of interventions to reduce infections.
+
+### MSF Epicentre - UrgEpi <a href="https://www.github.com/arnold-c/drc-urgepi"> <i class="bi bi-github"></i></a>
+
+An ongoing collaboration with Médecin Sans Frontières' (MSF) Epicentre unit to
+analyze measles seroprevalence in the ex-Katanga region of the Democratic 
+Republic of Congo (DRC). The intial project examined the role of new laboratory 
+testing facilities on the speed of diagnosis and outbreak response decisions. 
+The second project examines the impact of Supplemental Immunization Activities 
+in the ex-Katanga region; principally, characterizing the spatial and age-specific seronegativity, and examining the relationship between optical density (OD) distributions and seropositivity thresholds using finite mixture models.
+
+## Past Projects
+### Waning Measles Immunity
+
+A prospective cross-sectional serology study of Canadian newborns and mothers
+assessing the rate of waning measles, varicella, and mumps antibodies in infants, 
+including subgroup analysis by vaccination status. A retrospective analysis of 
+waning measles antibody titers (PRNT) in stored sera from a separate cohort of 
+Canadian newborns was published as part of the study, and can be found 
+[here](https://doi.org/10.1542/peds.2019-0630)

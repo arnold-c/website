@@ -49,3 +49,5 @@ vignettes/*.pdf
 
 DS_Store
 Thumbs.db
+
+/.quarto/

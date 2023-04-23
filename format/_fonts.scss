@@ -1,0 +1,14 @@
+/*-- scss:defaults --*/
+// Fonts
+@import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@200..900&display=swap';
+
+$font-family-sans-serif: 'Atkinson Hyperlegible', 'Open Sans', !default;
+$headings-font-family: 'Open Sans', !default;
+$headings-font-weight: 800, !default;
+
+/*-- scss:rules --*/
+body {
+    font-family: $font-family-sans-serif;
+    font-weight: 500;
+}

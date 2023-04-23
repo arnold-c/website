@@ -1,6 +1,0 @@
----
-title: "Posts"
-listings: posts
----
-
-<link rel="stylesheet" href="academicons/css/academicons.min.css"/>
