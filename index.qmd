@@ -1,5 +1,5 @@
 ---
-title: "Callum Arnold-Leps"
+title: "Callum Arnold"
 about:
   template: jolla
   image: "img/CA_Headshot-Web.jpg"
@@ -11,9 +11,9 @@ about:
     - icon: twitter
       text: Twitter
       url: "https://twitter.com/thecallumarnold"
-    - text: "{{< ai google-scholar >}} Google Scholar"
+    - text: "{{< ai google-scholar color=default >}} Google Scholar"
       url: "https://scholar.google.com/citations?user=6CMnUykAAAAJ&hl=en"
-    - text: "{{< ai orcid >}} ORCID"
+    - text: "{{< ai orcid color=default >}} ORCID"
       url: "https://orcid.org/0000-0002-3245-6956"
     - icon: github
       text: GitHub
@@ -54,15 +54,16 @@ When I'm not working, I can be found outside doing one of the following (dependi
 ## Research Experience
 
 <div class="box">
-**PhD Student**, Aug 2020 – Present, *Pennsylvania State University*
+**PhD Candidate**, Aug 2020 – Present, *Pennsylvania State University*
  
   Infectious disease epidemiology and modelling with Dr. Matt Ferrari.
   
-  [Currently working](projects.html) on:
+  [Currently working](projects.qmd) on:
   
-  - The [Data4Action Research Project](https://doi.org/10.1038/s41598-022-12499-5) examing the dynamics of COVID-19 in a 
+  - The [Data4Action Research Project](https://doi.org/10.1038/s41598-022-12499-5) examining the dynamics of COVID-19 in a 
   university community
   - Resource utilisation strategies for measles surveillance and detection in the DRC
+  - The effects of population-level thresholds for the detection and response to outbreaks
 </div>
 
 <div class="box">
