@@ -46,5 +46,5 @@ format:
     code-fold: false
     code-overflow: wrap
 
-
-
+execute: 
+  freeze: auto
