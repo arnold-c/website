@@ -34,6 +34,7 @@ website:
   comments:
     utterances: 
       repo: arnold-c/website
+  google-analytics: "G-EVYBCCRZHE"
 
 format:
   html:
