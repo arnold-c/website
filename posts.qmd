@@ -3,7 +3,7 @@ title: "Posts"
 listing:
     contents: posts
     sort:
-        - "date"
+        - "date desc"
         - "title desc"
     categories: true
 ---

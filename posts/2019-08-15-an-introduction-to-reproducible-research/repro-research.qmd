@@ -2,8 +2,13 @@
 title: "An Introduction to Reproducible Research"
 date: "2019-08-15"
 description: |
-  An introductorary course on reproducible epidemiology research using Git and 
+  An introductory course on reproducible epidemiology research using Git and 
   notebooks.
+categories:
+    - git
+    - "reproducible research"
+    - notebooks
+    - "project structure"
 ---
 
 # Welcome, and what this book is about
