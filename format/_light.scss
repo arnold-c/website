@@ -13,3 +13,10 @@ $navbar-padding-y: 1.5rem !default;
 // Box class
 @import '_box';
 
+
+/*-- scss:rules: --*/
+
+.navbar > .container-xxl, .navbar > .container-xl, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container, .navbar > .container-fluid {
+  max-width: 1400px;
+  margin: 0 auto;
+}
