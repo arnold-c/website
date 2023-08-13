@@ -10,6 +10,8 @@ $navbar-padding-y: 1.5rem !default;
 // Link colors
 $link-color: #00328aff !default;
 $hover-color: #c73d3dff !default;
+$post-cat-color: #181825 !default;
+$post-cat-bg-color: #cdd6f4 !default;
 
 // Box colors
 :root {
@@ -19,6 +21,13 @@ $hover-color: #c73d3dff !default;
 
 // Box class
 @import '_box';
+
+
+
+
+
+
+
 
 
 
@@ -32,6 +41,16 @@ $hover-color: #c73d3dff !default;
 div.quarto-post .thumbnail img {
     height: 12rem;
     object-position: 100% 100%;
+}
+
+div.quarto-post .listing-categories .listing-category {
+    background-color: $navbar-color;
+}
+
+.quarto-title .quarto-categories .quarto-category {
+    font-weight: 600;
+    color: $post-cat-color;
+    background-color: $post-cat-bg-color;
 }
 
 // Set TOC active left border thicker

@@ -30,6 +30,11 @@ $navbar-padding-y: 1.5rem !default;
 // Project button class
 @import '_button';
 
+
+
+
+
+
 /*-- scss:rules --*/
 .title {
     color: $gray-700;
@@ -39,6 +44,20 @@ div.quarto-post .thumbnail img {
     height: 12rem;
     object-position: 100% 100%;
 }
+
+div.quarto-post .listing-categories .listing-category {
+    color: inherit;
+    background-color: $code-bg;
+    border-color: $link-color;
+}
+
+.quarto-title .quarto-categories .quarto-category {
+    font-weight: 600;
+    color: $body-bg;
+    background-color: $body-color;
+}
+
+// front page title
 div.quarto-about-jolla .quarto-title h1.title, div.quarto-about-jolla .quarto-title .title.h1 {
     color: $title-color;
 }
