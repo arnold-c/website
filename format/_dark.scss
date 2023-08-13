@@ -5,6 +5,7 @@ $body-bg: #181825 !default;
 $body-color: #cdd6f4 !default;
 $link-color: #eba0ac !default;
 $navbar-link-color: #00328aff !default;
+$navbar-hover-color: #c73d3dff !default;
 $hover-color: #22c59cff !default;
 $headings-color: #a6adc8 !default;
 $title-color:#74c7ec !default;
@@ -84,7 +85,7 @@ a.nav-link:after {
   width: 0%;
   content: '.'; /* content required to create underline */
   color: transparent; /* turn dot transparent*/
-  background: $hover-color;
+  background: $navbar-hover-color;
   height: 0.3rem;
 }
 
@@ -103,7 +104,7 @@ a.nav-link:hover:after {
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: $hover-color  !important;
+    color: $navbar-hover-color  !important;
 }
 
 .navbar .navbar-title {
@@ -111,7 +112,7 @@ a.nav-link:hover:after {
 }
 
 .navbar .navbar-title:hover {
-    color: $hover-color  !important;
+    color: $navbar-hover-color  !important;
 }
 
 // Apply hover color and bold to in-text link
