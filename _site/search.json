@@ -2,9 +2,9 @@
   {
     "objectID": "posts.html",
     "href": "posts.html",
-    "title": "Posts",
+    "title": "\nPosts\n",
     "section": "",
-    "text": "Thoughts From Running a Git Workshop\n\n\n\n\n\n\n\ngit\n\n\nworkshops\n\n\nteaching\n\n\nreproducible research\n\n\nlearning\n\n\nexpectations\n\n\n\n\nSome brief ruminations after organizing a workshop on Git and GitHub.\n\n\n\n\n\n\nMay 20, 2023\n\n\nCallum Arnold-Leps\n\n\n\n\n\n\n  \n\n\n\n\nAn Introduction to Reproducible Research\n\n\n\n\n\n\n\ngit\n\n\nreproducible research\n\n\nnotebooks\n\n\nproject structure\n\n\n\n\nAn introductory course on reproducible epidemiology research using Git and notebooks.\n\n\n\n\n\n\nAug 15, 2019\n\n\nCallum Arnold-Leps\n\n\n\n\n\n\nNo matching items"
+    "text": "Posts\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nThoughts From Running a Git Workshop\n\n\n\n\n\n\n\ngit\n\n\nworkshops\n\n\nteaching\n\n\nreproducible research\n\n\nlearning\n\n\nexpectations\n\n\n\n\nSome brief ruminations after organizing a workshop on Git and GitHub.\n\n\n\n\n\n\nMay 20, 2023\n\n\nCallum Arnold-Leps\n\n\n\n\n\n\n  \n\n\n\n\nAn Introduction to Reproducible Research\n\n\n\n\n\n\n\ngit\n\n\nreproducible research\n\n\nnotebooks\n\n\nproject structure\n\n\n\n\nAn introductory course on reproducible epidemiology research using Git and notebooks.\n\n\n\n\n\n\nAug 15, 2019\n\n\nCallum Arnold-Leps\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects.html",
@@ -173,5 +173,12 @@
     "title": "Callum Arnold",
     "section": "Research Experience",
     "text": "Research Experience\n\nPhD Candidate, Aug 2020 – Present, Pennsylvania State University\nInfectious disease epidemiology and modelling with Dr. Matt Ferrari.\nCurrently working on:\n\nThe Data4Action Research Project examining the dynamics of COVID-19 in a university community\nResource utilisation strategies for measles surveillance and detection in the DRC\nThe effects of population-level thresholds for the detection and response to outbreaks\n\n\n\nClinical Research Coordinator, Apr 2018 – Dec 2019, The Hospital for Sick Children\nCoordinated a multi-centre observational study into waning immunity in infants to measles, mumps and varicella, and managed all data produced by the National Microbiology Laboratory and the Nova Scotia Health Authority laboratory.\nResponsibilities included:\n\nData Management\nData Analysis\nGrant Applications\nPatient enrollment and consent\n\n\n\nHonorary Clinical Researcher, Jun 2016 - May 2019, BOTNAR, University of Oxford\nResponsibilities included:\n\nData Analysis\n4-D CT Analysis\nMRI Segmentation\nContributing researcher in multicentre FAIM study"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "\nCallum Arnold\n",
+    "section": "",
+    "text": "Callum Arnold"
   }
 ]
