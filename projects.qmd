@@ -168,7 +168,23 @@ project_card(
     github = "https://www.github.com/arnold-c/sismid-module-02_2023",
     text = "
 Created the website and rewrote the teaching materials for the 2023 SISMID module 2 (Mathematical Models of Infectious Diseases), that introduced students to the basics of mathematical modeling of infectious diseases.
-Additionally, I wrote and delivered the lecture on understanding heterogeneity in models."
+Additionally, I wrote and delivered the lecture on understanding heterogeneity in models.
+"
+)
+```
+
+```{r}
+#| echo: false
+#| results: asis
+project_card(
+    "Julia for Epidemiologists",
+    website = "https://juliaepibook.callumarnold.com/",
+    github = "https://github.com/arnold-c/JuliaEpiHandbook",
+    text = "
+I am currently in the process of (slowly) writing a book on using Julia for epidemiological research.
+The book is aimed at epidemiologists with no prior programming experience, and will cover the basics of Julia, and how to use it for epidemiological research.
+The [EpiRHandbook](https://epirhandbook.com/en/) is an excellent resource for new and experienced epidemiologists, but Julia has many advantages over R (and certainly some disadvantages), and I hope this book will serve a similar purpose and help epidemiologists thinking about the transition to Julia.
+"
 )
 ```
 
