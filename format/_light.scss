@@ -29,6 +29,10 @@ $hover-color: #c73d3dff !default;
   margin: 0 auto;
 }
 
+div.quarto-post .thumbnail img {
+    height: 12rem;
+    object-position: 100% 100%;
+}
 
 // Set TOC active left border thicker
 .sidebar nav[role=doc-toc] ul>li>a.active, .sidebar nav[role=doc-toc] ul>li>ul>li>a.active {

@@ -9,6 +9,7 @@ categories:
     - "reproducible research"
     - notebooks
     - "project structure"
+image-alt: "Photo by <a href='https://unsplash.com/@hesmundt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Hes Mundt</a> on <a href='https://unsplash.com/photos/cyOz5w7baOA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>"
 ---
 
 # Welcome, and what this book is about

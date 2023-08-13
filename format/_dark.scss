@@ -35,6 +35,10 @@ $navbar-padding-y: 1.5rem !default;
     color: $gray-700;
 }
 
+div.quarto-post .thumbnail img {
+    height: 12rem;
+    object-position: 100% 100%;
+}
 div.quarto-about-jolla .quarto-title h1.title, div.quarto-about-jolla .quarto-title .title.h1 {
     color: $title-color;
 }
