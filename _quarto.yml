@@ -39,8 +39,13 @@ website:
 format:
   html:
     theme:
-      light: [cosmo, format/_fonts.scss, format/_light.scss]
-      dark: [cosmo, format/_fonts.scss, format/_dark.scss]
+      light: [cosmo, format/_fonts.scss, format/_light.scss, format/_button.scss]
+      dark: [cosmo, format/_fonts.scss, format/_dark.scss, format/_button.scss]
+    grid:
+      sidebar-width: 270px
+      body-width: 1000px
+      margin-width: 200px
+      gutter-width: 1rem
     mainfont: "Atkinson Hyperlegible"
     toc: true
     code-copy: true

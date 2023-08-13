@@ -128,9 +128,9 @@
   {
     "objectID": "projects.html",
     "href": "projects.html",
-    "title": "Projects",
+    "title": "Callum Arnold",
     "section": "",
-    "text": "A longitudinal cohort study, comprising of two geographically related cohorts, that aims to examine the effect of Penn State University students on the SARS-CoV-2 incidence in the surrounding community. We have recently published a the interim serological results in Nature Scientific Reports, which can be found here. The second part of the project focuses on relating the differential exposures observed in the student cohort to latent risk profiles, examining the potential impact of interventions to reduce infections.\n\n\n\nAn ongoing collaboration with Médecin Sans Frontières’ (MSF) Epicentre unit to analyze measles seroprevalence in the ex-Katanga region of the Democratic Republic of Congo (DRC). The intial project examined the role of new laboratory testing facilities on the speed of diagnosis and outbreak response decisions. The second project examines the impact of Supplemental Immunization Activities in the ex-Katanga region; principally, characterizing the spatial and age-specific seronegativity, and examining the relationship between optical density (OD) distributions and seropositivity thresholds using finite mixture models."
+    "text": "Paper\n\n\n\nA longitudinal cohort study, comprising of two geographically related cohorts, that aims to examine the effect of Penn State University students on the SARS-CoV-2 incidence in the surrounding community. We have recently published a the interim serological results in Nature Scientific Reports, which can be found here. The second part of the project focuses on relating the differential exposures observed in the student cohort to latent risk profiles, examining the potential impact of interventions to reduce infections.\n\n\n\n\n\n\n\nCode\n\n\nAn ongoing collaboration with Médecin Sans Frontières’ (MSF) Epicentre unit to analyze measles seroprevalence in the ex-Katanga region of the Democratic Republic of Congo (DRC). The intial project examined the role of new laboratory testing facilities on the speed of diagnosis and outbreak response decisions. The second project examines the impact of Supplemental Immunization Activities in the ex-Katanga region; principally, characterizing the spatial and age-specific seronegativity, and examining the relationship between optical density (OD) distributions and seropositivity thresholds using finite mixture models.\n\n\n\n\n\n\nClick to view prior projects\n\n\n\n\n\n\n\n\nPaper\n\n\n\nA prospective cross-sectional serology study of Canadian newborns and mothers assessing the rate of waning measles, varicella, and mumps antibodies in infants, including subgroup analysis by vaccination status. A retrospective analysis of waning measles antibody titers (PRNT) in stored sera from a separate cohort of Canadian newborns was published as part of the study, and can be found here"
   },
   {
     "objectID": "projects.html#past-projects",
@@ -166,5 +166,54 @@
     "title": "Posts",
     "section": "",
     "text": "Thoughts From Running a Git Workshop\n\n\n\n\n\n\n\ngit\n\n\nworkshops\n\n\nteaching\n\n\nreproducible research\n\n\nlearning\n\n\nexpectations\n\n\n\n\nSome brief ruminations after organizing a workshop on Git and GitHub.\n\n\n\n\n\n\nMay 20, 2023\n\n\nCallum Arnold-Leps\n\n\n\n\n\n\n  \n\n\n\n\nAn Introduction to Reproducible Research\n\n\n\n\n\n\n\ngit\n\n\nreproducible research\n\n\nnotebooks\n\n\nproject structure\n\n\n\n\nAn introductory course on reproducible epidemiology research using Git and notebooks.\n\n\n\n\n\n\nAug 15, 2019\n\n\nCallum Arnold-Leps\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects.html#research",
+    "href": "projects.html#research",
+    "title": "Callum Arnold",
+    "section": "",
+    "text": "Paper\n\n\n\nA longitudinal cohort study, comprising of two geographically related cohorts, that aims to examine the effect of Penn State University students on the SARS-CoV-2 incidence in the surrounding community. We have recently published a the interim serological results in Nature Scientific Reports, which can be found here. The second part of the project focuses on relating the differential exposures observed in the student cohort to latent risk profiles, examining the potential impact of interventions to reduce infections.\n\n\n\n\n\n\n\nCode\n\n\nAn ongoing collaboration with Médecin Sans Frontières’ (MSF) Epicentre unit to analyze measles seroprevalence in the ex-Katanga region of the Democratic Republic of Congo (DRC). The intial project examined the role of new laboratory testing facilities on the speed of diagnosis and outbreak response decisions. The second project examines the impact of Supplemental Immunization Activities in the ex-Katanga region; principally, characterizing the spatial and age-specific seronegativity, and examining the relationship between optical density (OD) distributions and seropositivity thresholds using finite mixture models.\n\n\n\n\n\n\nClick to view prior projects\n\n\n\n\n\n\n\n\nPaper\n\n\n\nA prospective cross-sectional serology study of Canadian newborns and mothers assessing the rate of waning measles, varicella, and mumps antibodies in infants, including subgroup analysis by vaccination status. A retrospective analysis of waning measles antibody titers (PRNT) in stored sera from a separate cohort of Canadian newborns was published as part of the study, and can be found here"
+  },
+  {
+    "objectID": "projects.html#teaching",
+    "href": "projects.html#teaching",
+    "title": "Callum Arnold",
+    "section": "Teaching",
+    "text": "Teaching\n\n\n\n\nAn Introduction to Git and GitHub\n\n\n\nWebsite\n\n\nCode\n\n\nDesigned and create a 2-hour workshop on the basics of Git and GitHub to graduate students, postdocs, and faculty at the Center for Infectious Disease Dynamics at Penn State University. Focusses on building a conceptual understanding of Git and GitHub, and how it can be used to improve research workflows by providing clear examples that are directly relevant to infectious disease researchers.\n\n\n\n\n\nSISMID Modeling Infectious Diseases\n\n\n\nWebsite\n\n\nCode\n\n\nCreated the website and rewrote the teaching materials for the 2023 SISMID module 2 (Mathematical Models of Infectious Diseases), that introduced students to the basics of mathematical modeling of infectious diseases. Additionally, I wrote and delivered the lecture on understanding heterogeneity in models."
+  },
+  {
+    "objectID": "projects.html#past-research-projects",
+    "href": "projects.html#past-research-projects",
+    "title": "Callum Arnold",
+    "section": "Past Research Projects",
+    "text": "Past Research Projects\n\nWaning Measles Immunity\nA prospective cross-sectional serology study of Canadian newborns and mothers assessing the rate of waning measles, varicella, and mumps antibodies in infants, including subgroup analysis by vaccination status. A retrospective analysis of waning measles antibody titers (PRNT) in stored sera from a separate cohort of Canadian newborns was published as part of the study, and can be found here"
+  },
+  {
+    "objectID": "projects.html#current-research",
+    "href": "projects.html#current-research",
+    "title": "Callum Arnold",
+    "section": "",
+    "text": "Click to toggle projects\n\n\n\n\n\n\n\nA longitudinal cohort study, comprising of two geographically related cohorts, that aims to examine the effect of Penn State University students on the SARS-CoV-2 incidence in the surrounding community. We have recently published a the interim serological results in Nature Scientific Reports, which can be found here. The second part of the project focuses on relating the differential exposures observed in the student cohort to latent risk profiles, examining the potential impact of interventions to reduce infections.\n\n\n\nAn ongoing collaboration with Médecin Sans Frontières’ (MSF) Epicentre unit to analyze measles seroprevalence in the ex-Katanga region of the Democratic Republic of Congo (DRC). The intial project examined the role of new laboratory testing facilities on the speed of diagnosis and outbreak response decisions. The second project examines the impact of Supplemental Immunization Activities in the ex-Katanga region; principally, characterizing the spatial and age-specific seronegativity, and examining the relationship between optical density (OD) distributions and seropositivity thresholds using finite mixture models."
+  },
+  {
+    "objectID": "projects.html#test",
+    "href": "projects.html#test",
+    "title": "Callum Arnold",
+    "section": "Test",
+    "text": "Test\n\n\n\n\n\nPaper\n\n\n\n\nAn Introduction to Git and GitHub\n\n\nDesigned a workshop to teach PSU about Git."
+  },
+  {
+    "objectID": "projects.html#an-introduction-to-git-and-github",
+    "href": "projects.html#an-introduction-to-git-and-github",
+    "title": "Callum Arnold",
+    "section": "An Introduction to Git and GitHub",
+    "text": "An Introduction to Git and GitHub\n\n\n\nDesigned a workshop to teach PSU about Git."
+  },
+  {
+    "objectID": "projects.html#sismid-mathematical-models-of-infectious-diseases",
+    "href": "projects.html#sismid-mathematical-models-of-infectious-diseases",
+    "title": "Callum Arnold",
+    "section": "SISMID Mathematical Models of Infectious Diseases",
+    "text": "SISMID Mathematical Models of Infectious Diseases\n\n\n\nTA’d for SISMID module 2."
   }
 ]

@@ -1,5 +1,8 @@
 /*-- scss:defaults --*/
 
+// Project button class
+@import '_button';
+
 // Navbar
 $navbar-color: #f5e0dc !default;
 $navbar-padding-y: 1.5rem !default;
@@ -14,9 +17,17 @@ $navbar-padding-y: 1.5rem !default;
 @import '_box';
 
 
+
 /*-- scss:rules: --*/
 
 .navbar > .container-xxl, .navbar > .container-xl, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container, .navbar > .container-fluid {
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.card-project {
+    height: 100%;
+    padding: 1rem 1rem 1rem 1rem;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 0.4rem
 }

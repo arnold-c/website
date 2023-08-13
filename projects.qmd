@@ -1,34 +1,175 @@
 ---
-title: "Projects"
-title-block-banner: true
+page-layout: full
+format:
+    html:
+        toc: false
 ---
 
-## Current Projects
-### Data4Action <a href="https://www.github.com/arnold-c/Data4Action"> <i class="bi bi-github"></i></a>
+## Research
 
-A longitudinal cohort study, comprising of two geographically related cohorts, 
-that aims to examine the effect of Penn State University students on the 
-SARS-CoV-2 incidence in the surrounding community. We have recently published a
-the interim serological results in Nature Scientific Reports, which can be 
-found [here](https://doi.org/10.1038/s41598-022-12499-5). The second part of
-the project focuses on relating the differential exposures observed in the 
+
+```{r}
+#| echo: false
+icon_link <- function(type, icons, url, label) {
+    paste0(
+        '<',
+        type,
+        ' class="',
+        icons,
+        '" onclick="window.location.href=\'',
+        url,
+        '\'">',
+        label,
+        '</',
+        type,
+        '>'
+    )
+}
+
+paper_button <- function(url, label = "Paper") {
+    c(
+        '<div class="btn btn-paper">',
+        icon_link(type = "p", icons = "bi bi-journal", url, label),
+        '</div>'
+    )
+}
+
+gh_button <- function(url) {
+    icon_link(type = "div", icons = "btn btn-github bi bi-github", url, "Code")
+}
+
+website_button <- function(url) {
+    icon_link(type = "div", icons = "btn btn-website bi bi-browser-chrome", url, "Website")
+}
+
+project_card <- function(
+    title,
+    github,
+    paper,
+    paper2,
+    website,
+    text
+    ) {
+
+    if (hasArg(paper)) {
+        if (hasArg(paper2)) {
+            paper1_label <- "Paper 1"
+
+            paper2_icon <- paper_button(paper2, "Paper 2")
+        } else {
+            paper1_label <- "Paper"
+        }
+
+        paper1_icon <- paper_button(paper, paper1_label)
+    }
+
+    card_details <- c(
+        '::: {.g-col-6}',
+        '<div class="card card-project">',
+        paste0('<h2>', title, '</h2>'),
+        '<div class="container">',
+        if (hasArg(website)) { website_button(website) },
+        if (hasArg(github)) { gh_button(github) },
+        if (exists("paper1_icon")){ paper1_icon },
+        if (exists("paper2_icon")){ paper2_icon },
+        '</div>',
+        text,
+        '</div>',
+        ':::'
+    )
+
+    cat(card_details, sep = "\n")
+}
+```
+
+:::: {.grid}
+
+```{r}
+#| echo: false
+#| results: asis
+project_card(
+    "Data4Action (COVID-19 at Penn State)",
+    paper = "https://www.nature.com/articles/s41598-022-12499-5",
+    text = "
+A longitudinal cohort study, comprising of two geographically related cohorts,  that aims to examine the effect of Penn State University students on the SARS-CoV-2 incidence in the surrounding community.
+We have recently published a the interim serological results in Nature Scientific Reports, which can be found [here](https://doi.org/10.1038/s41598-022-12499-5).
+The second part of the project focuses on relating the differential exposures observed in the 
 student cohort to latent risk profiles, examining the potential impact of interventions to reduce infections.
+"
+)
+```
 
-### MSF Epicentre - UrgEpi <a href="https://www.github.com/arnold-c/drc-urgepi"> <i class="bi bi-github"></i></a>
+```{r}
+#| echo: false
+#| results: asis
+project_card(
+    "Measles in the DRC",
+    github = "https://www.github.com/arnold-c/drc-urgepi",
+    text = "
+An ongoing collaboration with Médecin Sans Frontières' (MSF) Epicentre unit to analyze measles seroprevalence in the ex-Katanga region of the Democratic  Republic of Congo (DRC).
+The intial project examined the role of new laboratory testing facilities on the speed of diagnosis and outbreak response decisions.
+The second project examines the impact of Supplemental Immunization Activities in the ex-Katanga region; principally, characterizing the spatial and age-specific seronegativity, and examining the relationship between optical density (OD) distributions and seropositivity thresholds using finite mixture models.
+"
+)
+```
 
-An ongoing collaboration with Médecin Sans Frontières' (MSF) Epicentre unit to
-analyze measles seroprevalence in the ex-Katanga region of the Democratic 
-Republic of Congo (DRC). The intial project examined the role of new laboratory 
-testing facilities on the speed of diagnosis and outbreak response decisions. 
-The second project examines the impact of Supplemental Immunization Activities 
-in the ex-Katanga region; principally, characterizing the spatial and age-specific seronegativity, and examining the relationship between optical density (OD) distributions and seropositivity thresholds using finite mixture models.
+::::
 
-## Past Projects
-### Waning Measles Immunity
+</br>
 
-A prospective cross-sectional serology study of Canadian newborns and mothers
+<details>
+<summary>Click to view prior projects</summary>
+
+:::: {.grid}
+
+```{r}
+#| echo: false
+#| results: asis
+project_card(
+    "Waning Measles Immunity Among Infants in Canada",
+    paper = "https://doi.org/10.1542/peds.2019-0630",
+    text = "A prospective cross-sectional serology study of Canadian newborns and mothers
 assessing the rate of waning measles, varicella, and mumps antibodies in infants, 
 including subgroup analysis by vaccination status. A retrospective analysis of 
 waning measles antibody titers (PRNT) in stored sera from a separate cohort of 
 Canadian newborns was published as part of the study, and can be found 
-[here](https://doi.org/10.1542/peds.2019-0630)
+[here](https://doi.org/10.1542/peds.2019-0630)"
+)
+```
+
+::::
+
+</details>
+
+
+## Teaching
+:::: {.grid}
+
+```{r}
+#| echo: false
+#| results: asis
+project_card(
+    "An Introduction to Git and GitHub",
+    website = "https://psu-git.callumarnold.com",
+    github = "https://www.github.com/arnold-c/psu-intro-to-git",
+    text = "
+Designed and create a 2-hour workshop on the basics of Git and GitHub to graduate students, postdocs, and faculty at the Center for Infectious Disease Dynamics at Penn State University.
+Focusses on building a conceptual understanding of Git and GitHub, and how it can be used to improve research workflows by providing clear examples that are directly relevant to infectious disease researchers.
+"
+)
+```
+
+```{r}
+#| echo: false
+#| results: asis
+project_card(
+    "SISMID Modeling Infectious Diseases",
+    website = "https://sismid2023.callumarnold.com",
+    github = "https://www.github.com/arnold-c/sismid-module-02_2023",
+    text = "
+Created the website and rewrote the teaching materials for the 2023 SISMID module 2 (Mathematical Models of Infectious Diseases), that introduced students to the basics of mathematical modeling of infectious diseases.
+Additionally, I wrote and delivered the lecture on understanding heterogeneity in models."
+)
+```
+
+::::

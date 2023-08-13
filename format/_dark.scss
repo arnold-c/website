@@ -24,6 +24,9 @@ $navbar-padding-y: 1.5rem !default;
 // Box class
 @import '_box';
 
+// Project button class
+@import '_button';
+
 /*-- scss:rules --*/
 .title {
     color: $gray-700;
@@ -33,3 +36,13 @@ $navbar-padding-y: 1.5rem !default;
     max-width: 1400px;
     margin: 0 auto;
   }
+
+
+.card-project {
+    color: $body-color;
+    background-color: $code-block-bg;
+    height: 100%;
+    padding: 1rem 1rem 1rem 1rem;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 0.4rem
+}

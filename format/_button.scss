@@ -1,0 +1,54 @@
+/*-- scss:rules --*/
+
+.btn-github {
+    font-size: 1.1rem;
+    color: white;
+    background-color: #7b47ebff;
+    border: none;
+    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+    // padding: 5px 7px 7px 7px;
+    margin-bottom: 10px;
+    border-radius: 0.4em;
+    height: 2rem;
+}
+
+.btn-github:hover {
+    color: white;
+    background-color: #5116cfff;
+}
+
+.btn-website {
+    font-size: 1.1rem;
+    color: white;
+    background-color: #037c64ff;
+    border: none;
+    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+    // padding: 5px 7px 7px 7px;
+    margin-bottom: 10px;
+    border-radius: 0.4em;
+    height: 2rem;
+}
+
+.btn-website:hover {
+    color: white;
+    background-color: #013128ff;
+}
+
+.btn-paper {
+    color: white;
+    font-size: 1rem;
+    background-color: #eb4747ff;
+    border: none;
+    border-radius: 0.4em;
+    padding: 0.3rem 0.4rem 0.2rem 0.4rem;
+    // padding: 7px 7px 7px 7px;
+    margin-bottom: 10px;
+    height: 2rem;
+}
+
+.btn-paper:hover {
+    // font-weight: 700;
+    color: white;
+    background-color: #cf1717ff;
+}
+
