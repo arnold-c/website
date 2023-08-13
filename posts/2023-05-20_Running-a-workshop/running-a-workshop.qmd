@@ -10,6 +10,7 @@ categories:
   - "reproducible research"
   - learning
   - expectations
+image-alt: "Photo by <a href='https://unsplash.com/@praveentcom?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Praveen Thirumurugan</a> on <a href='https://unsplash.com/photos/KPAQpJYzH0Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>"
 ---
 
 A few weeks ago, I organized and ran a workshop on Git and GitHub for the [Center for Infectious Disease Dynamics](https://www.huck.psu.edu/institutes-and-centers/center-for-infectious-disease-dynamics) at the Pennsylvania State University.

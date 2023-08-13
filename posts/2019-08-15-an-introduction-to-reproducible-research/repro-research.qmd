@@ -532,7 +532,10 @@ Branching is a key part of the Git work-flow. It allows you to make changes to y
 
 Simply put, when you create another branch you are creating a copy of your code at that point in time. This is useful because it allows you to make changes to your copy, and leave your original code intact! So there's no concern about breaking your working code while you test out some ideas.
 
-<img alt="guideline-554f4577.png" src="assets/guideline-554f4577.png" style="float: right;" width="40%" height="" >
+<figure  style="float: right; width: 30%; padding: 0" >
+<img alt="git branching strategy" src="guideline-554f4577.png" style="float: right; width: 100%;">
+<figurecaption style="float: right;text-align: center">Git branching diagram by <a href="https://nvie.com/posts/a-successful-git-branching-model/">Vincent Driessen</a></figurecaption>
+</figure>
 
 > "But isn't that why we use Git?"
 
@@ -546,7 +549,7 @@ As with all things in Git, you can do this multiple ways. I prefer to use the cl
 
 When you are in your client (in this case, SourceTree), open the repository you would like to create a branch in. You will notice that there are two buttons called `Branch` and `Merge`. If you click on `Branch`, you will see something like this
 
-<img alt="guideline-b2aa08de.png" src="assets/guideline-b2aa08de.png" width="" height="" >
+<img alt="guideline-b2aa08de.png" src="guideline-b2aa08de.png" width="" height="" style="margin-left:auto; margin-right:auto; display: block;">
 
 Enter the branch name you would like to create into `New Branch` (I would suggest `develop`), and hit `Create Branch`. That's it. You now have a `master` and `develop` branch.
 
@@ -558,7 +561,7 @@ You've created a `develop` branch so you can keep you `master` pristine and in w
 
 To do this, first you need to `checkout` the `master` branch, so you are merging changes *into* it. Then, click on the `Merge` button in SourceTree. Select the `commit` you would like to merge into the `master` branch (most likely the top one in the `develop` branch), and click `OK`. You should have a view like this.
 
-<img alt="guideline-eeaa7b68.png" src="assets/guideline-eeaa7b68.png" width="150%" height="" >
+<img alt="guideline-eeaa7b68.png" src="guideline-eeaa7b68.png" width="100%" height="" >
 
 You have now merged your first feature. Whilst the `merge` feature is particularly useful, it is not the only way of doing this. `rebase` is another option that works in a slightly different way. It is slightly beyond the scope of this document, but you should read [this document](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) and visit [this website](https://learngitbranching.js.org/), as suggested previously, to get experience of putting them both into practice.
 

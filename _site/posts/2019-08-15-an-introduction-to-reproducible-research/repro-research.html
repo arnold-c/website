@@ -851,7 +851,9 @@ gtag('config', 'G-EVYBCCRZHE', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="branching">Branching</h2>
 <p>Branching is a key part of the Git work-flow. It allows you to make changes to your code, without worrying about breaking previously ‘good’ code. But what is it?</p>
 <p>Simply put, when you create another branch you are creating a copy of your code at that point in time. This is useful because it allows you to make changes to your copy, and leave your original code intact! So there’s no concern about breaking your working code while you test out some ideas.</p>
-<p><img alt="guideline-554f4577.png" src="assets/guideline-554f4577.png" style="float: right;" width="40%" height=""></p>
+<figure style="float: right; width: 30%; padding: 0" class="figure">
+<img alt="git branching strategy" src="guideline-554f4577.png" style="float: right; width: 100%;" class="figure-img"> <figurecaption style="float: right;text-align: center">Git branching diagram by <a href="https://nvie.com/posts/a-successful-git-branching-model/">Vincent Driessen</a></figurecaption>
+</figure>
 <blockquote class="blockquote">
 <p>“But isn’t that why we use Git?”</p>
 </blockquote>
@@ -861,7 +863,7 @@ gtag('config', 'G-EVYBCCRZHE', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="creating-a-branch">Creating a branch</h3>
 <p>As with all things in Git, you can do this multiple ways. I prefer to use the client, as I find it far more intuitive when you can see the changes, but you can use the command line or Git bash. If you want to explore the command line code, I would recommend visiting <a href="https://learngitbranching.js.org/">this website</a>, which allows you to interact with the code through illustrations.</p>
 <p>When you are in your client (in this case, SourceTree), open the repository you would like to create a branch in. You will notice that there are two buttons called <code>Branch</code> and <code>Merge</code>. If you click on <code>Branch</code>, you will see something like this</p>
-<p><img alt="guideline-b2aa08de.png" src="assets/guideline-b2aa08de.png" width="" height=""></p>
+<p><img alt="guideline-b2aa08de.png" src="guideline-b2aa08de.png" width="" height="" style="margin-left:auto; margin-right:auto; display: block;"></p>
 <p>Enter the branch name you would like to create into <code>New Branch</code> (I would suggest <code>develop</code>), and hit <code>Create Branch</code>. That’s it. You now have a <code>master</code> and <code>develop</code> branch.</p>
 <p>You might notice the tick-box <code>Checkout New Branch</code>. This means SourceTree will execute the command <code>git checkout develop</code> i.e.&nbsp;you will move to the <code>develop</code> branch to continue your work. Now, any changes you make to your code will happen in the <code>develop</code> copy of the code, not in your <code>master</code> branch. Neat. If you want to move back to <code>master</code> branch at some point, you simply right click on the <code>master</code> branch on the left side of SourceTree, and select <code>Checkout master...</code>.</p>
 </section>
@@ -869,7 +871,7 @@ gtag('config', 'G-EVYBCCRZHE', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="merging-a-branch">Merging a branch</h3>
 <p>You’ve created a <code>develop</code> branch so you can keep you <code>master</code> pristine and in working condition. But now you’ve made changes you’re happy with, and you want to incorporate them in the main code. To do this, you need to <code>merge</code> the changes from <code>develop</code> into <code>master</code>.</p>
 <p>To do this, first you need to <code>checkout</code> the <code>master</code> branch, so you are merging changes <em>into</em> it. Then, click on the <code>Merge</code> button in SourceTree. Select the <code>commit</code> you would like to merge into the <code>master</code> branch (most likely the top one in the <code>develop</code> branch), and click <code>OK</code>. You should have a view like this.</p>
-<p><img alt="guideline-eeaa7b68.png" src="assets/guideline-eeaa7b68.png" width="150%" height=""></p>
+<p><img alt="guideline-eeaa7b68.png" src="guideline-eeaa7b68.png" width="100%" height=""></p>
 <p>You have now merged your first feature. Whilst the <code>merge</code> feature is particularly useful, it is not the only way of doing this. <code>rebase</code> is another option that works in a slightly different way. It is slightly beyond the scope of this document, but you should read <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing">this document</a> and visit <a href="https://learngitbranching.js.org/">this website</a>, as suggested previously, to get experience of putting them both into practice.</p>
 </section>
 </section>
