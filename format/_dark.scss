@@ -7,7 +7,7 @@ $link-color: #eba0ac !default;
 $navbar-link-color: #00328aff !default;
 $hover-color: #22c59cff !default;
 $headings-color: #a6adc8 !default;
-// $title-color:#74c7ec !default; 
+$title-color:#74c7ec !default;
 $code-color: #a6e3a1 !default;
 $code-bg: #11111b !default;
 $code-block-bg: $code-bg !default;
@@ -32,6 +32,10 @@ $navbar-padding-y: 1.5rem !default;
 /*-- scss:rules --*/
 .title {
     color: $gray-700;
+}
+
+div.quarto-about-jolla .quarto-title h1.title, div.quarto-about-jolla .quarto-title .title.h1 {
+    color: $title-color;
 }
 
 .navbar > .container-xxl, .navbar > .container-xl, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container, .navbar > .container-fluid {

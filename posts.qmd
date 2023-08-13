@@ -1,5 +1,4 @@
 ---
-title: "Posts"
 listing:
     contents: posts
     sort:
@@ -7,3 +6,5 @@ listing:
         - "title desc"
     categories: true
 ---
+
+<h1>Posts</h1>

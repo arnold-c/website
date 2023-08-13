@@ -8,8 +8,8 @@ website:
     background: "#f5e0dc"
     pinned: true
     left:
-    - text: "Home"
-      href: index.qmd
+    # - text: "Home"
+    #   href: index.qmd
     - text: "CV"
       href: files/cv-push/cv.pdf
     - text: "Projects"
