@@ -76,21 +76,38 @@ It's certainly not essential to use the same IDE for all languages, but it defin
 
 That rules out RStudio, but what about VSCode?
 Well, I actually had switched to using VSCode entirely for my R code 2 years ago.
-The main reason was not because I was starting to learn Julia (though it did coincide with this), but actually because ~~*RStudio couldn't handle*~~ I didn't search hard enough to figure out how to get RStudio to handle some of my larger projects.
-Because I was working with larger and larger datasets, and often trying to make use of parallelization to speed up long-running code, I was running into memory issues with RStudio (at the time I was working on a 10 year old MacBook Pro that had seen it's fair share of hardships and was absolutely not up to the task).
-Unfortunately, RStudio's biggest strength was also it's biggest weakness for me: by including everything within the IDE, there's no way to separate your console and R session from the editor.
-If RStudio crashes, it takes your session down with it.
-And in my case, it was crashing a lot, requiring me to restart long computations far more often than was actually required: the same scripts (technically [`{targets}`](https://books.ropensci.org/targets/) pipelines) would run fine in the terminal!^[If you use R and you haven't come across `{targets}` yet, do yourself a favor and go learn it now! Not only does it make your code more reproducible by removing the questions about which scripts need to be run when something is updated (this comes with the added benefit of not needing to re-run calculations when their dependencies haven't changed) but it also makes it easier to debug as it encourages smaller modular functions.]
-It turns out there are ways to circumvent this issue using the technique described below, and it's [been around for a while](https://www.r-bloggers.com/2018/09/4-ways-to-be-more-productive-using-rstudios-terminal/), so this point was actually my biggest weakness, not RStudio's, but the end result was the same as I ended up mostly switching to Julia.
+The main reason was not because I was starting to learn Julia (though it did coincide with this), but actually because ~~*RStudio couldn't handle*~~ I didn't search hard enough to figure out how to get RStudio to handle some of my larger projects.^[The issue below just outlines my reasoning at the time, and it can be worked around by sending code to a tmux terminal session within RStudio's terminal pane (see [this post](https://support.posit.co/hc/en-us/articles/115010737148-Using-the-RStudio-Terminal-in-the-RStudio-IDE#send) for more detail).]
 
-VSCode solved this issue for me because it has an integrated terminal (like RStudio), but it doesn't have a dedicated console, so all code is sent to the terminal that is currently open.
+Because I was working with larger and larger datasets, and often trying to make use of parallelization to speed up long-running code, I was running into memory issues with RStudio (at the time I was working on a 10 year old MacBook Pro that had seen it's fair share of hardships and was absolutely not up to the task).
+Unfortunately, RStudio's biggest strength was also it's biggest weakness for me: by including everything within the IDE, by default your R code is sent to the integrated console that is bound to your editor.
+If RStudio crashes, it takes your R session down with it.
+And in my case, it was crashing a lot, requiring me to restart long computations far more often than was actually required: the same scripts (technically [`{targets}`](https://books.ropensci.org/targets/) pipelines) would run fine in the terminal!^[If you use R and you haven't come across `{targets}` yet, do yourself a favor and go learn it now! Not only does it make your code more reproducible by removing the questions about which scripts need to be run when something is updated (this comes with the added benefit of not needing to re-run calculations when their dependencies haven't changed) but it also makes it easier to debug as it encourages smaller modular functions.]
+It turns out there are ways to circumvent this issue using the technique described below, and it's [been around for a while](https://www.r-bloggers.com/2018/09/4-ways-to-be-more-productive-using-rstudios-terminal/), so this point was actually my biggest weakness, not RStudio's, but the end result was the same as I mostly use Julia now, requiring a new editor anyway.
+
+VSCode solved this issue for me because it has an integrated terminal (like RStudio), but by default all code is sent to the terminal that is currently open.
 At first glance, this doesn't seem to be any different from RStudio's integrated console.
 However, the difference is that I could use a terminal multiplexer like [tmux](https://github.com/tmux/tmux/wiki/Getting-Started) from within the VSCode terminal, allowing me to separate my R session from my editor.
 If you're not familiar with terminal multiplexers like tmux, that's OK, I wasn't either at first.
 Essentially, they allow you to create multiple persistent terminals that will stay open and running even if you close your terminal window.
 They are useful when working on servers and you want to guard against accidentally losing connection because of internet issues etc., but as you can imagine, they come in handy for local development too.
 In my case, I could open up a tmux session (in the VSCode terminal), start R, and then VSCode would send the commands to the R session running in tmux, and if VSCode crashed, I could just re-open it and reconnect to the tmux session, which would still be running.
+And better yet, because VSCode is the most [popular editor](https://survey.stackoverflow.co/2022/#most-popular-technologies-new-collab-tools), there's likely an extension available that will solve a problem you are facing.
+This includes an extension for working with R: [vscode-r](https://github.com/REditorSupport/vscode-R).
+It's not perfect, and there are certainly some niceties from RStudio that are missing or need some work to be configured (e.g., setting up [RStudio addins](https://github.com/REditorSupport/vscode-R/issues/405) to add Roxygen docstrings), but it was a pretty good solution that I was happy with for a couple of years.
+And VSCode is the editor primarily suggested for Julia, so it was a natural fit to have everything in one place.
 
+So again, why switch?
+
+Over time, there were small details I noticed were annoying me about the VSCode (and RStudio) approach.
+Firstly, it was slow to start up and get going with a project.
+This is certainly not the biggest issue, but it adds just a little bit of friction each time you have an idea you want to test out.
+If I'm working on one project and I realize I should reimplement a function in another, I want to be able to move instantly to that project and start working on it, not wait for VSCode to fire up.
+The extra time resulted in me having multiple VSCode windows open at once, which is not ideal for many reasons (particularly on old hardware).
+Secondly, and this was a surprisingly large motivating factor, the plotting window in VSCode is baked in to the editor.
+In a similar vein to the issue with RStudio defaulting to sending code to a console, relying on an integrated plotting window makes working off a laptop annoying.
+Most of the time I have a monitor, but there have been enough occasions where I only have the small screen of my laptop to work with, and each time I want the code to take up all the space.
+Normally I don't need to see plots as I'm writing code, and it's possible to hide and show the plot windows, but I found that I need to view them frequently enough to notice how slow this is to accomplish using a mouse (I couldn't find any settings that would allow me to do this using keyboard shortcuts, though this could again be a me-issue).
+What I wanted was to be able to send the plot window to a different "space/desktop" on my laptop, and then I could switch between the editor and the plot window with a keyboard shortcut I set up in System Preferences.^[Something similar could be achieved using a tiling window manager like [yabai](https://github.com/koekeishiya/yabai/) for MacOS, which I use extensively (but that's for a later day) or [I3](https://i3wm.org)/[Sway](https://swaywm.org) for Linux. I'm not sure if something similarly competent exists for Windows, but [this package](https://github.com/LGUG2Z/komorebi) seems like a promising start.].
 
 
 
