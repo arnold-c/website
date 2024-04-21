@@ -1,0 +1,15 @@
+{
+  "hash": "607b9d5683d21d1414dd350776f3a7e4",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\noutput: 'asis'\n---\n\n\n## Posters\n\n\n\n```{.r .cell-code}\nlibrary(knitcitations)\ncleanbib()\nread.bibtex(\"references.bib\")\n```\n\n[1] J. Marrero, A. García, M. Berrocoso, et al. \"Strategies for the\ndevelopment of volcanic hazard maps in monogenetic volcanic fields: the\nexample of La Palma (Canary Islands)\". In: _Journal of Applied\nVolcanology_ 8 (Jul. 2019). DOI: 10.1186/s13617-019-0085-5.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
