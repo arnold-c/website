@@ -93,7 +93,7 @@ project_card(
     text = "
 A longitudinal cohort study, comprising of two geographically related cohorts,  that aims to examine the effect of Penn State University students on the SARS-CoV-2 incidence in the surrounding community.
 We have recently published a the interim serological results in Nature Scientific Reports, which can be found [here](https://doi.org/10.1038/s41598-022-12499-5).
-The second part of the project focuses on relating the differential exposures observed in the 
+The second part of the project focuses on relating the differential exposures observed in the
 student cohort to latent risk profiles, examining the potential impact of interventions to reduce infections.
 "
 )
@@ -108,8 +108,22 @@ project_card(
     text = "
 An ongoing collaboration with Médecin Sans Frontières' (MSF) Epicentre unit to analyze measles seroprevalence in the ex-Katanga region of the Democratic  Republic of Congo (DRC).
 The intial project examined the role of new laboratory testing facilities on the speed of diagnosis and outbreak response decisions.
-The second project examines the impact of Supplemental Immunization Activities in the ex-Katanga region; principally, characterizing the spatial and age-specific seronegativity, and examining the relationship between optical density (OD) distributions and seropositivity thresholds using finite mixture models.
+The second project examines the impact of Supplemental Immunization Activities in the ex-Katanga region; principally, characterizing the spatial and age-specific seronegativity, and examining the relationship between optical density (OD) distributions and seropositivity thresholds using finite mixture models and generalized additive models.
 "
+)
+```
+
+
+```{r}
+#| echo: false
+#| results: asis
+project_card(
+    "Outbreak Detection and Surveillance",
+    github = "https://github.com/arnold-c/OutbreakDetection",
+    text = "
+A simulation study of the potential use and effectiveness of a rapid diagnostic test (RDT) in the surveillance of, and outbreak detection for, measles in near-elimination status regions.
+    This project was conducted for Gavi and the WHO to assist in guiding the target product profile for a potential measles RDT for public health surveillance purposes.
+    "
 )
 ```
 
@@ -129,10 +143,10 @@ project_card(
     "Waning Measles Immunity Among Infants in Canada",
     paper = "https://doi.org/10.1542/peds.2019-0630",
     text = "A prospective cross-sectional serology study of Canadian newborns and mothers
-assessing the rate of waning measles, varicella, and mumps antibodies in infants, 
-including subgroup analysis by vaccination status. A retrospective analysis of 
-waning measles antibody titers (PRNT) in stored sera from a separate cohort of 
-Canadian newborns was published as part of the study, and can be found 
+assessing the rate of waning measles, varicella, and mumps antibodies in infants,
+including subgroup analysis by vaccination status. A retrospective analysis of
+waning measles antibody titers (PRNT) in stored sera from a separate cohort of
+Canadian newborns was published as part of the study, and can be found
 [here](https://doi.org/10.1542/peds.2019-0630)"
 )
 ```
