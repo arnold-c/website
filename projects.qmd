@@ -45,22 +45,24 @@ website_button <- function(url) {
 project_card <- function(
     title,
     github,
-    paper,
-    paper2,
+    papers,
     website,
     text
     ) {
 
-    if (hasArg(paper)) {
-        if (hasArg(paper2)) {
-            paper1_label <- "Paper 1"
+    if (hasArg(papers)) {
+        if (length(papers) > 1) {
 
-            paper2_icon <- paper_button(paper2, "Paper 2")
+            paper_icons <- purrr::map2(
+                seq_along(papers),
+                papers,
+                ~paper_button(.y, paste0("Paper ", .x))
+            )
+
         } else {
-            paper1_label <- "Paper"
+            paper_icons <- paper_button(papers, "Paper")
         }
 
-        paper1_icon <- paper_button(paper, paper1_label)
     }
 
     card_details <- c(
@@ -70,8 +72,7 @@ project_card <- function(
         '<div class="container">',
         if (hasArg(website)) { website_button(website) },
         if (hasArg(github)) { gh_button(github) },
-        if (exists("paper1_icon")){ paper1_icon },
-        if (exists("paper2_icon")){ paper2_icon },
+        if (exists("paper_icons")){ unlist(paper_icons) },
         '</div>',
         text,
         '</div>',
@@ -89,7 +90,7 @@ project_card <- function(
 #| results: asis
 project_card(
     "Data4Action (COVID-19 at Penn State)",
-    paper = "https://www.nature.com/articles/s41598-022-12499-5",
+    papers = "https://www.nature.com/articles/s41598-022-12499-5",
     text = "
 A longitudinal cohort study, comprising of two geographically related cohorts,  that aims to examine the effect of Penn State University students on the SARS-CoV-2 incidence in the surrounding community.
 We have recently published a the interim serological results in Nature Scientific Reports, which can be found [here](https://doi.org/10.1038/s41598-022-12499-5).
@@ -141,7 +142,7 @@ A simulation study of the potential use and effectiveness of a rapid diagnostic 
 #| results: asis
 project_card(
     "Waning Measles Immunity Among Infants in Canada",
-    paper = "https://doi.org/10.1542/peds.2019-0630",
+    papers = c("https://doi.org/10.1542/peds.2019-0630", "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0287765", "https://www.sciencedirect.com/science/article/pii/S0264410X23011921"),
     text = "A prospective cross-sectional serology study of Canadian newborns and mothers
 assessing the rate of waning measles, varicella, and mumps antibodies in infants,
 including subgroup analysis by vaccination status. A retrospective analysis of
