@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Callum Arnold-Leps">
+<meta name="dcterms.date" content="2023-08-31">
+<meta name="description" content="The first in an unorganized series of thoughts about using Neovim for scientific computing.">
 
-<title>Callum Arnold</title>
+<title>Callum Arnold - Reflections from a Month of NeoVim</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +26,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./img/favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,14 +86,14 @@ gtag('config', 'G-EVYBCCRZHE', { 'anonymize_ip': true});
 
 </head>
 
-<body class="nav-fixed">
+<body class="floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Callum Arnold</span>
     </a>
   </div>
@@ -101,15 +104,15 @@ gtag('config', 'G-EVYBCCRZHE', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./files/cv-push/cv.pdf"> 
+    <a class="nav-link" href="../../files/cv-push/cv.pdf"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html"> 
+    <a class="nav-link" href="../../posts.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
 </ul>
@@ -145,129 +148,146 @@ gtag('config', 'G-EVYBCCRZHE', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Reflections from a Month of NeoVim</h1>
+            <p class="subtitle lead">Neovim for Science: Post 01</p>
+                  <div>
+        <div class="description">
+          <p>The first in an unorganized series of thoughts about using Neovim for scientific computing.</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">neovim</div>
+                <div class="quarto-category">r</div>
+                <div class="quarto-category">julia</div>
+                <div class="quarto-category">quarto</div>
+                <div class="quarto-category">science</div>
+                <div class="quarto-category">repl</div>
+                <div class="quarto-category">ide</div>
+              </div>
+                  </div>
+  </div>
     
+  <div class="quarto-title-meta-author">
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Affiliation</div>
+    
+      <div class="quarto-title-meta-contents">
+      <p class="author"><a href="https://callumarnold.com">Callum Arnold-Leps</a> <a href="https://orcid.org/0000-0002-3245-6956" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+    </div>
+    <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              Pennsylvania State University
+            </p>
+        </div>
+    </div>
+
+  <div class="quarto-title-meta">
+
+        
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 31, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#where-im-coming-from" id="toc-where-im-coming-from" class="nav-link active" data-scroll-target="#where-im-coming-from">Where I’m coming from</a></li>
+  <li><a href="#what-i-need-want-from-an-editor" id="toc-what-i-need-want-from-an-editor" class="nav-link" data-scroll-target="#what-i-need-want-from-an-editor">What I need &amp; want from an editor</a></li>
+  <li><a href="#whats-wrong-with-rstudio-vscode" id="toc-whats-wrong-with-rstudio-vscode" class="nav-link" data-scroll-target="#whats-wrong-with-rstudio-vscode">What’s wrong with RStudio &amp; VSCode?</a></li>
+  <li><a href="#what-does-neovim-do-better" id="toc-what-does-neovim-do-better" class="nav-link" data-scroll-target="#what-does-neovim-do-better">What does NeoVim do better?</a></li>
+  <li><a href="#what-are-the-pain-points" id="toc-what-are-the-pain-points" class="nav-link" data-scroll-target="#what-are-the-pain-points">What are the pain points?</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
 
-<section id="research" class="level2">
-<h2 class="anchored" data-anchor-id="research">Research</h2>
-<div class="grid">
-<div class="g-col-12 g-col-md-6">
-<div class="card card-project h-100">
-<h2 style="font-size: 1.45rem" class="anchored">
-Data4Action (COVID-19 at Penn State)
-</h2>
-<div class="container">
-<div class="btn btn-paper">
-<p class="bi bi-journal" onclick="window.location.href='https://www.nature.com/articles/s41598-022-12499-5'">
-Paper
-</p>
-</div>
-</div>
-<p>A longitudinal cohort study, comprising of two geographically related cohorts, that aims to examine the effect of Penn State University students on the SARS-CoV-2 incidence in the surrounding community. We have recently published a the interim serological results in Nature Scientific Reports, which can be found <a href="https://doi.org/10.1038/s41598-022-12499-5">here</a>. The second part of the project focuses on relating the differential exposures observed in the student cohort to latent risk profiles, examining the potential impact of interventions to reduce infections.</p>
-</div>
-</div>
-<div class="g-col-12 g-col-md-6">
-<div class="card card-project h-100">
-<h2 style="font-size: 1.45rem" class="anchored">
-Measles in the DRC
-</h2>
-<div class="container">
-<div class="btn btn-github bi bi-github" onclick="window.location.href='https://www.github.com/arnold-c/drc-urgepi'">
-Code
-</div>
-</div>
-<p>An ongoing collaboration with Médecin Sans Frontières’ (MSF) Epicentre unit to analyze measles seroprevalence in the ex-Katanga region of the Democratic Republic of Congo (DRC). The intial project examined the role of new laboratory testing facilities on the speed of diagnosis and outbreak response decisions. The second project examines the impact of Supplemental Immunization Activities in the ex-Katanga region; principally, characterizing the spatial and age-specific seronegativity, and examining the relationship between optical density (OD) distributions and seropositivity thresholds using finite mixture models.</p>
-</div>
-</div>
-</div>
-<p><br></p>
-<details>
-<summary>
-Click to view prior projects
-</summary>
-<div class="grid">
-<div class="g-col-12 g-col-md-6">
-<div class="card card-project h-100">
-<h2 style="font-size: 1.45rem" class="anchored">
-Waning Measles Immunity Among Infants in Canada
-</h2>
-<div class="container">
-<div class="btn btn-paper">
-<p class="bi bi-journal" onclick="window.location.href='https://doi.org/10.1542/peds.2019-0630'">
-Paper
-</p>
-</div>
-</div>
-<p>A prospective cross-sectional serology study of Canadian newborns and mothers assessing the rate of waning measles, varicella, and mumps antibodies in infants, including subgroup analysis by vaccination status. A retrospective analysis of waning measles antibody titers (PRNT) in stored sera from a separate cohort of Canadian newborns was published as part of the study, and can be found <a href="https://doi.org/10.1542/peds.2019-0630">here</a></p>
-</div>
-</div>
-</div>
-</details>
+
+<p>Recently, I made the decision to go all-in with <a href="https://neovim.io">NeoVim</a>. If you’re not family with Vi(m) or NeoVim, it’s a fairly bare-bones, but incredibly, powerful text editor. If you’ve ever opened a file in Unix terminal, whether that be on your Mac or a Linux machine, or even a server, there’s a good chance you’ve used Vi(m). While this switch is certainly not unheard of, particularly in the wider programming world, I can’t say I know many scientists (outside of CS, that is) who use it. In a world where everyone is using RStudio for R (and increasingly Python) programming, and VSCode dominates everything else, why would I possibly move to a text editor that doesn’t have all of the creature comforts that are baked into modern IDEs?</p>
+<p>Over the next couple of posts I hope to answer that question, and maybe even convince you to give it a try. The first post in this mini-series will outline my motivations for switching and the bigger picture, and the subsequent posts will focus on the technical aspects and how I’ve made it work for me and my needs in scientific computing. Long story short, I’ve found it to be a really enjoyable experience, and it has helped me become a better programmer through gaining a deeper understanding of the tools I use every day, which has transferred back to a better understanding of the languages I use for my work.</p>
+<section id="where-im-coming-from" class="level2">
+<h2 class="anchored" data-anchor-id="where-im-coming-from">Where I’m coming from</h2>
+<p>Before we talk about motivations, I think it’s important to outline the type of work that I do, and what tools I’ve used in the past, as no editor is a one-size-fits-all solution.</p>
+<p>In my day-to-day work, I use the R and Julia programming languages to clean lots of population-level infection data, build statistical (think GLM) and dynamical (think SIR) models, create lots of figures, and write papers and summary reports using <a href="https://quarto.org">Quarto</a> notebooks. All of this is fairly typical of a scientist in the modern era, where most of our work is now performed on computers.</p>
+<p>As a result of being researcher who’s work is entirely computational, it’s important that the text editor I use fits my needs. But these needs are not the same as a software developer’s, who is the primary target for most IDEs, so seemingly inconsequential grievances can be deal-breakers for researchers.</p>
 </section>
-<section id="teaching" class="level2">
-<h2 class="anchored" data-anchor-id="teaching">Teaching</h2>
-<div class="grid">
-<div class="g-col-12 g-col-md-6">
-<div class="card card-project h-100">
-<h2 style="font-size: 1.45rem" class="anchored">
-An Introduction to Git and GitHub
-</h2>
-<div class="container">
-<div class="btn btn-website bi bi-browser-chrome" onclick="window.location.href='https://psu-git.callumarnold.com'">
-Website
+<section id="what-i-need-want-from-an-editor" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-need-want-from-an-editor">What I need &amp; want from an editor</h2>
+<p>Given the work outlined above, there are a number of non-negotaible features that I <strong>need</strong> from an editor:</p>
+<div class="box" style="padding-bottom:0">
+<ol type="1">
+<li><strong>Interactive editing</strong> of R and Julia code, including the ability to send <strong>code chunks</strong> to a REPL/console.</li>
+<li><strong>Syntax and error highlighting</strong> for R, Julia, and Markdown (and ideally LaTeX).</li>
+<li><strong>Autocompletion</strong> of R and Julia code, including in a Quarto notebook.</li>
+<li><strong>Easy plot creation and viewing</strong>.</li>
+</ol>
 </div>
-<div class="btn btn-github bi bi-github" onclick="window.location.href='https://www.github.com/arnold-c/psu-intro-to-git'">
-Code
+<p>Most of these should hopefully be self-explanatory given the workflow I outlined above, and it was not immediately obvious that all were possible within NeoVim (within a reasonable enough time-frame before I gave up and went back to what I was used to).</p>
+<p>There are also a number of features that I <strong>want</strong> from an editor, but could live without:</p>
+<div class="box" style="padding-bottom:0">
+<ol type="1">
+<li><strong>First-class Git integration</strong>.</li>
+<li><strong>Spell checking</strong>.</li>
+<li><strong>Code formatting</strong>.</li>
+<li><strong>Extensibility</strong> through plugins as I decide to learn new languages or workflows.</li>
+<li><strong>Quick start up times</strong>.</li>
+<li><strong>Simple configuration</strong> of keymaps, snippets, etc.</li>
+<li><strong>Easy navigation</strong> of files and projects.</li>
+<li><strong>Good file manipulation</strong> (e.g.&nbsp;moving, copying, deleting, etc.).</li>
+</ol>
 </div>
-</div>
-<p>Designed and create a 2-hour workshop on the basics of Git and GitHub to graduate students, postdocs, and faculty at the Center for Infectious Disease Dynamics at Penn State University. Focusses on building a conceptual understanding of Git and GitHub, and how it can be used to improve research workflows by providing clear examples that are directly relevant to infectious disease researchers.</p>
-</div>
-</div>
-<div class="g-col-12 g-col-md-6">
-<div class="card card-project h-100">
-<h2 style="font-size: 1.45rem" class="anchored">
-SISMID Modeling Infectious Diseases
-</h2>
-<div class="container">
-<div class="btn btn-website bi bi-browser-chrome" onclick="window.location.href='https://sismid2023.callumarnold.com'">
-Website
-</div>
-<div class="btn btn-github bi bi-github" onclick="window.location.href='https://www.github.com/arnold-c/sismid-module-02_2023'">
-Code
-</div>
-</div>
-<p>Created the website and rewrote the teaching materials for the 2023 SISMID module 2 (Mathematical Models of Infectious Diseases), that introduced students to the basics of mathematical modeling of infectious diseases. Additionally, I wrote and delivered the lecture on understanding heterogeneity in models.</p>
-</div>
-</div>
-<div class="g-col-12 g-col-md-6">
-<div class="card card-project h-100">
-<h2 style="font-size: 1.45rem" class="anchored">
-Julia for Epidemiologists
-</h2>
-<div class="container">
-<div class="btn btn-website bi bi-browser-chrome" onclick="window.location.href='https://juliaepibook.callumarnold.com/'">
-Website
-</div>
-<div class="btn btn-github bi bi-github" onclick="window.location.href='https://github.com/arnold-c/JuliaEpiHandbook'">
-Code
-</div>
-</div>
-<p>I am currently in the process of (slowly) writing a book on using Julia for epidemiological research. The book is aimed at epidemiologists with no prior programming experience, and will cover the basics of Julia, and how to use it for epidemiological research. The <a href="https://epirhandbook.com/en/">EpiRHandbook</a> is an excellent resource for new and experienced epidemiologists, but Julia has many advantages over R (and certainly some disadvantages), and I hope this book will serve a similar purpose and help epidemiologists thinking about the transition to Julia.</p>
-</div>
-</div>
-</div>
+</section>
+<section id="whats-wrong-with-rstudio-vscode" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="whats-wrong-with-rstudio-vscode">What’s wrong with RStudio &amp; VSCode?</h2>
+<p>Like most people, I started learning R using RStudio, and I still think it’s a great tool. It is incredibly easy to set up, and it does all of my four essentials for R out of the box. It can also do most of my wants with somewhat minimal effort. So why switch?</p>
+<p>As mentioned, I’ve been using Julia more and more as I’ve transitioned from traditional epidemiological analysis with statistical models to building dynamical models of infectious disease, which are much more computationally intensive (particularly for ensemble stochastic simulations) and benefit from a faster language. Plus, it’s fun learning a new language and has made me a better programmer in general, which benefits my R work as well. As a result, I haven’t used R for serious work in the last couple of months, and last I checked, RStudio didn’t support Julia (outside of using a binding like the <a href="https://github.com/Non-Contradiction/JuliaCall">JuliaCall</a> R package from within R scripts, which is not ideal from a reproducibility standpoint and doesn’t address needs 2. and 3. particularly well). It’s certainly not essential to use the same IDE for all languages, but it definitely makes it easier to switch between projects, and there are fewer configurations to maintain and get used to.</p>
+<p>That rules out RStudio, but what about VSCode? Well, I actually had switched to using VSCode entirely for my R code 2 years ago. The main reason was not because I was starting to learn Julia (though it did coincide with this), but actually because <del><em>RStudio couldn’t handle</em></del> I didn’t search hard enough to figure out how to get RStudio to handle some of my larger projects.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;The issue below just outlines my reasoning at the time, and it can be worked around by sending code to a tmux terminal session within RStudio’s terminal pane (see <a href="https://support.posit.co/hc/en-us/articles/115010737148-Using-the-RStudio-Terminal-in-the-RStudio-IDE#send">this post</a> for more detail).</p></div><div id="fn2"><p><sup>2</sup>&nbsp;If you use R and you haven’t come across <code>{targets}</code> yet, do yourself a favor and go learn it now! Not only does it make your code more reproducible by removing the questions about which scripts need to be run when something is updated (this comes with the added benefit of not needing to re-run calculations when their dependencies haven’t changed) but it also makes it easier to debug as it encourages smaller modular functions.</p></div></div><p>Because I was working with larger and larger datasets, and often trying to make use of parallelization to speed up long-running code, I was running into memory issues with RStudio (at the time I was working on a 10 year old MacBook Pro that had seen it’s fair share of hardships and was absolutely not up to the task). Unfortunately, RStudio’s biggest strength was also it’s biggest weakness for me: by including everything within the IDE, by default your R code is sent to the integrated console that is bound to your editor. If RStudio crashes, it takes your R session down with it. And in my case, it was crashing a lot, requiring me to restart long computations far more often than was actually required: the same scripts (technically <a href="https://books.ropensci.org/targets/"><code>{targets}</code></a> pipelines) would run fine in the terminal!<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> It turns out there are ways to circumvent this issue using the technique described below, and it’s <a href="https://www.r-bloggers.com/2018/09/4-ways-to-be-more-productive-using-rstudios-terminal/">been around for a while</a>, so this point was actually my biggest weakness, not RStudio’s, but the end result was the same as I mostly use Julia now, requiring a new editor anyway.</p>
+<p>VSCode solved this issue for me because it has an integrated terminal (like RStudio), but by default all code is sent to the terminal that is currently open. At first glance, this doesn’t seem to be any different from RStudio’s integrated console. However, the difference is that I could use a terminal multiplexer like <a href="https://github.com/tmux/tmux/wiki/Getting-Started">tmux</a> from within the VSCode terminal, allowing me to separate my R session from my editor. If you’re not familiar with terminal multiplexers like tmux, that’s OK, I wasn’t either at first. Essentially, they allow you to create multiple persistent terminals that will stay open and running even if you close your terminal window. They are useful when working on servers and you want to guard against accidentally losing connection because of internet issues etc., but as you can imagine, they come in handy for local development too. In my case, I could open up a tmux session (in the VSCode terminal), start R, and then VSCode would send the commands to the R session running in tmux, and if VSCode crashed, I could just re-open it and reconnect to the tmux session, which would still be running. And better yet, because VSCode is the most <a href="https://survey.stackoverflow.co/2022/#most-popular-technologies-new-collab-tools">popular editor</a>, there’s likely an extension available that will solve a problem you are facing. This includes an extension for working with R: <a href="https://github.com/REditorSupport/vscode-R">vscode-r</a>. It’s not perfect, and there are certainly some niceties from RStudio that are missing or need some work to be configured (e.g., setting up <a href="https://github.com/REditorSupport/vscode-R/issues/405">RStudio addins</a> to add Roxygen docstrings), but it was a pretty good solution that I was happy with for a couple of years. And VSCode is the editor primarily suggested for Julia, so it was a natural fit to have everything in one place.</p>
+<p>So again, why switch?</p>
+<p>Over time, there were small details I noticed were annoying me about the VSCode (and RStudio) approach. Firstly, it was slow to start up and get going with a project. This is certainly not the biggest issue, but it adds just a little bit of friction each time you have an idea you want to test out. If I’m working on one project and I realize I should reimplement a function in another, I want to be able to move instantly to that project and start working on it, not wait for VSCode to fire up. The extra time resulted in me having multiple VSCode windows open at once, which is not ideal for many reasons (particularly on old hardware). Secondly, and this was a surprisingly large motivating factor, the plotting window in VSCode is baked in to the editor. In a similar vein to the issue with RStudio defaulting to sending code to a console, relying on an integrated plotting window makes working off a laptop annoying. Most of the time I have a monitor, but there have been enough occasions where I only have the small screen of my laptop to work with, and each time I want the code to take up all the space. Normally I don’t need to see plots as I’m writing code, and it’s possible to hide and show the plot windows, but I found that I need to view them frequently enough to notice how slow this is to accomplish using a mouse (I couldn’t find any settings that would allow me to do this using keyboard shortcuts, though this could again be a me-issue). What I wanted was to be able to send the plot window to a different “space/desktop” on my laptop, and then I could switch between the editor and the plot window with a keyboard shortcut I set up in System Preferences.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Something similar could be achieved using a tiling window manager like <a href="https://github.com/koekeishiya/yabai/">yabai</a> for MacOS, which I use extensively (but that’s for a later day) or <a href="https://i3wm.org">I3</a>/<a href="https://swaywm.org">Sway</a> for Linux. I’m not sure if something similarly competent exists for Windows, but <a href="https://github.com/LGUG2Z/komorebi">this package</a> seems like a promising start.</p></div></div></section>
+<section id="what-does-neovim-do-better" class="level2">
+<h2 class="anchored" data-anchor-id="what-does-neovim-do-better">What does NeoVim do better?</h2>
+</section>
+<section id="what-are-the-pain-points" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-the-pain-points">What are the pain points?</h2>
 
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{arnold-leps2023,
+  author = {Arnold-Leps, Callum},
+  title = {Reflections from a {Month} of {NeoVim}},
+  date = {2023-08-31},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-arnold-leps2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+Arnold-Leps, Callum. 2023. <span>“Reflections from a Month of
+NeoVim.”</span> August 31, 2023.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

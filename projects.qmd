@@ -64,7 +64,7 @@ project_card <- function(
     }
 
     card_details <- c(
-        '::: {.g-col-6}',
+        '::: {.g-col-12 .g-col-md-6}',
         '<div class="card card-project h-100">',
         paste0('<h2 style="font-size: 1.45rem">', title, '</h2>'),
         '<div class="container">',

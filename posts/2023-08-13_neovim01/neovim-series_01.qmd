@@ -110,7 +110,6 @@ Normally I don't need to see plots as I'm writing code, and it's possible to hid
 What I wanted was to be able to send the plot window to a different "space/desktop" on my laptop, and then I could switch between the editor and the plot window with a keyboard shortcut I set up in System Preferences.^[Something similar could be achieved using a tiling window manager like [yabai](https://github.com/koekeishiya/yabai/) for MacOS, which I use extensively (but that's for a later day) or [I3](https://i3wm.org)/[Sway](https://swaywm.org) for Linux. I'm not sure if something similarly competent exists for Windows, but [this package](https://github.com/LGUG2Z/komorebi) seems like a promising start.].
 
 
-
 ## What does NeoVim do better?
 
 ## What are the pain points?
