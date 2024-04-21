@@ -12,7 +12,7 @@ categories:
     - science
     - repl
     - ide
-image-alt: 'Photo by <a href="https://unsplash.com/@timberfoster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tim Foster</a> on <a href="https://unsplash.com/photos/qefCF3r4Eoc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+image-alt: "Photo by <a href='https://unsplash.com/@timberfoster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Tim Foster</a> on <a href='https://unsplash.com/photos/qefCF3r4Eoc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>"
 ---
 
 Recently, I made the decision to go all-in with [NeoVim](https://neovim.io).
