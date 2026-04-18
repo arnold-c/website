@@ -53,3 +53,5 @@ Thumbs.db
 /.quarto/
 
 /.luarc.json
+
+**/*.quarto_ipynb
