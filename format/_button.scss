@@ -6,7 +6,6 @@
     background-color: #7b47ebff;
     border: none;
     padding: 0.2rem 0.4rem 0.2rem 0.4rem;
-    // padding: 5px 7px 7px 7px;
     margin-bottom: 10px;
     border-radius: 0.4em;
     height: 2rem;
@@ -23,7 +22,6 @@
     background-color: #037c64ff;
     border: none;
     padding: 0.2rem 0.4rem 0.2rem 0.4rem;
-    // padding: 5px 7px 7px 7px;
     margin-bottom: 10px;
     border-radius: 0.4em;
     height: 2rem;
@@ -41,14 +39,28 @@
     border: none;
     border-radius: 0.4em;
     padding: 0.3rem 0.4rem 0.2rem 0.4rem;
-    // padding: 7px 7px 7px 7px;
     margin-bottom: 10px;
     height: 2rem;
 }
 
 .btn-paper:hover {
-    // font-weight: 700;
     color: white;
     background-color: #cf1717ff;
+}
+
+.btn-preprint {
+    color: white;
+    font-size: 1rem;
+    background-color: #26BBD2;
+    border: none;
+    border-radius: 0.4em;
+    padding: 0.3rem 0.4rem 0.2rem 0.4rem;
+    margin-bottom: 10px;
+    height: 2rem;
+}
+
+.btn-preprint:hover {
+    color: white;
+    background-color: #1D8D9E;
 }
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Callum Arnold</title>
+<title>software – Callum Arnold</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,6 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
@@ -276,7 +277,7 @@ gtag('config', 'G-EVYBCCRZHE', { 'anonymize_ip': true});
 <span class="menu-text">Academic Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./software.html"> 
+    <a class="nav-link active" href="./software.html" aria-current="page"> 
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
@@ -316,7 +317,7 @@ gtag('config', 'G-EVYBCCRZHE', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -324,118 +325,38 @@ gtag('config', 'G-EVYBCCRZHE', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#about-me" id="toc-about-me" class="nav-link active" data-scroll-target="#about-me">About Me</a></li>
-  <li><a href="#education-fellowships" id="toc-education-fellowships" class="nav-link" data-scroll-target="#education-fellowships">Education &amp; Fellowships</a></li>
-  <li><a href="#research-experience" id="toc-research-experience" class="nav-link" data-scroll-target="#research-experience">Research Experience</a></li>
+  <li><a href="#geofacetmakie.jl" id="toc-geofacetmakie.jl" class="nav-link active" data-scroll-target="#geofacetmakie.jl"><i class="bi bi-github"></i> GeoFacetMakie.jl</a></li>
+  <li><a href="#beancount-plugins" id="toc-beancount-plugins" class="nav-link" data-scroll-target="#beancount-plugins"><i class="bi bi-github"></i> Beancount plugins</a></li>
+  <li><a href="#canada-presence-calculator" id="toc-canada-presence-calculator" class="nav-link" data-scroll-target="#canada-presence-calculator"><i class="bi bi-github"></i> Canada Presence Calculator</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
 
-<p><link rel="stylesheet" href="academicons/css/academicons.min.css"></p>
-<div class="quarto-about-jolla">
-  <img src="img/CA_Headshot-Web.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Callum Arnold</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><div id="blank">
-</div> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://www.linkedin.com/in/arnold-c/" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://twitter.com/thecallumarnold" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://scholar.google.com/citations?user=6CMnUykAAAAJ&amp;hl=en" class="about-link" rel="" target="">
-     <span class="about-link-text"><i class="ai  ai-google-scholar" style="color:default"></i> Google Scholar</span>
-  </a>
-  <a href="https://orcid.org/0000-0002-3245-6956" class="about-link" rel="" target="">
-     <span class="about-link-text"><i class="ai  ai-orcid" style="color:default"></i> ORCID</span>
-  </a>
-  <a href="https://github.com/arnold-c" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">GitHub</span>
-  </a>
-  <a href="mailto:contact@callumarnold.com" class="about-link" rel="" target="">
-    <i class="bi bi-envelope-fill"></i>
-     <span class="about-link-text">Email</span>
-  </a>
+<section id="geofacetmakie.jl" class="level3">
+<h3 class="anchored" data-anchor-id="geofacetmakie.jl"><a href="https://github.com/arnold-c/GeoFacetMakie.jl"><i class="bi bi-github"></i></a> <a href="https://geofacetmakie.callumarnold.com/dev/">GeoFacetMakie.jl</a></h3>
+<p>A Julia package for Makie plotting that produces geographically representative distribution of plot facets, analogous to the <a href="https://hafen.github.io/geofacet/">geofacet</a> R ggplot2 package.</p>
+<div class="project-screenshot">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/geofacetmakie.png" class="img-fluid figure-img"></p>
+<figcaption>An example of GeoFacetMakie.jl for a plot of US states</figcaption>
+</figure>
 </div>
 </div>
-
-<section id="about-me" class="level2">
-<h2 data-anchor-id="about-me">About Me</h2>
-<p>I am an Arts &amp; Science Postdoctoral Fellow in the Ecology &amp; Evolutionary Biology Department at the University of Toronto, where I build mathematical models of infectious diseases as part of Dr.&nbsp;Nicole Mideo’s lab, in addition to other infectious disease epidemiology work. I previously completed my PhD in Biology in Dr.&nbsp;Matt Ferrari’s lab at Penn State, worked as a clinical research coordinator in the Infectious Disease Division at the Hospital for Sick Children (Toronto, Canada), and concurrently completed an MSc in Global Health Policy at LSHTM. Prior to working in public health and epidemiology, I completed an MChem in Chemistry at the University of Oxford, where my Masters year focused on computational chemistry. Here I realized that I enjoyed research and computational modeling, but wanted to work in a more applied healthcare-related field. Since then, I have applied and developed my skills in Public Health research.</p>
-<p>My research interests are in infectious disease epidemiology, with a particular focus on the use of mathematical models to improve outbreak response and resource utilization: namely, how the choices we make in categorizing continuous quantitative data affects our understanding and ability to anticipate, detect, and respond to outbreaks. I primarily work with <a href="https://www.r-project.org/">R</a> and <a href="https://julialang.org/">Julia</a>, but have experience with <a href="https://www.python.org/">Python</a>, Bash, and am learning <a href="https://www.rust-lang.org/">Rust</a> for fun.</p>
-<p>When I’m not working, I can be found outside doing one of the following (depending on the season): mountain biking, road cycling, rock climbing, hiking, snowboarding, cross-country skiing, or very occasionally, running.</p>
 </section>
-<section id="education-fellowships" class="level2">
-<h2 data-anchor-id="education-fellowships">Education &amp; Fellowships</h2>
-<p><strong>Postdoctoral Fellow</strong>, 2025 - Present, <em>University of Toronto</em></p>
-<p><strong>Postdoctoral Scholar</strong>, 2025, <em>Pennsylvania State University</em></p>
-<p><strong>PhD Biology</strong>, 2020 - 2024, <em>Pennsylvania State University</em></p>
-<p><strong>MSc Global Health Policy</strong>, 2017 - 2020, <em>London School of Hygiene and Tropical Medicine</em></p>
-<p><strong>MChem Chemistry</strong>, 2011 - 2015, <em>University of Oxford</em></p>
+<section id="beancount-plugins" class="level3">
+<h3 class="anchored" data-anchor-id="beancount-plugins"><a href="https://github.com/arnold-c/CallumsBeancountPlugins"><i class="bi bi-github"></i> Beancount plugins</a></h3>
+<p>A collection of <a href="https://beancount.github.io/docs/">Beancount</a> and <a href="https://beancount.github.io/fava/">Fava</a> plugins for Canadian personal-finance workflows, including adjusted cost base tracking, realized gains reporting, and registered account contribution room estimation.</p>
 </section>
-<section id="research-experience" class="level2">
-<h2 data-anchor-id="research-experience">Research Experience</h2>
-<div class="box">
-<p><strong>Postdoctoral Fellow</strong>, Dec 2025 – Present, <em><a href="https://www.artsci.utoronto.ca/faculty-staff/research-supports-services/find-funding#postdoctoral-accordion-1">University of Toronto</a></em>, <a href="https://mideo.eeb.utoronto.ca/">Dr.&nbsp;Nicole Mideo</a></p>
-<p><a href="./academic-projects.html#ongoing-work">Currently working</a> on:</p>
-<ul>
-<li>Examining the impact of modelling susceptibility as a continuous function.</li>
-<li>Developing training materials for epidemiologists, focusing on <a href="https://juliaepibook.callumarnold.com">learning the Julia programming language</a> within a familiar context, as well as <a href="https://aiforepi.com">how to employ AI tools</a> to improve software quality and increase confidence in analyses.</li>
-</ul>
-</div>
-<div class="box">
-<p><strong>Postdoctoral Scholar</strong>, Jan 2025 – Dec 2025, <em><a href="https://www.psu.edu">Pennsylvania State University</a></em>, <a href="https://www.theferrarilab.net/">Dr.&nbsp;Matt Ferrari</a></p>
-<p>Characterized the effectiveness of national Foot-and-Mouth Disease vaccination campaigns in India since 2011, digitizing and cleaning data, and producing reports for governmental partners.</p>
-</div>
-<div class="box">
-<p><strong>PhD Student</strong>, Aug 2020 – Dec 2024, <em><a href="https://www.psu.edu">Pennsylvania State University</a></em>, <a href="https://www.theferrarilab.net/">Dr.&nbsp;Matt Ferrari</a></p>
-<p><a href="./academic-projects.html#prior-projects">Worked</a> on:</p>
-<ul>
-<li>The <a href="https://doi.org/10.1038/s41598-022-12499-5">Data4Action Research Project</a> examining the dynamics of COVID-19 in a university community</li>
-<li>Resource utilisation strategies for measles surveillance and detection in the Democratic Republic of Congo</li>
-<li>The effects of <a href="https://www.medrxiv.org/content/10.1101/2025.07.11.25331369v1">population-level thresholds</a> for the detection and response to outbreaks</li>
-<li>How <a href="http://arxiv.org/abs/2504.11352">critical slowing down metrics</a> perform in light of non-target diseases (background noise)</li>
-</ul>
-</div>
-<div class="box">
-<p><strong>Clinical Research Coordinator</strong>, Apr 2018 – Dec 2019, <em><a href="https://www.sickkids.ca/">The Hospital for Sick Children</a></em></p>
-<p>Coordinated a multi-centre observational study into waning immunity in infants to measles, mumps and varicella, and managed all data produced by the National Microbiology Laboratory and the Nova Scotia Health Authority laboratory.</p>
-<p>Responsibilities included:</p>
-<ul>
-<li>Data Management</li>
-<li>Data Analysis</li>
-<li>Grant Applications</li>
-<li>Patient enrollment and consent</li>
-</ul>
-</div>
-<div class="box">
-<p><strong>Honorary Clinical Researcher</strong>, Jun 2016 - May 2019, <em><a href="https://www.ndorms.ox.ac.uk/">BOTNAR, University of Oxford</a></em></p>
-<p>Responsibilities included:</p>
-<ul>
-<li>Data Analysis</li>
-<li>4-D CT Analysis</li>
-<li>MRI Segmentation</li>
-<li>Contributing researcher in multicentre FAIM study</li>
-</ul>
-</div>
-
+<section id="canada-presence-calculator" class="level3">
+<h3 class="anchored" data-anchor-id="canada-presence-calculator"><a href="https://github.com/arnold-c/CanadaPresenceCalculator"><i class="bi bi-github"></i> Canada Presence Calculator</a></h3>
+<p>A Rust command-line tool for tracking time spent in Canada from calendar data to help estimate permanent residency status maintenance and calculate citizenship application date eligibility (and forecasted eligibility date if not currently eligible). Connects to an individual’s online calendar to calculate the eligibility, as well as produce CSV files that summarize entry/exit events in the format required to complete the <a href="https://eservices.cic.gc.ca/rescalc/resCalcRetrieve.do?&amp;lang=en">official eligibility calculator</a>.</p>
 
 
 </section>
@@ -456,6 +377,13 @@ gtag('config', 'G-EVYBCCRZHE', { 'anonymize_ip': true});
       window.document.body.appendChild(a);
     }
     setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

@@ -20,7 +20,7 @@ about:
       url: "https://github.com/arnold-c"
     - icon: envelope-fill
       text: Email
-      url: "mailto:arnold.crk@gmail.com"
+      url: "mailto:contact@callumarnold.com"
 ---
 
 <link rel="stylesheet" href="academicons/css/academicons.min.css"/>
@@ -31,21 +31,24 @@ about:
 
 ## About Me
 
-
-
-I am a PhD Candidate in Biology at Pennsylvania State University, where I build mathematical models of infectious diseases as part of Dr. Matt Ferrari’s lab (within the Center for Infectious Disease Dynamics), in addition to other infectious disease epidemiology work.
-I previously worked as a clinical research coordinator in the Infectious Disease Division at the Hospital for Sick Children (Toronto, Canada), and concurrently completed an MSc in Global Health Policy at LSHTM.
-Whilst completing my Masters in computational chemistry, I realized that I enjoyed research and computational modeling, but wanted to work in a more applied healthcare-related field.
+I am an Arts & Science Postdoctoral Fellow in the Ecology & Evolutionary Biology Department at the University of Toronto, where I build mathematical models of infectious diseases as part of Dr. Nicole Mideo’s lab, in addition to other infectious disease epidemiology work.
+I previously completed my PhD in Biology in Dr. Matt Ferrari's lab at Penn State, worked as a clinical research coordinator in the Infectious Disease Division at the Hospital for Sick Children (Toronto, Canada), and concurrently completed an MSc in Global Health Policy at LSHTM.
+Prior to working in public health and epidemiology, I completed an MChem in Chemistry at the University of Oxford, where my Masters year focused on computational chemistry.
+Here I realized that I enjoyed research and computational modeling, but wanted to work in a more applied healthcare-related field.
 Since then, I have applied and developed my skills in Public Health research.
 
 My research interests are in infectious disease epidemiology, with a particular focus on the use of mathematical models to improve outbreak response and resource utilization: namely, how the choices we make in categorizing continuous quantitative data affects our understanding and ability to anticipate, detect, and respond to outbreaks.
-I primarily work with [R](https://www.r-project.org/) and [Julia](https://julialang.org/), but have experience with [Python](https://www.python.org/), Bash, and am learning [Rust](https://www.rust-lang.org/) for fun
+I primarily work with [R](https://www.r-project.org/) and [Julia](https://julialang.org/), but have experience with [Python](https://www.python.org/), Bash, and am learning [Rust](https://www.rust-lang.org/) for fun.
 
 When I'm not working, I can be found outside doing one of the following (depending on the season): mountain biking, road cycling, rock climbing, hiking, snowboarding, cross-country skiing, or very occasionally, running.
 
-## Education
+## Education & Fellowships
 
-**PhD Biology**, 2020 - Present, *Pennsylvania State University*
+**Postdoctoral Fellow**, 2025 - Present, *University of Toronto*
+
+**Postdoctoral Scholar**, 2025, *Pennsylvania State University*
+
+**PhD Biology**, 2020 - 2024, *Pennsylvania State University*
 
 **MSc Global Health Policy**, 2017 - 2020, *London School of Hygiene and Tropical Medicine*
 
@@ -54,25 +57,37 @@ When I'm not working, I can be found outside doing one of the following (dependi
 ## Research Experience
 
 <div class="box">
-**PhD Candidate**, Aug 2020 – Present, *[Pennsylvania State University](https://www.psu.edu)*
+**Postdoctoral Fellow**, Dec 2025 – Present, *[University of Toronto](https://www.artsci.utoronto.ca/faculty-staff/research-supports-services/find-funding#postdoctoral-accordion-1)*, [Dr. Nicole Mideo](https://mideo.eeb.utoronto.ca/)
 
-  Infectious disease epidemiology and modelling with Dr. Matt Ferrari.
+[Currently working](academic-projects.qmd#ongoing-work) on:
 
-  [Currently working](projects.qmd) on:
+- Examining the impact of modelling susceptibility as a continuous function.
+- Developing training materials for epidemiologists, focusing on [learning the Julia programming language](https://juliaepibook.callumarnold.com) within a familiar context, as well as [how to employ AI tools](https://aiforepi.com) to improve software quality and increase confidence in analyses.
 
-  - The [Data4Action Research Project](https://doi.org/10.1038/s41598-022-12499-5) examining the dynamics of COVID-19 in a
-  university community
+</div>
+
+<div class="box">
+**Postdoctoral Scholar**, Jan 2025 – Dec 2025, *[Pennsylvania State University](https://www.psu.edu)*, [Dr. Matt Ferrari](https://www.theferrarilab.net/)
+
+Characterized the effectiveness of national Foot-and-Mouth Disease vaccination campaigns in India since 2011, digitizing and cleaning data, and producing reports for governmental partners.
+
+</div>
+
+<div class="box">
+**PhD Student**, Aug 2020 – Dec 2024, *[Pennsylvania State University](https://www.psu.edu)*, [Dr. Matt Ferrari](https://www.theferrarilab.net/)
+
+  [Worked](academic-projects.qmd#prior-projects) on:
+
+  - The [Data4Action Research Project](https://doi.org/10.1038/s41598-022-12499-5) examining the dynamics of COVID-19 in a university community
   - Resource utilisation strategies for measles surveillance and detection in the Democratic Republic of Congo
-  - The effects of population-level thresholds for the detection and response to outbreaks
-  - How [critical slowing down metrics](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007679) perform in light of non-target diseases (background noise)
+  - The effects of [population-level thresholds](https://www.medrxiv.org/content/10.1101/2025.07.11.25331369v1) for the detection and response to outbreaks
+  - How [critical slowing down metrics](http://arxiv.org/abs/2504.11352) perform in light of non-target diseases (background noise)
 </div>
 
 <div class="box">
   **Clinical Research Coordinator**, Apr 2018 – Dec 2019, *[The Hospital for Sick Children](https://www.sickkids.ca/)*
 
-  Coordinated a multi-centre observational study into waning immunity in infants
-  to measles, mumps and varicella, and managed all data produced by the National
-  Microbiology Laboratory and the Nova Scotia Health Authority laboratory.
+  Coordinated a multi-centre observational study into waning immunity in infants to measles, mumps and varicella, and managed all data produced by the National Microbiology Laboratory and the Nova Scotia Health Authority laboratory.
 
   Responsibilities included:
 
