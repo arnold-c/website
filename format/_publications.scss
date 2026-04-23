@@ -1,0 +1,63 @@
+/*-- scss:rules --*/
+
+.publication-section {
+    margin-bottom: 2rem;
+}
+
+.publication-heading {
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.publication-heading h2 {
+    margin-bottom: 0;
+}
+
+.publication-count {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.publication-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.publication-entry {
+    background: var(--box-bg);
+    border: 1px solid var(--box-border-color);
+    border-radius: 5px;
+    margin-bottom: 0.85rem;
+    padding: 1rem 1.1rem;
+}
+
+.publication-citation {
+    margin: 0;
+}
+
+.publication-title {
+    font-weight: 600;
+}
+
+.publication-author-highlight {
+    background: var(--publication-author-highlight-bg);
+    border-radius: 0.3rem;
+    color: var(--publication-author-highlight-color);
+    display: inline-block;
+    font-weight: 700;
+    padding: 0.05rem 0.3rem;
+}
+
+.publication-status,
+.publication-error,
+.publication-empty {
+    background: var(--box-bg);
+    border: 1px solid var(--box-border-color);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 0.9rem 1rem;
+}

@@ -1,0 +1,35 @@
+---
+page-layout: full
+format:
+  html:
+    toc: true
+---
+
+This page is generated from my bibliography file and grouped by publication type.
+My name is highlighted throughout the author lists.
+
+<div id="publications-list" data-bibliography="files/My%20Publications.bib">
+  <p class="publication-status">Loading publications…</p>
+</div>
+
+## Published & in-press articles {#articles}
+
+<div id="publications-articles"></div>
+
+## Preprints {#preprints}
+
+<div id="publications-preprints"></div>
+
+## Theses {#theses}
+
+<div id="publications-theses"></div>
+
+## Posters {#posters}
+
+<div id="publications-posters"></div>
+
+<script src="format/publications.js"></script>
+
+<noscript>
+  <p class="publication-error">Enable JavaScript to view the publications list.</p>
+</noscript>

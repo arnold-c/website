@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - files/My Publications.bib
 
 website:
   title: "Callum Arnold"
@@ -16,6 +18,8 @@ website:
       href: academic-projects.qmd
     - text: "Software"
       href: software.qmd
+    - text: "Publications"
+      href: publications.qmd
     - text: "Posts"
       href: posts.qmd
     right:
@@ -41,8 +45,8 @@ website:
 format:
   html:
     theme:
-      light: [cosmo, format/_fonts.scss, format/_light.scss, format/_button.scss, format/_box.scss]
-      dark: [cosmo, format/_fonts.scss, format/_dark.scss, format/_button.scss, format/_box.scss]
+      light: [cosmo, format/_fonts.scss, format/_light.scss, format/_button.scss, format/_box.scss, format/_publications.scss]
+      dark: [cosmo, format/_fonts.scss, format/_dark.scss, format/_button.scss, format/_box.scss, format/_publications.scss]
     grid:
       sidebar-width: 270px
       body-width: 1000px
