@@ -18,6 +18,9 @@
       .replace(/\\%/g, "%")
       .replace(/\\_/g, "_")
       .replace(/\\#/g, "#")
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">")
+      .replace(/&amp;/g, "&")
       .replace(/~/g, " ")
       .replace(/--/g, "–")
       .replace(/[{}]/g, "")
@@ -561,6 +564,19 @@
     });
   }
 
+  function buildAbstractHtml(entry) {
+    const abstractText = entry.fields.abstract
+      ? escapeHtml(entry.fields.abstract)
+      : "No abstract available for this publication.";
+
+    return `
+      <details class="publication-abstract">
+        <summary>Abstract</summary>
+        <p class="publication-abstract-text">${abstractText}</p>
+      </details>
+    `;
+  }
+
   function buildPublicationHtml(entry) {
     const title = escapeHtml(entry.fields.title || entry.citationKey);
     const titleLink = entry.fields.url || (entry.fields.doi ? `https://doi.org/${entry.fields.doi}` : "");
@@ -570,13 +586,13 @@
     const authorsHtml = formatAuthorsHtml(entry.fields.author || "");
     const source = buildSource(entry);
     const links = buildLinks(entry);
+    const abstractHtml = buildAbstractHtml(entry);
 
     const bits = [];
     if (authorsHtml) {
       bits.push(authorsHtml);
     }
     bits.push(`(${escapeHtml(entry.year)}).`);
-    bits.push(`${titleHtml}.`);
     if (source) {
       bits.push(`${source}.`);
     }
@@ -584,7 +600,13 @@
       bits.push(`<span class="publication-links">${links}</span>.`);
     }
 
-    return `<li class="publication-entry"><p class="publication-citation">${bits.join(" ")}</p></li>`;
+    return `
+      <li class="publication-entry">
+        <p class="publication-title-line">${titleHtml}.</p>
+        <p class="publication-citation">${bits.join(" ")}</p>
+        ${abstractHtml}
+      </li>
+    `;
   }
 
   function groupEntries(entries) {

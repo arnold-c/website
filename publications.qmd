@@ -7,6 +7,7 @@ format:
 
 This page is generated from my bibliography file and grouped by publication type.
 My name is highlighted throughout the author lists.
+Expand the abstract dropdown beneath each entry to read the abstract when available.
 
 <div id="publications-list" data-bibliography="files/My%20Publications.bib">
   <p class="publication-status">Loading publications…</p>

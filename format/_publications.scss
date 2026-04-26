@@ -28,11 +28,15 @@
 }
 
 .publication-entry {
-    background: var(--box-bg);
-    border: 1px solid var(--box-border-color);
-    border-radius: 5px;
-    margin-bottom: 0.85rem;
-    padding: 1rem 1.1rem;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 1.4rem;
+    padding: 0;
+}
+
+.publication-title-line {
+    margin: 0 0 0.2rem 0;
 }
 
 .publication-citation {
@@ -41,6 +45,49 @@
 
 .publication-title {
     font-weight: 600;
+}
+
+.publication-abstract {
+    background: var(--box-bg);
+    border: 1px solid var(--box-border-color);
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 0.35rem;
+    padding: 0.45rem 0.7rem;
+}
+
+.publication-abstract summary {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    list-style: none;
+}
+
+.publication-abstract summary::-webkit-details-marker {
+    display: none;
+}
+
+.publication-abstract summary::before {
+    content: "▸";
+    display: inline-block;
+    margin-right: 0.35rem;
+}
+
+.publication-abstract[open] {
+    display: block;
+}
+
+.publication-abstract[open] summary::before {
+    content: "▾";
+}
+
+.publication-abstract[open] summary {
+    margin-bottom: 0.35rem;
+}
+
+.publication-abstract-text {
+    margin: 0;
 }
 
 .publication-author-highlight {
