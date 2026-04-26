@@ -450,6 +450,7 @@
     const pubstate = (entry.fields.pubstate || "").toLowerCase();
     const eprinttype = (entry.fields.eprinttype || "").toLowerCase();
     const isInPress = /\bin[ -]?press\b/.test(annotation) || /\bin[ -]?press\b/.test(pubstate);
+    const isPreprint = /\bpre-?print\b/.test(annotation) || /\bpre-?print\b/.test(pubstate);
 
     if (entryType === "thesis" || /thesis|phd|mchem|msc/.test(subtype)) {
       return "theses";
@@ -460,7 +461,9 @@
     }
 
     if (entryType === "article" && (!/under review|in review/.test(annotation) || isInPress)) {
-      return "articles";
+      if (!isPreprint) {
+        return "articles";
+      }
     }
 
     if (isInPress) {
@@ -470,7 +473,7 @@
     if (
       entryType === "online" ||
       pubstate === "prepublished" ||
-      /pre-?print/.test(annotation) ||
+      isPreprint ||
       Boolean(eprinttype)
     ) {
       return "preprints";
@@ -597,11 +600,19 @@
     const annotation = (fields.annotation || "").toLowerCase();
     const pubstate = (fields.pubstate || "").toLowerCase();
     const isInPress = /\bin[ -]?press\b/.test(annotation) || /\bin[ -]?press\b/.test(pubstate);
+    const isPreprint = /\bpre-?print\b/.test(annotation) || /\bpre-?print\b/.test(pubstate);
+
+    let yearVal = extractYear(fields.date || fields.year || "");
+    if (isInPress) {
+      yearVal = "In press";
+    } else if (isPreprint) {
+      yearVal = "Pre-print";
+    }
 
     const normalized = {
       ...entry,
       fields,
-      year: isInPress ? "In press" : extractYear(fields.date || fields.year || ""),
+      year: yearVal,
       sortValue: buildSortValue(fields.date || fields.year || ""),
       category: null
     };
