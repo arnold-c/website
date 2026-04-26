@@ -594,10 +594,14 @@
       fields[key] = cleanLatex(value);
     });
 
+    const annotation = (fields.annotation || "").toLowerCase();
+    const pubstate = (fields.pubstate || "").toLowerCase();
+    const isInPress = /\bin[ -]?press\b/.test(annotation) || /\bin[ -]?press\b/.test(pubstate);
+
     const normalized = {
       ...entry,
       fields,
-      year: extractYear(fields.date || fields.year || ""),
+      year: isInPress ? "In press" : extractYear(fields.date || fields.year || ""),
       sortValue: buildSortValue(fields.date || fields.year || ""),
       category: null
     };
