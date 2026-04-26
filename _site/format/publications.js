@@ -575,14 +575,16 @@
   }
 
   function buildAbstractHtml(entry) {
-    const abstractText = entry.fields.abstract
-      ? formatAbstractHtml(entry.fields.abstract)
-      : "No abstract available for this publication.";
+    const abstractText = String(entry.fields.abstract || "").trim();
+
+    if (!abstractText) {
+      return "";
+    }
 
     return `
       <details class="publication-abstract">
         <summary>Abstract</summary>
-        <p class="publication-abstract-text">${abstractText}</p>
+        <p class="publication-abstract-text">${formatAbstractHtml(abstractText)}</p>
       </details>
     `;
   }
