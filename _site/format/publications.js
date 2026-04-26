@@ -564,9 +564,19 @@
     });
   }
 
+  function formatAbstractHtml(value) {
+    return escapeHtml(value || "")
+      .replace(/&lt;br\s*\/?&gt;/gi, "<br>")
+      .replace(/&lt;(\/?)(strong|em)&gt;/gi, "<$1$2>")
+      .replace(/&lt;(\/)b&gt;/gi, "<$1strong>")
+      .replace(/&lt;b&gt;/gi, "<strong>")
+      .replace(/&lt;(\/)i&gt;/gi, "<$1em>")
+      .replace(/&lt;i&gt;/gi, "<em>");
+  }
+
   function buildAbstractHtml(entry) {
     const abstractText = entry.fields.abstract
-      ? escapeHtml(entry.fields.abstract)
+      ? formatAbstractHtml(entry.fields.abstract)
       : "No abstract available for this publication.";
 
     return `
