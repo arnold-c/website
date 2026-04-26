@@ -771,6 +771,31 @@
       } else {
         root.innerHTML = "";
       }
+
+      const toc = document.getElementById("TOC");
+      if (toc && !document.getElementById("toggle-all-abstracts")) {
+        const toggleBtn = document.createElement("button");
+        toggleBtn.id = "toggle-all-abstracts";
+        toggleBtn.className = "btn btn-sm btn-outline-primary";
+        toggleBtn.style.marginTop = "1rem";
+        toggleBtn.style.width = "100%";
+        toggleBtn.textContent = "Expand all abstracts";
+        let abstractsExpanded = false;
+
+        toggleBtn.addEventListener("click", () => {
+          abstractsExpanded = !abstractsExpanded;
+          toggleBtn.textContent = abstractsExpanded ? "Collapse all abstracts" : "Expand all abstracts";
+          document.querySelectorAll("details.publication-abstract").forEach((details) => {
+            if (abstractsExpanded) {
+              details.setAttribute("open", "");
+            } else {
+              details.removeAttribute("open");
+            }
+          });
+        });
+
+        toc.appendChild(toggleBtn);
+      }
     } catch (error) {
       root.innerHTML = `<p class="publication-error">Could not load publications from <code>${escapeHtml(bibliographyPath)}</code>: ${escapeHtml(error.message)}</p>`;
     }
