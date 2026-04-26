@@ -214,6 +214,58 @@
     return fields;
   }
 
+  function parseCslJson(items) {
+    return items.map((item) => {
+      const fields = {};
+
+      if (item.title) fields.title = String(item.title);
+      if (item.abstract) fields.abstract = String(item.abstract);
+      if (item.URL) fields.url = String(item.URL);
+      if (item.DOI) fields.doi = String(item.DOI);
+      if (item["container-title"]) fields.journaltitle = String(item["container-title"]);
+      if (item.volume) fields.volume = String(item.volume);
+      if (item.issue) fields.number = String(item.issue);
+      else if (item.number) fields.number = String(item.number);
+      if (item.page) fields.pages = String(item.page);
+      if (item.note) fields.annotation = String(item.note);
+      if (item.genre) fields.type = String(item.genre);
+      if (item["event-title"]) fields.eventtitle = String(item["event-title"]);
+      if (item["event-place"]) fields.venue = String(item["event-place"]);
+
+      if (item.type === "thesis") {
+        if (item.publisher) fields.institution = String(item.publisher);
+        if (item["publisher-place"]) fields.location = String(item["publisher-place"]);
+      } else {
+        if (item.publisher) fields.publisher = String(item.publisher);
+      }
+
+      if (item.type === "article" && item.note && /pre-?print/i.test(item.note)) {
+        if (item.publisher) fields.eprinttype = String(item.publisher);
+      }
+
+      if (item.issued && item.issued["date-parts"] && item.issued["date-parts"][0]) {
+        const parts = item.issued["date-parts"][0];
+        fields.date = parts.join("-");
+        fields.year = String(parts[0]);
+      }
+
+      if (item.author) {
+        fields.author = item.author
+          .map((a) => `${a.family || ""}, ${a.given || ""}`)
+          .join(" and ");
+      }
+
+      let entryType = item.type || "misc";
+      if (entryType === "article-journal") entryType = "article";
+
+      return {
+        entryType: String(entryType),
+        citationKey: String(item["citation-key"] || item.id || ""),
+        fields
+      };
+    });
+  }
+
   function parseBibtex(text) {
     const entries = [];
     let index = 0;
@@ -696,7 +748,7 @@
       return;
     }
 
-    const bibliographyPath = root.dataset.bibliography || "files/My%20Publications.bib";
+    const bibliographyPath = root.dataset.bibliography || "files/My%20Publications.json";
     root.innerHTML = '<p class="publication-status">Loading publications…</p>';
 
     try {
@@ -706,7 +758,12 @@
       }
 
       const bibliographyText = await response.text();
-      const entries = parseBibtex(bibliographyText).map(normalizeEntry);
+      let entries;
+      if (bibliographyPath.toLowerCase().endsWith(".json")) {
+        entries = parseCslJson(JSON.parse(bibliographyText)).map(normalizeEntry);
+      } else {
+        entries = parseBibtex(bibliographyText).map(normalizeEntry);
+      }
       const visibleSectionCount = renderGroups(groupEntries(entries));
 
       if (visibleSectionCount === 0) {
@@ -720,6 +777,7 @@
   }
 
   const api = {
+    parseCslJson,
     parseBibtex,
     normalizeEntry,
     groupEntries,

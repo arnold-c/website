@@ -1,7 +1,7 @@
 project:
   type: website
   resources:
-    - files/My Publications.bib
+    - files/My Publications.json
 
 website:
   title: "Callum Arnold"
