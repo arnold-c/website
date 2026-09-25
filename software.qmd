@@ -5,6 +5,15 @@ format:
         toc: true
 ---
 
+### [<i class="bi bi-github"></i>](https://github.com/arnold-c/BrowserPlots.jl) [BrowserPlots.jl](https://browserplots.callumarnold.com/dev/)
+
+A Julia package for Makie.jl and Plots.jl plotting that allows you to view your figures in a browser (with history), analogous to the [httpgd](https://nx10.dev/httpgd/) R package.
+This is useful when you may be working in a headless environment, and when combined with a service like [Tailscale](https://tailscale.com/), you can easily view your plots and the session history.
+
+::: {.project-screenshot}
+![An example of BrowserPlots.jl](./img/BrowserPlots-preview.png)
+:::
+
 ### [<i class="bi bi-github"></i>](https://github.com/arnold-c/GeoFacetMakie.jl) [GeoFacetMakie.jl](https://geofacetmakie.callumarnold.com/dev/)
 
 A Julia package for Makie plotting that produces geographically representative distribution of plot facets, analogous to the [geofacet](https://hafen.github.io/geofacet/) R ggplot2 package.
@@ -21,3 +30,9 @@ A collection of [Beancount](https://beancount.github.io/docs/) and [Fava](https:
 
 A Rust command-line tool for tracking time spent in Canada from calendar data to help estimate permanent residency status maintenance and calculate citizenship application date eligibility (and forecasted eligibility date if not currently eligible).
 Connects to an individual's online calendar to calculate the eligibility, as well as produce CSV files that summarize entry/exit events in the format required to complete the [official eligibility calculator](https://eservices.cic.gc.ca/rescalc/resCalcRetrieve.do?&lang=en).
+
+### [<i class="bi bi-github"></i> GitHub Task Notes](https://github.com/arnold-c/gh_task-notes)
+
+A Rust command-line tool to sync (in both directions) GitHub issues data into local Markdown notes using the GraphQL API.
+This allows users to integrate GitHub issues with note-taking workflows in applications like Obsidian.
+
