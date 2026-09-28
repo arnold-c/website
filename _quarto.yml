@@ -36,7 +36,7 @@ website:
     repo-url: https://github.com/arnold-c/website
     repo-actions: [edit, issue]
   page-footer:
-    "Copyright 2023, Callum Arnold-Leps. Made with [Quarto](https://quarto.org)"
+    "Copyright 2026, Callum Arnold-Leps. Made with [Quarto](https://quarto.org)"
   comments:
     utterances:
       repo: arnold-c/website
