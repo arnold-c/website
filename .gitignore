@@ -55,3 +55,6 @@ Thumbs.db
 /.luarc.json
 
 **/*.quarto_ipynb
+
+# pi coding agent
+**/.pi/
